@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Normalization - DBMS Notes - StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/notes.css" />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header class="page-header">
+      <h1>📋 Normalization</h1>
+      <p>Learn how data is organized properly in DBMS.</p>
+    </header>
+
+
+    <div class="notes-container">
+
+      <!-- What is Normalization -->
+      <div class="note-card">
+        <h2>📖 What is Normalization?</h2>
+
+        <p>
+          Normalization is the process of organizing data in a database
+          to reduce duplicate data and improve data consistency.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          Normalization means arranging data properly and reducing
+          unnecessary duplicate data.
+        </div>
+      </div>
+
+
+      <!-- Need -->
+      <div class="note-card">
+        <h2>🎯 Need of Normalization</h2>
+
+        <p>
+          Normalization is used to make the database clean, organized
+          and easy to manage.
+        </p>
+
+        <ul>
+          <li>Reduces duplicate data.</li>
+          <li>Improves data consistency.</li>
+          <li>Makes database easier to manage.</li>
+          <li>Reduces storage space.</li>
+          <li>Prevents data problems during insert, update and delete.</li>
+        </ul>
+      </div>
+
+
+      <!-- 1NF -->
+      <div class="note-card">
+        <h2>1️⃣ First Normal Form (1NF)</h2>
+
+        <p>
+          A table is in 1NF when every column contains only single
+          and atomic values.
+        </p>
+
+        <h3>Example:</h3>
+
+        <p>
+          A Student table should not store multiple phone numbers
+          in one cell.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          One cell should contain only one value.
+        </div>
+      </div>
+
+
+      <!-- 2NF -->
+      <div class="note-card">
+        <h2>2️⃣ Second Normal Form (2NF)</h2>
+
+        <p>
+          A table is in 2NF when it is already in 1NF and every
+          non-key attribute fully depends on the Primary Key.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          Every non-key column should depend on the complete Primary Key.
+        </div>
+      </div>
+
+
+      <!-- 3NF -->
+      <div class="note-card">
+        <h2>3️⃣ Third Normal Form (3NF)</h2>
+
+        <p>
+          A table is in 3NF when it is already in 2NF and non-key
+          attributes do not depend on other non-key attributes.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          Non-key data should depend only on the Primary Key.
+        </div>
+      </div>
+
+
+      <!-- BCNF -->
+      <div class="note-card">
+        <h2>4️⃣ Boyce-Codd Normal Form (BCNF)</h2>
+
+        <p>
+          BCNF is a stronger version of 3NF.
+          A table is in BCNF when every determinant is a Candidate Key.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          Every attribute that determines another attribute should be
+          a Candidate Key.
+        </div>
+      </div>
+
+
+      <!-- Example -->
+      <div class="note-card">
+        <h2>📝 Simple Example of Normalization</h2>
+
+        <p>
+          Suppose a Student table contains Student ID, Student Name,
+          Course Name and Teacher Name.
+        </p>
+
+        <p>
+          If the same course and teacher information is repeated for
+          many students, it creates duplicate data.
+        </p>
+
+        <p>
+          Normalization separates the data into different related
+          tables to reduce this duplication.
+        </p>
+      </div>
+
+
+      <!-- Advantages -->
+      <div class="note-card">
+        <h2>⭐ Advantages of Normalization</h2>
+
+        <ul>
+          <li>Reduces data duplication.</li>
+          <li>Improves data consistency.</li>
+          <li>Saves storage space.</li>
+          <li>Makes database structure better.</li>
+          <li>Makes data easier to maintain.</li>
+        </ul>
+      </div>
+
+
+      <!-- Disadvantages -->
+      <div class="note-card">
+        <h2>⚠️ Disadvantages of Normalization</h2>
+
+        <ul>
+          <li>Creates more tables.</li>
+          <li>Queries may become more complex.</li>
+          <li>More table joins may be required.</li>
+          <li>Database design can take more time.</li>
+        </ul>
+      </div>
+
+
+      <!-- Summary -->
+      <div class="note-card">
+        <h2>📊 Normal Forms Summary</h2>
+
+        <ul>
+          <li><b>1NF:</b> One value in one cell.</li>
+          <li><b>2NF:</b> Full dependency on Primary Key.</li>
+          <li><b>3NF:</b> No dependency between non-key attributes.</li>
+          <li><b>BCNF:</b> Every determinant is a Candidate Key.</li>
+        </ul>
+      </div>
+
+
+      <!-- Back Button -->
+      <button
+        class="back-btn"
+        onclick="location.href='dbms-notes.html'"
+      >
+        ⬅️ Back to DBMS Notes
+      </button>
+
+    </div>
+
+  </body>
+</html>

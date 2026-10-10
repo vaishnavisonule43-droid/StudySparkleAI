@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Process Management - StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/os.css" />
+  </head>
+
+  <body>
+    <div class="notes-container">
+      <h1>⚙️ Process Management in Operating System</h1>
+
+      <div class="notes-card">
+
+        <h2>1. What is a Process?</h2>
+
+        <p>
+          A process is a program that is currently being executed by the
+          computer.
+        </p>
+
+        <p>
+          When a program is loaded into memory and starts running, it becomes a
+          process.
+        </p>
+
+        <div class="example-box">
+          <b>Example:</b>
+
+          <br /><br />
+
+          When we open a web browser, the browser program becomes a process
+          while it is running.
+        </div>
+
+        <h2>2. What is Process Management?</h2>
+
+        <p>
+          Process Management is the function of an Operating System that
+          manages the creation, execution and termination of processes.
+        </p>
+
+        <p>
+          It also manages CPU time and resources among different processes.
+        </p>
+
+        <h2>3. Need of Process Management</h2>
+
+        <p>
+          Process Management is needed to manage multiple processes efficiently
+          and make proper use of the CPU.
+        </p>
+
+        <p>It helps to:</p>
+
+        <ul>
+          <li>Manage running processes.</li>
+          <li>Allocate CPU to processes.</li>
+          <li>Create and terminate processes.</li>
+          <li>Manage process resources.</li>
+          <li>Allow multiple processes to run efficiently.</li>
+        </ul>
+
+        <h2>4. Process States</h2>
+
+        <p>
+          During its execution, a process passes through different states.
+        </p>
+
+        <ul>
+          <li>
+            <b>New:</b> The process is being created.
+          </li>
+
+          <li>
+            <b>Ready:</b> The process is ready and waiting for CPU time.
+          </li>
+
+          <li>
+            <b>Running:</b> The process is currently being executed by the CPU.
+          </li>
+
+          <li>
+            <b>Waiting:</b> The process is waiting for an input/output
+            operation or another event.
+          </li>
+
+          <li>
+            <b>Terminated:</b> The process has completed its execution.
+          </li>
+        </ul>
+
+        <div class="example-box">
+          <b>Process State Flow:</b>
+
+          <br /><br />
+
+          New → Ready → Running → Waiting → Ready → Running → Terminated
+        </div>
+
+        <h2>5. Process Control Block (PCB)</h2>
+
+        <p>
+          Process Control Block (PCB) is a data structure used by the Operating
+          System to store important information about a process.
+        </p>
+
+        <p>
+          Every process has its own PCB.
+        </p>
+
+        <h2>6. Information Stored in PCB</h2>
+
+        <ul>
+          <li>Process ID</li>
+          <li>Process State</li>
+          <li>Program Counter</li>
+          <li>CPU Registers</li>
+          <li>CPU Scheduling Information</li>
+          <li>Memory Management Information</li>
+          <li>Input/Output Status Information</li>
+        </ul>
+
+        <h2>7. Process Scheduling</h2>
+
+        <p>
+          Process Scheduling is the method used by the Operating System to
+          select a process from the ready queue and assign the CPU to it.
+        </p>
+
+        <p>
+          The main goal is to use the CPU efficiently and provide good system
+          performance.
+        </p>
+
+        <h2>8. CPU Scheduling Algorithms</h2>
+
+        <p>
+          CPU Scheduling Algorithms are used to decide which process should get
+          the CPU next.
+        </p>
+
+        <ul>
+          <li>
+            <b>FCFS:</b> First Come First Serve. The process that arrives first
+            gets the CPU first.
+          </li>
+
+          <li>
+            <b>SJF:</b> Shortest Job First. The process with the shortest
+            execution time is selected first.
+          </li>
+
+          <li>
+            <b>Priority Scheduling:</b> The process with higher priority is
+            selected first.
+          </li>
+
+          <li>
+            <b>Round Robin:</b> Each process gets a fixed amount of CPU time
+            called a time quantum.
+          </li>
+        </ul>
+
+        <h2>9. Process Creation</h2>
+
+        <p>
+          Process creation means creating a new process for execution.
+        </p>
+
+        <p>
+          A process may create another process to perform a particular task.
+        </p>
+
+        <div class="example-box">
+          <b>Example:</b>
+
+          <br /><br />
+
+          When we open a new application, the Operating System creates a new
+          process for that application.
+        </div>
+
+        <h2>10. Process Termination</h2>
+
+        <p>
+          Process termination means stopping a process after it has completed
+          its task or when it needs to be stopped because of an error.
+        </p>
+
+        <p>
+          The Operating System releases the resources used by the terminated
+          process.
+        </p>
+
+        <h2>11. Context Switching</h2>
+
+        <p>
+          Context Switching is the process of saving the state of one process
+          and loading the state of another process.
+        </p>
+
+        <p>
+          It allows the CPU to switch between different processes.
+        </p>
+
+        <div class="example-box">
+          <b>Example:</b>
+
+          <br /><br />
+
+          If the CPU stops one process and starts another process, the
+          Operating System saves the first process information and loads the
+          second process information.
+        </div>
+
+        <h2>12. Process Synchronization</h2>
+
+        <p>
+          Process Synchronization is used to coordinate multiple processes when
+          they access shared data or resources.
+        </p>
+
+        <p>
+          It helps prevent incorrect results and data inconsistency.
+        </p>
+
+        <h2>13. Process Communication</h2>
+
+        <p>
+          Process Communication allows processes to exchange information and
+          data with each other.
+        </p>
+
+        <p>
+          It is also called Inter-Process Communication (IPC).
+        </p>
+
+        <h2>14. Advantages of Process Management</h2>
+
+        <ul>
+          <li>Improves CPU utilization.</li>
+          <li>Manages multiple processes efficiently.</li>
+          <li>Provides proper CPU scheduling.</li>
+          <li>Helps in process synchronization.</li>
+          <li>Manages process resources.</li>
+          <li>Improves overall system performance.</li>
+        </ul>
+
+        <h2>15. Real-Life Example</h2>
+
+        <p>
+          Suppose we are using a laptop and running a browser, music player and
+          text editor at the same time.
+        </p>
+
+        <p>
+          The Operating System manages all these processes and gives CPU time
+          and other resources to each process.
+        </p>
+
+        <div class="example-box">
+          <b>Example:</b>
+
+          <br /><br />
+
+          Browser → Process 1
+
+          <br />
+
+          Music Player → Process 2
+
+          <br />
+
+          Text Editor → Process 3
+
+          <br /><br />
+
+          The Operating System manages all three processes.
+        </div>
+
+        <h2>16. Summary</h2>
+
+        <p>
+          Process Management is an important function of an Operating System. It
+          manages the creation, execution, scheduling, synchronization and
+          termination of processes. It helps the CPU and other resources to be
+          used efficiently.
+        </p>
+
+      </div>
+
+      <button onclick="location.href = 'os-notes.html'">
+        ⬅️ Back to OS
+      </button>
+    </div>
+  </body>
+</html>

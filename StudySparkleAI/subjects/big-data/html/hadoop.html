@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apache Hadoop - StudySpark AI</title>
+    <link rel="stylesheet" href="../css/notes.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <div class="header-icon">🐘</div>
+        <h1>Apache Hadoop</h1>
+        <p>Learn the Basics of Hadoop in Simple English</p>
+    </header>
+
+    <main class="notes-container">
+
+        <section class="intro-card">
+            <h2>Introduction to Hadoop</h2>
+            <p>
+                Apache Hadoop is an open-source framework used to store
+                and process very large amounts of data. It can divide
+                data processing tasks among multiple computers.
+            </p>
+        </section>
+
+        <section class="notes-section">
+            <h2>1. Definition of Hadoop</h2>
+
+            <div class="note-card">
+                <p class="definition">
+                    Apache Hadoop is an open-source framework that
+                    stores and processes big data across a group
+                    of computers.
+                </p>
+
+                <p>
+                    It helps process large datasets that may be difficult
+                    to handle using a single computer.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>2. Why Do We Use Hadoop?</h2>
+
+            <div class="notes-grid">
+
+                <div class="note-card">
+                    <span class="topic-icon">📦</span>
+                    <h3>Large Data Storage</h3>
+                    <p>Hadoop can store huge amounts of data across multiple computers.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">⚡</span>
+                    <h3>Fast Processing</h3>
+                    <p>It processes data by dividing work among multiple computers.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">💰</span>
+                    <h3>Cost Effective</h3>
+                    <p>It can run on groups of ordinary computers instead of requiring only expensive special-purpose machines.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">🔧</span>
+                    <h3>Scalability</h3>
+                    <p>More computers can be added to increase storage and processing capacity.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>3. Main Components of Hadoop</h2>
+
+            <div class="note-card">
+                <h3>1. HDFS (Hadoop Distributed File System)</h3>
+                <p>
+                    HDFS stores large files by dividing them into blocks
+                    and distributing them across different computers.
+                    It can keep copies of blocks to help protect against
+                    hardware failures.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>2. MapReduce</h3>
+                <p>
+                    MapReduce is a programming model used to process
+                    large datasets in parallel. It uses Map and Reduce
+                    operations to process and combine data.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>3. YARN (Yet Another Resource Negotiator)</h3>
+                <p>
+                    YARN manages computer resources and schedules
+                    applications that run on a Hadoop cluster.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>4. Hadoop Common</h3>
+                <p>
+                    Hadoop Common provides the basic libraries and
+                    utilities needed by other Hadoop components.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>4. How Does Hadoop Work?</h2>
+
+            <div class="note-card">
+                <ol>
+                    <li>
+                        <strong>Data Input:</strong>
+                        Large amounts of data are collected.
+                    </li>
+                    <li>
+                        <strong>Data Storage:</strong>
+                        HDFS divides files into blocks and stores
+                        them across different computers.
+                    </li>
+                    <li>
+                        <strong>Task Distribution:</strong>
+                        YARN helps allocate resources to processing tasks.
+                    </li>
+                    <li>
+                        <strong>Data Processing:</strong>
+                        MapReduce processes data in parallel when
+                        a MapReduce job is used.
+                    </li>
+                    <li>
+                        <strong>Output:</strong>
+                        The processed results are collected and saved.
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>5. Example of Hadoop</h2>
+
+            <div class="note-card">
+                <p>
+                    Suppose an online shopping website has millions of
+                    customer orders. It wants to find the total number
+                    of orders for each product.
+                </p>
+
+                <p>
+                    Hadoop can store this large order data using HDFS.
+                    A MapReduce job can process the orders across
+                    multiple computers and combine the results.
+                </p>
+
+                <p>
+                    <strong>Result:</strong> The website can find how many
+                    times each product was ordered.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>6. Features of Hadoop</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>It is an open-source framework.</li>
+                    <li>It supports distributed data storage.</li>
+                    <li>It can process large datasets.</li>
+                    <li>It supports parallel processing.</li>
+                    <li>It can scale by adding more computers.</li>
+                    <li>HDFS can replicate data blocks for fault tolerance.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>7. Advantages of Hadoop</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>It can handle very large amounts of data.</li>
+                    <li>It distributes storage across multiple computers.</li>
+                    <li>It supports processing tasks in parallel.</li>
+                    <li>It can expand as data requirements grow.</li>
+                    <li>It provides fault tolerance through HDFS replication.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>8. Limitations of Hadoop</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>Setting up and managing a cluster can be complex.</li>
+                    <li>MapReduce may be slow for interactive processing.</li>
+                    <li>It requires sufficient storage and computing resources.</li>
+                    <li>It may not be suitable for every real-time data task.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>9. Applications of Hadoop</h2>
+
+            <div class="notes-grid">
+
+                <div class="note-card">
+                    <span class="topic-icon">🛒</span>
+                    <h3>E-commerce</h3>
+                    <p>Analyzing customer orders and shopping patterns.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">🏦</span>
+                    <h3>Banking</h3>
+                    <p>Analyzing large volumes of financial transactions.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">🏥</span>
+                    <h3>Healthcare</h3>
+                    <p>Processing medical records and research data.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">🌐</span>
+                    <h3>Social Media</h3>
+                    <p>Analyzing posts, comments, and user activity.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>10. Conclusion</h2>
+
+            <div class="note-card">
+                <p>
+                    Apache Hadoop is an important big data framework.
+                    It helps store and process large datasets across
+                    multiple computers. Its main components are HDFS,
+                    MapReduce, YARN, and Hadoop Common.
+                </p>
+            </div>
+        </section>
+
+        <button class="back-btn" onclick="location.href='big-data-notes.html'">
+            ⬅️ Back to Big Data Topics
+        </button>
+
+    </main>
+
+    <footer>
+        <p>© 2026 StudySpark AI | Learn • Practice • Grow</p>
+    </footer>
+
+</body>
+</html>

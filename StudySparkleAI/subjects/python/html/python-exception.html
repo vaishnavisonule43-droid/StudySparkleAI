@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Python Exception Handling</title>
+
+  <link rel="stylesheet" href="../css/python-topic.css">
+</head>
+
+<body>
+
+<div class="notes-container">
+
+  <h1>🐍 Exception Handling in Python</h1>
+
+  <div class="notes-card">
+
+    <h2>📘 What is an Exception?</h2>
+
+    <p>
+      An exception is an error that occurs while a Python program
+      is running.
+    </p>
+
+    <p>
+      When an exception occurs, the normal flow of the program can
+      stop if the error is not handled.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+a = 10
+b = 0
+
+print(a / b)
+      </pre>
+    </div>
+
+    <p>
+      In this example, division by zero causes an exception.
+    </p>
+
+
+    <h2>⭐ What is Exception Handling?</h2>
+
+    <p>
+      Exception handling is a method of handling errors that occur
+      during program execution.
+    </p>
+
+    <p>
+      Python mainly uses <strong>try</strong>, <strong>except</strong>,
+      <strong>else</strong> and <strong>finally</strong> blocks
+      for exception handling.
+    </p>
+
+
+    <h2>🧩 Why Use Exception Handling?</h2>
+
+    <ul>
+      <li>It prevents the program from stopping suddenly.</li>
+      <li>It helps handle runtime errors.</li>
+      <li>It makes programs more reliable.</li>
+      <li>It displays meaningful error messages.</li>
+      <li>It allows the program to continue when possible.</li>
+    </ul>
+
+
+    <h2>🔹 try Block</h2>
+
+    <p>
+      The <strong>try</strong> block contains the code that may
+      produce an exception.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+try:
+    print(10 / 0)
+      </pre>
+    </div>
+
+
+    <h2>🔹 except Block</h2>
+
+    <p>
+      The <strong>except</strong> block is used to handle an exception
+      that occurs inside the try block.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+try:
+    print(10 / 0)
+
+except:
+    print("An error occurred")
+      </pre>
+    </div>
+
+
+    <h2>🔹 try and except Example</h2>
+
+    <div class="example-box">
+      <pre>
+try:
+    number = int(input("Enter a number: "))
+    print(10 / number)
+
+except:
+    print("Something went wrong")
+      </pre>
+    </div>
+
+
+    <h2>🎯 Handling a Specific Exception</h2>
+
+    <p>
+      We can specify the type of exception that we want to handle.
+    </p>
+
+    <p>
+      For example, <strong>ZeroDivisionError</strong> occurs when
+      a number is divided by zero.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+try:
+    result = 10 / 0
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+      </pre>
+    </div>
+
+
+    <h2>🔢 ValueError</h2>
+
+    <p>
+      <strong>ValueError</strong> occurs when a function receives
+      a value of the correct type but an inappropriate value.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+try:
+    number = int("abc")
+
+except ValueError:
+    print("Invalid number")
+      </pre>
+    </div>
+
+
+    <h2>🔤 TypeError</h2>
+
+    <p>
+      <strong>TypeError</strong> occurs when an operation is performed
+      on an inappropriate data type.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+try:
+    result = "10" + 5
+
+except TypeError:
+    print("Invalid data types")
+      </pre>
+    </div>
+
+
+    <h2>📂 FileNotFoundError</h2>
+
+    <p>
+      <strong>FileNotFoundError</strong> occurs when Python tries to
+      access a file that does not exist.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+try:
+    file = open("abc.txt", "r")
+
+except FileNotFoundError:
+    print("File not found")
+      </pre>
+    </div>
+
+
+    <h2>🔹 Multiple except Blocks</h2>
+
+    <p>
+      A program can have multiple except blocks to handle
+      different types of exceptions.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+
+except ValueError:
+    print("Please enter a valid number")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+      </pre>
+    </div>
+
+
+    <h2>🔹 else Block</h2>
+
+    <p>
+      The <strong>else</strong> block runs when no exception occurs
+      in the try block.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+else:
+    print("Result:", result)
+      </pre>
+    </div>
+
+
+    <h2>🔹 finally Block</h2>
+
+    <p>
+      The <strong>finally</strong> block runs whether an exception
+      occurs or not.
+    </p>
+
+    <p>
+      It is commonly used for cleanup operations such as closing
+      a file.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+try:
+    print(10 / 2)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+finally:
+    print("Program completed")
+      </pre>
+    </div>
+
+
+    <h2>📊 try, except, else and finally</h2>
+
+    <table>
+      <tr>
+        <th>Block</th>
+        <th>Purpose</th>
+      </tr>
+
+      <tr>
+        <td>try</td>
+        <td>Contains code that may cause an exception.</td>
+      </tr>
+
+      <tr>
+        <td>except</td>
+        <td>Handles the exception.</td>
+      </tr>
+
+      <tr>
+        <td>else</td>
+        <td>Runs when no exception occurs.</td>
+      </tr>
+
+      <tr>
+        <td>finally</td>
+        <td>Runs whether an exception occurs or not.</td>
+      </tr>
+    </table>
+
+
+    <h2>🚨 Common Python Exceptions</h2>
+
+    <table>
+      <tr>
+        <th>Exception</th>
+        <th>Meaning</th>
+      </tr>
+
+      <tr>
+        <td>ZeroDivisionError</td>
+        <td>Division by zero.</td>
+      </tr>
+
+      <tr>
+        <td>ValueError</td>
+        <td>Invalid value is given.</td>
+      </tr>
+
+      <tr>
+        <td>TypeError</td>
+        <td>Invalid operation between data types.</td>
+      </tr>
+
+      <tr>
+        <td>IndexError</td>
+        <td>Invalid list or sequence index.</td>
+      </tr>
+
+      <tr>
+        <td>KeyError</td>
+        <td>Dictionary key does not exist.</td>
+      </tr>
+
+      <tr>
+        <td>FileNotFoundError</td>
+        <td>Requested file does not exist.</td>
+      </tr>
+    </table>
+
+
+    <h2>🔢 IndexError Example</h2>
+
+    <p>
+      IndexError occurs when we try to access an index that does not
+      exist in a list.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+numbers = [10, 20, 30]
+
+try:
+    print(numbers[5])
+
+except IndexError:
+    print("Invalid index")
+      </pre>
+    </div>
+
+
+    <h2>🔑 KeyError Example</h2>
+
+    <p>
+      KeyError occurs when we try to access a dictionary key
+      that does not exist.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "course": "BCA"
+}
+
+try:
+    print(student["age"])
+
+except KeyError:
+    print("Key not found")
+      </pre>
+    </div>
+
+
+    <h2>📢 Raising an Exception</h2>
+
+    <p>
+      The <strong>raise</strong> keyword is used to manually generate
+      an exception.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+age = 15
+
+if age &lt; 18:
+    raise ValueError("Age must be 18 or above")
+      </pre>
+    </div>
+
+
+    <h2>💻 Practical Example</h2>
+
+    <p>
+      The following program takes two numbers and safely performs
+      division.
+    </p>
+
+    <div class="example-box">
+      <pre>
+try:
+
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+
+    result = num1 / num2
+
+except ValueError:
+    print("Please enter numbers only")
+
+except ZeroDivisionError:
+    print("Second number cannot be zero")
+
+else:
+    print("Result:", result)
+
+finally:
+    print("Thank you")
+      </pre>
+    </div>
+
+
+    <h2>📚 Advantages of Exception Handling</h2>
+
+    <ul>
+      <li>Improves program reliability.</li>
+      <li>Prevents unexpected program termination.</li>
+      <li>Makes error messages easier to understand.</li>
+      <li>Helps handle different errors separately.</li>
+      <li>Makes programs easier to maintain.</li>
+    </ul>
+
+
+    <h2>📌 Quick Revision</h2>
+
+    <ul>
+      <li>An exception is an error that occurs during program execution.</li>
+      <li>Exception handling manages runtime errors.</li>
+      <li>The try block contains risky code.</li>
+      <li>The except block handles an exception.</li>
+      <li>The else block runs when no exception occurs.</li>
+      <li>The finally block runs whether an exception occurs or not.</li>
+      <li>ZeroDivisionError occurs when dividing by zero.</li>
+      <li>ValueError occurs when an inappropriate value is given.</li>
+      <li>TypeError occurs when an operation uses inappropriate data types.</li>
+      <li>IndexError occurs when an invalid index is used.</li>
+      <li>KeyError occurs when a dictionary key is not found.</li>
+      <li>The raise keyword is used to manually generate an exception.</li>
+    </ul>
+
+
+    <button class="back-btn" onclick="location.href='python-notes.html'">
+      ⬅️ Back to Python Notes
+    </button>
+
+  </div>
+
+</div>
+
+</body>
+</html>

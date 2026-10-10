@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Notes | StudySpark AI</title>
+    <link rel="stylesheet" href="../css/web-topic.css">
+</head>
+
+<body>
+
+    <header class="topic-header">
+        <h1>DOM Manipulation</h1>
+        <p>Learn how JavaScript changes HTML elements and webpage content.</p>
+    </header>
+
+    <main class="topic-container">
+
+        <section class="topic-card">
+            <h2>1. What is DOM Manipulation?</h2>
+
+            <p>
+                DOM stands for Document Object Model. It represents an HTML
+                document as a tree of objects.
+            </p>
+
+            <p>
+                DOM Manipulation means using JavaScript to change the content,
+                style, or structure of a webpage.
+            </p>
+
+            <div class="example-box">
+                <strong>Example:</strong>
+                JavaScript can change a heading, change its colour, or add a
+                new paragraph to a webpage.
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>2. Selecting HTML Elements</h2>
+
+            <p>
+                JavaScript can select HTML elements using their ID, class,
+                or HTML tag name.
+            </p>
+
+            <h3>Using getElementById()</h3>
+            <p>It selects an element using its unique ID.</p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>document.getElementById("heading");</code></pre>
+            </div>
+
+            <h3>Using querySelector()</h3>
+            <p>It selects the first element matching a CSS selector.</p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>document.querySelector(".message");</code></pre>
+            </div>
+
+            <h3>Using getElementsByClassName()</h3>
+            <p>It selects elements that have the given class name.</p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>document.getElementsByClassName("item");</code></pre>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>3. Changing HTML Content</h2>
+
+            <p>
+                JavaScript can change the text displayed inside an HTML element
+                by using the <strong>textContent</strong> property.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>&lt;h2 id="heading"&gt;Hello Student&lt;/h2&gt;
+
+&lt;script&gt;
+document.getElementById("heading").textContent =
+    "Welcome to StudySpark AI";
+&lt;/script&gt;</code></pre>
+            </div>
+
+            <div class="important-box">
+                <strong>Remember:</strong>
+                <code>textContent</code> changes the text inside an element.
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>4. Changing CSS Styles</h2>
+
+            <p>
+                JavaScript can change the appearance of an HTML element using
+                the <strong>style</strong> property.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>&lt;h2 id="title"&gt;Hello World&lt;/h2&gt;
+
+&lt;script&gt;
+const title = document.getElementById("title");
+
+title.style.color = "purple";
+title.style.fontSize = "30px";
+title.style.backgroundColor = "lightyellow";
+&lt;/script&gt;</code></pre>
+            </div>
+
+            <div class="example-box">
+                <strong>Output:</strong>
+                The heading becomes purple, its font size increases, and its
+                background becomes light yellow.
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>5. DOM Events</h2>
+
+            <p>
+                An event is an action that happens on a webpage, such as a
+                mouse click or keyboard input.
+            </p>
+
+            <p>Common DOM events include:</p>
+
+            <ul>
+                <li><strong>click:</strong> When an element is clicked.</li>
+                <li><strong>mouseover:</strong> When the mouse moves over an element.</li>
+                <li><strong>keydown:</strong> When a keyboard key is pressed.</li>
+                <li><strong>change:</strong> When an input value changes.</li>
+            </ul>
+
+            <h3>Example of a Click Event</h3>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>&lt;button id="myButton"&gt;Click Me&lt;/button&gt;
+
+&lt;script&gt;
+document.getElementById("myButton").addEventListener(
+    "click",
+    function() {
+        alert("Button clicked!");
+    }
+);
+&lt;/script&gt;</code></pre>
+            </div>
+
+            <div class="example-box">
+                <strong>Output:</strong>
+                When the user clicks the button, an alert message appears.
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>6. Creating New HTML Elements</h2>
+
+            <p>
+                JavaScript can create new HTML elements using
+                <strong>createElement()</strong>.
+            </p>
+
+            <p>
+                The <strong>appendChild()</strong> method adds the new element
+                inside another element.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>&lt;div id="container"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+const paragraph = document.createElement("p");
+
+paragraph.textContent = "This is a new paragraph.";
+
+document.getElementById("container").appendChild(paragraph);
+&lt;/script&gt;</code></pre>
+            </div>
+
+            <div class="example-box">
+                <strong>Output:</strong>
+                A new paragraph is created and added inside the container.
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>7. Removing HTML Elements</h2>
+
+            <p>
+                JavaScript can remove an HTML element from the webpage using
+                the <strong>remove()</strong> method.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>&lt;p id="message"&gt;This paragraph will be removed.&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById("message").remove();
+&lt;/script&gt;</code></pre>
+            </div>
+
+            <div class="example-box">
+                <strong>Output:</strong>
+                The paragraph is removed from the webpage.
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>8. Changing CSS Classes</h2>
+
+            <p>
+                The <strong>classList</strong> property helps JavaScript add,
+                remove, or toggle CSS classes on an HTML element.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>const box = document.getElementById("box");
+
+box.classList.add("active");
+box.classList.remove("active");
+box.classList.toggle("active");</code></pre>
+            </div>
+
+            <ul>
+                <li><strong>add():</strong> Adds a CSS class.</li>
+                <li><strong>remove():</strong> Removes a CSS class.</li>
+                <li><strong>toggle():</strong> Adds the class if absent, or removes it if present.</li>
+            </ul>
+        </section>
+
+        <section class="topic-card">
+            <h2>9. Advantages of DOM Manipulation</h2>
+
+            <ul>
+                <li>It changes webpage content dynamically.</li>
+                <li>It allows interactive webpages.</li>
+                <li>It can change colours and styles.</li>
+                <li>It can create and remove HTML elements.</li>
+                <li>It improves the user experience.</li>
+            </ul>
+        </section>
+
+        <section class="topic-card">
+            <h2>10. Quick Revision</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Method / Property</th>
+                        <th>Use</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>getElementById()</td>
+                        <td>Selects an element by ID.</td>
+                    </tr>
+                    <tr>
+                        <td>querySelector()</td>
+                        <td>Selects the first matching element.</td>
+                    </tr>
+                    <tr>
+                        <td>textContent</td>
+                        <td>Changes or reads text.</td>
+                    </tr>
+                    <tr>
+                        <td>style</td>
+                        <td>Changes inline CSS styles.</td>
+                    </tr>
+                    <tr>
+                        <td>addEventListener()</td>
+                        <td>Runs a function when an event occurs.</td>
+                    </tr>
+                    <tr>
+                        <td>createElement()</td>
+                        <td>Creates a new HTML element.</td>
+                    </tr>
+                    <tr>
+                        <td>appendChild()</td>
+                        <td>Adds a child element.</td>
+                    </tr>
+                    <tr>
+                        <td>remove()</td>
+                        <td>Removes an element.</td>
+                    </tr>
+                    <tr>
+                        <td>classList</td>
+                        <td>Adds, removes, or toggles CSS classes.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a href="web-notes.html" class="back-btn">
+                ← Back to Web Technology
+            </a>
+        </section>
+
+    </main>
+
+    <script>
+        async function copyCode(button) {
+            const codeBox = button.closest(".code-box");
+            const code = codeBox.querySelector("pre code").innerText;
+            const status = codeBox.querySelector(".copy-status");
+
+            try {
+                await navigator.clipboard.writeText(code);
+
+                button.textContent = "Copied!";
+                status.textContent = "Code copied!";
+
+                setTimeout(function () {
+                    button.textContent = "Copy Code";
+                    status.textContent = "";
+                }, 2000);
+
+            } catch (error) {
+                status.textContent =
+                    "Copy unavailable. Please copy manually.";
+            }
+        }
+    </script>
+
+</body>
+</html>

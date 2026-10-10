@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Memory Management - OS Notes</title>
+
+  <link rel="stylesheet" href="../css/os.css">
+</head>
+
+<body>
+
+  <div class="notes-container">
+
+    <h1>Memory Management</h1>
+
+    <div class="notes-card">
+
+      <h2>1. What is Memory Management?</h2>
+
+      <p>
+        Memory Management is an important function of an Operating System
+        that manages the main memory (RAM) of a computer.
+      </p>
+
+      <p>
+        In simple words, it decides <b>which process gets memory, how much
+        memory it gets, and when the memory is released.</b>
+      </p>
+
+
+      <h2>2. Need of Memory Management</h2>
+
+      <ul>
+        <li>It keeps track of memory usage.</li>
+        <li>It allocates memory to processes.</li>
+        <li>It releases memory after a process finishes.</li>
+        <li>It prevents processes from using each other's memory.</li>
+        <li>It improves the efficient use of RAM.</li>
+      </ul>
+
+
+      <h2>3. Main Functions of Memory Management</h2>
+
+      <ul>
+        <li><b>Memory Allocation:</b> Gives memory to processes.</li>
+        <li><b>Memory Deallocation:</b> Frees memory after use.</li>
+        <li><b>Memory Protection:</b> Protects one process from another.</li>
+        <li><b>Memory Tracking:</b> Keeps information about used and free memory.</li>
+        <li><b>Memory Sharing:</b> Allows processes to share memory when required.</li>
+      </ul>
+
+
+      <h2>4. Memory Allocation</h2>
+
+      <p>
+        Memory allocation means assigning a portion of main memory to
+        a process when it needs memory for execution.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        If a process needs 100 MB of memory, the Operating System
+        finds a suitable free memory area and assigns it to the process.
+      </div>
+
+
+      <h2>5. Memory Deallocation</h2>
+
+      <p>
+        Memory deallocation means releasing the memory occupied by a
+        process after the process completes its execution.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        When a program is closed, the memory used by that program is
+        released and can be used by another program.
+      </div>
+
+
+      <h2>6. Contiguous Memory Allocation</h2>
+
+      <p>
+        In contiguous memory allocation, a process is given a continuous
+        block of memory.
+      </p>
+
+      <p>
+        The two main types are:
+      </p>
+
+      <ul>
+        <li>Fixed Partitioning</li>
+        <li>Variable Partitioning</li>
+      </ul>
+
+
+      <h2>7. Fixed Partitioning</h2>
+
+      <p>
+        In fixed partitioning, the main memory is divided into fixed-size
+        partitions. Each partition can hold one process.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        If memory is divided into four partitions, a maximum of four
+        processes can be loaded at the same time.
+      </div>
+
+      <p>
+        <b>Disadvantage:</b> It can cause internal fragmentation.
+      </p>
+
+
+      <h2>8. Variable Partitioning</h2>
+
+      <p>
+        In variable partitioning, memory is divided according to the
+        size required by each process.
+      </p>
+
+      <p>
+        This uses memory more efficiently than fixed partitioning,
+        but it may create external fragmentation.
+      </p>
+
+
+      <h2>9. Fragmentation</h2>
+
+      <p>
+        Fragmentation means memory is wasted because of the way memory
+        is allocated.
+      </p>
+
+      <p>There are two types:</p>
+
+      <ul>
+        <li><b>Internal Fragmentation</b></li>
+        <li><b>External Fragmentation</b></li>
+      </ul>
+
+
+      <h2>10. Internal Fragmentation</h2>
+
+      <p>
+        Internal fragmentation occurs when the allocated memory block
+        is larger than the memory required by the process.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        A process needs 70 MB but gets a 100 MB block.
+        The remaining 30 MB inside that block is wasted.
+      </div>
+
+
+      <h2>11. External Fragmentation</h2>
+
+      <p>
+        External fragmentation occurs when enough free memory is available
+        in total, but it is divided into small non-contiguous blocks.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        There may be 100 MB free memory, but it is divided into
+        20 MB + 30 MB + 50 MB blocks. A process requiring one
+        continuous 100 MB block cannot use it.
+      </div>
+
+
+      <h2>12. Paging</h2>
+
+      <p>
+        Paging is a memory management technique in which physical memory
+        is divided into fixed-size blocks called <b>Frames</b> and
+        logical memory is divided into fixed-size blocks called <b>Pages</b>.
+      </p>
+
+      <ul>
+        <li>Pages belong to logical memory.</li>
+        <li>Frames belong to physical memory.</li>
+        <li>Pages can be stored in different frames.</li>
+        <li>Paging helps reduce external fragmentation.</li>
+      </ul>
+
+
+      <h2>13. Segmentation</h2>
+
+      <p>
+        Segmentation divides a program into logical parts called segments.
+      </p>
+
+      <p>
+        Examples of segments are:
+      </p>
+
+      <ul>
+        <li>Code segment</li>
+        <li>Data segment</li>
+        <li>Stack segment</li>
+      </ul>
+
+
+      <h2>14. Virtual Memory</h2>
+
+      <p>
+        Virtual Memory is a technique that allows a computer to run
+        programs that are larger than the available physical RAM.
+      </p>
+
+      <p>
+        It uses a part of secondary storage such as an SSD or hard disk
+        as an extension of RAM.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        If a computer has limited RAM but needs more memory to run
+        a program, the Operating System can use part of storage as
+        virtual memory.
+      </div>
+
+
+      <h2>15. Swapping</h2>
+
+      <p>
+        Swapping is a technique in which a process is temporarily moved
+        from main memory to secondary storage and later brought back
+        into main memory when required.
+      </p>
+
+      <div class="example-box">
+        <b>Simple Flow:</b><br><br>
+        Main Memory → Secondary Storage → Main Memory
+      </div>
+
+
+      <h2>16. Page Replacement</h2>
+
+      <p>
+        When memory is full and a new page is required, the Operating
+        System removes an existing page from memory and brings the
+        required page into memory.
+      </p>
+
+      <p>Common page replacement algorithms are:</p>
+
+      <ul>
+        <li>FIFO (First In First Out)</li>
+        <li>Optimal Page Replacement</li>
+        <li>LRU (Least Recently Used)</li>
+      </ul>
+
+
+      <h2>17. Memory Management Techniques</h2>
+
+      <table>
+
+        <tr>
+          <th>Technique</th>
+          <th>Main Idea</th>
+        </tr>
+
+        <tr>
+          <td>Contiguous Allocation</td>
+          <td>Process gets one continuous memory block</td>
+        </tr>
+
+        <tr>
+          <td>Paging</td>
+          <td>Memory is divided into pages and frames</td>
+        </tr>
+
+        <tr>
+          <td>Segmentation</td>
+          <td>Program is divided into logical segments</td>
+        </tr>
+
+        <tr>
+          <td>Virtual Memory</td>
+          <td>Uses secondary storage as an extension of RAM</td>
+        </tr>
+
+        <tr>
+          <td>Swapping</td>
+          <td>Moves processes between RAM and storage</td>
+        </tr>
+
+      </table>
+
+
+      <h2>18. Advantages of Memory Management</h2>
+
+      <ul>
+        <li>Uses memory efficiently.</li>
+        <li>Allows multiple processes to run.</li>
+        <li>Protects memory from unauthorized access.</li>
+        <li>Reduces memory wastage.</li>
+        <li>Improves system performance.</li>
+      </ul>
+
+
+      <h2>19. Real-Life Example</h2>
+
+      <p>
+        Think of RAM as a study table. Different books represent
+        different programs. Memory management decides where each book
+        should be kept, which book can be removed, and where a new book
+        should be placed.
+      </p>
+
+
+      <h2>20. Summary</h2>
+
+      <p>
+        Memory Management is the process of managing the main memory
+        of a computer. It includes memory allocation, deallocation,
+        protection, paging, segmentation, virtual memory and swapping.
+        Good memory management helps the Operating System use RAM
+        efficiently and run multiple processes smoothly.
+      </p>
+
+
+      <button onclick="location.href = 'os-notes.html'">
+        ⬅️ Back to OS
+      </button>
+
+    </div>
+  </div>
+
+</body>
+</html>

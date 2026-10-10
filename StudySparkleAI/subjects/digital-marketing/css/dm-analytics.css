@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6ff;
+    color: #222;
+}
+
+.notes-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.notes-container > h1 {
+    text-align: center;
+    color: #5b4bc4;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.notes-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+    border-left: 6px solid #6a5acd;
+}
+
+.notes-card h2 {
+    color: #5b4bc4;
+    margin-top: 28px;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.notes-card h2:first-child {
+    margin-top: 0;
+}
+
+.notes-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.notes-card ul,
+.notes-card ol {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.notes-card li {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 6px;
+}
+
+.example-box {
+    background: #f0edff;
+    border-left: 5px solid #6a5acd;
+    padding: 18px;
+    margin: 20px 0;
+    border-radius: 8px;
+    line-height: 1.7;
+}
+
+.notes-container > button {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #6a5acd;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.notes-container > button:hover {
+    background: #493d9b;
+}
+
+@media (max-width: 700px) {
+
+    .notes-container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .notes-container > h1 {
+        font-size: 24px;
+    }
+
+    .notes-card {
+        padding: 20px;
+    }
+
+    .notes-card h2 {
+        font-size: 20px;
+    }
+
+    .notes-card p,
+    .notes-card li {
+        font-size: 15px;
+    }
+}

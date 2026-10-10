@@ -1,0 +1,557 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.7;
+}
+
+
+/* Header */
+
+.page-header {
+  text-align: center;
+  padding: 35px 15px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  animation: slideDown 0.8s ease;
+}
+
+.page-header h1 {
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+.page-header p {
+  font-size: 16px;
+}
+
+
+/* Main Container */
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 35px auto;
+}
+
+
+/* Note Card */
+
+.note-card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+  animation: fadeUp 0.7s ease;
+  transition: 0.3s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+}
+
+
+/* Headings */
+
+.note-card h2 {
+  color: #5b4bc4;
+  margin-bottom: 12px;
+  font-size: 23px;
+}
+
+.note-card h3 {
+  color: #444;
+  margin: 18px 0 8px;
+}
+
+
+/* Paragraph */
+
+.note-card p {
+  margin-bottom: 12px;
+}
+
+
+/* Lists */
+
+.note-card ul,
+.note-card ol {
+  margin-left: 25px;
+}
+
+.note-card li {
+  margin-bottom: 7px;
+}
+
+
+/* Definition */
+
+.definition {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #f0edff;
+  border-left: 5px solid #6c5ce7;
+  border-radius: 8px;
+}
+
+
+/* =========================
+   SPIRAL MODEL DIAGRAM
+   ========================= */
+
+.diagram-card {
+  overflow: hidden;
+}
+
+.spiral-diagram {
+  position: relative;
+  width: 650px;
+  height: 520px;
+  max-width: 100%;
+  margin: 30px auto;
+}
+
+
+/* Outer Spiral */
+
+.spiral-diagram::before {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px solid #6c5ce7;
+  border-radius: 50%;
+  opacity: 0.18;
+}
+
+
+/* Inner Spiral */
+
+.spiral-diagram::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px dashed #764ba2;
+  border-radius: 50%;
+  opacity: 0.25;
+}
+
+
+/* Center */
+
+.spiral-center {
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  z-index: 5;
+  box-shadow: 0 5px 18px rgba(91, 75, 196, 0.30);
+}
+
+
+/* Phase Boxes */
+
+.phase {
+  position: absolute;
+  width: 175px;
+  min-height: 105px;
+  padding: 13px;
+  background: #f0edff;
+  border-left: 5px solid #6c5ce7;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 6;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+  animation: phaseAppear 0.8s ease;
+  transition: 0.3s ease;
+}
+
+.phase:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(91, 75, 196, 0.20);
+}
+
+.phase b {
+  display: block;
+  color: #5b4bc4;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.phase small {
+  display: block;
+  font-size: 12px;
+  color: #444;
+  line-height: 1.4;
+}
+
+
+/* Phase Number */
+
+.phase-number {
+  display: inline-flex;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: #6c5ce7;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+/* Phase Positions */
+
+.phase-1 {
+  top: 20px;
+  left: 25px;
+}
+
+.phase-2 {
+  top: 20px;
+  right: 25px;
+}
+
+.phase-3 {
+  bottom: 20px;
+  right: 25px;
+}
+
+.phase-4 {
+  bottom: 20px;
+  left: 25px;
+}
+
+
+/* Arrows */
+
+.arrow {
+  position: absolute;
+  color: #6c5ce7;
+  font-size: 32px;
+  font-weight: bold;
+  z-index: 7;
+  animation: arrowPulse 1.5s infinite;
+}
+
+.arrow-1 {
+  top: 130px;
+  left: 225px;
+  transform: rotate(25deg);
+}
+
+.arrow-2 {
+  top: 245px;
+  right: 80px;
+  transform: rotate(90deg);
+}
+
+.arrow-3 {
+  bottom: 125px;
+  left: 225px;
+  transform: rotate(155deg);
+}
+
+.arrow-4 {
+  top: 245px;
+  left: 80px;
+  transform: rotate(-90deg);
+}
+
+
+/* Cycle Note */
+
+.cycle-note {
+  margin-top: 10px;
+  padding: 15px;
+  background: #f0edff;
+  border-left: 5px solid #6c5ce7;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+/* Example Box */
+
+.example-box {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f0edff;
+  border-left: 5px solid #6c5ce7;
+  border-radius: 8px;
+}
+
+
+/* Summary */
+
+.summary-box {
+  background: white;
+  padding: 25px;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  border-left: 6px solid #6c5ce7;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+  animation: fadeUp 0.8s ease;
+}
+
+.summary-box h2 {
+  color: #5b4bc4;
+  margin-bottom: 12px;
+}
+
+
+/* Back Button */
+
+.back-btn {
+  display: block;
+  margin: 30px auto 50px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  background: #5b4bc4;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: backButtonAnimation 0.9s ease;
+}
+
+.back-btn:hover {
+  background: #6c5ce7;
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(91, 75, 196, 0.30);
+}
+
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes slideDown {
+
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes backButtonAnimation {
+
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.90);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+@keyframes phaseAppear {
+
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+@keyframes arrowPulse {
+
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+  .container {
+    width: 92%;
+  }
+
+  .page-header {
+    padding: 28px 15px;
+  }
+
+  .page-header h1 {
+    font-size: 26px;
+  }
+
+  .page-header p {
+    font-size: 14px;
+  }
+
+  .note-card {
+    padding: 20px;
+  }
+
+  .note-card h2 {
+    font-size: 20px;
+  }
+
+
+  /* Mobile Spiral Diagram */
+
+  .spiral-diagram {
+    width: 100%;
+    height: 550px;
+  }
+
+  .spiral-diagram::before {
+    width: 350px;
+    height: 350px;
+  }
+
+  .spiral-diagram::after {
+    width: 220px;
+    height: 220px;
+  }
+
+  .spiral-center {
+    width: 85px;
+    height: 85px;
+    font-size: 12px;
+  }
+
+  .phase {
+    width: 140px;
+    min-height: 100px;
+    padding: 10px;
+  }
+
+  .phase b {
+    font-size: 14px;
+  }
+
+  .phase small {
+    font-size: 11px;
+  }
+
+  .phase-1 {
+    top: 15px;
+    left: 0;
+  }
+
+  .phase-2 {
+    top: 15px;
+    right: 0;
+  }
+
+  .phase-3 {
+    bottom: 15px;
+    right: 0;
+  }
+
+  .phase-4 {
+    bottom: 15px;
+    left: 0;
+  }
+
+  .arrow-1 {
+    top: 145px;
+    left: 45%;
+  }
+
+  .arrow-2 {
+    top: 260px;
+    right: 15px;
+  }
+
+  .arrow-3 {
+    bottom: 140px;
+    left: 43%;
+  }
+
+  .arrow-4 {
+    top: 260px;
+    left: 15px;
+  }
+
+  .cycle-note {
+    font-size: 14px;
+  }
+
+  .summary-box {
+    padding: 20px;
+  }
+
+  .back-btn {
+    width: 100%;
+    font-size: 14px;
+  }
+
+}

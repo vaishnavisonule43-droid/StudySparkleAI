@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Python Object-Oriented Programming</title>
+
+  <link rel="stylesheet" href="../css/python-topic.css">
+</head>
+
+<body>
+
+<div class="notes-container">
+
+  <h1>🐍 Object-Oriented Programming in Python</h1>
+
+  <div class="notes-card">
+
+    <h2>📘 What is OOP?</h2>
+
+    <p>
+      OOP stands for <strong>Object-Oriented Programming</strong>.
+      It is a programming approach based on objects and classes.
+    </p>
+
+    <p>
+      In OOP, data and functions are combined together inside objects.
+      Python supports object-oriented programming.
+    </p>
+
+    <div class="example-box">
+      <strong>Simple Example:</strong>
+
+      <pre>
+class Student:
+    name = "Vaishnavi"
+
+student1 = Student()
+
+print(student1.name)
+      </pre>
+    </div>
+
+
+    <h2>⭐ What is a Class?</h2>
+
+    <p>
+      A class is a blueprint or template used to create objects.
+      It defines the properties and behaviour of objects.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+class Student:
+    name = "Vaishnavi"
+    course = "BCA"
+      </pre>
+    </div>
+
+
+    <h2>📦 What is an Object?</h2>
+
+    <p>
+      An object is an instance of a class.
+      Objects are created using a class.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+class Student:
+    name = "Vaishnavi"
+
+student1 = Student()
+
+print(student1.name)
+      </pre>
+    </div>
+
+
+    <h2>🔗 Class and Object Example</h2>
+
+    <div class="example-box">
+      <pre>
+class Student:
+    name = "Vaishnavi"
+    age = 18
+
+student1 = Student()
+
+print(student1.name)
+print(student1.age)
+      </pre>
+    </div>
+
+
+    <h2>⚙️ The __init__() Method</h2>
+
+    <p>
+      The <strong>__init__()</strong> method is a special method in Python.
+      It is automatically called when a new object is created.
+    </p>
+
+    <p>
+      It is commonly used to initialize object data.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+class Student:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+student1 = Student("Vaishnavi", 18)
+
+print(student1.name)
+print(student1.age)
+      </pre>
+    </div>
+
+
+    <h2>👤 What is self?</h2>
+
+    <p>
+      <strong>self</strong> refers to the current object of the class.
+      It is used to access variables and methods belonging to that object.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+student1 = Student("Vaishnavi")
+
+print(student1.name)
+      </pre>
+    </div>
+
+
+    <h2>🔧 Methods in a Class</h2>
+
+    <p>
+      A method is a function defined inside a class.
+      It describes an action that an object can perform.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+class Student:
+
+    def show(self):
+        print("Student is studying")
+
+student1 = Student()
+
+student1.show()
+      </pre>
+    </div>
+
+
+    <h2>📊 Attributes</h2>
+
+    <p>
+      Attributes are variables that store information about an object.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+class Student:
+
+    def __init__(self, name, course):
+        self.name = name
+        self.course = course
+
+student1 = Student("Vaishnavi", "BCA")
+
+print(student1.name)
+print(student1.course)
+      </pre>
+    </div>
+
+
+    <h2>🧩 Main Concepts of OOP</h2>
+
+    <p>
+      The four main concepts of Object-Oriented Programming are:
+    </p>
+
+    <ul>
+      <li>Encapsulation</li>
+      <li>Inheritance</li>
+      <li>Polymorphism</li>
+      <li>Abstraction</li>
+    </ul>
+
+
+    <h2>🔒 1. Encapsulation</h2>
+
+    <p>
+      Encapsulation means combining data and methods inside a class
+      and controlling access to the data.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+    def show(self):
+        print(self.name)
+
+student1 = Student("Vaishnavi")
+
+student1.show()
+      </pre>
+    </div>
+
+
+    <h2>👨‍👩‍👧 2. Inheritance</h2>
+
+    <p>
+      Inheritance allows one class to use the properties and methods
+      of another class.
+    </p>
+
+    <p>
+      The existing class is called the parent class and the new class
+      is called the child class.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+class Animal:
+
+    def sound(self):
+        print("Animal makes sound")
+
+
+class Dog(Animal):
+
+    def bark(self):
+        print("Dog barks")
+
+
+dog1 = Dog()
+
+dog1.sound()
+dog1.bark()
+      </pre>
+    </div>
+
+
+    <h2>🔄 3. Polymorphism</h2>
+
+    <p>
+      Polymorphism means "many forms".
+      It allows the same method name to behave differently
+      for different objects.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+class Dog:
+
+    def sound(self):
+        print("Dog barks")
+
+
+class Cat:
+
+    def sound(self):
+        print("Cat meows")
+
+
+dog = Dog()
+cat = Cat()
+
+dog.sound()
+cat.sound()
+      </pre>
+    </div>
+
+
+    <h2>🎭 4. Abstraction</h2>
+
+    <p>
+      Abstraction means hiding unnecessary implementation details
+      and showing only the important features to the user.
+    </p>
+
+    <p>
+      For example, when we use a mobile phone, we use its buttons
+      and applications without knowing all the internal working.
+    </p>
+
+
+    <h2>🏗️ Constructor</h2>
+
+    <p>
+      A constructor is a special method used to initialize an object.
+      In Python, <strong>__init__()</strong> is commonly used as a constructor.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+student1 = Student("Vaishnavi")
+
+print(student1.name)
+      </pre>
+    </div>
+
+
+    <h2>👨‍👩‍👧 Parent and Child Class</h2>
+
+    <table>
+      <tr>
+        <th>Term</th>
+        <th>Meaning</th>
+      </tr>
+
+      <tr>
+        <td>Parent Class</td>
+        <td>The class whose properties are inherited.</td>
+      </tr>
+
+      <tr>
+        <td>Child Class</td>
+        <td>The class that inherits properties and methods.</td>
+      </tr>
+
+      <tr>
+        <td>Object</td>
+        <td>Instance of a class.</td>
+      </tr>
+
+      <tr>
+        <td>Method</td>
+        <td>Function defined inside a class.</td>
+      </tr>
+
+      <tr>
+        <td>Attribute</td>
+        <td>Variable associated with an object.</td>
+      </tr>
+    </table>
+
+
+    <h2>📊 Advantages of OOP</h2>
+
+    <ul>
+      <li>Code can be reused.</li>
+      <li>Programs are easier to organize.</li>
+      <li>Large programs can be divided into classes.</li>
+      <li>Data can be protected using encapsulation.</li>
+      <li>Inheritance reduces repeated code.</li>
+      <li>Programs become easier to maintain.</li>
+    </ul>
+
+
+    <h2>💻 Practical Example</h2>
+
+    <p>
+      The following example creates a Student class and stores
+      student information.
+    </p>
+
+    <div class="example-box">
+      <pre>
+class Student:
+
+    def __init__(self, name, course, marks):
+        self.name = name
+        self.course = course
+        self.marks = marks
+
+    def display(self):
+        print("Name:", self.name)
+        print("Course:", self.course)
+        print("Marks:", self.marks)
+
+
+student1 = Student("Vaishnavi", "BCA", 85)
+
+student1.display()
+      </pre>
+    </div>
+
+
+    <h2>📚 Real-Life Examples of OOP</h2>
+
+    <ul>
+      <li>A Student can be an object.</li>
+      <li>A Car can be an object.</li>
+      <li>A Bank Account can be an object.</li>
+      <li>A Product can be an object.</li>
+      <li>An Employee can be an object.</li>
+    </ul>
+
+
+    <h2>📋 OOP Concepts Summary</h2>
+
+    <table>
+      <tr>
+        <th>Concept</th>
+        <th>Meaning</th>
+      </tr>
+
+      <tr>
+        <td>Class</td>
+        <td>Blueprint for creating objects.</td>
+      </tr>
+
+      <tr>
+        <td>Object</td>
+        <td>Instance of a class.</td>
+      </tr>
+
+      <tr>
+        <td>Encapsulation</td>
+        <td>Combining data and methods together.</td>
+      </tr>
+
+      <tr>
+        <td>Inheritance</td>
+        <td>Using properties of another class.</td>
+      </tr>
+
+      <tr>
+        <td>Polymorphism</td>
+        <td>Same method with different behaviours.</td>
+      </tr>
+
+      <tr>
+        <td>Abstraction</td>
+        <td>Hiding unnecessary implementation details.</td>
+      </tr>
+    </table>
+
+
+    <h2>📌 Quick Revision</h2>
+
+    <ul>
+      <li>OOP stands for Object-Oriented Programming.</li>
+      <li>A class is a blueprint for creating objects.</li>
+      <li>An object is an instance of a class.</li>
+      <li>__init__() is used to initialize object data.</li>
+      <li>self refers to the current object.</li>
+      <li>A method is a function inside a class.</li>
+      <li>Encapsulation combines data and methods.</li>
+      <li>Inheritance allows code reuse from another class.</li>
+      <li>Polymorphism means many forms.</li>
+      <li>Abstraction hides unnecessary implementation details.</li>
+    </ul>
+
+
+    <button class="back-btn" onclick="location.href='python-notes.html'">
+      ⬅️ Back to Python Notes
+    </button>
+
+  </div>
+
+</div>
+
+</body>
+</html>

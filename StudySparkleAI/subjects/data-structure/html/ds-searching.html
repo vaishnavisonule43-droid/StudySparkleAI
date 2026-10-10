@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Searching - Data Structure</title>
+
+  <link rel="stylesheet" href="../css/data-structure.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>🔍 Searching</h1>
+    <p>Learn the basic concepts of Searching in Data Structure.</p>
+  </header>
+
+
+  <!-- Main Content -->
+  <div class="notes-container">
+
+    <!-- Introduction -->
+    <div class="note-card">
+
+      <h2>What is Searching?</h2>
+
+      <p>
+        Searching is the process of finding a particular element
+        from a collection of data.
+      </p>
+
+      <div class="definition">
+        <strong>Definition:</strong>
+        Searching is an operation used to find the location of
+        a specific element in a data structure.
+      </div>
+
+      <h3>Example</h3>
+
+      <p>
+        Suppose an array contains:
+      </p>
+
+      <div class="example-box">
+        10, 20, 30, 40, 50
+      </div>
+
+      <p>
+        If we want to find 30, the searching operation checks
+        the elements until 30 is found.
+      </p>
+
+    </div>
+
+
+    <!-- Types of Searching -->
+    <div class="note-card">
+
+      <h2>Types of Searching</h2>
+
+      <h3>1. Linear Search</h3>
+
+      <p>
+        Linear Search checks each element one by one from the
+        beginning until the required element is found.
+      </p>
+
+      <div class="example-box">
+        Example: Searching 30 in
+        10, 20, 30, 40, 50
+        <br><br>
+        10 → 20 → <strong>30 Found</strong>
+      </div>
+
+
+      <h3>2. Binary Search</h3>
+
+      <p>
+        Binary Search works on a sorted array. It repeatedly
+        divides the search area into two halves.
+      </p>
+
+      <div class="example-box">
+        Example: Searching 40 in
+        10, 20, 30, 40, 50
+        <br><br>
+        The middle element is checked first and the search
+        continues in the required half.
+      </div>
+
+    </div>
+
+
+    <!-- Linear Search -->
+    <div class="note-card">
+
+      <h2>Linear Search</h2>
+
+      <p>
+        Linear Search compares the target element with every
+        element one by one.
+      </p>
+
+      <h3>Steps</h3>
+
+      <ol>
+        <li>Start from the first element.</li>
+        <li>Compare the element with the target.</li>
+        <li>If the element matches, searching is completed.</li>
+        <li>If it does not match, move to the next element.</li>
+        <li>Repeat until the element is found or the array ends.</li>
+      </ol>
+
+    </div>
+
+
+    <!-- Binary Search -->
+    <div class="note-card">
+
+      <h2>Binary Search</h2>
+
+      <p>
+        Binary Search is a faster searching technique that works
+        only on sorted data.
+      </p>
+
+      <h3>Steps</h3>
+
+      <ol>
+        <li>Find the middle element.</li>
+        <li>Compare the middle element with the target.</li>
+        <li>If it matches, the element is found.</li>
+        <li>If the target is smaller, search the left half.</li>
+        <li>If the target is larger, search the right half.</li>
+        <li>Repeat until the element is found.</li>
+      </ol>
+
+    </div>
+
+
+    <!-- Comparison -->
+    <div class="note-card">
+
+      <h2>Linear Search vs Binary Search</h2>
+
+      <table>
+
+        <tr>
+          <th>Feature</th>
+          <th>Linear Search</th>
+          <th>Binary Search</th>
+        </tr>
+
+        <tr>
+          <td>Data</td>
+          <td>Sorted or Unsorted</td>
+          <td>Must be Sorted</td>
+        </tr>
+
+        <tr>
+          <td>Method</td>
+          <td>Checks one by one</td>
+          <td>Divides into halves</td>
+        </tr>
+
+        <tr>
+          <td>Speed</td>
+          <td>Slower</td>
+          <td>Faster</td>
+        </tr>
+
+        <tr>
+          <td>Time Complexity</td>
+          <td>O(n)</td>
+          <td>O(log n)</td>
+        </tr>
+
+      </table>
+
+    </div>
+
+
+    <!-- Searching Animation -->
+    <div class="note-card">
+
+      <h2>Searching Animation</h2>
+
+      <p>
+        Enter a number and click Search to see how the element
+        is searched in the array.
+      </p>
+
+      <div class="search-animation">
+
+        <h2>Interactive Searching</h2>
+
+        <div
+          id="searchArray"
+          class="search-array"
+        >
+        </div>
+
+        <div class="search-controls">
+
+          <input
+            type="number"
+            id="searchValue"
+            placeholder="Enter value"
+          />
+
+          <button onclick="linearSearch()">
+            Linear Search
+          </button>
+
+          <button onclick="binarySearch()">
+            Binary Search
+          </button>
+
+          <button onclick="resetSearch()">
+            Reset
+          </button>
+
+        </div>
+
+        <p
+          id="searchMessage"
+          class="search-message"
+        >
+          Enter a value to start searching.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Applications -->
+    <div class="note-card">
+
+      <h2>Applications of Searching</h2>
+
+      <ul>
+        <li>Searching a contact in a phone.</li>
+        <li>Finding a record in a database.</li>
+        <li>Searching a file in a computer.</li>
+        <li>Finding products in an online store.</li>
+        <li>Searching information in large data sets.</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Advantages -->
+    <div class="note-card">
+
+      <h2>Advantages of Searching</h2>
+
+      <ul>
+        <li>Helps to find required data quickly.</li>
+        <li>Useful for managing large amounts of data.</li>
+        <li>Different searching methods can be used according to the data.</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Back Button -->
+    <button
+      class="back-btn"
+      onclick="location.href = 'ds-notes.html'"
+    >
+      ⬅️ Back to Data Structure Notes
+    </button>
+
+  </div>
+
+
+  <!-- Searching JavaScript -->
+  <script>
+
+    const searchData = [10, 20, 30, 40, 50];
+
+    const searchArray =
+      document.getElementById("searchArray");
+
+    const searchMessage =
+      document.getElementById("searchMessage");
+
+
+    function displaySearchArray() {
+
+      searchArray.innerHTML = "";
+
+      searchData.forEach((value, index) => {
+
+        const element =
+          document.createElement("div");
+
+        element.className = "search-element";
+
+        element.textContent = value;
+
+        element.id = "search-" + index;
+
+        searchArray.appendChild(element);
+
+      });
+
+    }
+
+
+    function linearSearch() {
+
+      resetSearch(false);
+
+      const target =
+        parseInt(
+          document.getElementById("searchValue").value
+        );
+
+      if (isNaN(target)) {
+
+        searchMessage.textContent =
+          "Please enter a value.";
+
+        return;
+      }
+
+      let index = 0;
+
+      searchMessage.textContent =
+        "Linear Search started...";
+
+      const interval =
+        setInterval(() => {
+
+          if (index >= searchData.length) {
+
+            clearInterval(interval);
+
+            searchMessage.textContent =
+              target + " was not found.";
+
+            return;
+          }
+
+          const element =
+            document.getElementById(
+              "search-" + index
+            );
+
+          element.classList.add("active");
+
+          if (searchData[index] === target) {
+
+            element.classList.remove("active");
+
+            element.classList.add("found");
+
+            clearInterval(interval);
+
+            searchMessage.textContent =
+              target + " found at position " +
+              (index + 1) + ".";
+
+            return;
+          }
+
+          setTimeout(() => {
+            element.classList.remove("active");
+          }, 350);
+
+          index++;
+
+        }, 600);
+
+    }
+
+
+    function binarySearch() {
+
+      resetSearch(false);
+
+      const target =
+        parseInt(
+          document.getElementById("searchValue").value
+        );
+
+      if (isNaN(target)) {
+
+        searchMessage.textContent =
+          "Please enter a value.";
+
+        return;
+      }
+
+      let left = 0;
+      let right = searchData.length - 1;
+
+      searchMessage.textContent =
+        "Binary Search started...";
+
+      const interval =
+        setInterval(() => {
+
+          if (left > right) {
+
+            clearInterval(interval);
+
+            searchMessage.textContent =
+              target + " was not found.";
+
+            return;
+          }
+
+          const middle =
+            Math.floor((left + right) / 2);
+
+          const element =
+            document.getElementById(
+              "search-" + middle
+            );
+
+          element.classList.add("active");
+
+          if (searchData[middle] === target) {
+
+            element.classList.remove("active");
+
+            element.classList.add("found");
+
+            clearInterval(interval);
+
+            searchMessage.textContent =
+              target + " found at position " +
+              (middle + 1) + ".";
+
+            return;
+          }
+
+          if (target < searchData[middle]) {
+
+            right = middle - 1;
+
+          } else {
+
+            left = middle + 1;
+
+          }
+
+          setTimeout(() => {
+            element.classList.remove("active");
+          }, 400);
+
+        }, 900);
+
+    }
+
+
+    function resetSearch(showMessage = true) {
+
+      searchData.forEach((value, index) => {
+
+        const element =
+          document.getElementById(
+            "search-" + index
+          );
+
+        if (element) {
+
+          element.classList.remove("active");
+          element.classList.remove("found");
+          element.classList.remove("highlight");
+
+        }
+
+      });
+
+      if (showMessage) {
+
+        searchMessage.textContent =
+          "Enter a value to start searching.";
+
+      }
+
+    }
+
+
+    displaySearchArray();
+
+  </script>
+
+</body>
+</html>

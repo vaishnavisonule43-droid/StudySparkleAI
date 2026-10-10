@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Loops | StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/java-topic.css">
+</head>
+
+<body>
+
+    <header class="topic-header">
+        <h1>Java Loops</h1>
+        <p>Java Programming Notes | StudySpark AI</p>
+    </header>
+
+    <main class="topic-container">
+
+        <section class="topic-card">
+            <h2>1. What Is a Loop?</h2>
+            <p>
+                A loop is used to execute a block of code repeatedly
+                while a condition is satisfied or for a specified
+                number of iterations.
+            </p>
+
+            <div class="important-box">
+                <h3>Types of Loops in Java</h3>
+                <ul>
+                    <li>for loop</li>
+                    <li>while loop</li>
+                    <li>do-while loop</li>
+                    <li>Enhanced for loop (for-each)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>2. for Loop</h2>
+            <p>
+                A for loop is useful when we know how many times
+                we want to repeat a block of code.
+            </p>
+
+            <div class="important-box">
+                <h3>Syntax</h3>
+                <p>for (initialization; condition; update) { }</p>
+            </div>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(i);
+        }
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>3. while Loop</h2>
+            <p>
+                A while loop checks the condition before executing
+                the loop body. If the condition is false initially,
+                the body will not execute.
+            </p>
+
+            <div class="important-box">
+                <h3>Syntax</h3>
+                <p>while (condition) { }</p>
+            </div>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int i = 1;
+
+        while (i <= 5) {
+            System.out.println(i);
+            i++;
+        }
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>4. do-while Loop</h2>
+            <p>
+                A do-while loop executes the loop body at least once
+                because the condition is checked after the body.
+            </p>
+
+            <div class="important-box">
+                <h3>Syntax</h3>
+                <p>do { } while (condition);</p>
+            </div>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int i = 1;
+
+        do {
+            System.out.println(i);
+            i++;
+        } while (i <= 5);
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>5. Enhanced for Loop</h2>
+            <p>
+                The enhanced for loop, also called the for-each loop,
+                is used to access elements of an array or collection
+                one by one.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30};
+
+        for (int number : numbers) {
+            System.out.println(number);
+        }
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>10</p>
+                <p>20</p>
+                <p>30</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>6. break Statement</h2>
+            <p>
+                The break statement immediately terminates the
+                nearest enclosing loop.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) {
+                break;
+            }
+
+            System.out.println(i);
+        }
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>1</p>
+                <p>2</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>7. continue Statement</h2>
+            <p>
+                The continue statement skips the remaining statements
+                in the current iteration and moves to the next iteration.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) {
+                continue;
+            }
+
+            System.out.println(i);
+        }
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>1</p>
+                <p>2</p>
+                <p>4</p>
+                <p>5</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>8. Difference Between while and do-while</h2>
+
+            <p>
+                <strong>while loop:</strong> Checks the condition
+                before executing the loop body. It may execute zero times.
+            </p>
+
+            <p>
+                <strong>do-while loop:</strong> Checks the condition
+                after executing the body. It executes at least once.
+            </p>
+        </section>
+
+        <section class="topic-card">
+            <h2>9. Infinite Loop</h2>
+            <p>
+                An infinite loop continues forever when its stopping
+                condition never becomes false, unless the program
+                is interrupted or exits another way.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>while (true) {
+    System.out.println("Running");
+}</code></pre>
+            </div>
+
+            <p>
+                <strong>Note:</strong> This example keeps printing
+                until the program is stopped.
+            </p>
+        </section>
+
+        <section class="topic-card">
+            <h2>10. Importance of Loops</h2>
+            <div class="important-box">
+                <ul>
+                    <li>They reduce repeated code.</li>
+                    <li>They help process arrays and collections.</li>
+                    <li>They perform repetitive calculations.</li>
+                    <li>They make programs easier to manage.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>Topics Covered</h2>
+            <div class="important-box">
+                <ul>
+                    <li>Definition and types of loops</li>
+                    <li>for loop</li>
+                    <li>while loop</li>
+                    <li>do-while loop</li>
+                    <li>Enhanced for loop</li>
+                    <li>break statement</li>
+                    <li>continue statement</li>
+                    <li>Difference between while and do-while</li>
+                    <li>Infinite loop</li>
+                    <li>Java examples and outputs</li>
+                </ul>
+            </div>
+        </section>
+
+        <button class="back-btn"
+            onclick="location.href='java-notes.html'">
+            ⬅ Back to Java Topics
+        </button>
+
+    </main>
+
+    <script>
+        async function copyJavaCode(button) {
+            const codeBox = button.closest(".code-box");
+            const code = codeBox.querySelector("pre code").innerText;
+            const status = codeBox.querySelector(".copy-status");
+
+            try {
+                await navigator.clipboard.writeText(code);
+
+                button.textContent = "Copied!";
+                status.textContent = "Code copied successfully!";
+
+                setTimeout(() => {
+                    button.textContent = "Copy Code";
+                    status.textContent = "";
+                }, 2000);
+
+            } catch (error) {
+                status.textContent =
+                    "Copy unavailable. Please copy the code manually.";
+            }
+        }
+    </script>
+
+</body>
+</html>

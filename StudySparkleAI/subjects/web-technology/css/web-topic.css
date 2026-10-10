@@ -1,0 +1,745 @@
+/* ========================================
+   StudySpark AI - Web Technology Topic Pages
+   Complete CSS with Animations
+======================================== */
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f3ff;
+    color: #272343;
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.topic-header {
+    background: linear-gradient(
+        -45deg,
+        #6c3ce9,
+        #a855f7,
+        #7c3aed,
+        #9333ea
+    );
+
+    background-size: 300% 300%;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    animation: gradientMove 8s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.topic-header h1 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: headingAppear 0.8s ease-out;
+}
+
+.topic-header p {
+    font-size: 16px;
+    opacity: 0.95;
+    animation: headingAppear 1s ease-out;
+}
+
+/* HEADER GRADIENT ANIMATION */
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* HEADER TEXT ANIMATION */
+
+@keyframes headingAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.topic-container {
+    max-width: 1000px;
+    width: 92%;
+    margin: 35px auto;
+    animation: pageFadeIn 0.8s ease-out;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   TOPIC CARDS
+======================================== */
+
+.topic-card {
+    position: relative;
+    background: #ffffff;
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    border: 1px solid #ede9fe;
+    border-left: 5px solid #7c3aed;
+
+    box-shadow: 0 5px 18px rgba(70, 40, 130, 0.08);
+
+    animation: cardAppear 0.7s ease both;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* ANIMATED LEFT SIDE BORDER */
+
+.topic-card::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: -5px;
+    width: 5px;
+
+    background: linear-gradient(
+        180deg,
+        #6c3ce9,
+        #a855f7,
+        #d8b4fe,
+        #7c3aed
+    );
+
+    background-size: 100% 250%;
+    border-radius: 10px;
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    animation: sideBorderGlow 3s ease infinite;
+}
+
+/* BORDER ANIMATION */
+
+@keyframes sideBorderGlow {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* SHOW BORDER ON HOVER */
+
+.topic-card:hover::before {
+    opacity: 1;
+}
+
+/* CARD APPEAR ANIMATION */
+
+.topic-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.topic-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.topic-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.topic-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.topic-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.topic-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.topic-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CARD HOVER EFFECT */
+
+.topic-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(108, 60, 233, 0.15);
+    border-left-color: #a855f7;
+}
+
+/* TOPIC HEADINGS */
+
+.topic-card h2 {
+    color: #6d28d9;
+    font-size: 24px;
+    margin-top: 25px;
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+.topic-card h2:first-child {
+    margin-top: 0;
+}
+
+.topic-card h3 {
+    color: #7c3aed;
+    font-size: 19px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+/* PARAGRAPHS */
+
+.topic-card p {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #44405e;
+}
+
+/* LISTS */
+
+.topic-card ul,
+.topic-card ol {
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+.topic-card li {
+    margin-bottom: 8px;
+    padding-left: 3px;
+}
+
+.topic-card li::marker {
+    color: #7c3aed;
+}
+
+/* BOLD TEXT */
+
+.topic-card strong {
+    color: #5b21b6;
+}
+
+/* ========================================
+   CODE BOX
+======================================== */
+
+.code-box {
+    position: relative;
+    background: #1e1e2f;
+    color: #e9e7ff;
+
+    padding: 55px 22px 22px;
+    margin: 18px 0;
+    border-radius: 12px;
+    border: 1px solid #39364f;
+
+    overflow-x: auto;
+
+    box-shadow: 0 6px 18px rgba(20, 15, 40, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.code-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(20, 15, 40, 0.18);
+}
+
+/* CODE TOOLBAR */
+
+.code-toolbar {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* CODE TEXT */
+
+.code-box pre {
+    margin: 0;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    white-space: pre;
+    min-width: max-content;
+}
+
+.code-box code {
+    font-family: Consolas, "Courier New", monospace;
+}
+
+/* ========================================
+   COPY CODE BUTTON
+======================================== */
+
+.copy-btn {
+    background: #7c3aed;
+    color: #ffffff;
+    border: 1px solid #a78bfa;
+
+    padding: 7px 13px;
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: #9333ea;
+    transform: translateY(-2px);
+}
+
+.copy-btn:active {
+    transform: scale(0.96);
+}
+
+.copy-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* COPY STATUS MESSAGE */
+
+.copy-status {
+    color: #d8b4fe;
+    font-size: 12px;
+}
+
+/* ========================================
+   IMPORTANT BOX
+======================================== */
+
+.important-box {
+    background: linear-gradient(
+        135deg,
+        #f3e8ff,
+        #faf5ff
+    );
+
+    border: 1px solid #e9d5ff;
+    border-left: 4px solid #7c3aed;
+    border-radius: 12px;
+
+    padding: 20px;
+    margin: 18px 0;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.important-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(108, 60, 233, 0.10);
+}
+
+.important-box h3 {
+    color: #6d28d9;
+    font-size: 19px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.important-box p {
+    margin-bottom: 10px;
+}
+
+.important-box ul,
+.important-box ol {
+    padding-left: 22px;
+}
+
+/* ========================================
+   EXAMPLE BOX
+======================================== */
+
+.example-box {
+    background: #faf5ff;
+    border-left: 4px solid #a855f7;
+    border-radius: 10px;
+
+    padding: 16px 18px;
+    margin: 18px 0;
+
+    color: #44405e;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.example-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 60, 233, 0.10);
+}
+
+/* ========================================
+   TABLES
+======================================== */
+
+.topic-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    background: white;
+}
+
+.topic-card th,
+.topic-card td {
+    border: 1px solid #e5ddfa;
+    padding: 12px;
+    text-align: left;
+}
+
+.topic-card th {
+    background: #7c3aed;
+    color: white;
+}
+
+.topic-card tr:nth-child(even) {
+    background: #f5f3ff;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.back-btn,
+.next-btn {
+    display: inline-block;
+    margin: 30px 8px 5px 0;
+    padding: 13px 28px;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #9333ea
+    );
+
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+
+    box-shadow: 0 5px 14px rgba(108, 60, 233, 0.20);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.back-btn:hover,
+.next-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 9px 20px rgba(108, 60, 233, 0.30);
+}
+
+.back-btn:active,
+.next-btn:active {
+    transform: scale(0.97);
+}
+
+.back-btn:focus-visible,
+.next-btn:focus-visible {
+    outline: 3px solid #c4b5fd;
+    outline-offset: 4px;
+}
+
+/* ========================================
+   LINKS
+======================================== */
+
+.topic-card a {
+    color: #7c3aed;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.topic-card a:hover {
+    color: #4c1d95;
+    text-decoration: underline;
+}
+
+/* ========================================
+   TEXT SELECTION
+======================================== */
+
+::selection {
+    background: #ddd6fe;
+    color: #4c1d95;
+}
+
+/* ========================================
+   CODE BOX SCROLLBAR
+======================================== */
+
+.code-box::-webkit-scrollbar {
+    height: 8px;
+}
+
+.code-box::-webkit-scrollbar-track {
+    background: #2b2940;
+    border-radius: 10px;
+}
+
+.code-box::-webkit-scrollbar-thumb {
+    background: #8b5cf6;
+    border-radius: 10px;
+}
+
+.code-box::-webkit-scrollbar-thumb:hover {
+    background: #a78bfa;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - TABLET
+======================================== */
+
+@media (max-width: 768px) {
+    .topic-header {
+        padding: 35px 16px;
+    }
+
+    .topic-header h1 {
+        font-size: 28px;
+    }
+
+    .topic-container {
+        width: 94%;
+        margin: 24px auto;
+    }
+
+    .topic-card {
+        padding: 22px;
+        margin-bottom: 20px;
+    }
+
+    .topic-card h2 {
+        font-size: 21px;
+    }
+
+    .topic-card p,
+    .topic-card li {
+        font-size: 15px;
+    }
+
+    .code-box {
+        padding: 55px 16px 16px;
+    }
+
+    .code-box pre {
+        font-size: 13px;
+    }
+
+    .important-box {
+        padding: 17px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+    .topic-header {
+        padding: 28px 14px;
+    }
+
+    .topic-header h1 {
+        font-size: 24px;
+    }
+
+    .topic-header p {
+        font-size: 14px;
+    }
+
+    .topic-container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .topic-card {
+        padding: 17px;
+        border-radius: 12px;
+    }
+
+    .topic-card h2 {
+        font-size: 19px;
+    }
+
+    .topic-card h3 {
+        font-size: 17px;
+    }
+
+    .topic-card p,
+    .topic-card li {
+        font-size: 14px;
+    }
+
+    .important-box {
+        padding: 14px;
+    }
+
+    .example-box {
+        padding: 13px;
+    }
+
+    .code-box {
+        padding: 52px 12px 14px;
+    }
+
+    .code-box pre {
+        font-size: 12px;
+    }
+
+    .copy-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .copy-status {
+        font-size: 11px;
+    }
+
+    .back-btn,
+    .next-btn {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+
+    .topic-card th,
+    .topic-card td {
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+/* HTML Notes - Back Button Fix */
+
+.topic-card .back-btn {
+    display: inline-block;
+    margin: 30px 8px 5px 0;
+    padding: 13px 28px;
+
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    color: #ffffff !important;
+
+    border: none;
+    border-radius: 30px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none !important;
+    text-align: center;
+
+    box-shadow: 0 5px 14px rgba(108, 60, 233, 0.20);
+    transition: all 0.3s ease;
+}
+
+.topic-card .back-btn:hover {
+    background: linear-gradient(135deg, #6c3ce9, #a855f7);
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px rgba(108, 60, 233, 0.30);
+}
+
+.topic-card .back-btn:active {
+    transform: scale(0.97);
+}

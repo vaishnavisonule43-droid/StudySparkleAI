@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Python Strings</title>
+
+  <link rel="stylesheet" href="../css/python-topic.css">
+</head>
+
+<body>
+
+<div class="notes-container">
+
+  <h1>🐍 Python Strings</h1>
+
+  <div class="notes-card">
+
+    <h2>📘 What is a String?</h2>
+
+    <p>
+      A string is a sequence of characters used to store text in Python.
+      Strings can contain letters, numbers, spaces and special characters.
+    </p>
+
+    <p>
+      Strings can be written using single quotes, double quotes or triple quotes.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+name = "Vaishnavi"
+course = 'BCA'
+message = """Welcome to Python"""
+      </pre>
+    </div>
+
+
+    <h2>⭐ Creating a String</h2>
+
+    <p>
+      A string can be created by placing text inside quotation marks.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+name = "Python"
+college = 'Sangamner College'
+      </pre>
+    </div>
+
+
+    <h2>🔢 String Indexing</h2>
+
+    <p>
+      Each character in a string has a position called an index.
+      Python uses zero-based indexing, so the first character has index 0.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+word = "Python"
+
+print(word[0])
+print(word[1])
+print(word[5])
+      </pre>
+
+      <p>
+        The characters are accessed using their index positions.
+      </p>
+    </div>
+
+
+    <h2>🔙 Negative Indexing</h2>
+
+    <p>
+      Python also supports negative indexing.
+      The last character has index -1, the second-last has index -2, and so on.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+word = "Python"
+
+print(word[-1])
+print(word[-2])
+      </pre>
+    </div>
+
+
+    <h2>✂️ String Slicing</h2>
+
+    <p>
+      String slicing is used to get a part of a string.
+      The general form is start:end.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+word = "Python"
+
+print(word[0:3])
+print(word[2:6])
+      </pre>
+
+      <p>
+        The ending index is not included in the selected part.
+      </p>
+    </div>
+
+
+    <h2>📏 Finding String Length</h2>
+
+    <p>
+      The <strong>len()</strong> function is used to find the number
+      of characters in a string.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+name = "Python"
+
+print(len(name))
+      </pre>
+    </div>
+
+
+    <h2>➕ Joining Strings</h2>
+
+    <p>
+      Two or more strings can be joined using the + operator.
+      This operation is called string concatenation.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+first_name = "Vaishnavi"
+last_name = "Sonule"
+
+full_name = first_name + " " + last_name
+
+print(full_name)
+      </pre>
+    </div>
+
+
+    <h2>🔁 Repeating Strings</h2>
+
+    <p>
+      A string can be repeated using the * operator.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+text = "Hi "
+
+print(text * 3)
+      </pre>
+    </div>
+
+
+    <h2>🔤 Changing Case of Strings</h2>
+
+    <p>
+      Python provides several methods to change the case of characters
+      in a string.
+    </p>
+
+    <table>
+      <tr>
+        <th>Method</th>
+        <th>Purpose</th>
+      </tr>
+
+      <tr>
+        <td>upper()</td>
+        <td>Converts characters to uppercase.</td>
+      </tr>
+
+      <tr>
+        <td>lower()</td>
+        <td>Converts characters to lowercase.</td>
+      </tr>
+
+      <tr>
+        <td>title()</td>
+        <td>Converts the first character of each word to uppercase.</td>
+      </tr>
+
+      <tr>
+        <td>capitalize()</td>
+        <td>Converts the first character of the string to uppercase.</td>
+      </tr>
+    </table>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+text = "python programming"
+
+print(text.upper())
+print(text.lower())
+print(text.title())
+print(text.capitalize())
+      </pre>
+    </div>
+
+
+    <h2>🔍 Searching in a String</h2>
+
+    <p>
+      The <strong>find()</strong> method is used to find the position
+      of a substring inside a string.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+text = "Python Programming"
+
+print(text.find("Python"))
+      </pre>
+    </div>
+
+
+    <h2>🔄 Replacing String Content</h2>
+
+    <p>
+      The <strong>replace()</strong> method is used to replace one part
+      of a string with another.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+text = "I like C"
+
+new_text = text.replace("C", "Python")
+
+print(new_text)
+      </pre>
+    </div>
+
+
+    <h2>✂️ Removing Extra Spaces</h2>
+
+    <p>
+      The <strong>strip()</strong> method removes extra spaces from
+      the beginning and end of a string.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+text = "   Python   "
+
+print(text.strip())
+      </pre>
+    </div>
+
+
+    <h2>📋 Splitting a String</h2>
+
+    <p>
+      The <strong>split()</strong> method divides a string into a list
+      using a specified separator.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+text = "Python,C,DBMS"
+
+subjects = text.split(",")
+
+print(subjects)
+      </pre>
+    </div>
+
+
+    <h2>🔗 Joining String Values</h2>
+
+    <p>
+      The <strong>join()</strong> method combines multiple strings
+      into one string using a separator.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+subjects = ["Python", "C", "DBMS"]
+
+result = ", ".join(subjects)
+
+print(result)
+      </pre>
+    </div>
+
+
+    <h2>🔢 Checking String Content</h2>
+
+    <p>
+      Python provides different methods to check the contents of a string.
+    </p>
+
+    <table>
+      <tr>
+        <th>Method</th>
+        <th>Purpose</th>
+      </tr>
+
+      <tr>
+        <td>isalpha()</td>
+        <td>Checks whether all characters are alphabetic.</td>
+      </tr>
+
+      <tr>
+        <td>isdigit()</td>
+        <td>Checks whether all characters are digits.</td>
+      </tr>
+
+      <tr>
+        <td>isalnum()</td>
+        <td>Checks whether all characters are letters or numbers.</td>
+      </tr>
+
+      <tr>
+        <td>isspace()</td>
+        <td>Checks whether all characters are whitespace.</td>
+      </tr>
+    </table>
+
+
+    <h2>⚠️ Strings are Immutable</h2>
+
+    <p>
+      Strings in Python are immutable. This means that individual characters
+      of an existing string cannot be changed directly.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+text = "Python"
+
+# A new string can be created instead
+text = "Pythons"
+
+print(text)
+      </pre>
+    </div>
+
+
+    <h2>💻 Practical Example</h2>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+name = "Vaishnavi Sonule"
+
+print("Name:", name)
+print("Length:", len(name))
+print("Uppercase:", name.upper())
+print("Lowercase:", name.lower())
+      </pre>
+    </div>
+
+
+    <h2>📚 Common String Methods</h2>
+
+    <table>
+      <tr>
+        <th>Method</th>
+        <th>Use</th>
+      </tr>
+
+      <tr>
+        <td>upper()</td>
+        <td>Converts text to uppercase.</td>
+      </tr>
+
+      <tr>
+        <td>lower()</td>
+        <td>Converts text to lowercase.</td>
+      </tr>
+
+      <tr>
+        <td>strip()</td>
+        <td>Removes spaces from both ends.</td>
+      </tr>
+
+      <tr>
+        <td>replace()</td>
+        <td>Replaces text.</td>
+      </tr>
+
+      <tr>
+        <td>find()</td>
+        <td>Finds the position of text.</td>
+      </tr>
+
+      <tr>
+        <td>split()</td>
+        <td>Splits a string into parts.</td>
+      </tr>
+
+      <tr>
+        <td>join()</td>
+        <td>Joins multiple strings.</td>
+      </tr>
+
+      <tr>
+        <td>len()</td>
+        <td>Returns the length of a string.</td>
+      </tr>
+    </table>
+
+
+    <h2>📌 Quick Revision</h2>
+
+    <ul>
+      <li>A string is a sequence of characters.</li>
+      <li>Strings can be written using single or double quotes.</li>
+      <li>Python uses zero-based indexing.</li>
+      <li>Negative indexing starts from the end.</li>
+      <li>Slicing is used to get a part of a string.</li>
+      <li>len() returns the length of a string.</li>
+      <li>Strings can be joined using concatenation.</li>
+      <li>upper() and lower() change the case of text.</li>
+      <li>replace() replaces text in a string.</li>
+      <li>split() divides a string into parts.</li>
+      <li>Strings are immutable in Python.</li>
+    </ul>
+
+
+    <button class="back-btn" onclick="location.href='python-notes.html'">
+      ⬅️ Back to Python Notes
+    </button>
+
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore easy-to-understand study notes for programming, computer science, and other subjects with StudySpark AI."
+    />
+    <title>Study Notes | StudySpark AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/notes.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <a href="../../index.html" class="brand" aria-label="StudySpark AI Home">
+        <span class="brand-icon">S</span>
+        <span>StudySpark<span class="brand-highlight">AI</span></span>
+      </a>
+      <a href="../../index.html" class="home-link">
+        <span aria-hidden="true">←</span> Home
+      </a>
+    </nav>
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+        <div class="hero-content">
+          <span class="eyebrow">
+            <span class="eyebrow-dot"></span> YOUR LEARNING SPACE
+          </span>
+          <h1>
+            Learn Better.<br />
+            <span>Remember More.</span>
+          </h1>
+          <p class="hero-description">
+            Explore your subjects, understand concepts step by step, and make
+            your study time more productive with StudySpark AI.
+          </p>
+          <div class="hero-stats">
+            <div class="stat"><strong>13</strong> <span>Subjects</span></div>
+            <span class="stat-divider"></span>
+            <div class="stat"><strong>Easy</strong> <span>Learning</span></div>
+            <span class="stat-divider"></span>
+            <div class="stat">
+              <strong>Anytime</strong> <span>Study Access</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="book-glow"></div>
+          <div class="book-card">
+            <div class="book-top">
+              <span class="book-dot"></span> <span class="book-dot"></span>
+              <span class="book-dot"></span>
+            </div>
+            <div class="book-icon">📚</div>
+            <div class="book-line book-line-long"></div>
+            <div class="book-line book-line-medium"></div>
+            <div class="book-line book-line-short"></div>
+            <div class="book-check">✓</div>
+          </div>
+          <div class="floating-badge badge-top">
+            <span>✦</span> Smart Learning
+          </div>
+          <div class="floating-badge badge-bottom">
+            <span>✓</span> Learn at Your Pace
+          </div>
+        </div>
+      </section>
+      <!-- SUBJECT CATALOG -->
+      <section class="catalog-section" id="subjects">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">EXPLORE YOUR NOTES</span>
+            <h2>Choose Your Subject<span class="heading-dot">.</span></h2>
+            <p>Find your subject and continue learning at your own pace.</p>
+          </div>
+          <div class="subject-count" id="subjectCount" aria-live="polite">
+            <span class="count-number">13</span> <span>Subjects Available</span>
+          </div>
+        </div>
+        <!-- SEARCH -->
+        <div class="search-panel">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search subjects, e.g. Python, DBMS..."
+            autocomplete="off"
+            aria-label="Search subjects"
+            aria-controls="subjectGrid"
+          />
+          <button
+            type="button"
+            id="clearSearch"
+            class="clear-search"
+            aria-label="Clear search"
+            hidden
+          >
+            ✕
+          </button>
+          <span class="search-hint">SEARCH SUBJECTS</span>
+        </div>
+        <!-- SUBJECT CARDS -->
+        <div class="notes-container" id="subjectGrid">
+          <article class="card accent-purple">
+            <div class="card-top">
+              <div class="subject-icon">📘</div>
+              <span class="card-number">01</span>
+            </div>
+            <h3>Data Structure</h3>
+            <p>
+              Understand arrays, linked lists, stacks, queues, trees, and more.
+            </p>
+            <div class="card-bottom">
+              <span class="card-category">Computer Science</span>
+              <a
+                href="../../subjects/data-structure/html/ds-notes.html"
+                class="card-action"
+              >
+                View Notes <span>↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="card accent-blue">
+            <div class="card-top">
+              <div class="subject-icon">⚙️</div>
+              <span class="card-number">02</span>
+            </div>
+            <h3>Software Engineering</h3>
+            <p>
+              Learn software development, requirements, testing, and design.
+            </p>
+            <div class="card-bottom">
+              <span class="card-category">Software</span>
+              <a
+                href="../../subjects/software-engineering/html/se-notes.html"
+                class="card-action"
+              >
+                View Notes <span>↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="card accent-orange">
+            <div class="card-top">
+              <div class="subject-icon">📈</div>
+              <span class="card-number">03</span>
+            </div>
+            <h3>Digital Marketing</h3>
+            <p>
+              Explore SEO, social media, online advertising, and digital
+              strategy.
+            </p>
+            <div class="card-bottom">
+              <span class="card-category">Marketing</span>
+              <a
+                href="../../subjects/digital-marketing/html/dm-notes.html"
+                class="card-action"
+              >
+                View Notes <span>↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="card accent-green">
+            <div class="card-top">
+              <div class="subject-icon">💾</div>
+              <span class="card-number">04</span>
+            </div>
+            <h3>DBMS</h3>
+            <p>Study databases, SQL, keys, normalization, and relationships.</p>
+            <div class="card-bottom">
+              <span class="card-category">Database</span>
+              <a
+                href="../../subjects/dbms/html/dbms-notes.html"
+                class="card-action"
+              >
+                View Notes <span>↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="card accent-pink">
+            <div class="card-top">
+              <div class="subject-icon">💻</div>
+              <span class="card-number">05</span>
+            </div>
+            <h3>C Programming</h3>
+            <p>
+              Build your programming basics with variables, loops, functions,
+              and arrays.
+            </p>
+            <div class="card-bottom">
+              <span class="card-category">Programming</span>
+              <a
+                href="../../subjects/c-programming/html/cp-notes.html"
+                class="card-action"
+              >
+                View Notes <span>↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="card accent-orange">
+            <div class="card-top">
+              <div class="subject-icon">☕</div>
+              <span class="card-number">06</span>
+            </div>
+            <h3>Java Programming</h3>
+            <p>
+              Explore Java syntax, object-oriented programming, and core
+              concepts.
+            </p>
+            <div class="card-bottom">
+              <span class="card-category">Programming</span>
+              <a
+                href="../../subjects/java/html/java-notes.html"
+                class="card-action"
+              >
+                View Notes <span>↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="card accent-green">
+            <div class="card-top">
+              <div class="subject-icon">🐍</div>
+              <span class="card-number">07</span>
+            </div>
+            <h3>Python Programming</h3>
+            <p>
+              Learn Python basics, conditions, loops, functions, and data
+              handling.
+            </p>
+            <div class="card-bottom">
+              <span class="card-category">Programming</span>
+              <a
+                href="../../subjects/python/html/python-notes.html"
+                class="card-action"
+              >
+                View Notes <span>↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="card accent-blue">
+            <div class="card-top">
+              <div class="subject-icon">🌐</div>
+              <span class="card-number">08</span>
+            </div>
+            <h3>Web Technology</h3>
+            <p>
+              Understand HTML, CSS, JavaScript, and the basics of web
+              development.
+            </p>
+            <div class="card-bottom">
+              <span class="card-category">Web Development</span>
+              <a
+                href="../../subjects/web-technology/html/web-notes.html"
+                class="card-action"
+              >
+                View Notes <span>↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="card accent-purple">
+            <div class="card-top">
+              <div class="subject-icon">🖥️</div>
+              <span class="card-number">09</span>
+            </div>
+            <h3>Operating System</h3>
+            <p>
+              Study processes, memory management, scheduling, and file systems.
+            </p>
+            <div class="card-bottom">
+              <span class="card-category">Computer Science</span>
+              <a
+                href="../../subjects/operating-system/html/os-notes.html"
+                class="card-action"
+              >
+                View Notes <span>↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="card accent-pink">
+            <div class="card-top">
+              <div class="subject-icon">🔒</div>
+              <span class="card-number">10</span>
+            </div>
+            <h3>Cyber Security</h3>
+            <p>
+              Learn about online threats, security practices, and data
+              protection.
+            </p>
+            <div class="card-bottom">
+              <span class="card-category">Security</span>
+              <a
+                href="../../subjects/cyber security/html/cyber-security-notes.html"
+                class="card-action"
+              >
+                View Notes <span>↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="card accent-blue">
+            <div class="card-top">
+              <div class="subject-icon">☁️</div>
+              <span class="card-number">11</span>
+            </div>
+            <h3>Cloud Computing</h3>
+            <p>
+              Understand cloud services, deployment models, and cloud
+              applications.
+            </p>
+            <div class="card-bottom">
+              <span class="card-category">Technology</span>
+              <a
+                href="../../subjects/cloud-computing/html/cloud-computing-notes.html"
+                class="card-action"
+              >
+                View Notes <span>↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="card accent-purple">
+            <div class="card-top">
+              <div class="subject-icon">🤖</div>
+              <span class="card-number">12</span>
+            </div>
+            <h3>Artificial Intelligence</h3>
+            <p>
+              Explore AI fundamentals, intelligent systems, and machine learning
+              basics.
+            </p>
+            <div class="card-bottom">
+              <span class="card-category">Emerging Tech</span>
+              <a
+                href="../../subjects/ai/html/ai-notes.html"
+                class="card-action"
+              >
+                View Notes <span>↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="card accent-green">
+            <div class="card-top">
+              <div class="subject-icon">📊</div>
+              <span class="card-number">13</span>
+            </div>
+            <h3>Big Data</h3>
+            <p>
+              Discover large datasets, data processing, and big data
+              technologies.
+            </p>
+            <div class="card-bottom">
+              <span class="card-category">Data Technology</span>
+              <a
+                href="../../subjects/big-data/html/big-data-notes.html"
+                class="card-action"
+              >
+                View Notes <span>↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+        <!-- NO RESULTS -->
+        <div class="no-result" id="noResult" hidden>
+          <div class="no-result-icon">⌕</div>
+          <h3>No subject found</h3>
+          <p>Try another subject name or clear your search.</p>
+          <button type="button" id="resetSearch">Show All Subjects</button>
+        </div>
+      </section>
+      <!-- BOTTOM CTA -->
+      <section class="cta-section">
+        <div class="cta-decoration cta-decoration-one"></div>
+        <div class="cta-decoration cta-decoration-two"></div>
+        <div class="cta-content">
+          <span class="cta-kicker">KEEP YOUR LEARNING GOING</span>
+          <h2>Small Steps. Big Progress.</h2>
+          <p>Return to StudySpark AI and continue your learning journey.</p>
+        </div>
+        <a href="../../index.html" class="cta-button">
+          Back to Home <span>→</span>
+        </a>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <a href="../../index.html" class="footer-brand">
+        <span class="brand-icon footer-icon">S</span>
+        <span>StudySpark<span class="brand-highlight">AI</span></span>
+      </a>
+      <p>Learn at your own pace. Grow with every concept.</p>
+      <span class="footer-copy"
+        >© <span id="currentYear"></span> StudySpark AI</span
+      >
+    </footer>
+    <!-- SEARCH SCRIPT -->
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const cards = Array.from(document.querySelectorAll(".card"));
+      const noResult = document.getElementById("noResult");
+      const subjectCount = document.getElementById("subjectCount");
+      const clearSearch = document.getElementById("clearSearch");
+      const resetSearch = document.getElementById("resetSearch");
+      function filterSubjects() {
+        const searchText = searchInput.value.toLowerCase().trim();
+        let visibleCount = 0;
+        cards.forEach(function (card) {
+          const subjectName = card
+            .querySelector("h3")
+            .textContent.toLowerCase();
+          const description = card.querySelector("p").textContent.toLowerCase();
+          const category = card
+            .querySelector(".card-category")
+            .textContent.toLowerCase();
+          const matches =
+            subjectName.includes(searchText) ||
+            description.includes(searchText) ||
+            category.includes(searchText);
+          card.hidden = !matches;
+          if (matches) {
+            visibleCount++;
+          }
+        });
+        noResult.hidden = visibleCount !== 0;
+        subjectCount.innerHTML =
+          '<span class="count-number">' +
+          visibleCount +
+          "</span>" +
+          "<span>" +
+          (visibleCount === 1 ? "Subject Found" : "Subjects Found") +
+          "</span>";
+        clearSearch.hidden = searchText === "";
+      }
+      function resetSubjects() {
+        searchInput.value = "";
+        filterSubjects();
+        searchInput.focus();
+      }
+      searchInput.addEventListener("input", filterSubjects);
+      clearSearch.addEventListener("click", resetSubjects);
+      resetSearch.addEventListener("click", resetSubjects);
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>

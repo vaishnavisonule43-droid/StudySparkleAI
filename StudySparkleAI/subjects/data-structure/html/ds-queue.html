@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Queue - Data Structure</title>
+
+  <link rel="stylesheet" href="../css/data-structure.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>📥 Queue</h1>
+    <p>Learn the basic concepts of Queue in Data Structure.</p>
+  </header>
+
+
+  <!-- Main Content -->
+  <div class="notes-container">
+
+    <!-- Introduction -->
+    <div class="note-card">
+
+      <h2>What is Queue?</h2>
+
+      <p>
+        A Queue is a linear data structure in which elements are inserted
+        from one end and removed from the other end.
+      </p>
+
+      <div class="definition">
+        <strong>Definition:</strong>
+        Queue follows the FIFO principle, which means
+        <strong>First In, First Out</strong>.
+      </div>
+
+      <h3>Example</h3>
+
+      <p>
+        A real-life example of a queue is a line of people waiting
+        at a ticket counter. The person who comes first gets served first.
+      </p>
+
+    </div>
+
+
+    <!-- FIFO -->
+    <div class="note-card">
+
+      <h2>FIFO Principle</h2>
+
+      <p>
+        FIFO stands for <strong>First In, First Out</strong>.
+        The element inserted first is removed first.
+      </p>
+
+      <div class="example-box">
+        <strong>Example:</strong><br><br>
+
+        If we insert:
+        10 → 20 → 30
+
+        <br><br>
+
+        Then the first element removed will be:
+        <strong>10</strong>
+      </div>
+
+    </div>
+
+
+    <!-- Operations -->
+    <div class="note-card">
+
+      <h2>Queue Operations</h2>
+
+      <h3>1. Enqueue</h3>
+
+      <p>
+        Enqueue is used to add an element to the rear end of the queue.
+      </p>
+
+      <h3>2. Dequeue</h3>
+
+      <p>
+        Dequeue is used to remove an element from the front end of the queue.
+      </p>
+
+      <h3>3. Peek</h3>
+
+      <p>
+        Peek is used to view the front element without removing it.
+      </p>
+
+      <h3>4. IsEmpty</h3>
+
+      <p>
+        IsEmpty checks whether the queue contains any element or not.
+      </p>
+
+    </div>
+
+
+    <!-- Queue Animation -->
+    <div class="note-card">
+
+      <h2>Queue Animation</h2>
+
+      <p>
+        Use the buttons below to understand how Enqueue and Dequeue
+        operations work.
+      </p>
+
+      <div class="queue-animation">
+
+        <h2>Interactive Queue</h2>
+
+        <div id="queueContainer" class="queue-container">
+        </div>
+
+        <div class="queue-controls">
+
+          <input
+            type="text"
+            id="queueValue"
+            placeholder="Enter value"
+          />
+
+          <button onclick="enqueue()">Enqueue</button>
+
+          <button onclick="dequeue()">Dequeue</button>
+
+          <button onclick="peekQueue()">Peek</button>
+
+        </div>
+
+        <p id="queueMessage" class="queue-message">
+          Queue is empty.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Types -->
+    <div class="note-card">
+
+      <h2>Types of Queue</h2>
+
+      <ul>
+        <li>Simple Queue</li>
+        <li>Circular Queue</li>
+        <li>Priority Queue</li>
+        <li>Double Ended Queue (Deque)</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Applications -->
+    <div class="note-card">
+
+      <h2>Applications of Queue</h2>
+
+      <ul>
+        <li>CPU Scheduling</li>
+        <li>Printer Queue</li>
+        <li>Call Center Systems</li>
+        <li>Network Data Handling</li>
+        <li>Keyboard and I/O Buffers</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Advantages -->
+    <div class="note-card">
+
+      <h2>Advantages of Queue</h2>
+
+      <ul>
+        <li>Easy to implement.</li>
+        <li>Follows FIFO principle.</li>
+        <li>Useful for scheduling tasks.</li>
+        <li>Helps manage data in an organized way.</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Disadvantages -->
+    <div class="note-card">
+
+      <h2>Disadvantages of Queue</h2>
+
+      <ul>
+        <li>Random access is not possible.</li>
+        <li>Searching an element can be time-consuming.</li>
+        <li>Fixed-size queues may cause overflow.</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Back Button -->
+    <button
+      class="back-btn"
+      onclick="location.href = 'ds-notes.html'"
+    >
+      ⬅️ Back to Data Structure Notes
+    </button>
+
+  </div>
+
+
+  <!-- Queue JavaScript -->
+  <script>
+    let queue = [];
+
+    function enqueue() {
+
+      const input = document.getElementById("queueValue");
+      const value = input.value.trim();
+
+      if (value === "") {
+        document.getElementById("queueMessage").textContent =
+          "Please enter a value.";
+        return;
+      }
+
+      queue.push(value);
+
+      input.value = "";
+
+      displayQueue();
+
+      document.getElementById("queueMessage").textContent =
+        value + " added to the queue.";
+    }
+
+
+    function dequeue() {
+
+      if (queue.length === 0) {
+
+        document.getElementById("queueMessage").textContent =
+          "Queue is empty.";
+
+        return;
+      }
+
+      const removed = queue.shift();
+
+      displayQueue();
+
+      document.getElementById("queueMessage").textContent =
+        removed + " removed from the queue.";
+    }
+
+
+    function peekQueue() {
+
+      if (queue.length === 0) {
+
+        document.getElementById("queueMessage").textContent =
+          "Queue is empty.";
+
+        return;
+      }
+
+      document.getElementById("queueMessage").textContent =
+        "Front element is " + queue[0] + ".";
+    }
+
+
+    function displayQueue() {
+
+      const container =
+        document.getElementById("queueContainer");
+
+      container.innerHTML = "";
+
+      queue.forEach((item, index) => {
+
+        const element = document.createElement("div");
+
+        element.className = "queue-item";
+
+        element.textContent = item;
+
+        if (index === 0) {
+          element.title = "Front";
+        }
+
+        if (index === queue.length - 1) {
+          element.title = "Rear";
+        }
+
+        container.appendChild(element);
+
+      });
+
+    }
+  </script>
+
+</body>
+</html>

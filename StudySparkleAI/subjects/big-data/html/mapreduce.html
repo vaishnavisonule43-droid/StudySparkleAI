@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapReduce - StudySpark AI</title>
+    <link rel="stylesheet" href="../css/notes.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <div class="header-icon">⚙️</div>
+        <h1>MapReduce</h1>
+        <p>Understand Big Data Processing in Simple English</p>
+    </header>
+
+    <main class="notes-container">
+
+        <section class="intro-card">
+            <h2>Introduction to MapReduce</h2>
+            <p>
+                MapReduce is a programming model used to process large
+                amounts of data. It divides a big task into smaller
+                tasks that can run across multiple computers.
+            </p>
+        </section>
+
+        <section class="notes-section">
+            <h2>1. Definition of MapReduce</h2>
+
+            <div class="note-card">
+                <p class="definition">
+                    MapReduce is a programming model used to process
+                    large datasets in parallel across multiple computers.
+                </p>
+                <p>
+                    It mainly uses two functions: Map and Reduce.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>2. Why Do We Use MapReduce?</h2>
+
+            <div class="notes-grid">
+
+                <div class="note-card">
+                    <span class="topic-icon">📊</span>
+                    <h3>Large Data Processing</h3>
+                    <p>It helps process very large datasets.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">⚡</span>
+                    <h3>Parallel Processing</h3>
+                    <p>It allows different parts of a task to be processed simultaneously.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">🧩</span>
+                    <h3>Task Division</h3>
+                    <p>It divides a large processing job into smaller tasks.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">🛡️</span>
+                    <h3>Fault Handling</h3>
+                    <p>Hadoop can rerun failed tasks when possible.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>3. Main Phases of MapReduce</h2>
+
+            <div class="note-card">
+                <h3>1. Input</h3>
+                <p>
+                    The input data is divided into smaller parts
+                    for processing.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>2. Map Phase</h3>
+                <p>
+                    The Map function processes input records and
+                    produces intermediate key-value pairs.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>3. Shuffle and Sort Phase</h3>
+                <p>
+                    Intermediate data is grouped by key and sent
+                    to the appropriate Reduce tasks.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>4. Reduce Phase</h3>
+                <p>
+                    The Reduce function combines or processes the
+                    values associated with each key to produce results.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>5. Output</h3>
+                <p>
+                    The final processed results are saved, commonly
+                    in HDFS in a Hadoop MapReduce job.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>4. Working of MapReduce</h2>
+
+            <div class="note-card">
+                <p>MapReduce follows these steps:</p>
+
+                <ol>
+                    <li>Input data is given to the system.</li>
+                    <li>The data is divided into input splits.</li>
+                    <li>Map tasks process records and create key-value pairs.</li>
+                    <li>Shuffle and Sort groups values with the same key.</li>
+                    <li>Reduce tasks process the grouped values.</li>
+                    <li>The final output is stored.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>5. Example: Word Count</h2>
+
+            <div class="note-card">
+                <p>
+                    Suppose the input sentence is:
+                </p>
+
+                <pre>big data big</pre>
+
+                <h3>Step 1: Map Phase</h3>
+                <p>The Map function produces a count of 1 for each word.</p>
+
+                <pre>
+(big, 1)
+(data, 1)
+(big, 1)
+                </pre>
+
+                <h3>Step 2: Shuffle and Sort</h3>
+                <p>Values for the same word are grouped together.</p>
+
+                <pre>
+big  → [1, 1]
+data → [1]
+                </pre>
+
+                <h3>Step 3: Reduce Phase</h3>
+                <p>The Reduce function adds the values for each word.</p>
+
+                <pre>
+big  → 2
+data → 1
+                </pre>
+
+                <p>
+                    <strong>Final Result:</strong> The word "big" appears
+                    2 times and "data" appears 1 time.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>6. Features of MapReduce</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>Processes large datasets.</li>
+                    <li>Supports parallel processing.</li>
+                    <li>Uses Map and Reduce functions.</li>
+                    <li>Groups intermediate values by key.</li>
+                    <li>Works with Hadoop's distributed environment.</li>
+                    <li>Can recover from certain task failures.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>7. Advantages of MapReduce</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>Can process large amounts of data.</li>
+                    <li>Divides work among multiple computers.</li>
+                    <li>Supports parallel execution.</li>
+                    <li>Can rerun failed tasks.</li>
+                    <li>Works with HDFS for large-scale data processing.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>8. Limitations of MapReduce</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>It can be slow for interactive data analysis.</li>
+                    <li>Writing MapReduce programs can be complex.</li>
+                    <li>Repeated disk operations can increase processing time.</li>
+                    <li>It is not ideal for every real-time processing task.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>9. Applications of MapReduce</h2>
+
+            <div class="notes-grid">
+
+                <div class="note-card">
+                    <span class="topic-icon">🔤</span>
+                    <h3>Word Counting</h3>
+                    <p>Counting words in large text collections.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">🛒</span>
+                    <h3>Shopping Analysis</h3>
+                    <p>Calculating product order totals.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">🌐</span>
+                    <h3>Web Data</h3>
+                    <p>Processing large collections of web records.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">📈</span>
+                    <h3>Data Analysis</h3>
+                    <p>Summarizing large datasets for analysis.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>10. MapReduce vs HDFS</h2>
+
+            <div class="note-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>HDFS</th>
+                            <th>MapReduce</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stores large datasets.</td>
+                            <td>Processes large datasets.</td>
+                        </tr>
+                        <tr>
+                            <td>Divides files into blocks.</td>
+                            <td>Divides work into processing tasks.</td>
+                        </tr>
+                        <tr>
+                            <td>Uses NameNode and DataNodes.</td>
+                            <td>Uses Map and Reduce functions.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>11. Conclusion</h2>
+
+            <div class="note-card">
+                <p>
+                    MapReduce is a big data processing model. It uses
+                    Map, Shuffle and Sort, and Reduce steps to process
+                    large datasets across multiple computers. It is
+                    useful for tasks such as word counting and data
+                    summarization.
+                </p>
+            </div>
+        </section>
+
+        <button class="back-btn" onclick="location.href='big-data-notes.html'">
+            ⬅️ Back to Big Data Topics
+        </button>
+
+    </main>
+
+    <footer>
+        <p>© 2026 StudySpark AI | Learn • Practice • Grow</p>
+    </footer>
+
+</body>
+</html>

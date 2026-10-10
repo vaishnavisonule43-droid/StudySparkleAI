@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Strings and Arrays | StudySpark AI</title>
+    <link rel="stylesheet" href="../css/java-topic.css">
+</head>
+<body>
+
+<header class="topic-header">
+    <h1>Java Strings and Arrays</h1>
+    <p>Learn Strings and Arrays in Java with simple examples.</p>
+</header>
+
+<main class="topic-container">
+
+    <section class="topic-card">
+        <h2>1. What is a String?</h2>
+        <p>A String is a sequence of characters. It is used to store
+        text such as names, addresses and messages.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Main {
+    public static void main(String[] args) {
+        String name = "Rahul";
+        System.out.println(name);
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Rahul</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>2. Common String Methods</h2>
+        <p>Java provides built-in methods to work with strings.</p>
+
+        <ul>
+            <li><code>length()</code> – returns the number of characters.</li>
+            <li><code>toUpperCase()</code> – converts text to uppercase.</li>
+            <li><code>toLowerCase()</code> – converts text to lowercase.</li>
+            <li><code>charAt(index)</code> – returns a character at an index.</li>
+            <li><code>equals()</code> – compares the contents of strings.</li>
+            <li><code>contains()</code> – checks whether text contains a sequence.</li>
+        </ul>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Main {
+    public static void main(String[] args) {
+        String text = "Java Programming";
+
+        System.out.println(text.length());
+        System.out.println(text.toUpperCase());
+        System.out.println(text.toLowerCase());
+        System.out.println(text.charAt(0));
+        System.out.println(text.contains("Java"));
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>16
+JAVA PROGRAMMING
+java programming
+J
+true</code></pre>
+
+        <div class="important-box">
+            Remember: String indexing starts at 0. Java Strings are
+            immutable, which means their contents cannot be changed
+            directly after creation.
+        </div>
+    </section>
+
+    <section class="topic-card">
+        <h2>3. Comparing Strings</h2>
+        <p>Use <code>equals()</code> to compare string contents.
+        The <code>==</code> operator checks whether two references
+        point to the same object.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Main {
+    public static void main(String[] args) {
+        String a = new String("Java");
+        String b = new String("Java");
+
+        System.out.println(a.equals(b));
+        System.out.println(a == b);
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>true
+false</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>4. What is an Array?</h2>
+        <p>An array stores multiple values of the same data type
+        in a single variable. Its size is fixed after creation.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Main {
+    public static void main(String[] args) {
+        int[] marks = {70, 80, 90};
+
+        System.out.println(marks[0]);
+        System.out.println(marks[1]);
+        System.out.println(marks[2]);
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>70
+80
+90</code></pre>
+
+        <div class="important-box">
+            Array indexing starts at 0. Therefore, the first element
+            is at index 0, and the last element is at index
+            <code>length - 1</code>.
+        </div>
+    </section>
+
+    <section class="topic-card">
+        <h2>5. Types of Arrays</h2>
+
+        <h3>One-Dimensional Array</h3>
+        <p>A one-dimensional array stores elements in a single sequence.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>int[] numbers = {10, 20, 30};</code></pre>
+        </div>
+
+        <h3>Two-Dimensional Array</h3>
+        <p>A two-dimensional array stores data in rows and columns.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Main {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 2},
+            {3, 4}
+        };
+
+        System.out.println(matrix[0][1]);
+        System.out.println(matrix[1][0]);
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>2
+3</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>6. Traversing an Array Using a for Loop</h2>
+        <p>Traversing means accessing each element of an array one by one.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Main {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40};
+
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>10
+20
+30
+40</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>7. Enhanced for Loop</h2>
+        <p>The enhanced for loop makes it easy to access each element
+        without manually managing an index.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Main {
+    public static void main(String[] args) {
+        int[] numbers = {5, 10, 15};
+
+        for (int number : numbers) {
+            System.out.println(number);
+        }
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>5
+10
+15</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>8. Advantages of Strings and Arrays</h2>
+        <ul>
+            <li>Strings make text storage and processing easier.</li>
+            <li>String methods simplify common text operations.</li>
+            <li>Arrays store multiple values under one variable name.</li>
+            <li>Array elements can be accessed using indexes.</li>
+            <li>Loops help process array elements efficiently.</li>
+        </ul>
+    </section>
+
+    <section class="topic-card">
+        <h2>Topics Covered</h2>
+        <p>Strings, String methods, string comparison, arrays,
+        one-dimensional arrays, two-dimensional arrays, array traversal
+        and enhanced for loops.</p>
+    </section>
+
+    <button class="back-btn"
+        onclick="location.href='java-notes.html'">
+        ⬅ Back to Java Topics
+    </button>
+
+</main>
+
+<script>
+    async function copyJavaCode(button) {
+        const codeBox = button.closest(".code-box");
+        const code = codeBox.querySelector("pre code").innerText;
+        const status = codeBox.querySelector(".copy-status");
+
+        try {
+            await navigator.clipboard.writeText(code);
+            button.textContent = "Copied!";
+            status.textContent = "Code copied successfully!";
+
+            setTimeout(() => {
+                button.textContent = "Copy Code";
+                status.textContent = "";
+            }, 2000);
+        } catch (error) {
+            status.textContent =
+                "Copy unavailable. Please copy the code manually.";
+        }
+    }
+</script>
+
+</body>
+</html>

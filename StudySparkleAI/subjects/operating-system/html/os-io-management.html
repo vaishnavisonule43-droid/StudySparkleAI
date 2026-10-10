@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>I/O Management - OS Notes</title>
+
+  <link rel="stylesheet" href="../css/os.css">
+</head>
+
+<body>
+
+  <div class="notes-container">
+
+    <h1>I/O Management</h1>
+
+    <div class="notes-card">
+
+      <h2>1. What is I/O Management?</h2>
+
+      <p>
+        I/O Management is an important function of an Operating System
+        that manages input and output devices connected to a computer.
+      </p>
+
+      <p>
+        In simple words, I/O Management controls how data is transferred
+        between the computer and I/O devices.
+      </p>
+
+
+      <h2>2. What is I/O?</h2>
+
+      <p>
+        I/O stands for <b>Input/Output</b>.
+        Input means giving data to the computer and output means receiving
+        results from the computer.
+      </p>
+
+      <div class="example-box">
+        <b>Input Devices:</b> Keyboard, Mouse, Scanner<br><br>
+        <b>Output Devices:</b> Monitor, Printer, Speaker
+      </div>
+
+
+      <h2>3. Need of I/O Management</h2>
+
+      <ul>
+        <li>It manages input and output devices.</li>
+        <li>It controls communication between devices and CPU.</li>
+        <li>It provides efficient data transfer.</li>
+        <li>It manages device access by processes.</li>
+        <li>It improves overall system performance.</li>
+      </ul>
+
+
+      <h2>4. Functions of I/O Management</h2>
+
+      <ul>
+        <li><b>Device Control:</b> Controls I/O devices.</li>
+        <li><b>Device Allocation:</b> Allocates devices to processes.</li>
+        <li><b>Data Transfer:</b> Manages data transfer between devices and memory.</li>
+        <li><b>Buffering:</b> Temporarily stores data during transfer.</li>
+        <li><b>Spooling:</b> Stores jobs temporarily for a device.</li>
+        <li><b>Error Handling:</b> Detects and handles I/O errors.</li>
+      </ul>
+
+
+      <h2>5. I/O Devices</h2>
+
+      <p>
+        I/O devices are hardware devices used to communicate with
+        a computer.
+      </p>
+
+      <table>
+
+        <tr>
+          <th>Type</th>
+          <th>Examples</th>
+        </tr>
+
+        <tr>
+          <td>Input Devices</td>
+          <td>Keyboard, Mouse, Scanner</td>
+        </tr>
+
+        <tr>
+          <td>Output Devices</td>
+          <td>Monitor, Printer, Speaker</td>
+        </tr>
+
+        <tr>
+          <td>Storage Devices</td>
+          <td>Hard Disk, SSD, Pen Drive</td>
+        </tr>
+
+      </table>
+
+
+      <h2>6. Device Driver</h2>
+
+      <p>
+        A Device Driver is a software component that allows the
+        Operating System to communicate with a hardware device.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        A printer driver helps the Operating System communicate
+        with the printer.
+      </div>
+
+
+      <h2>7. Device Controller</h2>
+
+      <p>
+        A Device Controller is a hardware component that controls
+        a particular I/O device and communicates with the CPU and
+        Operating System.
+      </p>
+
+
+      <h2>8. I/O Controller</h2>
+
+      <p>
+        An I/O Controller manages communication between the CPU,
+        memory and I/O devices.
+      </p>
+
+      <div class="example-box">
+        <b>Simple Flow:</b><br><br>
+        CPU ↔ I/O Controller ↔ I/O Device
+      </div>
+
+
+      <h2>9. I/O Techniques</h2>
+
+      <p>
+        Common I/O techniques used by Operating Systems are:
+      </p>
+
+      <ul>
+        <li>Programmed I/O</li>
+        <li>Interrupt-Driven I/O</li>
+        <li>Direct Memory Access (DMA)</li>
+      </ul>
+
+
+      <h2>10. Programmed I/O</h2>
+
+      <p>
+        In Programmed I/O, the CPU continuously checks the status
+        of the I/O device and controls the data transfer.
+      </p>
+
+      <p>
+        This can keep the CPU busy while waiting for the device.
+      </p>
+
+
+      <h2>11. Interrupt-Driven I/O</h2>
+
+      <p>
+        In Interrupt-Driven I/O, the device sends an interrupt to
+        the CPU when it is ready or when an I/O operation is completed.
+      </p>
+
+      <div class="example-box">
+        <b>Simple Flow:</b><br><br>
+        I/O Device → Interrupt → CPU → Handle I/O
+      </div>
+
+
+      <h2>12. Direct Memory Access (DMA)</h2>
+
+      <p>
+        DMA is a technique in which a DMA controller transfers data
+        directly between an I/O device and main memory with minimal
+        CPU involvement.
+      </p>
+
+      <p>
+        It is useful for large amounts of data transfer.
+      </p>
+
+
+      <h2>13. Buffering</h2>
+
+      <p>
+        Buffering means temporarily storing data in a memory area
+        called a buffer while data is being transferred between
+        devices or programs.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        While watching a video online, some data may be temporarily
+        stored in a buffer so that playback can continue smoothly.
+      </div>
+
+
+      <h2>14. Spooling</h2>
+
+      <p>
+        Spooling stands for <b>Simultaneous Peripheral Operations
+        On-Line</b>.
+        It is a technique in which data or jobs are temporarily stored
+        before being sent to a device.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        When many documents are sent to a printer, they are placed
+        in a print queue and printed one by one.
+      </div>
+
+
+      <h2>15. I/O Scheduling</h2>
+
+      <p>
+        I/O Scheduling is the process of deciding the order in which
+        I/O requests should be handled.
+      </p>
+
+      <p>
+        Proper scheduling can reduce waiting time and improve device
+        performance.
+      </p>
+
+
+      <h2>16. Blocking and Non-Blocking I/O</h2>
+
+      <ul>
+        <li>
+          <b>Blocking I/O:</b>
+          The process waits until the I/O operation is completed.
+        </li>
+
+        <li>
+          <b>Non-Blocking I/O:</b>
+          The process can continue other work while the I/O operation
+          is being handled.
+        </li>
+      </ul>
+
+
+      <h2>17. I/O Errors</h2>
+
+      <p>
+        I/O errors can occur when there is a problem with an I/O device
+        or during data transfer.
+      </p>
+
+      <ul>
+        <li>Device failure</li>
+        <li>Connection problems</li>
+        <li>Read/write errors</li>
+        <li>Storage errors</li>
+      </ul>
+
+
+      <h2>18. Comparison of I/O Techniques</h2>
+
+      <table>
+
+        <tr>
+          <th>Technique</th>
+          <th>CPU Involvement</th>
+          <th>Main Idea</th>
+        </tr>
+
+        <tr>
+          <td>Programmed I/O</td>
+          <td>High</td>
+          <td>CPU continuously checks the device</td>
+        </tr>
+
+        <tr>
+          <td>Interrupt-Driven I/O</td>
+          <td>Lower</td>
+          <td>Device interrupts CPU when attention is needed</td>
+        </tr>
+
+        <tr>
+          <td>DMA</td>
+          <td>Very Low</td>
+          <td>Data moves directly between device and memory</td>
+        </tr>
+
+      </table>
+
+
+      <h2>19. Advantages of I/O Management</h2>
+
+      <ul>
+        <li>Efficiently manages I/O devices.</li>
+        <li>Improves data transfer.</li>
+        <li>Reduces CPU workload.</li>
+        <li>Provides better device utilization.</li>
+        <li>Handles I/O errors.</li>
+      </ul>
+
+
+      <h2>20. Real-Life Example</h2>
+
+      <p>
+        Consider a printer connected to a computer. When multiple users
+        send documents for printing, the Operating System manages the
+        print queue and sends the documents to the printer one by one.
+        This is an example of I/O Management.
+      </p>
+
+
+      <h2>21. Summary</h2>
+
+      <p>
+        I/O Management is the function of an Operating System that
+        manages input and output devices. It handles device control,
+        data transfer, buffering, spooling, device drivers and I/O
+        scheduling. It helps the computer communicate efficiently
+        with different hardware devices.
+      </p>
+
+
+      <button onclick="location.href = 'os-notes.html'">
+        ⬅️ Back to OS
+      </button>
+
+    </div>
+  </div>
+
+</body>
+</html>

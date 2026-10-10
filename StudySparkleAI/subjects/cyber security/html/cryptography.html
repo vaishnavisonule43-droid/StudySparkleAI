@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptography | StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/notes.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <div class="header-icon">🔐</div>
+        <h1>Cryptography</h1>
+        <p>Learn how data is protected using encryption.</p>
+    </header>
+
+    <main class="notes-container">
+
+        <section class="intro-card">
+            <h2>📘 Introduction</h2>
+            <p>
+                Cryptography is an important part of Cyber Security.
+                It protects information by using mathematical methods
+                and algorithms.
+            </p>
+            <p>
+                It helps keep messages, passwords and online transactions
+                secure from unauthorized people.
+            </p>
+        </section>
+
+        <section class="notes-section">
+            <h2>📖 1. Definition of Cryptography</h2>
+
+            <div class="definition">
+                Cryptography is the method of protecting information
+                by converting it into a form that unauthorized
+                people cannot easily understand.
+            </div>
+
+            <p><strong>Example:</strong> Encrypting a message before
+            sending it over the internet.</p>
+        </section>
+
+        <section class="notes-section">
+            <h2>🔑 2. Important Terms in Cryptography</h2>
+
+            <div class="note-card">
+                <h3>1. Plaintext</h3>
+                <p>
+                    Plaintext is the original readable message or data
+                    before encryption.
+                </p>
+                <p><strong>Example:</strong> HELLO</p>
+            </div>
+
+            <div class="note-card">
+                <h3>2. Ciphertext</h3>
+                <p>
+                    Ciphertext is the unreadable or transformed data
+                    produced after encryption.
+                </p>
+                <p><strong>Example:</strong> A coded form of the word HELLO.</p>
+            </div>
+
+            <div class="note-card">
+                <h3>3. Encryption</h3>
+                <p>
+                    Encryption converts plaintext into ciphertext
+                    using an algorithm and a key.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>4. Decryption</h3>
+                <p>
+                    Decryption converts ciphertext back into readable
+                    data using the required key.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>5. Key</h3>
+                <p>
+                    A key is information used by a cryptographic
+                    algorithm to encrypt or decrypt data.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>6. Algorithm</h3>
+                <p>
+                    An algorithm is a set of mathematical steps
+                    used to perform cryptographic operations.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>⚙️ 3. How Cryptography Works</h2>
+
+            <div class="note-card">
+                <h3>Step 1: Create a Message</h3>
+                <p>
+                    The sender creates the original readable message.
+                </p>
+
+                <h3>Step 2: Encryption</h3>
+                <p>
+                    A cryptographic algorithm and key transform
+                    the message into ciphertext.
+                </p>
+
+                <h3>Step 3: Send the Data</h3>
+                <p>
+                    The ciphertext is sent to the receiver.
+                </p>
+
+                <h3>Step 4: Decryption</h3>
+                <p>
+                    The receiver uses the required key to recover
+                    the original message.
+                </p>
+            </div>
+
+            <div class="definition">
+                Plaintext → Encryption → Ciphertext → Decryption → Plaintext
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>🧩 4. Types of Cryptography</h2>
+
+            <div class="note-card">
+                <h3>1. Symmetric Key Cryptography</h3>
+                <p>
+                    Symmetric cryptography uses the same secret key
+                    for encryption and decryption.
+                </p>
+                <p><strong>Example:</strong> AES.</p>
+                <p><strong>Advantage:</strong> It is generally fast
+                for encrypting large amounts of data.</p>
+                <p><strong>Limitation:</strong> The secret key must
+                be shared securely.</p>
+            </div>
+
+            <div class="note-card">
+                <h3>2. Asymmetric Key Cryptography</h3>
+                <p>
+                    Asymmetric cryptography uses a pair of related
+                    keys: a public key and a private key.
+                </p>
+                <p><strong>Example:</strong> RSA.</p>
+                <p><strong>Advantage:</strong> It supports secure
+                key exchange and digital signatures.</p>
+                <p><strong>Limitation:</strong> It can be slower
+                than symmetric encryption for large data.</p>
+            </div>
+
+            <div class="note-card">
+                <h3>3. Hashing</h3>
+                <p>
+                    Hashing converts data into a fixed-length
+                    hash value. A secure hash function is designed
+                    to make it impractical to recover the original
+                    data from the hash.
+                </p>
+                <p><strong>Example:</strong> SHA-256.</p>
+                <p><strong>Use:</strong> Checking data integrity
+                and storing password verifiers securely when used
+                with suitable password-hashing methods.</p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>📊 5. Difference Between Symmetric and Asymmetric Cryptography</h2>
+
+            <div class="note-card">
+                <table>
+                    <tr>
+                        <th>Symmetric</th>
+                        <th>Asymmetric</th>
+                    </tr>
+
+                    <tr>
+                        <td>Uses one shared secret key.</td>
+                        <td>Uses a public and a private key.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Generally faster for bulk data encryption.</td>
+                        <td>Often requires more computation.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Secret key sharing must be protected.</td>
+                        <td>Public key can be shared openly, while the private key stays secret.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Example: AES.</td>
+                        <td>Example: RSA.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>🎯 6. Objectives of Cryptography</h2>
+
+            <div class="note-card">
+                <h3>1. Confidentiality</h3>
+                <p>
+                    It keeps information secret from unauthorized people.
+                </p>
+
+                <h3>2. Integrity</h3>
+                <p>
+                    It helps detect unauthorized changes to data.
+                </p>
+
+                <h3>3. Authentication</h3>
+                <p>
+                    It helps verify the identity of a user or the
+                    origin of information.
+                </p>
+
+                <h3>4. Non-repudiation</h3>
+                <p>
+                    Digital signatures can provide evidence that
+                    helps prevent a signer from falsely denying
+                    a signed digital message or document.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>💻 7. Applications of Cryptography</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>Online banking and digital payments.</li>
+                    <li>Secure websites using HTTPS.</li>
+                    <li>Protecting confidential messages.</li>
+                    <li>Securing stored files and databases.</li>
+                    <li>Digital signatures and certificates.</li>
+                    <li>Secure communication between devices.</li>
+                    <li>Verifying data integrity.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>⭐ 8. Advantages of Cryptography</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>Protects confidential information.</li>
+                    <li>Supports secure online communication.</li>
+                    <li>Helps detect data modification.</li>
+                    <li>Supports authentication and digital signatures.</li>
+                    <li>Improves security for online transactions.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>⚠️ 9. Limitations of Cryptography</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>Lost keys can make encrypted data difficult to recover.</li>
+                    <li>Weak algorithms can create security risks.</li>
+                    <li>Keys must be stored and managed securely.</li>
+                    <li>Encryption alone cannot prevent every cyber attack.</li>
+                    <li>Some cryptographic operations require extra computing resources.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>📝 10. Conclusion</h2>
+
+            <p>
+                Cryptography helps protect information through
+                encryption, decryption, hashing and digital signatures.
+                It is widely used to maintain privacy, data integrity
+                and secure communication in the digital world.
+            </p>
+        </section>
+
+        <button class="back-btn"
+                onclick="location.href='cyber-security-notes.html'">
+            ⬅️ Back to Cyber Security Topics
+        </button>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 StudySpark AI | Learn Smart, Grow Smart</p>
+    </footer>
+
+</body>
+</html>

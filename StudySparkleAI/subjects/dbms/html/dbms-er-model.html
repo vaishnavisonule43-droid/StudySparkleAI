@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ER Model - DBMS Notes - StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/notes.css" />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header class="page-header">
+      <h1>🔗 ER Model</h1>
+      <p>Learn about Entity Relationship Model in DBMS.</p>
+    </header>
+
+
+    <div class="notes-container">
+
+      <!-- What is ER Model -->
+      <div class="note-card">
+        <h2>📖 What is ER Model?</h2>
+
+        <p>
+          ER Model stands for Entity Relationship Model.
+          It is used to show the data and relationships between
+          different entities in a database.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          ER Model is a simple way to design and understand a database
+          using entities, attributes and relationships.
+        </div>
+      </div>
+
+
+      <!-- Entity -->
+      <div class="note-card">
+        <h2>👤 Entity</h2>
+
+        <p>
+          An entity is a real-world object about which we store data.
+        </p>
+
+        <h3>Examples:</h3>
+
+        <ul>
+          <li>Student</li>
+          <li>Teacher</li>
+          <li>Employee</li>
+          <li>Product</li>
+          <li>Customer</li>
+        </ul>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          Entity means a real-world object.
+        </div>
+      </div>
+
+
+      <!-- Attribute -->
+      <div class="note-card">
+        <h2>🏷️ Attribute</h2>
+
+        <p>
+          An attribute is a property or detail of an entity.
+        </p>
+
+        <h3>Example:</h3>
+
+        <p>
+          For a Student entity, Student ID, Name, Age and Class
+          are attributes.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          Attribute means the information or details of an entity.
+        </div>
+      </div>
+
+
+      <!-- Relationship -->
+      <div class="note-card">
+        <h2>🔄 Relationship</h2>
+
+        <p>
+          A relationship shows how two or more entities are connected
+          with each other.
+        </p>
+
+        <h3>Example:</h3>
+
+        <p>
+          A Student <b>enrolls in</b> a Course.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          Relationship shows the connection between entities.
+        </div>
+      </div>
+
+
+      <!-- ER Diagram -->
+      <div class="note-card">
+        <h2>📐 ER Diagram</h2>
+
+        <p>
+          An ER Diagram is a graphical representation of entities,
+          attributes and relationships in a database.
+        </p>
+
+        <h3>Example:</h3>
+
+        <p>
+          Student → Enrolls → Course
+        </p>
+
+        <ul>
+          <li>Student = Entity</li>
+          <li>Course = Entity</li>
+          <li>Enrolls = Relationship</li>
+        </ul>
+      </div>
+
+
+      <!-- Components -->
+      <div class="note-card">
+        <h2>🧩 Components of ER Model</h2>
+
+        <ul>
+          <li><b>Entity:</b> Real-world object.</li>
+          <li><b>Attribute:</b> Property of an entity.</li>
+          <li><b>Relationship:</b> Connection between entities.</li>
+          <li><b>ER Diagram:</b> Graphical representation of the database.</li>
+        </ul>
+      </div>
+
+
+      <!-- Types of Relationship -->
+      <div class="note-card">
+        <h2>🔢 Types of Relationships</h2>
+
+        <h3>1. One-to-One (1:1)</h3>
+        <p>
+          One entity is related to only one entity.
+        </p>
+
+        <h3>2. One-to-Many (1:M)</h3>
+        <p>
+          One entity can be related to many entities.
+        </p>
+
+        <h3>3. Many-to-Many (M:M)</h3>
+        <p>
+          Many entities can be related to many other entities.
+        </p>
+      </div>
+
+
+      <!-- Advantages -->
+      <div class="note-card">
+        <h2>⭐ Advantages of ER Model</h2>
+
+        <ul>
+          <li>Easy to understand.</li>
+          <li>Helps in database design.</li>
+          <li>Shows relationships clearly.</li>
+          <li>Reduces confusion while designing a database.</li>
+          <li>Helps developers understand the database structure.</li>
+        </ul>
+      </div>
+
+
+      <!-- Simple Example -->
+      <div class="note-card">
+        <h2>📝 Simple Example</h2>
+
+        <p>
+          In a college database, <b>Student</b> and <b>Course</b>
+          can be entities.
+        </p>
+
+        <p>
+          Student Name, Student ID and Course Name are attributes.
+          The relationship can be <b>"Student enrolls in Course"</b>.
+        </p>
+
+        <div class="definition">
+          <b>In short:</b>
+          Entity → Object | Attribute → Details | Relationship → Connection
+        </div>
+      </div>
+
+
+      <!-- Back Button -->
+      <button
+        class="back-btn"
+        onclick="location.href='dbms-notes.html'"
+      >
+        ⬅️ Back to DBMS Notes
+      </button>
+
+    </div>
+
+  </body>
+</html>

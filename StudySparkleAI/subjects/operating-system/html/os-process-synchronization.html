@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Process Synchronization - OS Notes</title>
+
+  <link rel="stylesheet" href="../css/os.css">
+</head>
+
+<body>
+
+  <div class="notes-container">
+
+    <h1>Process Synchronization</h1>
+
+    <div class="notes-card">
+
+      <h2>1. What is Process Synchronization?</h2>
+
+      <p>
+        Process Synchronization is a mechanism used by an Operating
+        System to control the execution of multiple processes when
+        they share common resources or data.
+      </p>
+
+      <p>
+        In simple words, it makes sure that multiple processes access
+        shared data in a <b>safe and proper order</b>.
+      </p>
+
+
+      <h2>2. Need of Process Synchronization</h2>
+
+      <ul>
+        <li>It prevents data inconsistency.</li>
+        <li>It protects shared resources.</li>
+        <li>It prevents incorrect results.</li>
+        <li>It controls access to shared data.</li>
+        <li>It allows processes to work together safely.</li>
+      </ul>
+
+
+      <h2>3. Shared Resource</h2>
+
+      <p>
+        A shared resource is a resource that can be accessed by
+        more than one process.
+      </p>
+
+      <div class="example-box">
+        <b>Examples:</b><br>
+        Shared memory<br>
+        File<br>
+        Printer<br>
+        Database
+      </div>
+
+
+      <h2>4. Critical Section</h2>
+
+      <p>
+        A Critical Section is the part of a program where a process
+        accesses or modifies shared data or resources.
+      </p>
+
+      <p>
+        Only one process should execute its critical section at a time
+        when the shared resource cannot safely be accessed concurrently.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        If two processes are updating the same bank account balance,
+        the code that changes the balance is a critical section.
+      </div>
+
+
+      <h2>5. Critical Section Problem</h2>
+
+      <p>
+        The Critical Section Problem is the problem of designing a
+        system so that multiple processes can safely access shared
+        resources without causing errors.
+      </p>
+
+      <p>
+        A good solution should satisfy three conditions:
+      </p>
+
+      <ul>
+        <li><b>Mutual Exclusion</b></li>
+        <li><b>Progress</b></li>
+        <li><b>Bounded Waiting</b></li>
+      </ul>
+
+
+      <h2>6. Mutual Exclusion</h2>
+
+      <p>
+        Mutual Exclusion means only one process can execute its
+        critical section at a time.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        If P1 is using a shared printer, P2 must wait until P1
+        finishes using it.
+      </div>
+
+
+      <h2>7. Progress</h2>
+
+      <p>
+        Progress means if no process is inside the critical section,
+        a process that wants to enter should be allowed to enter
+        without unnecessary delay.
+      </p>
+
+
+      <h2>8. Bounded Waiting</h2>
+
+      <p>
+        Bounded Waiting means a process should not wait forever
+        to enter its critical section.
+      </p>
+
+
+      <h2>9. Race Condition</h2>
+
+      <p>
+        A Race Condition occurs when multiple processes access and
+        modify shared data at the same time, and the final result
+        depends on the order in which they execute.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b><br>
+        Suppose a bank account has ₹1000.<br>
+        Two processes try to update the same account at the same time.
+        If synchronization is not used, the final balance may become
+        incorrect.
+      </div>
+
+
+      <h2>10. Synchronization Tools</h2>
+
+      <p>
+        Operating Systems provide different tools to achieve
+        process synchronization.
+      </p>
+
+      <ul>
+        <li>Mutex</li>
+        <li>Semaphore</li>
+        <li>Monitor</li>
+        <li>Locks</li>
+      </ul>
+
+
+      <h2>11. Mutex</h2>
+
+      <p>
+        Mutex stands for <b>Mutual Exclusion</b>.
+        It is a locking mechanism that allows only one process or
+        thread to access a shared resource at a time.
+      </p>
+
+      <div class="example-box">
+        <b>Simple Flow:</b><br><br>
+        Lock → Access Resource → Release Lock
+      </div>
+
+
+      <h2>12. Semaphore</h2>
+
+      <p>
+        A Semaphore is a synchronization mechanism used to control
+        access to shared resources.
+      </p>
+
+      <p>
+        It is generally associated with operations such as
+        <b>wait()</b> and <b>signal()</b>.
+      </p>
+
+      <ul>
+        <li><b>Binary Semaphore:</b> Usually has values 0 and 1.</li>
+        <li><b>Counting Semaphore:</b> Can have a range of non-negative values.</li>
+      </ul>
+
+
+      <h2>13. Monitor</h2>
+
+      <p>
+        A Monitor is a high-level synchronization mechanism that
+        allows only one process or thread at a time to execute
+        code inside the monitor.
+      </p>
+
+      <p>
+        It provides a structured way to protect shared data.
+      </p>
+
+
+      <h2>14. Locks</h2>
+
+      <p>
+        A Lock is used to prevent multiple processes or threads from
+        accessing a shared resource at the same time.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        Before accessing shared data, a process acquires a lock.
+        After completing the work, it releases the lock.
+      </div>
+
+
+      <h2>15. Producer-Consumer Problem</h2>
+
+      <p>
+        The Producer-Consumer Problem is a common synchronization
+        problem.
+      </p>
+
+      <p>
+        The producer creates data and puts it into a shared buffer,
+        while the consumer takes data from the buffer.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b><br>
+        Producer → Buffer → Consumer
+      </div>
+
+      <p>
+        Synchronization is required so that the producer does not
+        add data when the buffer is full and the consumer does not
+        remove data when the buffer is empty.
+      </p>
+
+
+      <h2>16. Readers-Writers Problem</h2>
+
+      <p>
+        The Readers-Writers Problem occurs when multiple processes
+        access a shared data source.
+      </p>
+
+      <ul>
+        <li>Multiple readers can read shared data at the same time.</li>
+        <li>A writer needs exclusive access while writing.</li>
+        <li>Synchronization is required to avoid incorrect data.</li>
+      </ul>
+
+
+      <h2>17. Dining Philosophers Problem</h2>
+
+      <p>
+        The Dining Philosophers Problem is a classical synchronization
+        problem used to explain resource sharing among processes.
+      </p>
+
+      <p>
+        Philosophers need shared resources to eat, so proper
+        synchronization is required to avoid problems such as
+        deadlock and starvation.
+      </p>
+
+
+      <h2>18. Starvation</h2>
+
+      <p>
+        Starvation occurs when a process waits for a very long time
+        because other processes continuously get the required resources.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        A low-priority process may keep waiting because higher-priority
+        processes are continuously selected.
+      </div>
+
+
+      <h2>19. Deadlock and Synchronization</h2>
+
+      <p>
+        Incorrect use of synchronization mechanisms can sometimes
+        lead to deadlock, where processes wait for resources held
+        by each other.
+      </p>
+
+      <p>
+        Therefore, synchronization must be designed carefully.
+      </p>
+
+
+      <h2>20. Comparison of Synchronization Tools</h2>
+
+      <table>
+
+        <tr>
+          <th>Tool</th>
+          <th>Purpose</th>
+        </tr>
+
+        <tr>
+          <td>Mutex</td>
+          <td>Allows one process/thread to access a resource at a time</td>
+        </tr>
+
+        <tr>
+          <td>Semaphore</td>
+          <td>Controls access to one or more shared resources</td>
+        </tr>
+
+        <tr>
+          <td>Monitor</td>
+          <td>Provides structured synchronization for shared data</td>
+        </tr>
+
+        <tr>
+          <td>Lock</td>
+          <td>Prevents simultaneous access to a shared resource</td>
+        </tr>
+
+      </table>
+
+
+      <h2>21. Advantages of Process Synchronization</h2>
+
+      <ul>
+        <li>Prevents race conditions.</li>
+        <li>Maintains data consistency.</li>
+        <li>Protects shared resources.</li>
+        <li>Improves reliability of programs.</li>
+        <li>Allows processes to cooperate safely.</li>
+      </ul>
+
+
+      <h2>22. Real-Life Example</h2>
+
+      <p>
+        Consider a single ATM machine. If two people try to use the
+        same ATM at exactly the same time, problems can occur.
+        The ATM allows one person to complete the transaction before
+        the next person uses it. This is similar to synchronization
+        in an Operating System.
+      </p>
+
+
+      <h2>23. Summary</h2>
+
+      <p>
+        Process Synchronization is used to safely manage multiple
+        processes that share resources or data. It prevents race
+        conditions and data inconsistency. Critical sections, mutexes,
+        semaphores, monitors and locks are important concepts used
+        for process synchronization.
+      </p>
+
+
+      <button onclick="location.href = 'os-notes.html'">
+        ⬅️ Back to OS
+      </button>
+
+    </div>
+  </div>
+
+</body>
+</html>

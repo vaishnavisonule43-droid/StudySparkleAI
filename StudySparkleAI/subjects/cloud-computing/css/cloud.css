@@ -1,0 +1,424 @@
+/* ===== StudySpark AI - Cloud Computing Common CSS ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #6d28d9;
+    --secondary: #9333ea;
+    --dark: #312e81;
+    --light: #f5f3ff;
+    --text: #1e1b4b;
+    --muted: #64748b;
+    --white: #ffffff;
+    --border: #e9d5ff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f3ff, #eef2ff);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* ===== Main Container ===== */
+
+.subjects-container {
+    width: 92%;
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 24px;
+    animation: fadeUp 0.7s ease;
+}
+
+/* ===== Main Heading ===== */
+
+.subjects-container > h1:first-child {
+    text-align: center;
+    padding: 35px 20px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        #312e81,
+        #7c3aed,
+        #9333ea
+    );
+    color: white;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.4;
+    box-shadow: 0 10px 28px rgba(91, 33, 182, 0.2);
+    animation: slideDown 0.7s ease;
+}
+
+/* ===== Subtitle ===== */
+
+.subjects-container > h1:first-child + p {
+    text-align: center;
+    color: var(--muted);
+    font-size: 16px;
+    margin: 0 auto 30px;
+    max-width: 800px;
+}
+
+/* ===== Information Sections ===== */
+
+.subject-info {
+    background: var(--white);
+    padding: 25px;
+    margin: 22px 0;
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--primary);
+    border-radius: 17px;
+    box-shadow: 0 5px 18px rgba(49, 46, 129, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeUp 0.6s ease both;
+}
+
+.subject-info:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(91, 33, 182, 0.12);
+}
+
+.subject-info h2 {
+    color: var(--primary);
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 13px;
+}
+
+.subject-info h3 {
+    color: var(--dark);
+    font-size: 18px;
+    margin: 15px 0 8px;
+}
+
+.subject-info p {
+    color: #475569;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.subject-info p:last-child {
+    margin-bottom: 0;
+}
+
+.subject-info ul,
+.subject-info ol {
+    padding-left: 25px;
+    color: #475569;
+}
+
+.subject-info li {
+    margin: 8px 0;
+    padding-left: 4px;
+}
+
+.subject-info li::marker {
+    color: var(--secondary);
+}
+
+.subject-info strong,
+.subject-info b {
+    color: var(--dark);
+}
+
+/* ===== Topics Heading ===== */
+
+.topics-title {
+    text-align: center;
+    color: var(--dark);
+    font-size: 28px;
+    margin-top: 38px;
+    margin-bottom: 8px;
+}
+
+.topics-subtitle {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 28px;
+    font-size: 15px;
+}
+
+/* ===== Topics Grid ===== */
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+/* ===== Topic Cards ===== */
+
+.subject-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    min-height: 180px;
+    padding: 23px;
+    background: var(--white);
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    box-shadow: 0 5px 16px rgba(49, 46, 129, 0.06);
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    animation: cardAppear 0.6s ease both;
+}
+
+/* Top Highlight */
+
+.subject-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #7c3aed, #c084fc);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.subject-card:hover::before {
+    transform: scaleX(1);
+}
+
+.subject-card:hover {
+    transform: translateY(-7px);
+    border-color: #a78bfa;
+    box-shadow: 0 13px 28px rgba(91, 33, 182, 0.13);
+}
+
+.subject-card h2 {
+    color: var(--primary);
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.subject-card h3 {
+    color: var(--primary);
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.subject-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.subject-card ul,
+.subject-card ol {
+    padding-left: 22px;
+    color: var(--muted);
+}
+
+.subject-card li {
+    margin: 6px 0;
+}
+
+.subject-card li::marker {
+    color: var(--secondary);
+}
+
+.subject-card:focus-visible,
+.back-btn:focus-visible {
+    outline: 3px solid #a78bfa;
+    outline-offset: 4px;
+}
+
+/* ===== Links ===== */
+
+.subject-info a,
+.subject-card a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.subject-info a:hover,
+.subject-card a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Back Button ===== */
+
+.back-btn {
+    display: block;
+    margin: 38px auto 15px;
+    padding: 13px 28px;
+    background: linear-gradient(135deg, #5b21b6, #7c3aed);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 17px rgba(91, 33, 182, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 23px rgba(91, 33, 182, 0.3);
+}
+
+/* ===== Footer ===== */
+
+footer {
+    text-align: center;
+    padding: 22px 12px;
+    margin-top: 25px;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 1px solid #ddd6fe;
+}
+
+/* ===== Animations ===== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Tablet ===== */
+
+@media (max-width: 900px) {
+    .subjects-container {
+        padding: 22px;
+    }
+
+    .subject-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .subjects-container > h1:first-child {
+        font-size: 29px;
+    }
+}
+
+/* ===== Mobile ===== */
+
+@media (max-width: 600px) {
+    .subjects-container {
+        width: 100%;
+        margin: 12px auto;
+        padding: 15px;
+        border-radius: 0;
+    }
+
+    .subjects-container > h1:first-child {
+        padding: 27px 15px;
+        font-size: 25px;
+        border-radius: 16px;
+    }
+
+    .subjects-container > h1:first-child + p {
+        font-size: 14px;
+    }
+
+    .subject-info {
+        padding: 19px;
+        margin: 17px 0;
+        border-radius: 14px;
+    }
+
+    .subject-info h2 {
+        font-size: 20px;
+    }
+
+    .subject-info p,
+    .subject-info li {
+        font-size: 14px;
+    }
+
+    .topics-title {
+        font-size: 24px;
+    }
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .subject-card {
+        min-height: 145px;
+        padding: 21px;
+    }
+
+    .subject-card h2,
+    .subject-card h3 {
+        font-size: 18px;
+    }
+
+    .back-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* ===== Accessibility ===== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SQL - DBMS Notes - StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/notes.css" />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header class="page-header">
+      <h1>💻 SQL</h1>
+      <p>Learn the basic SQL commands used in DBMS.</p>
+    </header>
+
+
+    <div class="notes-container">
+
+      <!-- What is SQL -->
+      <div class="note-card">
+        <h2>📖 What is SQL?</h2>
+
+        <p>
+          SQL stands for Structured Query Language.
+          It is used to create, manage and retrieve data from a database.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          SQL is a language used to communicate with a database.
+        </div>
+      </div>
+
+
+      <!-- Uses -->
+      <div class="note-card">
+        <h2>🎯 Uses of SQL</h2>
+
+        <ul>
+          <li>Create databases and tables.</li>
+          <li>Insert data into tables.</li>
+          <li>Update existing data.</li>
+          <li>Delete data.</li>
+          <li>Retrieve required data.</li>
+        </ul>
+      </div>
+
+
+      <!-- DDL -->
+      <div class="note-card">
+        <h2>🏗️ 1. DDL - Data Definition Language</h2>
+
+        <p>
+          DDL commands are used to create and change the structure
+          of database objects such as tables.
+        </p>
+
+        <h3>Main Commands:</h3>
+
+        <ul>
+          <li><b>CREATE:</b> Creates a database or table.</li>
+          <li><b>ALTER:</b> Changes the structure of a table.</li>
+          <li><b>DROP:</b> Deletes a table or database object.</li>
+          <li><b>TRUNCATE:</b> Removes all records from a table.</li>
+        </ul>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          DDL is used to create and change the structure of a database.
+        </div>
+      </div>
+
+
+      <!-- DML -->
+      <div class="note-card">
+        <h2>📝 2. DML - Data Manipulation Language</h2>
+
+        <p>
+          DML commands are used to add, change and delete data
+          from a table.
+        </p>
+
+        <h3>Main Commands:</h3>
+
+        <ul>
+          <li><b>INSERT:</b> Adds new data.</li>
+          <li><b>UPDATE:</b> Changes existing data.</li>
+          <li><b>DELETE:</b> Removes data.</li>
+        </ul>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          DML is used to manage the data stored in tables.
+        </div>
+      </div>
+
+
+      <!-- DQL -->
+      <div class="note-card">
+        <h2>🔍 3. DQL - Data Query Language</h2>
+
+        <p>
+          DQL is used to retrieve data from a database.
+        </p>
+
+        <h3>Main Command:</h3>
+
+        <ul>
+          <li><b>SELECT:</b> Retrieves data from a table.</li>
+        </ul>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          DQL is mainly used to get data from the database.
+        </div>
+      </div>
+
+
+      <!-- DCL -->
+      <div class="note-card">
+        <h2>🔐 4. DCL - Data Control Language</h2>
+
+        <p>
+          DCL commands are used to control access and permissions
+          in a database.
+        </p>
+
+        <h3>Main Commands:</h3>
+
+        <ul>
+          <li><b>GRANT:</b> Gives permission to a user.</li>
+          <li><b>REVOKE:</b> Removes permission from a user.</li>
+        </ul>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          DCL controls who can access database objects.
+        </div>
+      </div>
+
+
+      <!-- TCL -->
+      <div class="note-card">
+        <h2>🔄 5. TCL - Transaction Control Language</h2>
+
+        <p>
+          TCL commands are used to manage transactions in a database.
+        </p>
+
+        <h3>Main Commands:</h3>
+
+        <ul>
+          <li><b>COMMIT:</b> Saves the transaction permanently.</li>
+          <li><b>ROLLBACK:</b> Cancels changes made in a transaction.</li>
+          <li><b>SAVEPOINT:</b> Creates a point to which we can roll back.</li>
+        </ul>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          TCL controls database transactions.
+        </div>
+      </div>
+
+
+      <!-- SQL Example -->
+      <div class="note-card">
+        <h2>💡 Simple SQL Example</h2>
+
+        <h3>Create Table:</h3>
+
+        <p>
+          CREATE TABLE Student (ID, Name, Marks);
+        </p>
+
+        <h3>Insert Data:</h3>
+
+        <p>
+          INSERT INTO Student VALUES (1, 'Rahul', 80);
+        </p>
+
+        <h3>View Data:</h3>
+
+        <p>
+          SELECT * FROM Student;
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          SQL commands tell the database what operation we want to perform.
+        </div>
+      </div>
+
+
+      <!-- Summary -->
+      <div class="note-card">
+        <h2>📊 SQL Commands Summary</h2>
+
+        <ul>
+          <li><b>DDL:</b> CREATE, ALTER, DROP, TRUNCATE</li>
+          <li><b>DML:</b> INSERT, UPDATE, DELETE</li>
+          <li><b>DQL:</b> SELECT</li>
+          <li><b>DCL:</b> GRANT, REVOKE</li>
+          <li><b>TCL:</b> COMMIT, ROLLBACK, SAVEPOINT</li>
+        </ul>
+      </div>
+
+
+      <!-- Back Button -->
+      <button
+        class="back-btn"
+        onclick="location.href='dbms-notes.html'"
+      >
+        ⬅️ Back to DBMS Notes
+      </button>
+
+    </div>
+
+  </body>
+</html>

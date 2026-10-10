@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Heap - Data Structure | StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/data-structure.css" />
+  </head>
+
+  <body>
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1>🌳 Heap</h1>
+      <p>Learn the basic concepts of Heap in Data Structure.</p>
+    </header>
+
+    <!-- Notes Container -->
+    <div class="notes-container">
+
+      <!-- Heap Card -->
+      <div class="note-card">
+
+        <h2>What is Heap?</h2>
+
+        <p>
+          A Heap is a special tree-based data structure. It is a complete
+          binary tree that follows a specific order between parent and child
+          nodes.
+        </p>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          A Heap is a complete binary tree in which the parent node follows
+          a specific relationship with its child nodes.
+        </div>
+
+
+        <h2>Types of Heap</h2>
+
+        <p>There are mainly two types of Heap:</p>
+
+        <ul>
+          <li>Max Heap</li>
+          <li>Min Heap</li>
+        </ul>
+
+
+        <h2>Max Heap</h2>
+
+        <p>
+          In a Max Heap, the value of the parent node is greater than or equal
+          to the values of its child nodes.
+        </p>
+
+        <div class="definition">
+          <strong>Example:</strong>
+          If the parent is 50 and its children are 30 and 40, then the
+          condition of Max Heap is satisfied because 50 is greater than both.
+        </div>
+
+
+        <h2>Min Heap</h2>
+
+        <p>
+          In a Min Heap, the value of the parent node is smaller than or equal
+          to the values of its child nodes.
+        </p>
+
+        <div class="definition">
+          <strong>Example:</strong>
+          If the parent is 10 and its children are 20 and 30, then the
+          condition of Min Heap is satisfied because 10 is smaller than both.
+        </div>
+
+
+        <h2>Properties of Heap</h2>
+
+        <ul>
+          <li>Heap is a complete binary tree.</li>
+          <li>It follows the heap property.</li>
+          <li>It can be represented using an array.</li>
+          <li>It is useful for priority-based operations.</li>
+        </ul>
+
+
+        <h2>Heap Operations</h2>
+
+        <h3>1. Insertion</h3>
+
+        <p>
+          In insertion, a new element is added to the heap and then moved
+          upward if necessary to maintain the heap property.
+        </p>
+
+
+        <h3>2. Deletion</h3>
+
+        <p>
+          In deletion, the root element is removed and the heap is rearranged
+          to maintain the heap property.
+        </p>
+
+
+        <h3>3. Heapify</h3>
+
+        <p>
+          Heapify is the process of rearranging elements so that the heap
+          property is maintained.
+        </p>
+
+
+        <h3>4. Peek</h3>
+
+        <p>
+          Peek returns the root element of the heap without removing it.
+        </p>
+
+
+        <h2>Heap Representation</h2>
+
+        <p>
+          A heap can be represented using an array. For an element at index i,
+          its child nodes can be found using array index relationships.
+        </p>
+
+        <div class="definition">
+          <strong>For 0-based indexing:</strong>
+
+          <p>
+            Left Child = 2i + 1
+          </p>
+
+          <p>
+            Right Child = 2i + 2
+          </p>
+
+          <p>
+            Parent = (i - 1) / 2
+          </p>
+        </div>
+
+
+        <h2>Applications of Heap</h2>
+
+        <ul>
+          <li>Priority Queue</li>
+          <li>Heap Sort</li>
+          <li>Operating System scheduling</li>
+          <li>Graph algorithms</li>
+          <li>Finding minimum or maximum values</li>
+        </ul>
+
+
+        <h2>Advantages of Heap</h2>
+
+        <ul>
+          <li>Efficient access to minimum or maximum element.</li>
+          <li>Useful for implementing priority queues.</li>
+          <li>Insertion and deletion can be performed efficiently.</li>
+          <li>Heap Sort can be implemented using a heap.</li>
+        </ul>
+
+
+        <h2>Disadvantages of Heap</h2>
+
+        <ul>
+          <li>Searching for an arbitrary element is not very efficient.</li>
+          <li>Heap implementation can be more complex than simple arrays.</li>
+          <li>Maintaining the heap property requires extra operations.</li>
+        </ul>
+
+
+        <h2>Simple Example</h2>
+
+        <p>
+          Consider the following Max Heap:
+        </p>
+
+        <div class="definition">
+          <p>        50</p>
+          <p>       /  \</p>
+          <p>     30    40</p>
+          <p>    /  \</p>
+          <p>  20    10</p>
+        </div>
+
+        <p>
+          Here, 50 is the largest element and it is present at the root.
+          Every parent node is greater than or equal to its children, so it
+          follows the Max Heap property.
+        </p>
+
+
+        <h2>Conclusion</h2>
+
+        <p>
+          Heap is an important tree-based data structure used to efficiently
+          manage minimum and maximum elements. It is widely used in priority
+          queues, heap sort and various algorithms.
+        </p>
+
+      </div>
+
+
+      <!-- Back Button -->
+      <button
+        class="back-btn"
+        onclick="location.href = 'ds-notes.html'"
+      >
+        ⬅️ Back to Data Structure Notes
+      </button>
+
+    </div>
+
+  </body>
+</html>

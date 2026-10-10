@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Notes | StudySpark AI</title>
+    <link rel="stylesheet" href="../css/web-topic.css">
+</head>
+
+<body>
+
+<header class="topic-header">
+    <h1>CSS Notes</h1>
+    <p>Learn CSS with Simple Explanations and Examples</p>
+</header>
+
+<main class="topic-container">
+
+    <section class="topic-card">
+
+        <h2>1. What is CSS?</h2>
+        <p>
+            CSS stands for <strong>Cascading Style Sheets</strong>.
+            It is used to style HTML web pages. CSS controls colours,
+            fonts, spacing, borders, layouts and animations.
+        </p>
+
+        <div class="important-box">
+            <h3>Example</h3>
+            <p>HTML creates a heading, while CSS changes its colour, size and appearance.</p>
+        </div>
+
+        <h2>2. Features of CSS</h2>
+        <ul>
+            <li>CSS adds colours and styles to web pages.</li>
+            <li>It controls font size and font style.</li>
+            <li>It helps create attractive page layouts.</li>
+            <li>It supports transitions and animations.</li>
+            <li>It helps make websites responsive on different devices.</li>
+        </ul>
+
+        <h2>3. Basic CSS Syntax</h2>
+        <p>A CSS rule contains a selector and a declaration block.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>h1 {
+    color: purple;
+    font-size: 30px;
+}</code></pre>
+        </div>
+
+        <div class="example-box">
+            <ul>
+                <li><strong>h1:</strong> Selector.</li>
+                <li><strong>color:</strong> Property.</li>
+                <li><strong>purple:</strong> Property value.</li>
+                <li><strong>font-size:</strong> Controls the text size.</li>
+            </ul>
+        </div>
+
+        <h2>4. Types of CSS</h2>
+
+        <h3>1. Inline CSS</h3>
+        <p>Inline CSS is written inside an HTML element using the style attribute.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;p style="color: red;"&gt;
+    Hello World
+&lt;/p&gt;</code></pre>
+        </div>
+
+        <h3>2. Internal CSS</h3>
+        <p>Internal CSS is written inside a style tag in the HTML document's head section.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;head&gt;
+    &lt;style&gt;
+        p {
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+        </div>
+
+        <h3>3. External CSS</h3>
+        <p>External CSS is written in a separate .css file and connected using a link tag.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+        </div>
+
+        <div class="important-box">
+            <h3>Remember</h3>
+            <p>StudySpark AI uses external CSS files to keep HTML content and design separate.</p>
+        </div>
+
+        <h2>5. CSS Selectors</h2>
+        <p>Selectors identify which HTML elements should receive a style.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>/* Element selector */
+p {
+    color: blue;
+}
+
+/* Class selector */
+.card {
+    background: white;
+}
+
+/* ID selector */
+#title {
+    color: purple;
+}
+
+/* Universal selector */
+* {
+    box-sizing: border-box;
+}</code></pre>
+        </div>
+
+        <div class="example-box">
+            <ul>
+                <li><strong>Element selector:</strong> Selects elements by tag name.</li>
+                <li><strong>Class selector:</strong> Uses a dot, such as .card.</li>
+                <li><strong>ID selector:</strong> Uses a hash, such as #title.</li>
+                <li><strong>Universal selector:</strong> Uses * to select all elements.</li>
+            </ul>
+        </div>
+
+        <h2>6. CSS Colours and Backgrounds</h2>
+        <p>CSS colours can be used for text, backgrounds and borders.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>body {
+    background-color: #f5f3ff;
+}
+
+h1 {
+    color: purple;
+}
+
+.card {
+    background: white;
+}</code></pre>
+        </div>
+
+        <h2>7. Fonts and Text Styling</h2>
+        <p>CSS controls how text looks on a web page.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}</code></pre>
+        </div>
+
+        <h2>8. CSS Box Model</h2>
+        <p>
+            The CSS box model describes how an element occupies space.
+            It consists of content, padding, border and margin.
+        </p>
+
+        <div class="example-box">
+            <ul>
+                <li><strong>Content:</strong> The actual text or image.</li>
+                <li><strong>Padding:</strong> Space around the content, inside the border.</li>
+                <li><strong>Border:</strong> The line around the padding and content.</li>
+                <li><strong>Margin:</strong> Space outside the border.</li>
+            </ul>
+        </div>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>.card {
+    padding: 20px;
+    border: 2px solid purple;
+    margin: 15px;
+}</code></pre>
+        </div>
+
+        <h2>9. CSS Borders and Shadows</h2>
+        <p>Borders create outlines, while shadows add depth to elements.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>.card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px
+        rgba(0, 0, 0, 0.1);
+}</code></pre>
+        </div>
+
+        <h2>10. CSS Layout with Flexbox</h2>
+        <p>Flexbox helps arrange elements in a row or column.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}</code></pre>
+        </div>
+
+        <h2>11. CSS Hover Effect</h2>
+        <p>The hover selector applies styles when the pointer is over an element.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>.button {
+    background: purple;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: blue;
+    transform: translateY(-3px);
+}</code></pre>
+        </div>
+
+        <h2>12. CSS Animations</h2>
+        <p>CSS animations change styles over time without requiring JavaScript.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.7s ease;
+}</code></pre>
+        </div>
+
+        <h2>13. Responsive CSS</h2>
+        <p>
+            Responsive CSS helps a website adjust to different screen sizes,
+            such as mobile phones, tablets and computers.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>.container {
+    width: 90%;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+}</code></pre>
+        </div>
+
+        <h2>14. Advantages of CSS</h2>
+        <ul>
+            <li>Makes web pages attractive.</li>
+            <li>Keeps design separate from HTML content.</li>
+            <li>Allows consistent styling across pages.</li>
+            <li>Supports responsive layouts.</li>
+            <li>Provides transitions and animations.</li>
+        </ul>
+
+        <div class="important-box">
+            <h3>Quick Revision</h3>
+            <ul>
+                <li>CSS stands for Cascading Style Sheets.</li>
+                <li>CSS is used to style HTML pages.</li>
+                <li>Three types: Inline, Internal and External CSS.</li>
+                <li>Selectors target HTML elements.</li>
+                <li>The box model contains content, padding, border and margin.</li>
+                <li>Flexbox helps arrange elements.</li>
+                <li>Media queries help create responsive designs.</li>
+            </ul>
+        </div>
+
+        <a href="web-notes.html" class="back-btn">← Back to Web Technology</a>
+
+    </section>
+
+</main>
+
+<script>
+async function copyCode(button) {
+    const codeBox = button.closest(".code-box");
+    const code = codeBox.querySelector("pre code").innerText;
+    const status = codeBox.querySelector(".copy-status");
+
+    try {
+        await navigator.clipboard.writeText(code);
+
+        button.textContent = "Copied!";
+        status.textContent = "Code copied!";
+
+        setTimeout(function () {
+            button.textContent = "Copy Code";
+            status.textContent = "";
+        }, 2000);
+
+    } catch (error) {
+        status.textContent = "Copy unavailable. Please copy manually.";
+    }
+}
+</script>
+
+</body>
+</html>

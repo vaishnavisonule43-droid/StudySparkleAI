@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Operators | StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/java-topic.css">
+</head>
+
+<body>
+
+    <header class="topic-header">
+        <h1>Java Operators</h1>
+        <p>Java Programming Notes | StudySpark AI</p>
+    </header>
+
+    <main class="topic-container">
+
+        <section class="topic-card">
+            <h2>1. What is an Operator?</h2>
+            <p>
+                An operator is a symbol that performs an operation
+                on one or more values or variables.
+            </p>
+
+            <div class="important-box">
+                <h3>Example</h3>
+                <p>int sum = 10 + 5;</p>
+                <p>Here, + is an operator that adds two numbers.</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>2. Arithmetic Operators</h2>
+            <p>
+                Arithmetic operators perform mathematical operations
+                such as addition, subtraction and multiplication.
+            </p>
+
+            <div class="important-box">
+                <ul>
+                    <li><strong>+</strong> Addition</li>
+                    <li><strong>-</strong> Subtraction</li>
+                    <li><strong>*</strong> Multiplication</li>
+                    <li><strong>/</strong> Division</li>
+                    <li><strong>%</strong> Remainder (modulus)</li>
+                </ul>
+            </div>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 3;
+
+        System.out.println(a + b);
+        System.out.println(a - b);
+        System.out.println(a * b);
+        System.out.println(a / b);
+        System.out.println(a % b);
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>13</p>
+                <p>7</p>
+                <p>30</p>
+                <p>3</p>
+                <p>1</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>3. Relational Operators</h2>
+            <p>
+                Relational operators compare two values and return
+                either true or false.
+            </p>
+
+            <div class="important-box">
+                <ul>
+                    <li><strong>==</strong> Equal to</li>
+                    <li><strong>!=</strong> Not equal to</li>
+                    <li><strong>&gt;</strong> Greater than</li>
+                    <li><strong>&lt;</strong> Less than</li>
+                    <li><strong>&gt;=</strong> Greater than or equal to</li>
+                    <li><strong>&lt;=</strong> Less than or equal to</li>
+                </ul>
+            </div>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 5;
+
+        System.out.println(a > b);
+        System.out.println(a == b);
+        System.out.println(a != b);
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>true</p>
+                <p>false</p>
+                <p>true</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>4. Logical Operators</h2>
+            <p>
+                Logical operators combine or reverse boolean conditions.
+            </p>
+
+            <div class="important-box">
+                <ul>
+                    <li><strong>&amp;&amp;</strong> Logical AND — true when both conditions are true.</li>
+                    <li><strong>||</strong> Logical OR — true when at least one condition is true.</li>
+                    <li><strong>!</strong> Logical NOT — reverses a boolean value.</li>
+                </ul>
+            </div>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int age = 20;
+
+        System.out.println(age >= 18 && age <= 60);
+        System.out.println(age < 18 || age > 60);
+        System.out.println(!(age >= 18));
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>true</p>
+                <p>false</p>
+                <p>false</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>5. Assignment Operators</h2>
+            <p>
+                Assignment operators assign values to variables
+                or update their existing values.
+            </p>
+
+            <div class="important-box">
+                <ul>
+                    <li><strong>=</strong> Assign a value</li>
+                    <li><strong>+=</strong> Add and assign</li>
+                    <li><strong>-=</strong> Subtract and assign</li>
+                    <li><strong>*=</strong> Multiply and assign</li>
+                    <li><strong>/=</strong> Divide and assign</li>
+                    <li><strong>%=</strong> Find remainder and assign</li>
+                </ul>
+            </div>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int a = 10;
+
+        a += 5;
+        System.out.println(a);
+
+        a -= 3;
+        System.out.println(a);
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>15</p>
+                <p>12</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>6. Increment and Decrement Operators</h2>
+            <p>
+                The increment operator increases a value by one.
+                The decrement operator decreases a value by one.
+            </p>
+
+            <div class="important-box">
+                <ul>
+                    <li><strong>++</strong> Increment by 1</li>
+                    <li><strong>--</strong> Decrement by 1</li>
+                </ul>
+                <p><strong>Note:</strong> ++a changes the value before it is used in an expression, while a++ changes it after its current value is used.</p>
+            </div>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int a = 5;
+
+        a++;
+        System.out.println(a);
+
+        a--;
+        System.out.println(a);
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>6</p>
+                <p>5</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>7. Conditional (Ternary) Operator</h2>
+            <p>
+                The conditional operator uses a condition to choose
+                one of two values.
+            </p>
+
+            <div class="important-box">
+                <p><strong>Syntax:</strong> condition ? value1 : value2</p>
+            </div>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int marks = 75;
+
+        String result = marks >= 40 ? "Pass" : "Fail";
+
+        System.out.println(result);
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>Pass</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>8. Bitwise Operators</h2>
+            <p>
+                Bitwise operators perform operations on individual
+                bits of integer values.
+            </p>
+
+            <div class="important-box">
+                <ul>
+                    <li><strong>&amp;</strong> Bitwise AND</li>
+                    <li><strong>|</strong> Bitwise OR</li>
+                    <li><strong>^</strong> Bitwise XOR</li>
+                    <li><strong>~</strong> Bitwise complement</li>
+                    <li><strong>&lt;&lt;</strong> Left shift</li>
+                    <li><strong>&gt;&gt;</strong> Signed right shift</li>
+                </ul>
+            </div>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 3;
+
+        System.out.println(a & b);
+        System.out.println(a | b);
+        System.out.println(a ^ b);
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>1</p>
+                <p>7</p>
+                <p>6</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>9. Why Are Operators Important?</h2>
+            <div class="important-box">
+                <ul>
+                    <li>They perform mathematical calculations.</li>
+                    <li>They compare values.</li>
+                    <li>They help make decisions using conditions.</li>
+                    <li>They assign and update variable values.</li>
+                    <li>They perform bit-level operations.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>Topics Covered</h2>
+            <div class="important-box">
+                <ul>
+                    <li>Definition of operators</li>
+                    <li>Arithmetic operators</li>
+                    <li>Relational operators</li>
+                    <li>Logical operators</li>
+                    <li>Assignment operators</li>
+                    <li>Increment and decrement operators</li>
+                    <li>Conditional operator</li>
+                    <li>Bitwise operators</li>
+                    <li>Java examples and outputs</li>
+                </ul>
+            </div>
+        </section>
+
+        <button class="back-btn"
+            onclick="location.href='java-notes.html'">
+            ⬅ Back to Java Topics
+        </button>
+
+    </main>
+
+    <script>
+        async function copyJavaCode(button) {
+            const codeBox = button.closest(".code-box");
+            const code = codeBox.querySelector("pre code").innerText;
+            const status = codeBox.querySelector(".copy-status");
+
+            try {
+                await navigator.clipboard.writeText(code);
+
+                button.textContent = "Copied!";
+                status.textContent = "Code copied successfully!";
+
+                setTimeout(() => {
+                    button.textContent = "Copy Code";
+                    status.textContent = "";
+                }, 2000);
+
+            } catch (error) {
+                status.textContent =
+                    "Copy unavailable. Please copy the code manually.";
+            }
+        }
+    </script>
+
+</body>
+</html>

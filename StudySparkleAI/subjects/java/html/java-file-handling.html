@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java File Handling | StudySpark AI</title>
+    <link rel="stylesheet" href="../css/java-topic.css">
+</head>
+<body>
+
+<header class="topic-header">
+    <h1>Java File Handling</h1>
+    <p>Learn how to create, write, read and delete files in Java.</p>
+</header>
+
+<main class="topic-container">
+
+    <section class="topic-card">
+        <h2>1. What is File Handling?</h2>
+        <p>File handling means creating, reading, writing and managing
+        files using a program.</p>
+
+        <div class="important-box">
+            <strong>Example:</strong> A program can save student details
+            in a text file and read them later.
+        </div>
+    </section>
+
+    <section class="topic-card">
+        <h2>2. Important Classes</h2>
+        <ul>
+            <li><code>File</code> – represents a file or directory path.</li>
+            <li><code>FileWriter</code> – writes characters to a file.</li>
+            <li><code>FileReader</code> – reads characters from a file.</li>
+            <li><code>BufferedReader</code> – reads text efficiently using a buffer.</li>
+            <li><code>Scanner</code> – can read text from a file.</li>
+        </ul>
+    </section>
+
+    <section class="topic-card">
+        <h2>3. Creating a File</h2>
+        <p>The <code>File</code> class and its <code>createNewFile()</code>
+        method can be used to create a new file.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>import java.io.File;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) {
+        try {
+            File file = new File("student.txt");
+
+            if (file.createNewFile()) {
+                System.out.println("File created");
+            } else {
+                System.out.println("File already exists");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred");
+        }
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Possible output when the file is new:</strong></p>
+        <pre><code>File created</code></pre>
+
+        <div class="important-box">
+            The output depends on whether the file already exists.
+            The file is created in the program's working directory.
+        </div>
+    </section>
+
+    <section class="topic-card">
+        <h2>4. Writing to a File</h2>
+        <p><code>FileWriter</code> can write text into a file.
+        The try-with-resources statement closes the writer automatically.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>import java.io.FileWriter;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) {
+        try (FileWriter writer = new FileWriter("student.txt")) {
+            writer.write("Welcome to Java");
+            System.out.println("Data written successfully");
+        } catch (IOException e) {
+            System.out.println("An error occurred");
+        }
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Data written successfully</code></pre>
+
+        <div class="important-box">
+            By default, this FileWriter constructor overwrites the existing
+            file contents. To append instead, use
+            <code>new FileWriter("student.txt", true)</code>.
+        </div>
+    </section>
+
+    <section class="topic-card">
+        <h2>5. Reading from a File</h2>
+        <p><code>FileReader</code> and <code>BufferedReader</code> can
+        read text from a file line by line.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) {
+        try (BufferedReader reader =
+                 new BufferedReader(new FileReader("student.txt"))) {
+
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+
+        } catch (IOException e) {
+            System.out.println("Unable to read file");
+        }
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>If the file contains:</strong></p>
+        <pre><code>Welcome to Java</code></pre>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Welcome to Java</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>6. Appending Data to a File</h2>
+        <p>Appending means adding new content at the end of an existing file
+        without removing its previous contents.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>import java.io.FileWriter;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) {
+        try (FileWriter writer =
+                 new FileWriter("student.txt", true)) {
+
+            writer.write("\nJava is easy");
+            System.out.println("Data appended successfully");
+
+        } catch (IOException e) {
+            System.out.println("An error occurred");
+        }
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Data appended successfully</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>7. Checking File Information</h2>
+        <p>The <code>File</code> class provides methods to check file
+        properties such as existence, name and size.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>import java.io.File;
+
+class Main {
+    public static void main(String[] args) {
+        File file = new File("student.txt");
+
+        System.out.println(file.exists());
+        System.out.println(file.getName());
+        System.out.println(file.length());
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Example output if the file exists and contains
+        15 bytes:</strong></p>
+        <pre><code>true
+student.txt
+15</code></pre>
+
+        <div class="important-box">
+            The file size depends on its actual contents and character
+            encoding. The output above is only an example.
+        </div>
+    </section>
+
+    <section class="topic-card">
+        <h2>8. Deleting a File</h2>
+        <p>The <code>delete()</code> method attempts to delete the file.
+        It returns true if the deletion succeeds.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>import java.io.File;
+
+class Main {
+    public static void main(String[] args) {
+        File file = new File("student.txt");
+
+        if (file.delete()) {
+            System.out.println("File deleted");
+        } else {
+            System.out.println("File could not be deleted");
+        }
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Possible output when deletion succeeds:</strong></p>
+        <pre><code>File deleted</code></pre>
+
+        <div class="important-box">
+            Run this example only when you intend to delete the specified
+            file. Check the path carefully before deleting.
+        </div>
+    </section>
+
+    <section class="topic-card">
+        <h2>9. Advantages of File Handling</h2>
+        <ul>
+            <li>Stores data permanently for later use.</li>
+            <li>Allows programs to read saved information.</li>
+            <li>Makes it possible to update stored data.</li>
+            <li>Helps manage text and other file-based information.</li>
+            <li>Supports data exchange between program runs.</li>
+        </ul>
+    </section>
+
+    <section class="topic-card">
+        <h2>10. Important Points to Remember</h2>
+        <ul>
+            <li><code>File</code> represents a file or directory path.</li>
+            <li><code>FileWriter</code> writes text.</li>
+            <li><code>FileReader</code> reads characters.</li>
+            <li><code>BufferedReader</code> can read text line by line.</li>
+            <li>File operations may throw an <code>IOException</code>.</li>
+            <li>Try-with-resources closes supported resources automatically.</li>
+        </ul>
+    </section>
+
+    <section class="topic-card">
+        <h2>Topics Covered</h2>
+        <p>File handling, File class, creating files, writing files,
+        reading files, appending data, checking file information,
+        deleting files and exception handling.</p>
+    </section>
+
+    <button class="back-btn"
+        onclick="location.href='java-notes.html'">
+        ⬅ Back to Java Topics
+    </button>
+
+</main>
+
+<script>
+    async function copyJavaCode(button) {
+        const codeBox = button.closest(".code-box");
+        const code = codeBox.querySelector("pre code").innerText;
+        const status = codeBox.querySelector(".copy-status");
+
+        try {
+            await navigator.clipboard.writeText(code);
+            button.textContent = "Copied!";
+            status.textContent = "Code copied successfully!";
+
+            setTimeout(() => {
+                button.textContent = "Copy Code";
+                status.textContent = "";
+            }, 2000);
+        } catch (error) {
+            status.textContent =
+                "Copy unavailable. Please copy the code manually.";
+        }
+    }
+</script>
+
+</body>
+</html>

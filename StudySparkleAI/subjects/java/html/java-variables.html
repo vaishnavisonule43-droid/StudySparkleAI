@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Variables and Data Types | StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/java-topic.css">
+</head>
+
+<body>
+
+    <header class="topic-header">
+        <h1>Java Variables and Data Types</h1>
+        <p>Java Programming Notes | StudySpark AI</p>
+    </header>
+
+    <main class="topic-container">
+
+        <section class="topic-card">
+            <h2>1. What is a Variable?</h2>
+            <p>
+                A variable is a named memory location used to store data
+                in a program. Its value can be used and changed during
+                program execution.
+            </p>
+
+            <div class="important-box">
+                <h3>Example</h3>
+                <p><strong>int age = 18;</strong></p>
+                <p>Here, age is a variable that stores the value 18.</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>2. Rules for Naming Variables</h2>
+
+            <div class="important-box">
+                <ul>
+                    <li>A variable name can contain letters, digits, underscore and dollar sign.</li>
+                    <li>A variable name cannot start with a digit.</li>
+                    <li>Spaces are not allowed in variable names.</li>
+                    <li>Java keywords cannot be used as variable names.</li>
+                    <li>Variable names are case-sensitive. For example, age and Age are different.</li>
+                </ul>
+            </div>
+
+            <h3>Examples</h3>
+            <p><strong>Valid:</strong> age, studentName, marks1, _count</p>
+            <p><strong>Invalid:</strong> 1age, student name, class</p>
+        </section>
+
+        <section class="topic-card">
+            <h2>3. Types of Variables</h2>
+
+            <h3>Local Variable</h3>
+            <p>
+                A local variable is declared inside a method or block.
+                It must be initialized before it is used.
+            </p>
+
+            <h3>Instance Variable</h3>
+            <p>
+                An instance variable is declared inside a class but
+                outside methods and constructors. Each object has its
+                own instance variables.
+            </p>
+
+            <h3>Static Variable</h3>
+            <p>
+                A static variable is declared using the static keyword.
+                It belongs to the class and is shared by its instances.
+            </p>
+        </section>
+
+        <section class="topic-card">
+            <h2>4. What is a Data Type?</h2>
+            <p>
+                A data type tells Java what kind of value a variable
+                can store, such as an integer, decimal number,
+                character or true/false value.
+            </p>
+        </section>
+
+        <section class="topic-card">
+            <h2>5. Primitive Data Types</h2>
+
+            <p>Java has eight primitive data types.</p>
+
+            <div class="important-box">
+                <ul>
+                    <li><strong>byte:</strong> Stores small whole numbers.</li>
+                    <li><strong>short:</strong> Stores whole numbers in a short integer range.</li>
+                    <li><strong>int:</strong> Stores whole numbers.</li>
+                    <li><strong>long:</strong> Stores large whole numbers.</li>
+                    <li><strong>float:</strong> Stores decimal numbers with single precision.</li>
+                    <li><strong>double:</strong> Stores decimal numbers with double precision.</li>
+                    <li><strong>char:</strong> Stores a single UTF-16 code unit.</li>
+                    <li><strong>boolean:</strong> Stores true or false.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>6. Non-Primitive Data Types</h2>
+            <p>
+                Non-primitive types refer to objects. Common examples
+                include String, arrays and classes.
+            </p>
+
+            <div class="important-box">
+                <ul>
+                    <li><strong>String:</strong> Stores a sequence of characters.</li>
+                    <li><strong>Array:</strong> Stores multiple values of the same declared element type.</li>
+                    <li><strong>Class:</strong> Defines the structure and behaviour of objects.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>7. Java Program Example</h2>
+
+            <p>This program demonstrates variables and data types.</p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">
+                        Copy Code
+                    </button>
+                </div>
+
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int age = 18;
+        double percentage = 85.5;
+        char grade = 'A';
+        boolean passed = true;
+        String name = "Student";
+
+        System.out.println(name);
+        System.out.println(age);
+        System.out.println(percentage);
+        System.out.println(grade);
+        System.out.println(passed);
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>Student</p>
+                <p>18</p>
+                <p>85.5</p>
+                <p>A</p>
+                <p>true</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>8. Difference Between Variable and Data Type</h2>
+
+            <p>
+                <strong>Variable:</strong> A named storage location
+                used to hold a value.
+            </p>
+
+            <p>
+                <strong>Data Type:</strong> Specifies the kind of value
+                that can be stored in a variable.
+            </p>
+
+            <div class="important-box">
+                <p><strong>Example:</strong> int marks = 90;</p>
+                <p>int is the data type, marks is the variable name, and 90 is the value.</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>Topics Covered</h2>
+
+            <div class="important-box">
+                <ul>
+                    <li>Definition of variables</li>
+                    <li>Variable naming rules</li>
+                    <li>Local, instance and static variables</li>
+                    <li>Definition of data types</li>
+                    <li>Eight primitive data types</li>
+                    <li>Non-primitive data types</li>
+                    <li>Java program and output</li>
+                    <li>Difference between variable and data type</li>
+                </ul>
+            </div>
+        </section>
+
+        <button class="back-btn"
+            onclick="location.href='java-notes.html'">
+            ⬅ Back to Java Topics
+        </button>
+
+    </main>
+
+    <script>
+        async function copyJavaCode(button) {
+            const codeBox = button.closest(".code-box");
+            const code = codeBox.querySelector("pre code").innerText;
+            const status = codeBox.querySelector(".copy-status");
+
+            try {
+                await navigator.clipboard.writeText(code);
+
+                button.textContent = "Copied!";
+                status.textContent = "Code copied successfully!";
+
+                setTimeout(() => {
+                    button.textContent = "Copy Code";
+                    status.textContent = "";
+                }, 2000);
+
+            } catch (error) {
+                status.textContent =
+                    "Copy unavailable. Please copy the code manually.";
+            }
+        }
+    </script>
+
+</body>
+</html>

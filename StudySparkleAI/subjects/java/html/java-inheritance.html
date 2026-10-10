@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Inheritance | StudySpark AI</title>
+    <link rel="stylesheet" href="../css/java-topic.css">
+</head>
+<body>
+
+<header class="topic-header">
+    <h1>Java Inheritance</h1>
+    <p>Learn inheritance in Java with easy explanations and examples.</p>
+</header>
+
+<main class="topic-container">
+
+    <section class="topic-card">
+        <h2>1. What is Inheritance?</h2>
+        <p>Inheritance is an object-oriented programming feature in which
+        one class acquires accessible fields and methods from another class.</p>
+
+        <div class="important-box">
+            <strong>Example:</strong> A Dog class can inherit common
+            properties and methods from an Animal class.
+        </div>
+    </section>
+
+    <section class="topic-card">
+        <h2>2. Important Keywords</h2>
+        <ul>
+            <li><code>extends</code> – used when a class inherits from another class.</li>
+            <li><code>super</code> – refers to the parent-class part of an object.</li>
+            <li><code>implements</code> – used when a class implements an interface.</li>
+        </ul>
+    </section>
+
+    <section class="topic-card">
+        <h2>3. Single Inheritance</h2>
+        <p>In single inheritance, one child class inherits from one parent class.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Animal {
+    void eat() {
+        System.out.println("Animal eats food");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Animal eats food
+Dog barks</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>4. Multilevel Inheritance</h2>
+        <p>In multilevel inheritance, a class inherits from a child class,
+        forming a chain of inheritance.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Animal {
+    void eat() {
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking");
+    }
+}
+
+class Puppy extends Dog {
+    void play() {
+        System.out.println("Playing");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Puppy p = new Puppy();
+        p.eat();
+        p.bark();
+        p.play();
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Eating
+Barking
+Playing</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>5. Hierarchical Inheritance</h2>
+        <p>In hierarchical inheritance, multiple child classes inherit
+        from the same parent class.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Animal {
+    void eat() {
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking");
+    }
+}
+
+class Cat extends Animal {
+    void meow() {
+        System.out.println("Meowing");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        Cat c = new Cat();
+
+        d.eat();
+        d.bark();
+
+        c.eat();
+        c.meow();
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Eating
+Barking
+Eating
+Meowing</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>6. Multiple Inheritance in Java</h2>
+        <p>Java does not support multiple inheritance through classes.
+        A class cannot extend two classes at the same time. However,
+        Java supports multiple inheritance of type through interfaces.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>interface A {
+    void showA();
+}
+
+interface B {
+    void showB();
+}
+
+class Demo implements A, B {
+    public void showA() {
+        System.out.println("Interface A");
+    }
+
+    public void showB() {
+        System.out.println("Interface B");
+    }
+
+    public static void main(String[] args) {
+        Demo d = new Demo();
+        d.showA();
+        d.showB();
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Interface A
+Interface B</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>7. The super Keyword</h2>
+        <p>The <code>super</code> keyword can be used to access accessible
+        parent-class members and to call a parent-class constructor.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Parent {
+    void display() {
+        System.out.println("Parent class");
+    }
+}
+
+class Child extends Parent {
+    void display() {
+        super.display();
+        System.out.println("Child class");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.display();
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Parent class
+Child class</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>8. Method Overriding</h2>
+        <p>Method overriding occurs when a child class provides its own
+        implementation of an inherited instance method with a compatible
+        method signature.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Dog barks</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>9. Advantages of Inheritance</h2>
+        <ul>
+            <li>It supports code reuse.</li>
+            <li>It reduces repeated code.</li>
+            <li>It makes programs easier to organize.</li>
+            <li>It supports method overriding and runtime polymorphism.</li>
+            <li>It helps represent parent-child relationships.</li>
+        </ul>
+    </section>
+
+    <section class="topic-card">
+        <h2>10. Important Points to Remember</h2>
+        <ul>
+            <li><code>extends</code> is used for class inheritance.</li>
+            <li>Java classes support single, multilevel and hierarchical inheritance.</li>
+            <li>Multiple inheritance through classes is not supported.</li>
+            <li>Interfaces can be used to implement multiple inheritance of type.</li>
+            <li><code>super</code> can access accessible parent members.</li>
+            <li>Method overriding allows a child class to redefine an inherited method.</li>
+        </ul>
+    </section>
+
+    <section class="topic-card">
+        <h2>Topics Covered</h2>
+        <p>Inheritance, extends keyword, single inheritance, multilevel
+        inheritance, hierarchical inheritance, interfaces, super keyword
+        and method overriding.</p>
+    </section>
+
+    <button class="back-btn"
+        onclick="location.href='java-notes.html'">
+        ⬅ Back to Java Topics
+    </button>
+
+</main>
+
+<script>
+    async function copyJavaCode(button) {
+        const codeBox = button.closest(".code-box");
+        const code = codeBox.querySelector("pre code").innerText;
+        const status = codeBox.querySelector(".copy-status");
+
+        try {
+            await navigator.clipboard.writeText(code);
+            button.textContent = "Copied!";
+            status.textContent = "Code copied successfully!";
+
+            setTimeout(() => {
+                button.textContent = "Copy Code";
+                status.textContent = "";
+            }, 2000);
+        } catch (error) {
+            status.textContent =
+                "Copy unavailable. Please copy the code manually.";
+        }
+    }
+</script>
+
+</body>
+</html>

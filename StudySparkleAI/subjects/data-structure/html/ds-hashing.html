@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hashing - Data Structure | StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/data-structure.css" />
+  </head>
+
+  <body>
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1>🔐 Hashing</h1>
+      <p>Learn the basic concepts of Hashing in Data Structure.</p>
+    </header>
+
+    <!-- Notes Container -->
+    <div class="notes-container">
+
+      <!-- Hashing Card -->
+      <div class="note-card">
+
+        <h2>What is Hashing?</h2>
+
+        <p>
+          Hashing is a technique used to store and search data quickly.
+          It uses a special function called a hash function to convert a key
+          into an index of a hash table.
+        </p>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Hashing is a data structure technique that maps a key to a specific
+          location in a hash table using a hash function.
+        </div>
+
+
+        <h2>Hash Table</h2>
+
+        <p>
+          A hash table is a data structure that stores data in the form of
+          key-value pairs. The position of data is decided using a hash
+          function.
+        </p>
+
+
+        <h2>Hash Function</h2>
+
+        <p>
+          A hash function takes a key as input and produces an index where
+          the data should be stored in the hash table.
+        </p>
+
+        <div class="example-box">
+          <strong>Example:</strong>
+
+          <p>
+            If the hash table size is 10 and the key is 25:
+          </p>
+
+          <p>
+            Hash Function = Key % Table Size
+          </p>
+
+          <p>
+            25 % 10 = 5
+          </p>
+
+          <p>
+            Therefore, key 25 will be stored at index 5.
+          </p>
+        </div>
+
+
+        <h2>Collision</h2>
+
+        <p>
+          A collision occurs when two different keys produce the same index
+          in a hash table.
+        </p>
+
+        <div class="example-box">
+          <strong>Example:</strong>
+
+          <p>
+            Suppose the hash table size is 10.
+          </p>
+
+          <p>
+            25 % 10 = 5
+          </p>
+
+          <p>
+            35 % 10 = 5
+          </p>
+
+          <p>
+            Both keys get the same index 5, so a collision occurs.
+          </p>
+        </div>
+
+
+        <h2>Collision Resolution Techniques</h2>
+
+        <p>
+          Collision resolution techniques are used to handle collisions in
+          a hash table.
+        </p>
+
+        <ul>
+          <li>Separate Chaining</li>
+          <li>Linear Probing</li>
+          <li>Quadratic Probing</li>
+          <li>Double Hashing</li>
+        </ul>
+
+
+        <h2>Applications of Hashing</h2>
+
+        <ul>
+          <li>Database indexing</li>
+          <li>Password storage</li>
+          <li>Searching data quickly</li>
+          <li>Compiler symbol tables</li>
+          <li>Caching</li>
+          <li>Data retrieval</li>
+        </ul>
+
+
+        <h2>Advantages of Hashing</h2>
+
+        <ul>
+          <li>Fast searching</li>
+          <li>Fast insertion</li>
+          <li>Fast deletion</li>
+          <li>Efficient data storage</li>
+        </ul>
+
+
+        <h2>Disadvantages of Hashing</h2>
+
+        <ul>
+          <li>Collisions can occur</li>
+          <li>Good hash function is required</li>
+          <li>Hash tables may require extra memory</li>
+        </ul>
+
+
+        <!-- Interactive Hashing -->
+        <h2>Hashing Example</h2>
+
+        <div class="hash-animation">
+
+          <div class="hash-table" id="hashTable">
+
+            <div class="hash-slot">
+              <span>0</span>
+            </div>
+
+            <div class="hash-slot">
+              <span>1</span>
+            </div>
+
+            <div class="hash-slot">
+              <span>2</span>
+            </div>
+
+            <div class="hash-slot">
+              <span>3</span>
+            </div>
+
+            <div class="hash-slot">
+              <span>4</span>
+            </div>
+
+            <div class="hash-slot">
+              <span>5</span>
+            </div>
+
+            <div class="hash-slot">
+              <span>6</span>
+            </div>
+
+            <div class="hash-slot">
+              <span>7</span>
+            </div>
+
+            <div class="hash-slot">
+              <span>8</span>
+            </div>
+
+            <div class="hash-slot">
+              <span>9</span>
+            </div>
+
+          </div>
+
+
+          <input
+            type="number"
+            id="hashKey"
+            placeholder="Enter a key"
+          />
+
+          <div class="hash-buttons">
+
+            <button onclick="insertHash()">
+              Insert
+            </button>
+
+            <button onclick="searchHash()">
+              Search
+            </button>
+
+            <button onclick="clearHash()">
+              Clear
+            </button>
+
+          </div>
+
+          <p id="hashMessage" class="hash-message"></p>
+
+        </div>
+
+
+        <h2>Conclusion</h2>
+
+        <p>
+          Hashing is an important data structure technique used for fast
+          searching, insertion and deletion. It stores data using a hash
+          function and hash table.
+        </p>
+
+      </div>
+
+
+      <!-- Back Button -->
+      <button
+        class="back-btn"
+        onclick="location.href = 'ds-notes.html'"
+      >
+        ⬅️ Back to Data Structure Notes
+      </button>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="../js/ds-hashing.js"></script>
+
+  </body>
+</html>

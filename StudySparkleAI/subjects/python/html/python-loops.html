@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Python Loops</title>
+
+  <link rel="stylesheet" href="../css/python-topic.css">
+</head>
+
+<body>
+
+<div class="notes-container">
+
+  <h1>🐍 Python Loops</h1>
+
+  <div class="notes-card">
+
+    <h2>📘 What is a Loop?</h2>
+
+    <p>
+      A loop is used to execute a block of code repeatedly.
+      It helps us perform the same task multiple times without writing
+      the same code again and again.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+for i in range(5):
+    print(i)
+      </pre>
+
+      <p>
+        This loop executes the print statement five times.
+      </p>
+    </div>
+
+
+    <h2>⭐ Types of Loops in Python</h2>
+
+    <p>
+      Python mainly provides two types of loops:
+    </p>
+
+    <ul>
+      <li>for loop</li>
+      <li>while loop</li>
+    </ul>
+
+    <p>
+      Python also provides loop control statements such as
+      <strong>break</strong>, <strong>continue</strong> and
+      <strong>pass</strong>.
+    </p>
+
+
+    <h2>🔹 for Loop</h2>
+
+    <p>
+      The for loop is used to iterate over a sequence such as a list,
+      tuple, string or range of numbers.
+    </p>
+
+    <div class="example-box">
+      <strong>Syntax:</strong>
+
+      <pre>
+for variable in sequence:
+    statement
+      </pre>
+
+      <strong>Example:</strong>
+
+      <pre>
+for i in range(1, 6):
+    print(i)
+      </pre>
+    </div>
+
+
+    <h2>🔢 Using range() with for Loop</h2>
+
+    <p>
+      The range() function generates a sequence of numbers.
+      It is commonly used with the for loop.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+for i in range(1, 6):
+    print(i)
+      </pre>
+
+      <p>
+        The loop prints numbers from 1 to 5.
+      </p>
+    </div>
+
+
+    <h2>🔤 Loop through a String</h2>
+
+    <p>
+      A for loop can be used to access each character of a string one by one.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+name = "Python"
+
+for letter in name:
+    print(letter)
+      </pre>
+    </div>
+
+
+    <h2>📋 Loop through a List</h2>
+
+    <p>
+      A for loop can be used to access each item in a list.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+subjects = ["Python", "C", "DBMS"]
+
+for subject in subjects:
+    print(subject)
+      </pre>
+    </div>
+
+
+    <h2>🔹 while Loop</h2>
+
+    <p>
+      The while loop executes a block of code as long as the given
+      condition is True.
+    </p>
+
+    <div class="example-box">
+      <strong>Syntax:</strong>
+
+      <pre>
+while condition:
+    statement
+      </pre>
+
+      <strong>Example:</strong>
+
+      <pre>
+i = 1
+
+while i <= 5:
+    print(i)
+    i = i + 1
+      </pre>
+    </div>
+
+
+    <h2>🔄 Difference between for and while Loop</h2>
+
+    <table>
+      <tr>
+        <th>for Loop</th>
+        <th>while Loop</th>
+      </tr>
+
+      <tr>
+        <td>Used to iterate over a sequence.</td>
+        <td>Used to repeat code while a condition is True.</td>
+      </tr>
+
+      <tr>
+        <td>Useful when the number of iterations is known.</td>
+        <td>Useful when repetition depends on a condition.</td>
+      </tr>
+
+      <tr>
+        <td>Commonly used with range(), lists and strings.</td>
+        <td>Commonly used with conditions.</td>
+      </tr>
+    </table>
+
+
+    <h2>🛑 break Statement</h2>
+
+    <p>
+      The break statement is used to stop the loop immediately.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+for i in range(1, 6):
+
+    if i == 3:
+        break
+
+    print(i)
+      </pre>
+
+      <p>
+        The loop stops when the value of i becomes 3.
+      </p>
+    </div>
+
+
+    <h2>⏭️ continue Statement</h2>
+
+    <p>
+      The continue statement skips the current iteration and moves
+      to the next iteration of the loop.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+for i in range(1, 6):
+
+    if i == 3:
+        continue
+
+    print(i)
+      </pre>
+
+      <p>
+        When i is 3, that iteration is skipped.
+      </p>
+    </div>
+
+
+    <h2>⏸️ pass Statement</h2>
+
+    <p>
+      The pass statement does nothing. It is used as a placeholder
+      when a statement is required syntactically but no action is needed.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+for i in range(5):
+    pass
+      </pre>
+    </div>
+
+
+    <h2>🔁 Nested Loops</h2>
+
+    <p>
+      A loop inside another loop is called a nested loop.
+      Nested loops are useful for working with multiple levels of data.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+for i in range(1, 4):
+
+    for j in range(1, 4):
+        print(i, j)
+      </pre>
+    </div>
+
+
+    <h2>💻 Practical Example</h2>
+
+    <p>
+      Loops are commonly used for printing numbers, processing lists,
+      reading data and performing repeated calculations.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+total = 0
+
+for i in range(1, 6):
+    total = total + i
+
+print(total)
+      </pre>
+
+      <p>
+        This program adds the numbers from 1 to 5.
+      </p>
+    </div>
+
+
+    <h2>📚 Advantages of Loops</h2>
+
+    <ul>
+      <li>Loops reduce repeated code.</li>
+      <li>They save time and effort.</li>
+      <li>They make programs shorter and easier to manage.</li>
+      <li>They are useful for processing collections of data.</li>
+      <li>They are commonly used in real-world programs.</li>
+    </ul>
+
+
+    <h2>📌 Quick Revision</h2>
+
+    <ul>
+      <li>A loop executes a block of code repeatedly.</li>
+      <li>Python mainly provides for and while loops.</li>
+      <li>The for loop is commonly used with sequences.</li>
+      <li>The while loop runs while a condition is True.</li>
+      <li>range() is commonly used with for loops.</li>
+      <li>break stops the loop.</li>
+      <li>continue skips the current iteration.</li>
+      <li>pass acts as a placeholder.</li>
+      <li>A loop inside another loop is called a nested loop.</li>
+    </ul>
+
+
+    <button class="back-btn" onclick="location.href='python-notes.html'">
+      ⬅️ Back to Python Notes
+    </button>
+
+  </div>
+
+</div>
+
+</body>
+</html>

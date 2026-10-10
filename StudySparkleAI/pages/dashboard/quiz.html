@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#fcfbff" />
+    <meta
+      name="description"
+      content="Explore programming, computer science and technology quizzes on StudySpark AI. Practise concepts and build your confidence."
+    />
+
+    <title>Explore Quizzes | StudySpark AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/quiz.css" />
+    <script src="../../assets/js/quiz.js" defer></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="../../index.html"
+          aria-label="StudySpark AI Home"
+        >
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>StudySpark<span class="brand-ai">AI</span></span>
+        </a>
+
+        <div class="header-right">
+          <span class="learning-badge">Learning Space</span>
+          <a class="home-link" href="../../index.html">
+            <span aria-hidden="true">←</span>
+            <span>Home</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow">YOUR LEARNING JOURNEY</span>
+
+          <h1>
+            Turn knowledge into
+            <span>confidence.</span>
+          </h1>
+
+          <p>
+            Learn by doing. Explore your favourite subjects, test your knowledge
+            and make every practice session count.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-btn" href="#explore">
+              Explore Subjects
+              <span aria-hidden="true">↘</span>
+            </a>
+
+            <span class="hero-note">
+              <span class="note-dot"></span>
+              Learn at your own pace
+            </span>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <strong class="stat-value" id="heroSubjectCount">14</strong>
+              <span class="stat-label">Subjects to explore</span>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <div class="stat-item">
+              <strong class="stat-value">03</strong>
+              <span class="stat-label">Learning categories</span>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <div class="stat-item">
+              <strong class="stat-value">100%</strong>
+              <span class="stat-label">Your learning journey</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO VISUAL -->
+        <div class="hero-visual" aria-label="Learning progress illustration">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+
+          <div class="floating-chip chip-top">
+            <span class="chip-icon chip-purple">✦</span>
+            Keep learning
+          </div>
+
+          <div class="progress-card">
+            <div class="progress-card-top">
+              <div>
+                <span class="progress-label">YOUR LEARNING SPACE</span>
+                <h2>Ready to practise?</h2>
+              </div>
+
+              <span class="progress-symbol" aria-hidden="true">✧</span>
+            </div>
+
+            <div class="progress-illustration" aria-hidden="true">
+              <div class="illustration-circle circle-purple">✦</div>
+              <div class="illustration-circle circle-pink">✓</div>
+              <div class="illustration-circle circle-blue">⌘</div>
+              <div class="illustration-line"></div>
+              <div class="illustration-line short"></div>
+            </div>
+
+            <div class="progress-bottom">
+              <div>
+                <strong>One subject at a time.</strong>
+                <span>Small steps make progress.</span>
+              </div>
+              <span class="progress-check">✓</span>
+            </div>
+          </div>
+
+          <div class="floating-chip chip-bottom">
+            <span class="chip-icon chip-green">✓</span>
+            Practice makes progress
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-decoration decoration-one"></div>
+      <div class="hero-decoration decoration-two"></div>
+    </section>
+
+    <!-- SUBJECT EXPLORER -->
+    <main class="container">
+      <section class="explorer" id="explore">
+        <div class="section-heading">
+          <div>
+            <span class="section-eyebrow">FIND YOUR NEXT CHALLENGE</span>
+            <h2>Explore subjects<span class="heading-period">.</span></h2>
+            <p>
+              Choose a subject and take the next step in your learning journey.
+            </p>
+          </div>
+
+          <div class="subject-total">
+            <span class="total-icon">✦</span>
+            <span><strong id="visibleCount">14</strong> subjects</span>
+          </div>
+        </div>
+
+        <!-- SEARCH AND FILTERS -->
+        <div class="explorer-controls">
+          <div class="search-row">
+            <label class="search-box" for="quizSearch">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+
+              <input
+                type="search"
+                id="quizSearch"
+                placeholder="Search subjects, topics or keywords..."
+                autocomplete="off"
+                aria-label="Search subjects"
+                aria-describedby="searchHint"
+              />
+
+              <span class="keyboard-hint" id="searchHint">
+                <kbd>Ctrl</kbd><kbd>K</kbd>
+              </span>
+            </label>
+
+            <button
+              type="button"
+              id="clearSearch"
+              class="clear-search"
+              hidden
+              aria-label="Clear search"
+            >
+              Clear
+            </button>
+          </div>
+
+          <div class="filter-area">
+            <span class="filter-label">BROWSE BY CATEGORY</span>
+
+            <div
+              class="filter-row"
+              role="group"
+              aria-label="Filter subjects by category"
+            >
+              <button
+                type="button"
+                class="filter-btn active"
+                data-filter="all"
+                aria-pressed="true"
+              >
+                <span class="filter-icon">✦</span>
+                All subjects
+                <span class="filter-count" id="count-all">14</span>
+              </button>
+
+              <button
+                type="button"
+                class="filter-btn"
+                data-filter="programming"
+                aria-pressed="false"
+              >
+                <span class="filter-icon">⌘</span>
+                Programming
+                <span class="filter-count" id="count-programming">4</span>
+              </button>
+
+              <button
+                type="button"
+                class="filter-btn"
+                data-filter="computer-science"
+                aria-pressed="false"
+              >
+                <span class="filter-icon">▤</span>
+                Computer Science
+                <span class="filter-count" id="count-computer-science">5</span>
+              </button>
+
+              <button
+                type="button"
+                class="filter-btn"
+                data-filter="technology"
+                aria-pressed="false"
+              >
+                <span class="filter-icon">✧</span>
+                Technology
+                <span class="filter-count" id="count-technology">5</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="results-bar">
+          <p id="resultsMessage" aria-live="polite">Showing all 14 subjects</p>
+          <span class="results-decoration" aria-hidden="true">✳</span>
+        </div>
+
+        <!-- JavaScript creates cards here -->
+        <div class="quiz-grid" id="quizGrid"></div>
+
+        <!-- EMPTY STATE -->
+        <section class="empty-state" id="emptyState" hidden>
+          <div class="empty-state-icon" aria-hidden="true">⌕</div>
+          <span class="empty-eyebrow">NO MATCHES FOUND</span>
+          <h3>Nothing here just yet.</h3>
+          <p>
+            Try another keyword or clear your filters to explore all available
+            subjects.
+          </p>
+          <button type="button" class="reset-btn" id="resetFilters">
+            <span aria-hidden="true">↻</span>
+            Reset filters
+          </button>
+        </section>
+      </section>
+
+      <!-- BOTTOM BANNER -->
+      <section class="promo-banner">
+        <div class="banner-decoration" aria-hidden="true">✦</div>
+
+        <div class="banner-copy">
+          <span class="banner-eyebrow">YOUR NEXT STEP STARTS HERE</span>
+          <h2>Curiosity is your superpower.</h2>
+          <p>
+            Pick a subject, explore new concepts and keep moving forward, one
+            learning step at a time.
+          </p>
+        </div>
+
+        <a href="#explore" class="banner-btn">
+          Find a subject
+          <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand footer-brand" href="../../index.html">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>StudySpark<span class="brand-ai">AI</span></span>
+        </a>
+
+        <p class="footer-copy">
+          © <span id="currentYear"></span> StudySpark AI. Learn something new
+          every day.
+        </p>
+
+        <a class="footer-home" href="../../index.html">Back to home ↑</a>
+      </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div
+      class="quiz-toast"
+      id="quizToast"
+      role="status"
+      aria-live="polite"
+      hidden
+    >
+      <div class="toast-icon" id="toastIcon" aria-hidden="true">📚</div>
+
+      <div class="toast-content">
+        <h3 id="toastTitle">Subject selected</h3>
+        <p id="toastMessage">Get ready to learn.</p>
+      </div>
+
+      <button
+        type="button"
+        class="close-toast"
+        id="closeToast"
+        aria-label="Close notification"
+      >
+        ×
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Operators in C - StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/c-programming.css" />
+  </head>
+
+  <body>
+    <div class="notes-container">
+      <h1>📚 Operators in C</h1>
+
+      <div class="notes-card">
+        <h2>1. What is an Operator?</h2>
+
+        <p>
+          An operator is a symbol used to perform an operation on values or
+          variables.
+        </p>
+
+        <h2>2. Definition</h2>
+
+        <p>
+          <b>Operator:</b> An operator is a symbol that tells the compiler to
+          perform a specific operation.
+        </p>
+
+        <h2>3. Types of Operators in C</h2>
+
+        <p>The main types of operators in C are:</p>
+
+        <ul>
+          <li>Arithmetic Operators</li>
+          <li>Relational Operators</li>
+          <li>Logical Operators</li>
+          <li>Assignment Operators</li>
+          <li>Increment and Decrement Operators</li>
+          <li>Bitwise Operators</li>
+          <li>Conditional Operator</li>
+        </ul>
+
+        <h2>4. Arithmetic Operators</h2>
+
+        <p>Arithmetic operators are used to perform mathematical operations.</p>
+
+        <table>
+          <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+            <th>Example</th>
+          </tr>
+
+          <tr>
+            <td>+</td>
+            <td>Addition</td>
+            <td>a + b</td>
+          </tr>
+
+          <tr>
+            <td>-</td>
+            <td>Subtraction</td>
+            <td>a - b</td>
+          </tr>
+
+          <tr>
+            <td>*</td>
+            <td>Multiplication</td>
+            <td>a * b</td>
+          </tr>
+
+          <tr>
+            <td>/</td>
+            <td>Division</td>
+            <td>a / b</td>
+          </tr>
+
+          <tr>
+            <td>%</td>
+            <td>Remainder</td>
+            <td>a % b</td>
+          </tr>
+        </table>
+
+        <h2>5. Relational Operators</h2>
+
+        <p>
+          Relational operators are used to compare two values. They return true
+          or false.
+        </p>
+
+        <table>
+          <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+            <th>Example</th>
+          </tr>
+
+          <tr>
+            <td>==</td>
+            <td>Equal to</td>
+            <td>a == b</td>
+          </tr>
+
+          <tr>
+            <td>!=</td>
+            <td>Not equal to</td>
+            <td>a != b</td>
+          </tr>
+
+          <tr>
+            <td>&gt;</td>
+            <td>Greater than</td>
+            <td>a &gt; b</td>
+          </tr>
+
+          <tr>
+            <td>&lt;</td>
+            <td>Less than</td>
+            <td>a &lt; b</td>
+          </tr>
+
+          <tr>
+            <td>&gt;=</td>
+            <td>Greater than or equal to</td>
+            <td>a &gt;= b</td>
+          </tr>
+
+          <tr>
+            <td>&lt;=</td>
+            <td>Less than or equal to</td>
+            <td>a &lt;= b</td>
+          </tr>
+        </table>
+
+        <h2>6. Logical Operators</h2>
+
+        <p>Logical operators are used to combine two or more conditions.</p>
+
+        <table>
+          <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+            <th>Example</th>
+          </tr>
+
+          <tr>
+            <td>&amp;&amp;</td>
+            <td>Logical AND</td>
+            <td>a &gt; 5 &amp;&amp; b &lt; 10</td>
+          </tr>
+
+          <tr>
+            <td>||</td>
+            <td>Logical OR</td>
+            <td>a &gt; 5 || b &lt; 10</td>
+          </tr>
+
+          <tr>
+            <td>!</td>
+            <td>Logical NOT</td>
+            <td>!(a &gt; 5)</td>
+          </tr>
+        </table>
+
+        <h2>7. Assignment Operators</h2>
+
+        <p>Assignment operators are used to assign values to variables.</p>
+
+        <div class="example-box">
+          <b>Examples:</b>
+
+          <br /><br />
+
+          a = 10;
+
+          <br />
+
+          a += 5;
+
+          <br />
+
+          a -= 2;
+
+          <br />
+
+          a *= 3;
+
+          <br />
+
+          a /= 2;
+        </div>
+
+        <h2>8. Increment and Decrement Operators</h2>
+
+        <p>
+          Increment operator increases a value by 1. Decrement operator
+          decreases a value by 1.
+        </p>
+
+        <div class="example-box">
+          <b>Examples:</b>
+
+          <br /><br />
+
+          a++;
+
+          <br />
+
+          a--;
+        </div>
+
+        <h2>9. Conditional Operator</h2>
+
+        <p>
+          The conditional operator is used to make a simple decision using three
+          operands.
+        </p>
+
+        <div class="example-box">
+          <b>Syntax:</b>
+
+          <br /><br />
+
+          condition ? value1 : value2;
+
+          <br /><br />
+
+          <b>Example:</b>
+
+          <br /><br />
+
+          max = (a &gt; b) ? a : b;
+        </div>
+
+        <h2>10. Bitwise Operators</h2>
+
+        <p>
+          Bitwise operators perform operations on individual bits of numbers.
+        </p>
+
+        <div class="example-box">
+          <b>Examples:</b>
+
+          <br /><br />
+
+          &amp; &nbsp;&nbsp; | &nbsp;&nbsp; ^ &nbsp;&nbsp; ~ &nbsp;&nbsp;
+          &lt;&lt; &nbsp;&nbsp; &gt;&gt;
+        </div>
+
+        <h2>11. Example Program</h2>
+
+        <div class="example-box">
+          #include &lt;stdio.h&gt;
+
+          <br /><br />
+
+          int main() {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;int a = 10, b = 5;
+
+          <br /><br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("Addition = %d", a + b);
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("Subtraction = %d", a - b);
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("Multiplication = %d", a * b);
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("Division = %d", a / b);
+
+          <br /><br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;return 0;
+
+          <br />
+
+          }
+        </div>
+
+        <h2>12. Summary</h2>
+
+        <p>
+          Operators are symbols used to perform different operations in C. They
+          include arithmetic, relational, logical, assignment, increment,
+          decrement, bitwise and conditional operators.
+        </p>
+      </div>
+
+      <button class="back-btn" onclick="location.href = 'cp-notes.html'">
+        ⬅️ Back to C Programming
+      </button>
+    </div>
+  </body>
+</html>

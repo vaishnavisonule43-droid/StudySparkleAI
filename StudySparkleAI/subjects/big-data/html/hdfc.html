@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDFS - StudySpark AI</title>
+    <link rel="stylesheet" href="../css/notes.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <div class="header-icon">💾</div>
+        <h1>HDFS</h1>
+        <p>Hadoop Distributed File System</p>
+    </header>
+
+    <main class="notes-container">
+
+        <section class="intro-card">
+            <h2>Introduction to HDFS</h2>
+            <p>
+                HDFS is a storage system used by Hadoop to store very
+                large files across multiple computers. It divides files
+                into blocks and distributes those blocks across a cluster.
+            </p>
+        </section>
+
+        <section class="notes-section">
+            <h2>1. Definition of HDFS</h2>
+            <div class="note-card">
+                <p class="definition">
+                    HDFS (Hadoop Distributed File System) is a distributed
+                    file system that stores large amounts of data across
+                    multiple computers.
+                </p>
+                <p>
+                    It is designed to store large datasets reliably and
+                    provide access to data for processing.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>2. Why Do We Use HDFS?</h2>
+
+            <div class="notes-grid">
+                <div class="note-card">
+                    <span class="topic-icon">📦</span>
+                    <h3>Large Storage</h3>
+                    <p>It stores very large files across multiple computers.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">🛡️</span>
+                    <h3>Fault Tolerance</h3>
+                    <p>It can maintain copies of data blocks to help protect against computer failures.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">⚡</span>
+                    <h3>High Throughput</h3>
+                    <p>It supports efficient reading and writing of large datasets.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">🔧</span>
+                    <h3>Scalability</h3>
+                    <p>More computers can be added to increase storage capacity.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>3. Main Components of HDFS</h2>
+
+            <div class="note-card">
+                <h3>1. NameNode</h3>
+                <p>
+                    The NameNode manages the file system's metadata.
+                    It keeps information about files, directories,
+                    permissions, and where data blocks are stored.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>2. DataNode</h3>
+                <p>
+                    DataNodes store the actual data blocks. They report
+                    their status to the NameNode and handle data
+                    read and write requests.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>3. HDFS Client</h3>
+                <p>
+                    The HDFS client allows users and applications to
+                    read files from and write files to HDFS. It contacts
+                    the NameNode for metadata and communicates with
+                    DataNodes for the actual data.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>4. HDFS Architecture</h2>
+
+            <div class="note-card">
+                <p>
+                    HDFS generally follows a master-worker architecture.
+                    The NameNode manages metadata, while multiple
+                    DataNodes store the actual data blocks.
+                </p>
+
+                <div class="notes-grid">
+                    <div class="note-card">
+                        <span class="topic-icon">🧠</span>
+                        <h3>NameNode</h3>
+                        <p>Manages file and block information.</p>
+                    </div>
+
+                    <div class="note-card">
+                        <span class="topic-icon">💽</span>
+                        <h3>DataNode 1</h3>
+                        <p>Stores data blocks.</p>
+                    </div>
+
+                    <div class="note-card">
+                        <span class="topic-icon">💽</span>
+                        <h3>DataNode 2</h3>
+                        <p>Stores data blocks and their replicas.</p>
+                    </div>
+
+                    <div class="note-card">
+                        <span class="topic-icon">💽</span>
+                        <h3>DataNode 3</h3>
+                        <p>Stores other blocks or replicated copies.</p>
+                    </div>
+                </div>
+
+                <p>
+                    <strong>Remember:</strong> The NameNode manages
+                    metadata; the DataNodes store the actual file blocks.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>5. How Does HDFS Work?</h2>
+
+            <div class="note-card">
+                <ol>
+                    <li>
+                        <strong>File Input:</strong>
+                        The user uploads a large file to HDFS.
+                    </li>
+                    <li>
+                        <strong>Block Division:</strong>
+                        HDFS divides the file into smaller blocks.
+                    </li>
+                    <li>
+                        <strong>Block Storage:</strong>
+                        The blocks are stored across different DataNodes.
+                    </li>
+                    <li>
+                        <strong>Metadata Management:</strong>
+                        The NameNode maintains information about the file
+                        and the locations of its blocks.
+                    </li>
+                    <li>
+                        <strong>Data Reading:</strong>
+                        The client gets block locations from the NameNode
+                        and reads the data from the DataNodes.
+                    </li>
+                    <li>
+                        <strong>Replication:</strong>
+                        HDFS can keep copies of blocks on different
+                        DataNodes for reliability.
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>6. Example of HDFS</h2>
+
+            <div class="note-card">
+                <p>
+                    Suppose a college has a large file containing
+                    millions of student records.
+                </p>
+
+                <p>
+                    HDFS divides this file into blocks and stores them
+                    across different computers. The NameNode remembers
+                    where the blocks are stored, and the DataNodes
+                    store the actual blocks.
+                </p>
+
+                <p>
+                    If a stored block has a replica on another DataNode,
+                    that copy may be used if the original DataNode fails.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>7. Features of HDFS</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>Stores large files across multiple computers.</li>
+                    <li>Divides files into blocks.</li>
+                    <li>Supports block replication.</li>
+                    <li>Provides fault tolerance.</li>
+                    <li>Supports high-throughput data access.</li>
+                    <li>Can scale by adding more DataNodes.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>8. Advantages of HDFS</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>Can store huge amounts of data.</li>
+                    <li>Data is distributed across multiple computers.</li>
+                    <li>Replication helps protect against hardware failures.</li>
+                    <li>Can grow as storage needs increase.</li>
+                    <li>Works with Hadoop data-processing tools.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>9. Limitations of HDFS</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>It is not ideal for large numbers of tiny files.</li>
+                    <li>It is mainly designed for large, streaming data access.</li>
+                    <li>Maintaining replicas requires additional storage.</li>
+                    <li>It may not suit applications that need very low-latency access.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>10. Applications of HDFS</h2>
+
+            <div class="notes-grid">
+                <div class="note-card">
+                    <span class="topic-icon">🏦</span>
+                    <h3>Banking</h3>
+                    <p>Storing and processing large transaction datasets.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">🏥</span>
+                    <h3>Healthcare</h3>
+                    <p>Managing large medical and research datasets.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">🛒</span>
+                    <h3>E-commerce</h3>
+                    <p>Storing customer activity and order data.</p>
+                </div>
+
+                <div class="note-card">
+                    <span class="topic-icon">🌐</span>
+                    <h3>Social Media</h3>
+                    <p>Storing large volumes of posts and activity data.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>11. Conclusion</h2>
+
+            <div class="note-card">
+                <p>
+                    HDFS is an important component of Hadoop. It stores
+                    large files across multiple computers by dividing
+                    them into blocks. The NameNode manages metadata,
+                    while DataNodes store the actual data blocks.
+                </p>
+            </div>
+        </section>
+
+        <button class="back-btn" onclick="location.href='big-data-notes.html'">
+            ⬅️ Back to Big Data Topics
+        </button>
+
+    </main>
+
+    <footer>
+        <p>© 2026 StudySpark AI | Learn • Practice • Grow</p>
+    </footer>
+
+</body>
+</html>

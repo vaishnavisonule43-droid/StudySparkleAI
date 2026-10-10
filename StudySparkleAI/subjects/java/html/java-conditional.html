@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Conditional Statements | StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/java-topic.css">
+</head>
+
+<body>
+
+    <header class="topic-header">
+        <h1>Java Conditional Statements</h1>
+        <p>Java Programming Notes | StudySpark AI</p>
+    </header>
+
+    <main class="topic-container">
+
+        <section class="topic-card">
+            <h2>1. What Are Conditional Statements?</h2>
+            <p>
+                Conditional statements are used to make decisions in a
+                program. They execute different blocks of code depending
+                on whether a condition is true or false.
+            </p>
+
+            <div class="important-box">
+                <h3>Types of Conditional Statements</h3>
+                <ul>
+                    <li>if statement</li>
+                    <li>if-else statement</li>
+                    <li>if-else-if ladder</li>
+                    <li>Nested if statement</li>
+                    <li>switch statement</li>
+                    <li>Conditional (ternary) operator</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>2. if Statement</h2>
+            <p>
+                The if statement executes a block of code only when
+                the given condition is true.
+            </p>
+
+            <div class="important-box">
+                <h3>Syntax</h3>
+                <p>if (condition) { /* code */ }</p>
+            </div>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int age = 20;
+
+        if (age >= 18) {
+            System.out.println("Eligible to vote");
+        }
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>Eligible to vote</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>3. if-else Statement</h2>
+            <p>
+                The if-else statement executes one block if the
+                condition is true and another block if it is false.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int marks = 35;
+
+        if (marks >= 40) {
+            System.out.println("Pass");
+        } else {
+            System.out.println("Fail");
+        }
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>Fail</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>4. if-else-if Ladder</h2>
+            <p>
+                An if-else-if ladder checks multiple conditions in
+                order. The first true condition's block is executed.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int marks = 75;
+
+        if (marks >= 90) {
+            System.out.println("Grade A");
+        } else if (marks >= 70) {
+            System.out.println("Grade B");
+        } else if (marks >= 40) {
+            System.out.println("Grade C");
+        } else {
+            System.out.println("Fail");
+        }
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>Grade B</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>5. Nested if Statement</h2>
+            <p>
+                A nested if statement is an if statement written
+                inside another if statement.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int age = 20;
+        boolean hasId = true;
+
+        if (age >= 18) {
+            if (hasId) {
+                System.out.println("Entry allowed");
+            }
+        }
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>Entry allowed</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>6. switch Statement</h2>
+            <p>
+                The switch statement selects a block of code based
+                on the value of an expression.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int day = 2;
+
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+
+            case 2:
+                System.out.println("Tuesday");
+                break;
+
+            case 3:
+                System.out.println("Wednesday");
+                break;
+
+            default:
+                System.out.println("Invalid day");
+        }
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>Tuesday</p>
+            </div>
+
+            <p>
+                <strong>break:</strong> Ends the current switch case.
+            </p>
+            <p>
+                <strong>default:</strong> Executes when no case matches.
+            </p>
+        </section>
+
+        <section class="topic-card">
+            <h2>7. Conditional (Ternary) Operator</h2>
+            <p>
+                The ternary operator is a short way to choose between
+                two values based on a condition.
+            </p>
+
+            <div class="important-box">
+                <h3>Syntax</h3>
+                <p>condition ? value1 : value2</p>
+            </div>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status" aria-live="polite"></span>
+                    <button type="button" class="copy-btn"
+                        onclick="copyJavaCode(this)">Copy Code</button>
+                </div>
+                <pre><code>class Main {
+    public static void main(String[] args) {
+        int number = 8;
+
+        String result =
+            number % 2 == 0 ? "Even" : "Odd";
+
+        System.out.println(result);
+    }
+}</code></pre>
+            </div>
+
+            <div class="important-box">
+                <h3>Output</h3>
+                <p>Even</p>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>8. Difference Between if-else and switch</h2>
+
+            <p>
+                <strong>if-else:</strong> Useful for checking ranges,
+                multiple conditions and complex logical expressions.
+            </p>
+
+            <p>
+                <strong>switch:</strong> Useful when selecting between
+                different cases based on one expression's value.
+            </p>
+        </section>
+
+        <section class="topic-card">
+            <h2>9. Importance of Conditional Statements</h2>
+
+            <div class="important-box">
+                <ul>
+                    <li>They help a program make decisions.</li>
+                    <li>They execute code based on conditions.</li>
+                    <li>They help validate user input.</li>
+                    <li>They are useful for grading and eligibility checks.</li>
+                    <li>They control the flow of a program.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>Topics Covered</h2>
+
+            <div class="important-box">
+                <ul>
+                    <li>Definition of conditional statements</li>
+                    <li>if statement</li>
+                    <li>if-else statement</li>
+                    <li>if-else-if ladder</li>
+                    <li>Nested if statement</li>
+                    <li>switch statement</li>
+                    <li>Conditional (ternary) operator</li>
+                    <li>Differences and uses</li>
+                    <li>Java examples and outputs</li>
+                </ul>
+            </div>
+        </section>
+
+        <button class="back-btn"
+            onclick="location.href='java-notes.html'">
+            ⬅ Back to Java Topics
+        </button>
+
+    </main>
+
+    <script>
+        async function copyJavaCode(button) {
+            const codeBox = button.closest(".code-box");
+            const code = codeBox.querySelector("pre code").innerText;
+            const status = codeBox.querySelector(".copy-status");
+
+            try {
+                await navigator.clipboard.writeText(code);
+
+                button.textContent = "Copied!";
+                status.textContent = "Code copied successfully!";
+
+                setTimeout(() => {
+                    button.textContent = "Copy Code";
+                    status.textContent = "";
+                }, 2000);
+
+            } catch (error) {
+                status.textContent =
+                    "Copy unavailable. Please copy the code manually.";
+            }
+        }
+    </script>
+
+</body>
+</html>

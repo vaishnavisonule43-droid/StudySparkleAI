@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Python Conditional Statements</title>
+
+  <link rel="stylesheet" href="../css/python-topic.css">
+</head>
+
+<body>
+
+<div class="notes-container">
+
+  <h1>🐍 Python Conditional Statements</h1>
+
+  <div class="notes-card">
+
+    <h2>📘 What are Conditional Statements?</h2>
+
+    <p>
+      Conditional statements are used to make decisions in a Python program.
+      They execute different blocks of code depending on whether a condition
+      is True or False.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+age = 18
+
+if age >= 18:
+    print("You are eligible to vote.")
+      </pre>
+    </div>
+
+
+    <h2>⭐ Types of Conditional Statements</h2>
+
+    <p>
+      Python mainly provides the following conditional statements:
+    </p>
+
+    <ul>
+      <li>if statement</li>
+      <li>if-else statement</li>
+      <li>if-elif-else statement</li>
+      <li>Nested if statement</li>
+      <li>Conditional Expression</li>
+    </ul>
+
+
+    <h2>🔹 if Statement</h2>
+
+    <p>
+      The if statement is used to execute a block of code when a given
+      condition is True.
+    </p>
+
+    <div class="example-box">
+      <strong>Syntax:</strong>
+
+      <pre>
+if condition:
+    statement
+      </pre>
+
+      <strong>Example:</strong>
+
+      <pre>
+marks = 75
+
+if marks >= 40:
+    print("Pass")
+      </pre>
+    </div>
+
+
+    <h2>🔹 if-else Statement</h2>
+
+    <p>
+      The if-else statement is used when we want to execute one block
+      when the condition is True and another block when the condition
+      is False.
+    </p>
+
+    <div class="example-box">
+      <strong>Syntax:</strong>
+
+      <pre>
+if condition:
+    statement1
+else:
+    statement2
+      </pre>
+
+      <strong>Example:</strong>
+
+      <pre>
+marks = 35
+
+if marks >= 40:
+    print("Pass")
+else:
+    print("Fail")
+      </pre>
+    </div>
+
+
+    <h2>🔹 if-elif-else Statement</h2>
+
+    <p>
+      The if-elif-else statement is used when there are multiple conditions
+      to check.
+    </p>
+
+    <div class="example-box">
+      <strong>Syntax:</strong>
+
+      <pre>
+if condition1:
+    statement1
+elif condition2:
+    statement2
+else:
+    statement3
+      </pre>
+
+      <strong>Example:</strong>
+
+      <pre>
+marks = 75
+
+if marks >= 80:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+else:
+    print("Grade C")
+      </pre>
+    </div>
+
+
+    <h2>🔗 Multiple elif Conditions</h2>
+
+    <p>
+      We can use more than one elif statement when we need to check
+      several conditions.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+marks = 85
+
+if marks >= 90:
+    print("Excellent")
+elif marks >= 75:
+    print("Very Good")
+elif marks >= 60:
+    print("Good")
+elif marks >= 40:
+    print("Pass")
+else:
+    print("Fail")
+      </pre>
+    </div>
+
+
+    <h2>📌 Nested if Statement</h2>
+
+    <p>
+      A nested if statement means using one if statement inside another if
+      statement.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+age = 20
+has_id = True
+
+if age >= 18:
+    if has_id:
+        print("Entry allowed")
+      </pre>
+    </div>
+
+
+    <h2>💡 Conditional Expression</h2>
+
+    <p>
+      A conditional expression is a short way to write a simple if-else
+      condition in one line.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+age = 20
+
+result = "Adult" if age >= 18 else "Minor"
+
+print(result)
+      </pre>
+    </div>
+
+
+    <h2>🔍 Conditions with Comparison Operators</h2>
+
+    <p>
+      Conditional statements commonly use comparison operators such as
+      greater than, less than, equal to and not equal to.
+    </p>
+
+    <table>
+      <tr>
+        <th>Operator</th>
+        <th>Meaning</th>
+        <th>Example</th>
+      </tr>
+
+      <tr>
+        <td>==</td>
+        <td>Equal to</td>
+        <td>10 == 10</td>
+      </tr>
+
+      <tr>
+        <td>!=</td>
+        <td>Not equal to</td>
+        <td>10 != 5</td>
+      </tr>
+
+      <tr>
+        <td>&gt;</td>
+        <td>Greater than</td>
+        <td>10 &gt; 5</td>
+      </tr>
+
+      <tr>
+        <td>&lt;</td>
+        <td>Less than</td>
+        <td>5 &lt; 10</td>
+      </tr>
+
+      <tr>
+        <td>&gt;=</td>
+        <td>Greater than or equal to</td>
+        <td>10 &gt;= 10</td>
+      </tr>
+
+      <tr>
+        <td>&lt;=</td>
+        <td>Less than or equal to</td>
+        <td>5 &lt;= 10</td>
+      </tr>
+    </table>
+
+
+    <h2>🧠 Conditions with Logical Operators</h2>
+
+    <p>
+      Logical operators can be used to combine multiple conditions.
+    </p>
+
+    <ul>
+      <li><strong>and:</strong> Both conditions must be True.</li>
+      <li><strong>or:</strong> At least one condition must be True.</li>
+      <li><strong>not:</strong> Reverses the result of a condition.</li>
+    </ul>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+age = 20
+
+if age >= 18 and age <= 60:
+    print("Eligible")
+      </pre>
+    </div>
+
+
+    <h2>⚠️ Importance of Indentation</h2>
+
+    <p>
+      Python uses indentation to define a block of code.
+      The statements inside an if, elif or else block must be properly
+      indented.
+    </p>
+
+    <div class="example-box">
+      <strong>Correct Example:</strong>
+
+      <pre>
+if age >= 18:
+    print("Adult")
+      </pre>
+
+      <p>
+        The print statement is indented, so it belongs to the if block.
+      </p>
+    </div>
+
+
+    <h2>💻 Real-Life Example</h2>
+
+    <p>
+      Conditional statements can be used in real-life applications such as
+      checking age, marks, login details, eligibility and payment status.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+marks = 65
+
+if marks >= 40:
+    print("Student passed the exam")
+else:
+    print("Student failed the exam")
+      </pre>
+    </div>
+
+
+    <h2>📚 Advantages of Conditional Statements</h2>
+
+    <ul>
+      <li>They help programs make decisions.</li>
+      <li>They allow different actions for different conditions.</li>
+      <li>They make programs more useful and flexible.</li>
+      <li>They are useful for checking user input.</li>
+      <li>They are commonly used in real-world applications.</li>
+    </ul>
+
+
+    <h2>📌 Quick Revision</h2>
+
+    <ul>
+      <li>Conditional statements are used for decision making.</li>
+      <li>The if statement checks a condition.</li>
+      <li>The else block executes when the if condition is False.</li>
+      <li>The elif statement checks additional conditions.</li>
+      <li>A nested if means an if statement inside another if statement.</li>
+      <li>Conditional expressions provide a short form of if-else.</li>
+      <li>Python uses indentation to define code blocks.</li>
+    </ul>
+
+
+    <button class="back-btn" onclick="location.href='python-notes.html'">
+      ⬅️ Back to Python Notes
+    </button>
+
+  </div>
+
+</div>
+
+</body>
+</html>

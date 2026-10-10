@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
+
+.notes-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 35px auto;
+}
+
+
+/* =========================
+   PAGE TITLE
+   ========================= */
+
+.notes-container > h1 {
+  text-align: center;
+
+  margin-bottom: 30px;
+
+  padding: 35px 15px;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+  color: white;
+
+  border-radius: 16px;
+
+  font-size: 30px;
+
+  animation: slideDown 0.8s ease;
+
+  box-shadow: 0 5px 18px rgba(91, 75, 196, 0.20);
+}
+
+
+/* =========================
+   NOTES CARD
+   ========================= */
+
+.notes-card {
+  background: white;
+
+  padding: 25px;
+
+  margin-bottom: 22px;
+
+  border-radius: 16px;
+
+  border-left: 5px solid #6c5ce7;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+
+  animation: fadeUp 0.7s ease;
+
+  transition: all 0.3s ease;
+}
+
+.notes-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(91, 75, 196, 0.20);
+}
+
+
+/* =========================
+   TOPIC HEADINGS
+   ========================= */
+
+.notes-card h2 {
+  color: #5b4bc4;
+
+  margin-top: 22px;
+
+  margin-bottom: 12px;
+
+  font-size: 23px;
+}
+
+.notes-card h2:first-child {
+  margin-top: 0;
+}
+
+
+/* =========================
+   PARAGRAPH
+   ========================= */
+
+.notes-card p {
+  margin-bottom: 12px;
+
+  color: #444;
+
+  font-size: 16px;
+}
+
+
+/* =========================
+   LIST
+   ========================= */
+
+.notes-card ul,
+.notes-card ol {
+  margin-left: 25px;
+
+  margin-bottom: 15px;
+}
+
+.notes-card li {
+  margin-bottom: 7px;
+
+  color: #444;
+}
+
+
+/* =========================
+   EXAMPLE BOX
+   ========================= */
+
+.example-box {
+  margin-top: 15px;
+
+  margin-bottom: 20px;
+
+  padding: 18px;
+
+  background: #f0edff;
+
+  border-left: 5px solid #6c5ce7;
+
+  border-radius: 8px;
+
+  color: #444;
+
+  overflow-x: auto;
+
+  transition: all 0.3s ease;
+}
+
+.example-box:hover {
+  background: #e9e5ff;
+
+  transform: translateX(5px);
+
+  box-shadow: 0 5px 15px rgba(91, 75, 196, 0.12);
+}
+
+
+/* =========================
+   CODE INSIDE EXAMPLE
+   ========================= */
+
+.example-box b {
+  color: #5b4bc4;
+}
+
+
+/* =========================
+   BOLD TEXT
+   ========================= */
+
+.notes-card b {
+  color: #444;
+}
+
+
+/* =========================
+   BACK BUTTON
+   ========================= */
+
+.back-btn {
+  display: block;
+
+  margin: 30px auto 50px;
+
+  padding: 12px 28px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #5b4bc4;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  animation: backButtonAnimation 0.9s ease;
+}
+
+.back-btn:hover {
+  background: #6c5ce7;
+
+  transform: scale(1.08);
+
+  box-shadow: 0 6px 15px rgba(91, 75, 196, 0.30);
+}
+
+.back-btn:active {
+  transform: scale(0.95);
+}
+
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes backButtonAnimation {
+  from {
+    opacity: 0;
+
+    transform: translateY(25px) scale(0.90);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+  .notes-container {
+    width: 92%;
+  }
+
+  .notes-container > h1 {
+    padding: 28px 15px;
+
+    font-size: 26px;
+
+    margin-bottom: 22px;
+  }
+
+  .notes-card {
+    padding: 20px;
+  }
+
+  .notes-card h2 {
+    font-size: 20px;
+
+    margin-top: 20px;
+  }
+
+  .notes-card p {
+    font-size: 14px;
+  }
+
+  .notes-card li {
+    font-size: 14px;
+  }
+
+  .example-box {
+    padding: 13px;
+
+    font-size: 14px;
+
+    overflow-x: auto;
+  }
+
+  .back-btn {
+    width: 100%;
+
+    font-size: 14px;
+  }
+
+}

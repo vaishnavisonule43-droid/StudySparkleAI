@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Transaction Management - DBMS Notes - StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/notes.css" />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header class="page-header">
+      <h1>🔄 Transaction Management</h1>
+      <p>Learn how database transactions are managed safely.</p>
+    </header>
+
+
+    <div class="notes-container">
+
+      <!-- What is Transaction -->
+      <div class="note-card">
+        <h2>📖 What is a Transaction?</h2>
+
+        <p>
+          A transaction is a group of operations performed on a database
+          to complete a particular task.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          A transaction is a complete database operation or task.
+        </div>
+      </div>
+
+
+      <!-- Example -->
+      <div class="note-card">
+        <h2>💡 Example of Transaction</h2>
+
+        <p>
+          Suppose money is transferred from Account A to Account B.
+          The system must deduct money from A and add money to B.
+        </p>
+
+        <p>
+          Both operations should be completed successfully.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          A transaction should complete the whole task correctly.
+        </div>
+      </div>
+
+
+      <!-- ACID -->
+      <div class="note-card">
+        <h2>⭐ ACID Properties</h2>
+
+        <p>
+          ACID properties help to make database transactions reliable
+          and safe.
+        </p>
+
+        <h3>1. Atomicity</h3>
+        <p>
+          A transaction is completed fully or not completed at all.
+        </p>
+
+        <h3>2. Consistency</h3>
+        <p>
+          A transaction keeps the database in a correct state.
+        </p>
+
+        <h3>3. Isolation</h3>
+        <p>
+          Multiple transactions can work without interfering with each other.
+        </p>
+
+        <h3>4. Durability</h3>
+        <p>
+          Once a transaction is completed, the changes are saved permanently.
+        </p>
+      </div>
+
+
+      <!-- Transaction States -->
+      <div class="note-card">
+        <h2>🔄 Transaction States</h2>
+
+        <h3>1. Active</h3>
+        <p>
+          The transaction is currently running.
+        </p>
+
+        <h3>2. Partially Committed</h3>
+        <p>
+          The transaction has completed its operations but changes
+          are not yet permanently saved.
+        </p>
+
+        <h3>3. Committed</h3>
+        <p>
+          The transaction is completed successfully and changes are saved.
+        </p>
+
+        <h3>4. Failed</h3>
+        <p>
+          The transaction cannot continue because of an error or failure.
+        </p>
+
+        <h3>5. Aborted</h3>
+        <p>
+          The transaction is cancelled and its changes are undone.
+        </p>
+      </div>
+
+
+      <!-- Commit -->
+      <div class="note-card">
+        <h2>✅ COMMIT</h2>
+
+        <p>
+          COMMIT is used to permanently save the changes made by
+          a transaction.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          COMMIT means save the changes permanently.
+        </div>
+      </div>
+
+
+      <!-- Rollback -->
+      <div class="note-card">
+        <h2>↩️ ROLLBACK</h2>
+
+        <p>
+          ROLLBACK is used to cancel the changes made by a transaction
+          and return the database to its previous state.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          ROLLBACK means undo the changes.
+        </div>
+      </div>
+
+
+      <!-- Concurrency Control -->
+      <div class="note-card">
+        <h2>🔐 Concurrency Control</h2>
+
+        <p>
+          Concurrency control manages multiple transactions running
+          at the same time.
+        </p>
+
+        <p>
+          It helps to prevent incorrect data and maintains database
+          consistency.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          It safely manages many transactions at the same time.
+        </div>
+      </div>
+
+
+      <!-- Problems -->
+      <div class="note-card">
+        <h2>⚠️ Problems in Concurrent Transactions</h2>
+
+        <ul>
+          <li><b>Lost Update:</b> One update may overwrite another update.</li>
+          <li><b>Dirty Read:</b> A transaction reads uncommitted data.</li>
+          <li><b>Incorrect Summary:</b> A calculation may use changing data.</li>
+        </ul>
+      </div>
+
+
+      <!-- Importance -->
+      <div class="note-card">
+        <h2>🎯 Importance of Transaction Management</h2>
+
+        <ul>
+          <li>Keeps database data correct.</li>
+          <li>Prevents data loss.</li>
+          <li>Maintains data consistency.</li>
+          <li>Handles transaction failures.</li>
+          <li>Allows multiple users to work safely.</li>
+        </ul>
+      </div>
+
+
+      <!-- Summary -->
+      <div class="note-card">
+        <h2>📊 Summary</h2>
+
+        <ul>
+          <li><b>Transaction:</b> A group of database operations.</li>
+          <li><b>ACID:</b> Atomicity, Consistency, Isolation, Durability.</li>
+          <li><b>COMMIT:</b> Saves changes permanently.</li>
+          <li><b>ROLLBACK:</b> Undoes changes.</li>
+          <li><b>Concurrency Control:</b> Manages multiple transactions safely.</li>
+        </ul>
+      </div>
+
+
+      <!-- Back Button -->
+      <button
+        class="back-btn"
+        onclick="location.href='dbms-notes.html'"
+      >
+        ⬅️ Back to DBMS Notes
+      </button>
+
+    </div>
+
+  </body>
+</html>

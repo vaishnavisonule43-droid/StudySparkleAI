@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  padding: 35px 15px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  animation: slideDown 0.8s ease;
+}
+
+.page-header h1 {
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+.page-header p {
+  font-size: 16px;
+}
+
+
+/* Notes Container */
+.notes-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 35px auto;
+}
+
+
+/* Note Card */
+.note-card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+  animation: fadeUp 0.7s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+
+/* Heading */
+.note-card h2 {
+  color: #5b4bc4;
+  margin-bottom: 12px;
+}
+
+.note-card h3 {
+  margin: 15px 0 8px;
+}
+
+
+/* Paragraph */
+.note-card p {
+  margin-bottom: 12px;
+}
+
+
+/* List */
+.note-card ul {
+  margin-left: 25px;
+}
+
+.note-card li {
+  margin-bottom: 6px;
+}
+
+
+/* Definition Box */
+.definition {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f0edff;
+  border-left: 5px solid #6c5ce7;
+  border-radius: 8px;
+}
+
+
+/* Back Button */
+.back-btn {
+  display: block;
+  margin: 30px auto 50px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #5b4bc4;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .notes-container {
+    width: 92%;
+  }
+
+  .page-header h1 {
+    font-size: 26px;
+  }
+
+  .note-card {
+    padding: 20px;
+  }
+
+  .note-card h2 {
+    font-size: 20px;
+  }
+
+}

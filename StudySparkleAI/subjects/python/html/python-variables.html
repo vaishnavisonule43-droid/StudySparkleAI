@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Python Variables & Data Types</title>
+
+  <link rel="stylesheet" href="../css/python-topic.css">
+</head>
+
+<body>
+
+<div class="notes-container">
+
+  <h1>🐍 Python Variables & Data Types</h1>
+
+  <div class="notes-card">
+
+    <h2>📘 What is a Variable?</h2>
+
+    <p>
+      A variable is a name used to store a value in a Python program.
+      The value stored in a variable can be changed during program execution.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+name = "Vaishnavi"
+age = 18
+      </pre>
+
+      <p>
+        Here, <strong>name</strong> stores a text value and
+        <strong>age</strong> stores a number.
+      </p>
+    </div>
+
+
+    <h2>💡 Creating Variables</h2>
+
+    <p>
+      In Python, we do not need to declare the type of a variable separately.
+      We can directly assign a value to a variable using the assignment operator.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+x = 10
+name = "Python"
+price = 99.50
+      </pre>
+    </div>
+
+
+    <h2>⭐ Rules for Naming Variables</h2>
+
+    <ul>
+      <li>A variable name can contain letters, numbers and underscore.</li>
+      <li>A variable name cannot start with a number.</li>
+      <li>A variable name cannot contain spaces.</li>
+      <li>Python variable names are case-sensitive.</li>
+      <li>Python keywords cannot be used as variable names.</li>
+    </ul>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student_name = "Rahul"
+age2 = 20
+total_marks = 450
+      </pre>
+    </div>
+
+
+    <h2>📚 What are Data Types?</h2>
+
+    <p>
+      A data type tells us what kind of value is stored in a variable.
+      Python supports different types of data.
+    </p>
+
+
+    <h2>🔢 Main Data Types in Python</h2>
+
+    <table>
+      <tr>
+        <th>Data Type</th>
+        <th>Meaning</th>
+        <th>Example</th>
+      </tr>
+
+      <tr>
+        <td>int</td>
+        <td>Integer numbers</td>
+        <td>25</td>
+      </tr>
+
+      <tr>
+        <td>float</td>
+        <td>Decimal numbers</td>
+        <td>25.5</td>
+      </tr>
+
+      <tr>
+        <td>str</td>
+        <td>Text or characters</td>
+        <td>"Hello"</td>
+      </tr>
+
+      <tr>
+        <td>bool</td>
+        <td>True or False value</td>
+        <td>True</td>
+      </tr>
+
+      <tr>
+        <td>list</td>
+        <td>Ordered collection of items</td>
+        <td>[10, 20, 30]</td>
+      </tr>
+
+      <tr>
+        <td>tuple</td>
+        <td>Ordered and unchangeable collection</td>
+        <td>(10, 20, 30)</td>
+      </tr>
+
+      <tr>
+        <td>dict</td>
+        <td>Collection of key-value pairs</td>
+        <td>{"name": "Raj"}</td>
+      </tr>
+
+      <tr>
+        <td>set</td>
+        <td>Collection of unique values</td>
+        <td>{10, 20, 30}</td>
+      </tr>
+    </table>
+
+
+    <h2>🔤 Integer Data Type</h2>
+
+    <p>
+      The <strong>int</strong> data type is used to store whole numbers
+      without decimal values.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+age = 18
+marks = 85
+      </pre>
+    </div>
+
+
+    <h2>🔢 Float Data Type</h2>
+
+    <p>
+      The <strong>float</strong> data type is used to store numbers
+      containing decimal values.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+price = 99.50
+percentage = 85.75
+      </pre>
+    </div>
+
+
+    <h2>🔤 String Data Type</h2>
+
+    <p>
+      The <strong>str</strong> data type is used to store text.
+      Strings are written inside single or double quotation marks.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+name = "Vaishnavi"
+college = 'Sangamner College'
+      </pre>
+    </div>
+
+
+    <h2>✅ Boolean Data Type</h2>
+
+    <p>
+      The <strong>bool</strong> data type represents one of two values:
+      True or False.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+is_student = True
+is_logged_in = False
+      </pre>
+    </div>
+
+
+    <h2>📋 List Data Type</h2>
+
+    <p>
+      A list is an ordered collection of items.
+      Lists are written using square brackets and their values can be changed.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+subjects = ["Python", "C", "DBMS"]
+      </pre>
+    </div>
+
+
+    <h2>📦 Tuple Data Type</h2>
+
+    <p>
+      A tuple is an ordered collection of items that cannot be changed
+      after it is created.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+numbers = (10, 20, 30)
+      </pre>
+    </div>
+
+
+    <h2>🗂️ Dictionary Data Type</h2>
+
+    <p>
+      A dictionary stores data in the form of key-value pairs.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18
+}
+      </pre>
+    </div>
+
+
+    <h2>🔹 Set Data Type</h2>
+
+    <p>
+      A set is a collection of unique values.
+      Duplicate values are not stored in a set.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+numbers = {10, 20, 30}
+      </pre>
+    </div>
+
+
+    <h2>🔍 Checking Data Type</h2>
+
+    <p>
+      Python provides the <strong>type()</strong> function to check
+      the data type of a value or variable.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+age = 18
+
+print(type(age))
+      </pre>
+
+      <p>
+        The output shows that the value stored in age is an integer.
+      </p>
+    </div>
+
+
+    <h2>📌 Quick Revision</h2>
+
+    <ul>
+      <li>A variable stores a value.</li>
+      <li>Python does not require separate variable type declaration.</li>
+      <li>Variable names are case-sensitive.</li>
+      <li>int stores whole numbers.</li>
+      <li>float stores decimal numbers.</li>
+      <li>str stores text.</li>
+      <li>bool stores True or False.</li>
+      <li>list stores an ordered collection of items.</li>
+      <li>tuple stores an ordered and unchangeable collection.</li>
+      <li>dict stores key-value pairs.</li>
+      <li>set stores unique values.</li>
+      <li>type() is used to check the data type.</li>
+    </ul>
+
+
+    <button class="back-btn" onclick="location.href='python-notes.html'">
+      ⬅️ Back to Python Notes
+    </button>
+
+  </div>
+
+</div>
+
+</body>
+</html>

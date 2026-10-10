@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f7ff" />
+
+    <title>Previous Year Papers | StudySparkAI</title>
+    <meta
+      name="description"
+      content="Explore previous year question papers and prepare smarter with StudySparkAI."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/papers.css" />
+    <script src="../../assets/js/papers.js" defer></script>
+  </head>
+
+  <body>
+    <div class="page-glow glow-one"></div>
+    <div class="page-glow glow-two"></div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <a href="../../index.html" class="brand">
+        <span class="brand-icon">S</span>
+        <span>StudySpark<span class="brand-highlight">AI</span></span>
+      </a>
+
+      <a href="../../index.html" class="nav-cta">
+        Back to Home <span>↗</span>
+      </a>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            YOUR EXAM PREPARATION HUB
+          </div>
+
+          <h1>
+            Prepare smarter.<br />
+            <span class="gradient-text">Score better.</span>
+          </h1>
+
+          <p class="hero-description">
+            Practice with previous year question papers, understand exam
+            patterns, and prepare for your next exam with confidence.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#papers" class="primary-button">
+              Explore Papers <span>↓</span>
+            </a>
+            <div class="trust-note">
+              <span class="trust-icon">✓</span>
+              <span>13 subjects to explore</span>
+            </div>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">13</span>
+              <span class="stat-label">Subjects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">PDF</span>
+              <span class="stat-label">Paper format</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Study anytime</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+
+          <div class="floating-chip chip-top">
+            <span class="chip-icon purple-icon">✦</span>
+            Smart Preparation
+          </div>
+
+          <div class="paper-illustration">
+            <div class="illustration-top">
+              <span class="mini-brand">S</span>
+              <span class="mini-tag">QUESTION PAPER</span>
+            </div>
+
+            <div class="illustration-title"></div>
+            <div class="illustration-line line-wide"></div>
+            <div class="illustration-line"></div>
+
+            <div class="illustration-question">
+              <span class="question-number">01</span>
+              <div class="question-lines">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="illustration-question">
+              <span class="question-number">02</span>
+              <div class="question-lines">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="illustration-question">
+              <span class="question-number">03</span>
+              <div class="question-lines">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="illustration-footer">
+              <span>Study. Practice. Improve.</span>
+              <span class="pdf-symbol">PDF</span>
+            </div>
+          </div>
+
+          <div class="floating-chip chip-bottom">
+            <span class="success-icon">✓</span>
+            Exam Ready
+          </div>
+
+          <div class="visual-spark spark-one">✦</div>
+          <div class="visual-spark spark-two">✧</div>
+        </div>
+      </section>
+
+      <!-- PAPERS SECTION -->
+      <section class="papers-section" id="papers">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">LEARN • PRACTICE • GROW</div>
+            <h2>Explore your <span class="heading-gradient">subjects</span></h2>
+            <p class="section-description">
+              Select a subject and start your exam preparation.
+            </p>
+          </div>
+
+          <div class="subject-counter">
+            <span class="counter-dot"></span>
+            <strong id="subjectCount">13</strong>
+            <span>Subjects available</span>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input
+              type="search"
+              id="subjectSearch"
+              placeholder="Search subjects..."
+              aria-label="Search subjects"
+              autocomplete="off"
+            />
+            <kbd>SEARCH</kbd>
+          </div>
+
+          <div class="toolbar-label">
+            <span class="toolbar-grid-icon">▦</span>
+            All Subjects
+          </div>
+        </div>
+
+        <div class="papers-grid" id="papersGrid">
+          <article class="paper-card software">
+            <div class="card-top">
+              <div class="subject-icon">SE</div>
+              <span class="subject-tag">CORE SUBJECT</span>
+            </div>
+            <div class="card-content">
+              <span class="subject-number">SUBJECT 01</span>
+              <h3>Software Engineering</h3>
+              <p>
+                Study software development, design, testing and project
+                management.
+              </p>
+            </div>
+            <div class="card-bottom">
+              <span class="format-label"
+                ><span class="format-dot"></span> Question Papers</span
+              >
+              <a href="#" class="download-button" data-pdf=""
+                >View PDF <span>↗</span></a
+              >
+            </div>
+          </article>
+
+          <article class="paper-card dbms">
+            <div class="card-top">
+              <div class="subject-icon">DB</div>
+              <span class="subject-tag">DATABASE</span>
+            </div>
+            <div class="card-content">
+              <span class="subject-number">SUBJECT 02</span>
+              <h3>DBMS</h3>
+              <p>
+                Practice database concepts, SQL queries and data management.
+              </p>
+            </div>
+            <div class="card-bottom">
+              <span class="format-label"
+                ><span class="format-dot"></span> Question Papers</span
+              >
+              <a href="#" class="download-button" data-pdf=""
+                >View PDF <span>↗</span></a
+              >
+            </div>
+          </article>
+
+          <article class="paper-card data-structure">
+            <div class="card-top">
+              <div class="subject-icon">DS</div>
+              <span class="subject-tag">PROGRAMMING</span>
+            </div>
+            <div class="card-content">
+              <span class="subject-number">SUBJECT 03</span>
+              <h3>Data Structure</h3>
+              <p>
+                Revise arrays, linked lists, stacks, queues and sorting
+                algorithms.
+              </p>
+            </div>
+            <div class="card-bottom">
+              <span class="format-label"
+                ><span class="format-dot"></span> Question Papers</span
+              >
+              <a href="#" class="download-button" data-pdf=""
+                >View PDF <span>↗</span></a
+              >
+            </div>
+          </article>
+
+          <article class="paper-card digital-marketing">
+            <div class="card-top">
+              <div class="subject-icon">DM</div>
+              <span class="subject-tag">MARKETING</span>
+            </div>
+            <div class="card-content">
+              <span class="subject-number">SUBJECT 04</span>
+              <h3>Digital Marketing</h3>
+              <p>
+                Explore SEO, social media marketing and digital advertising.
+              </p>
+            </div>
+            <div class="card-bottom">
+              <span class="format-label"
+                ><span class="format-dot"></span> Question Papers</span
+              >
+              <a href="#" class="download-button" data-pdf=""
+                >View PDF <span>↗</span></a
+              >
+            </div>
+          </article>
+
+          <article class="paper-card c-programming">
+            <div class="card-top">
+              <div class="subject-icon">C</div>
+              <span class="subject-tag">PROGRAMMING</span>
+            </div>
+            <div class="card-content">
+              <span class="subject-number">SUBJECT 05</span>
+              <h3>C Programming</h3>
+              <p>
+                Practice C basics, functions, arrays, pointers and programs.
+              </p>
+            </div>
+            <div class="card-bottom">
+              <span class="format-label"
+                ><span class="format-dot"></span> Question Papers</span
+              >
+              <a href="#" class="download-button" data-pdf=""
+                >View PDF <span>↗</span></a
+              >
+            </div>
+          </article>
+
+          <article class="paper-card java">
+            <div class="card-top">
+              <div class="subject-icon">Jv</div>
+              <span class="subject-tag">PROGRAMMING</span>
+            </div>
+            <div class="card-content">
+              <span class="subject-number">SUBJECT 06</span>
+              <h3>Java Programming</h3>
+              <p>
+                Revise object-oriented programming, classes, objects and
+                methods.
+              </p>
+            </div>
+            <div class="card-bottom">
+              <span class="format-label"
+                ><span class="format-dot"></span> Question Papers</span
+              >
+              <a href="#" class="download-button" data-pdf=""
+                >View PDF <span>↗</span></a
+              >
+            </div>
+          </article>
+
+          <article class="paper-card python">
+            <div class="card-top">
+              <div class="subject-icon">Py</div>
+              <span class="subject-tag">PROGRAMMING</span>
+            </div>
+            <div class="card-content">
+              <span class="subject-number">SUBJECT 07</span>
+              <h3>Python Programming</h3>
+              <p>
+                Practice Python syntax, loops, functions and data structures.
+              </p>
+            </div>
+            <div class="card-bottom">
+              <span class="format-label"
+                ><span class="format-dot"></span> Question Papers</span
+              >
+              <a href="#" class="download-button" data-pdf=""
+                >View PDF <span>↗</span></a
+              >
+            </div>
+          </article>
+
+          <article class="paper-card web">
+            <div class="card-top">
+              <div class="subject-icon">WEB</div>
+              <span class="subject-tag">WEB DESIGN</span>
+            </div>
+            <div class="card-content">
+              <span class="subject-number">SUBJECT 08</span>
+              <h3>Web Technology</h3>
+              <p>Prepare HTML, CSS, JavaScript and web development concepts.</p>
+            </div>
+            <div class="card-bottom">
+              <span class="format-label"
+                ><span class="format-dot"></span> Question Papers</span
+              >
+              <a href="#" class="download-button" data-pdf=""
+                >View PDF <span>↗</span></a
+              >
+            </div>
+          </article>
+
+          <article class="paper-card operating-system">
+            <div class="card-top">
+              <div class="subject-icon">OS</div>
+              <span class="subject-tag">SYSTEMS</span>
+            </div>
+            <div class="card-content">
+              <span class="subject-number">SUBJECT 09</span>
+              <h3>Operating System</h3>
+              <p>Learn process management, memory management and scheduling.</p>
+            </div>
+            <div class="card-bottom">
+              <span class="format-label"
+                ><span class="format-dot"></span> Question Papers</span
+              >
+              <a href="#" class="download-button" data-pdf=""
+                >View PDF <span>↗</span></a
+              >
+            </div>
+          </article>
+
+          <article class="paper-card cyber-security">
+            <div class="card-top">
+              <div class="subject-icon">CS</div>
+              <span class="subject-tag">SECURITY</span>
+            </div>
+            <div class="card-content">
+              <span class="subject-number">SUBJECT 10</span>
+              <h3>Cyber Security</h3>
+              <p>Revise cyber threats, network security and data protection.</p>
+            </div>
+            <div class="card-bottom">
+              <span class="format-label"
+                ><span class="format-dot"></span> Question Papers</span
+              >
+              <a href="#" class="download-button" data-pdf=""
+                >View PDF <span>↗</span></a
+              >
+            </div>
+          </article>
+
+          <article class="paper-card cloud">
+            <div class="card-top">
+              <div class="subject-icon">CC</div>
+              <span class="subject-tag">CLOUD TECH</span>
+            </div>
+            <div class="card-content">
+              <span class="subject-number">SUBJECT 11</span>
+              <h3>Cloud Computing</h3>
+              <p>
+                Understand cloud services, deployment models and architecture.
+              </p>
+            </div>
+            <div class="card-bottom">
+              <span class="format-label"
+                ><span class="format-dot"></span> Question Papers</span
+              >
+              <a href="#" class="download-button" data-pdf=""
+                >View PDF <span>↗</span></a
+              >
+            </div>
+          </article>
+
+          <article class="paper-card artificial-intelligence">
+            <div class="card-top">
+              <div class="subject-icon">AI</div>
+              <span class="subject-tag">ARTIFICIAL INTELLIGENCE</span>
+            </div>
+            <div class="card-content">
+              <span class="subject-number">SUBJECT 12</span>
+              <h3>Artificial Intelligence</h3>
+              <p>
+                Practice AI concepts, intelligent systems and problem-solving
+                methods.
+              </p>
+            </div>
+            <div class="card-bottom">
+              <span class="format-label"
+                ><span class="format-dot"></span> Question Papers</span
+              >
+              <a href="#" class="download-button" data-pdf=""
+                >View PDF <span>↗</span></a
+              >
+            </div>
+          </article>
+
+          <article class="paper-card big-data">
+            <div class="card-top">
+              <div class="subject-icon">BD</div>
+              <span class="subject-tag">DATA ANALYTICS</span>
+            </div>
+            <div class="card-content">
+              <span class="subject-number">SUBJECT 13</span>
+              <h3>Big Data</h3>
+              <p>
+                Learn big data concepts, data processing and analytics
+                fundamentals.
+              </p>
+            </div>
+            <div class="card-bottom">
+              <span class="format-label"
+                ><span class="format-dot"></span> Question Papers</span
+              >
+              <a href="#" class="download-button" data-pdf=""
+                >View PDF <span>↗</span></a
+              >
+            </div>
+          </article>
+        </div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <div class="empty-icon">⌕</div>
+          <h3>No subjects found</h3>
+          <p>Try another subject name or clear your search.</p>
+          <button type="button" id="clearSearch" class="clear-button">
+            Clear Search
+          </button>
+        </div>
+
+        <div class="bottom-banner">
+          <div class="banner-decoration"></div>
+          <div class="banner-icon">✦</div>
+          <div class="banner-copy">
+            <h3>Your next result starts with today's practice.</h3>
+            <p>Keep learning, stay consistent, and prepare with confidence.</p>
+          </div>
+          <a href="../../index.html" class="banner-button"
+            >Back to Home <span>↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="../../index.html" class="footer-brand">
+        <span class="brand-icon footer-logo">S</span>
+        <span>StudySpark<span class="brand-highlight">AI</span></span>
+      </a>
+      <p>Learn smarter. Grow further.</p>
+      <span class="copyright"
+        >© <span id="currentYear"></span> StudySparkAI</span
+      >
+    </footer>
+  </body>
+</html>

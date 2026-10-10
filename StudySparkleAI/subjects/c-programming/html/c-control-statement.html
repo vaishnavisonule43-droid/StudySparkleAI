@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Control Statements in C - StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/c-programming.css" />
+  </head>
+
+  <body>
+    <div class="notes-container">
+      <h1>📚 Control Statements in C</h1>
+
+      <div class="notes-card">
+        <h2>1. What are Control Statements?</h2>
+
+        <p>
+          Control statements are used to control the flow and execution of a C
+          program.
+        </p>
+
+        <p>
+          They decide which statement should execute, how many times it should
+          execute and when it should stop.
+        </p>
+
+        <h2>2. Definition</h2>
+
+        <p>
+          <b>Control Statement:</b> A control statement is a statement used to
+          control the order of execution of statements in a program.
+        </p>
+
+        <h2>3. Types of Control Statements</h2>
+
+        <p>Control statements in C are mainly divided into three types:</p>
+
+        <ul>
+          <li>Sequential Control Statement</li>
+          <li>Decision or Selection Control Statement</li>
+          <li>Looping or Iteration Control Statement</li>
+          <li>Jump Control Statement</li>
+        </ul>
+
+        <h2>4. Sequential Control Statement</h2>
+
+        <p>
+          In sequential control, statements are executed one after another in
+          the same order in which they are written.
+        </p>
+
+        <div class="example-box">
+          <b>Example:</b>
+
+          <br /><br />
+
+          int a = 10;
+
+          <br />
+
+          int b = 20;
+
+          <br />
+
+          int sum = a + b;
+
+          <br />
+
+          printf("%d", sum);
+        </div>
+
+        <h2>5. Decision / Selection Control Statement</h2>
+
+        <p>
+          Decision statements are used to make a choice based on a condition.
+        </p>
+
+        <ul>
+          <li>if statement</li>
+          <li>if-else statement</li>
+          <li>else-if ladder</li>
+          <li>nested if</li>
+          <li>switch statement</li>
+        </ul>
+
+        <h2>6. if Statement</h2>
+
+        <p>
+          The if statement executes a block of code when the given condition is
+          true.
+        </p>
+
+        <div class="example-box">
+          if (age &gt;= 18) {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("Eligible to vote");
+
+          <br />
+
+          }
+        </div>
+
+        <h2>7. if-else Statement</h2>
+
+        <p>
+          The if-else statement executes one block when the condition is true
+          and another block when the condition is false.
+        </p>
+
+        <div class="example-box">
+          if (marks &gt;= 40) {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("Pass");
+
+          <br />
+
+          }
+
+          <br />
+
+          else {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("Fail");
+
+          <br />
+
+          }
+        </div>
+
+        <h2>8. else-if Ladder</h2>
+
+        <p>
+          The else-if ladder is used to check multiple conditions one by one.
+        </p>
+
+        <div class="example-box">
+          if (marks &gt;= 75)
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("Distinction");
+
+          <br />
+
+          else if (marks &gt;= 60)
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("First Class");
+
+          <br />
+
+          else if (marks &gt;= 40)
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("Pass");
+
+          <br />
+
+          else
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("Fail");
+        </div>
+
+        <h2>9. Nested if</h2>
+
+        <p>
+          A nested if means using one if statement inside another if statement.
+        </p>
+
+        <div class="example-box">
+          if (age &gt;= 18) {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;if (hasID == 1) {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Allowed");
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;}
+
+          <br />
+
+          }
+        </div>
+
+        <h2>10. switch Statement</h2>
+
+        <p>
+          The switch statement is used to select one option from many choices.
+        </p>
+
+        <div class="example-box">
+          switch (choice) {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;case 1:
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Monday");
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;
+
+          <br /><br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;case 2:
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Tuesday");
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;
+
+          <br /><br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;default:
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Invalid");
+
+          <br />
+
+          }
+        </div>
+
+        <h2>11. Looping / Iteration Control Statement</h2>
+
+        <p>
+          Looping statements are used to execute the same block of code
+          repeatedly.
+        </p>
+
+        <ul>
+          <li>for loop</li>
+          <li>while loop</li>
+          <li>do-while loop</li>
+        </ul>
+
+        <h2>12. for Loop</h2>
+
+        <p>
+          The for loop is used when we know how many times the statements need
+          to be repeated.
+        </p>
+
+        <div class="example-box">
+          for (i = 1; i &lt;= 5; i++) {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("%d", i);
+
+          <br />
+
+          }
+        </div>
+
+        <h2>13. while Loop</h2>
+
+        <p>
+          The while loop repeats statements as long as the condition is true.
+        </p>
+
+        <div class="example-box">
+          while (i &lt;= 5) {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("%d", i);
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;i++;
+
+          <br />
+
+          }
+        </div>
+
+        <h2>14. do-while Loop</h2>
+
+        <p>
+          The do-while loop executes the statements at least once and then
+          checks the condition.
+        </p>
+
+        <div class="example-box">
+          do {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("%d", i);
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;i++;
+
+          <br />
+
+          } while (i &lt;= 5);
+        </div>
+
+        <h2>15. Jump Control Statements</h2>
+
+        <p>
+          Jump statements are used to change the normal flow of program
+          execution.
+        </p>
+
+        <ul>
+          <li>break</li>
+          <li>continue</li>
+          <li>goto</li>
+          <li>return</li>
+        </ul>
+
+        <h2>16. break Statement</h2>
+
+        <p>
+          The break statement is used to stop a loop or switch statement
+          immediately.
+        </p>
+
+        <div class="example-box">
+          for (i = 1; i &lt;= 5; i++) {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;if (i == 3)
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;
+
+          <br />
+
+          }
+        </div>
+
+        <h2>17. continue Statement</h2>
+
+        <p>
+          The continue statement skips the current iteration and moves to the
+          next iteration of the loop.
+        </p>
+
+        <div class="example-box">
+          for (i = 1; i &lt;= 5; i++) {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;if (i == 3)
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; continue;
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("%d", i);
+
+          <br />
+
+          }
+        </div>
+
+        <h2>18. goto Statement</h2>
+
+        <p>
+          The goto statement transfers program control to a labelled statement.
+        </p>
+
+        <div class="example-box">
+          goto end;
+
+          <br /><br />
+
+          end:
+
+          <br />
+
+          printf("End of program");
+        </div>
+
+        <h2>19. return Statement</h2>
+
+        <p>
+          The return statement is used to return a value from a function and end
+          its execution.
+        </p>
+
+        <div class="example-box">return 0;</div>
+
+        <h2>20. Summary</h2>
+
+        <p>
+          Control statements control the flow of a C program. They include
+          sequential statements, decision statements, loops and jump statements.
+        </p>
+      </div>
+
+      <button class="back-btn" onclick="location.href = 'cp-notes.html'">
+        ⬅️ Back to C Programming
+      </button>
+    </div>
+  </body>
+</html>

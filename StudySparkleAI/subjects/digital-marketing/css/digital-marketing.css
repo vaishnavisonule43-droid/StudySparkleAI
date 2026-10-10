@@ -1,0 +1,467 @@
+/* =========================
+   RESET
+   ========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================
+   BODY
+   ========================= */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
+
+.subjects-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 35px auto;
+  animation: fadeUp 0.8s ease;
+}
+
+
+/* =========================
+   MAIN HEADING
+   ========================= */
+
+.subjects-container > h1 {
+  text-align: center;
+
+  padding: 30px 15px;
+  margin-bottom: 15px;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+  color: white;
+
+  border-radius: 16px;
+
+  font-size: 32px;
+
+  box-shadow: 0 5px 18px rgba(91, 75, 196, 0.20);
+
+  animation: slideDown 0.8s ease;
+}
+
+
+/* =========================
+   MAIN DESCRIPTION
+   ========================= */
+
+.subjects-container > h1 + p {
+  text-align: center;
+
+  color: #555;
+
+  font-size: 16px;
+
+  margin-bottom: 30px;
+
+  animation: fadeUp 1s ease;
+}
+
+
+/* =========================
+   SUBJECT INFORMATION
+   ========================= */
+
+.subject-info {
+  background: white;
+
+  padding: 25px;
+
+  margin-bottom: 22px;
+
+  border-radius: 16px;
+
+  border-left: 5px solid #6c5ce7;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+
+  animation: fadeUp 0.8s ease;
+
+  transition: all 0.3s ease;
+}
+
+
+/* =========================
+   SUBJECT INFO HOVER
+   ========================= */
+
+.subject-info:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(91, 75, 196, 0.20);
+}
+
+
+/* =========================
+   INFO HEADINGS
+   ========================= */
+
+.subject-info h2 {
+  color: #5b4bc4;
+
+  margin-bottom: 12px;
+
+  font-size: 22px;
+}
+
+
+/* =========================
+   INFO PARAGRAPH
+   ========================= */
+
+.subject-info p {
+  color: #555;
+
+  font-size: 16px;
+
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+   INFO LIST
+   ========================= */
+
+.subject-info ul {
+  margin-left: 25px;
+}
+
+.subject-info li {
+  margin-bottom: 7px;
+
+  color: #444;
+}
+
+
+/* =========================
+   TOPICS TITLE
+   ========================= */
+
+.topics-title {
+  text-align: center;
+
+  color: #5b4bc4;
+
+  font-size: 28px;
+
+  margin-top: 40px;
+
+  margin-bottom: 5px;
+
+  animation: fadeUp 0.9s ease;
+}
+
+
+/* =========================
+   TOPICS SUBTITLE
+   ========================= */
+
+.topics-subtitle {
+  text-align: center;
+
+  color: #666;
+
+  margin-bottom: 25px;
+
+  animation: fadeUp 1s ease;
+}
+
+
+/* =========================
+   TOPIC GRID
+   ========================= */
+
+.subject-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   TOPIC CARD
+   ========================= */
+
+.subject-card {
+  background: white;
+
+  padding: 22px;
+
+  border-radius: 16px;
+
+  border-left: 5px solid #6c5ce7;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+
+  transition: all 0.3s ease;
+
+  animation: cardAppear 0.8s ease;
+}
+
+
+/* =========================
+   CARD ANIMATION DELAY
+   ========================= */
+
+.subject-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.subject-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.subject-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.subject-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.subject-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.subject-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.subject-card:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.subject-card:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+
+/* =========================
+   CARD HOVER
+   ========================= */
+
+.subject-card:hover {
+  transform: translateY(-7px);
+
+  border-left-color: #5b4bc4;
+
+  box-shadow: 0 12px 28px rgba(91, 75, 196, 0.22);
+}
+
+
+/* =========================
+   CARD HEADING
+   ========================= */
+
+.subject-card h2 {
+  color: #5b4bc4;
+
+  font-size: 20px;
+
+  margin-bottom: 8px;
+}
+
+
+/* =========================
+   CARD TEXT
+   ========================= */
+
+.subject-card p {
+  color: #555;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   BACK BUTTON
+   ========================= */
+
+.back-btn {
+  display: block;
+
+  margin: 35px auto 50px;
+
+  padding: 13px 28px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #5b4bc4;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  animation: buttonAppear 1s ease;
+}
+
+
+/* =========================
+   BACK BUTTON HOVER
+   ========================= */
+
+.back-btn:hover {
+  background: #6c5ce7;
+
+  transform: scale(1.08);
+
+  box-shadow: 0 6px 18px rgba(91, 75, 196, 0.30);
+}
+
+
+/* =========================
+   BACK BUTTON ACTIVE
+   ========================= */
+
+.back-btn:active {
+  transform: scale(0.95);
+}
+
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+@keyframes buttonAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.90);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media (max-width: 600px) {
+
+  .subjects-container {
+    width: 92%;
+    margin: 25px auto;
+  }
+
+  .subjects-container > h1 {
+    font-size: 26px;
+    padding: 25px 12px;
+  }
+
+  .subjects-container > h1 + p {
+    font-size: 14px;
+  }
+
+  .subject-info {
+    padding: 20px;
+  }
+
+  .subject-info h2 {
+    font-size: 20px;
+  }
+
+  .subject-info p,
+  .subject-info li {
+    font-size: 14px;
+  }
+
+  .topics-title {
+    font-size: 24px;
+  }
+
+  .topics-subtitle {
+    font-size: 14px;
+  }
+
+  .subject-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .subject-card {
+    padding: 20px;
+  }
+
+  .subject-card h2 {
+    font-size: 19px;
+  }
+
+  .subject-card p {
+    font-size: 14px;
+  }
+
+  .back-btn {
+    width: 100%;
+    font-size: 14px;
+  }
+}

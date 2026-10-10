@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Classes and Objects | StudySpark AI</title>
+    <link rel="stylesheet" href="../css/java-topic.css">
+</head>
+<body>
+
+<header class="topic-header">
+    <h1>Java Classes and Objects</h1>
+    <p>Understand classes, objects and constructors with easy examples.</p>
+</header>
+
+<main class="topic-container">
+
+    <section class="topic-card">
+        <h2>1. What is a Class?</h2>
+        <p>A class is a blueprint or template used to create objects.
+        It defines the data and methods that its objects can have.</p>
+
+        <div class="important-box">
+            <strong>Example:</strong> A Student class can contain student
+            name, roll number and a method to display student details.
+        </div>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Student {
+    String name;
+    int rollNo;
+
+    void display() {
+        System.out.println(name);
+        System.out.println(rollNo);
+    }
+}</code></pre>
+        </div>
+    </section>
+
+    <section class="topic-card">
+        <h2>2. What is an Object?</h2>
+        <p>An object is an instance of a class. It can store data and
+        use the methods defined in its class.</p>
+
+        <div class="important-box">
+            <strong>Example:</strong> If Student is a class, Rahul and
+            Priya can be objects of that class.
+        </div>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Student {
+    String name;
+
+    public static void main(String[] args) {
+        Student s1 = new Student();
+
+        s1.name = "Rahul";
+
+        System.out.println(s1.name);
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Rahul</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>3. Creating Multiple Objects</h2>
+        <p>We can create multiple objects from the same class.
+        Each object can store its own instance data.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Student {
+    String name;
+
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        Student s2 = new Student();
+
+        s1.name = "Rahul";
+        s2.name = "Priya";
+
+        System.out.println(s1.name);
+        System.out.println(s2.name);
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Rahul
+Priya</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>4. What is a Constructor?</h2>
+        <p>A constructor is a special member used to initialize an object.
+        It has the same name as the class and does not have a return type.</p>
+
+        <h3>Default Constructor</h3>
+        <p>If no constructor is written in a class, Java provides a
+        default constructor. It initializes fields to their default values.</p>
+
+        <h3>Parameterized Constructor</h3>
+        <p>A parameterized constructor accepts values when an object
+        is created.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Student {
+    String name;
+    int age;
+
+    Student(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void display() {
+        System.out.println(name);
+        System.out.println(age);
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student("Rahul", 19);
+        s1.display();
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Rahul
+19</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>5. What is the this Keyword?</h2>
+        <p>The <code>this</code> keyword refers to the current object.
+        It is often used to distinguish instance variables from
+        parameters having the same names.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Student {
+    String name;
+
+    Student(String name) {
+        this.name = name;
+    }
+
+    void display() {
+        System.out.println(name);
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student("Priya");
+        s1.display();
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Priya</code></pre>
+
+        <div class="important-box">
+            Here, <code>this.name</code> refers to the object's instance
+            variable, while <code>name</code> refers to the constructor parameter.
+        </div>
+    </section>
+
+    <section class="topic-card">
+        <h2>6. Instance Variables and Methods</h2>
+        <p>An instance variable stores data for each object. An instance
+        method performs an operation using the object's data.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <button class="copy-btn" onclick="copyJavaCode(this)">Copy Code</button>
+                <span class="copy-status"></span>
+            </div>
+            <pre><code>class Rectangle {
+    int length = 10;
+    int breadth = 5;
+
+    void area() {
+        System.out.println(length * breadth);
+    }
+
+    public static void main(String[] args) {
+        Rectangle r = new Rectangle();
+        r.area();
+    }
+}</code></pre>
+        </div>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>50</code></pre>
+    </section>
+
+    <section class="topic-card">
+        <h2>7. Class vs Object</h2>
+
+        <ul>
+            <li><strong>Class:</strong> A blueprint used to create objects.</li>
+            <li><strong>Object:</strong> An instance created from a class.</li>
+            <li><strong>Class:</strong> Defines variables and methods.</li>
+            <li><strong>Object:</strong> Uses those variables and methods.</li>
+        </ul>
+    </section>
+
+    <section class="topic-card">
+        <h2>8. Advantages of Classes and Objects</h2>
+
+        <ul>
+            <li>They organize code into logical units.</li>
+            <li>They help represent real-world entities.</li>
+            <li>They support code reuse.</li>
+            <li>They make large programs easier to maintain.</li>
+            <li>They are important building blocks of object-oriented programming.</li>
+        </ul>
+    </section>
+
+    <section class="topic-card">
+        <h2>Topics Covered</h2>
+        <p>Classes, objects, creating multiple objects, constructors,
+        default and parameterized constructors, this keyword,
+        instance variables and instance methods.</p>
+    </section>
+
+    <button class="back-btn"
+        onclick="location.href='java-notes.html'">
+        ⬅ Back to Java Topics
+    </button>
+
+</main>
+
+<script>
+    async function copyJavaCode(button) {
+        const codeBox = button.closest(".code-box");
+        const code = codeBox.querySelector("pre code").innerText;
+        const status = codeBox.querySelector(".copy-status");
+
+        try {
+            await navigator.clipboard.writeText(code);
+            button.textContent = "Copied!";
+            status.textContent = "Code copied successfully!";
+
+            setTimeout(() => {
+                button.textContent = "Copy Code";
+                status.textContent = "";
+            }, 2000);
+        } catch (error) {
+            status.textContent =
+                "Copy unavailable. Please copy the code manually.";
+        }
+    }
+</script>
+
+</body>
+</html>

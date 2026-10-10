@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Python Operators</title>
+
+  <link rel="stylesheet" href="../css/python-topic.css">
+</head>
+
+<body>
+
+<div class="notes-container">
+
+  <h1>🐍 Python Operators</h1>
+
+  <div class="notes-card">
+
+    <h2>📘 What are Operators?</h2>
+
+    <p>
+      Operators are special symbols or keywords used to perform
+      operations on values and variables in Python.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+a = 10
+b = 5
+
+print(a + b)
+      </pre>
+
+      <p>
+        Here, <strong>+</strong> is an operator used to add two values.
+      </p>
+    </div>
+
+
+    <h2>⭐ Types of Operators in Python</h2>
+
+    <p>
+      Python provides different types of operators for performing
+      different operations.
+    </p>
+
+    <ul>
+      <li>Arithmetic Operators</li>
+      <li>Assignment Operators</li>
+      <li>Comparison Operators</li>
+      <li>Logical Operators</li>
+      <li>Bitwise Operators</li>
+      <li>Membership Operators</li>
+      <li>Identity Operators</li>
+    </ul>
+
+
+    <h2>➕ Arithmetic Operators</h2>
+
+    <p>
+      Arithmetic operators are used to perform mathematical calculations.
+    </p>
+
+    <table>
+      <tr>
+        <th>Operator</th>
+        <th>Name</th>
+        <th>Example</th>
+      </tr>
+
+      <tr>
+        <td>+</td>
+        <td>Addition</td>
+        <td>10 + 5 = 15</td>
+      </tr>
+
+      <tr>
+        <td>-</td>
+        <td>Subtraction</td>
+        <td>10 - 5 = 5</td>
+      </tr>
+
+      <tr>
+        <td>*</td>
+        <td>Multiplication</td>
+        <td>10 * 5 = 50</td>
+      </tr>
+
+      <tr>
+        <td>/</td>
+        <td>Division</td>
+        <td>10 / 5 = 2</td>
+      </tr>
+
+      <tr>
+        <td>%</td>
+        <td>Modulus</td>
+        <td>10 % 3 = 1</td>
+      </tr>
+
+      <tr>
+        <td>**</td>
+        <td>Exponent</td>
+        <td>2 ** 3 = 8</td>
+      </tr>
+
+      <tr>
+        <td>//</td>
+        <td>Floor Division</td>
+        <td>10 // 3 = 3</td>
+      </tr>
+    </table>
+
+
+    <h2>📝 Arithmetic Example</h2>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+a = 10
+b = 3
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a % b)
+print(a ** b)
+print(a // b)
+      </pre>
+    </div>
+
+
+    <h2>📥 Assignment Operators</h2>
+
+    <p>
+      Assignment operators are used to assign values to variables.
+    </p>
+
+    <table>
+      <tr>
+        <th>Operator</th>
+        <th>Meaning</th>
+        <th>Example</th>
+      </tr>
+
+      <tr>
+        <td>=</td>
+        <td>Assign</td>
+        <td>x = 10</td>
+      </tr>
+
+      <tr>
+        <td>+=</td>
+        <td>Add and assign</td>
+        <td>x += 5</td>
+      </tr>
+
+      <tr>
+        <td>-=</td>
+        <td>Subtract and assign</td>
+        <td>x -= 5</td>
+      </tr>
+
+      <tr>
+        <td>*=</td>
+        <td>Multiply and assign</td>
+        <td>x *= 5</td>
+      </tr>
+
+      <tr>
+        <td>/=</td>
+        <td>Divide and assign</td>
+        <td>x /= 5</td>
+      </tr>
+    </table>
+
+
+    <h2>🔍 Comparison Operators</h2>
+
+    <p>
+      Comparison operators are used to compare two values.
+      They return either True or False.
+    </p>
+
+    <table>
+      <tr>
+        <th>Operator</th>
+        <th>Meaning</th>
+        <th>Example</th>
+      </tr>
+
+      <tr>
+        <td>==</td>
+        <td>Equal to</td>
+        <td>10 == 10</td>
+      </tr>
+
+      <tr>
+        <td>!=</td>
+        <td>Not equal to</td>
+        <td>10 != 5</td>
+      </tr>
+
+      <tr>
+        <td>&gt;</td>
+        <td>Greater than</td>
+        <td>10 &gt; 5</td>
+      </tr>
+
+      <tr>
+        <td>&lt;</td>
+        <td>Less than</td>
+        <td>5 &lt; 10</td>
+      </tr>
+
+      <tr>
+        <td>&gt;=</td>
+        <td>Greater than or equal to</td>
+        <td>10 &gt;= 10</td>
+      </tr>
+
+      <tr>
+        <td>&lt;=</td>
+        <td>Less than or equal to</td>
+        <td>5 &lt;= 10</td>
+      </tr>
+    </table>
+
+
+    <h2>🧠 Logical Operators</h2>
+
+    <p>
+      Logical operators are used to combine two or more conditions.
+    </p>
+
+    <table>
+      <tr>
+        <th>Operator</th>
+        <th>Meaning</th>
+      </tr>
+
+      <tr>
+        <td>and</td>
+        <td>Returns True when both conditions are True.</td>
+      </tr>
+
+      <tr>
+        <td>or</td>
+        <td>Returns True when at least one condition is True.</td>
+      </tr>
+
+      <tr>
+        <td>not</td>
+        <td>Reverses the result of a condition.</td>
+      </tr>
+    </table>
+
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+age = 20
+
+print(age &gt; 18 and age &lt; 30)
+      </pre>
+    </div>
+
+
+    <h2>💻 Bitwise Operators</h2>
+
+    <p>
+      Bitwise operators perform operations on the binary representation
+      of numbers.
+    </p>
+
+    <table>
+      <tr>
+        <th>Operator</th>
+        <th>Name</th>
+      </tr>
+
+      <tr>
+        <td>&amp;</td>
+        <td>AND</td>
+      </tr>
+
+      <tr>
+        <td>|</td>
+        <td>OR</td>
+      </tr>
+
+      <tr>
+        <td>^</td>
+        <td>XOR</td>
+      </tr>
+
+      <tr>
+        <td>~</td>
+        <td>NOT</td>
+      </tr>
+
+      <tr>
+        <td>&lt;&lt;</td>
+        <td>Left Shift</td>
+      </tr>
+
+      <tr>
+        <td>&gt;&gt;</td>
+        <td>Right Shift</td>
+      </tr>
+    </table>
+
+
+    <h2>📋 Membership Operators</h2>
+
+    <p>
+      Membership operators are used to check whether a value exists
+      inside a sequence such as a list or string.
+    </p>
+
+    <ul>
+      <li><strong>in:</strong> Returns True if the value exists.</li>
+      <li><strong>not in:</strong> Returns True if the value does not exist.</li>
+    </ul>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+subjects = ["Python", "C", "DBMS"]
+
+print("Python" in subjects)
+print("Java" not in subjects)
+      </pre>
+    </div>
+
+
+    <h2>🔗 Identity Operators</h2>
+
+    <p>
+      Identity operators are used to check whether two variables
+      refer to the same object.
+    </p>
+
+    <ul>
+      <li><strong>is:</strong> Checks whether two objects are the same object.</li>
+      <li><strong>is not:</strong> Checks whether two objects are different objects.</li>
+    </ul>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+a = [1, 2, 3]
+b = a
+
+print(a is b)
+      </pre>
+    </div>
+
+
+    <h2>📌 Importance of Operators</h2>
+
+    <ul>
+      <li>Operators help perform calculations.</li>
+      <li>They are used to compare values.</li>
+      <li>They help create logical conditions.</li>
+      <li>They are useful for assigning and updating values.</li>
+      <li>They are important in decision-making and programming logic.</li>
+    </ul>
+
+
+    <h2>📚 Quick Revision</h2>
+
+    <ul>
+      <li>Operators perform operations on values and variables.</li>
+      <li>Arithmetic operators perform mathematical calculations.</li>
+      <li>Assignment operators assign values to variables.</li>
+      <li>Comparison operators compare two values.</li>
+      <li>Logical operators combine conditions.</li>
+      <li>Bitwise operators work with binary values.</li>
+      <li>Membership operators check whether a value exists in a sequence.</li>
+      <li>Identity operators check whether two variables refer to the same object.</li>
+    </ul>
+
+
+    <button class="back-btn" onclick="location.href='python-notes.html'">
+      ⬅️ Back to Python Notes
+    </button>
+
+  </div>
+
+</div>
+
+</body>
+</html>

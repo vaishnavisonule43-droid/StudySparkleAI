@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Notes | StudySpark AI</title>
+    <link rel="stylesheet" href="../css/web-topic.css">
+</head>
+
+<body>
+
+    <header class="topic-header">
+        <h1>Responsive Web Design</h1>
+        <p>Learn how to create websites that work on mobile, tablet and desktop.</p>
+    </header>
+
+    <main class="topic-container">
+
+        <!-- 1. Introduction -->
+        <section class="topic-card">
+            <h2>1. What is Responsive Web Design?</h2>
+
+            <p>
+                Responsive Web Design is a method of designing websites
+                that automatically adjust to different screen sizes.
+            </p>
+
+            <p>
+                A responsive website works properly on mobile phones,
+                tablets, laptops and desktop computers.
+            </p>
+
+            <div class="example-box">
+                <strong>Example:</strong>
+                A website changes its layout to fit a mobile screen
+                instead of displaying the desktop layout in a small size.
+            </div>
+        </section>
+
+        <!-- 2. Need -->
+        <section class="topic-card">
+            <h2>2. Need for Responsive Design</h2>
+
+            <ul>
+                <li>It makes websites mobile-friendly.</li>
+                <li>It improves the user experience.</li>
+                <li>It makes content easy to read.</li>
+                <li>It reduces unnecessary horizontal scrolling.</li>
+                <li>It supports different screen sizes.</li>
+            </ul>
+        </section>
+
+        <!-- 3. Viewport -->
+        <section class="topic-card">
+            <h2>3. Viewport</h2>
+
+            <p>
+                The viewport is the visible area of a webpage on a device.
+                The viewport meta tag helps a webpage fit the device's width.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <pre><code>&lt;meta name="viewport"
+content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+            </div>
+
+            <div class="important-box">
+                <strong>Remember:</strong>
+                Add the viewport meta tag inside the HTML head section.
+            </div>
+        </section>
+
+        <!-- 4. Flexible Layout -->
+        <section class="topic-card">
+            <h2>4. Flexible Layout</h2>
+
+            <p>
+                A flexible layout uses relative sizes, such as percentages,
+                instead of fixed widths wherever appropriate.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <pre><code>.container {
+    width: 90%;
+    margin: auto;
+}</code></pre>
+            </div>
+
+            <p>
+                Here, the container takes 90% of the available width.
+            </p>
+        </section>
+
+        <!-- 5. Responsive Images -->
+        <section class="topic-card">
+            <h2>5. Responsive Images</h2>
+
+            <p>
+                Responsive images adjust their size to fit the available space
+                without overflowing their container.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <pre><code>img {
+    max-width: 100%;
+    height: auto;
+}</code></pre>
+            </div>
+
+            <div class="example-box">
+                <strong>Output:</strong>
+                The image can shrink to fit its container while maintaining
+                its original aspect ratio.
+            </div>
+        </section>
+
+        <!-- 6. Media Queries -->
+        <section class="topic-card">
+            <h2>6. CSS Media Queries</h2>
+
+            <p>
+                Media queries apply different CSS styles depending on
+                conditions such as the screen width.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <pre><code>body {
+    background-color: white;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}</code></pre>
+            </div>
+
+            <div class="example-box">
+                <strong>Output:</strong>
+                When the viewport width is 600 pixels or less,
+                the page background becomes light blue.
+            </div>
+        </section>
+
+        <!-- 7. Flexbox -->
+        <section class="topic-card">
+            <h2>7. Using Flexbox</h2>
+
+            <p>
+                Flexbox is a CSS layout system that helps arrange elements
+                in rows or columns.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <pre><code>.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}</code></pre>
+            </div>
+
+            <p>
+                The <strong>flex-wrap</strong> property allows items to move
+                onto another line when there is not enough space.
+            </p>
+        </section>
+
+        <!-- 8. CSS Grid -->
+        <section class="topic-card">
+            <h2>8. Using CSS Grid</h2>
+
+            <p>
+                CSS Grid is a layout system used to arrange elements
+                in rows and columns.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <pre><code>.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}</code></pre>
+            </div>
+
+            <p>
+                This example creates two equal-width columns.
+            </p>
+        </section>
+
+        <!-- 9. Complete Example -->
+        <section class="topic-card">
+            <h2>9. Complete Responsive Website Example</h2>
+
+            <p>
+                This example creates a simple webpage that adjusts its
+                content layout for smaller screens.
+            </p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <span class="copy-status"></span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport"
+          content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;title&gt;Responsive Website&lt;/title&gt;
+
+    &lt;style&gt;
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .box {
+            flex: 1;
+            padding: 25px;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;My Responsive Website&lt;/h1&gt;
+
+    &lt;div class="container"&gt;
+        &lt;div class="box"&gt;First Box&lt;/div&gt;
+        &lt;div class="box"&gt;Second Box&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <div class="example-box">
+                <strong>Output:</strong>
+                On wider screens, the two boxes appear side by side.
+                On screens 600 pixels wide or less, they appear one below
+                the other.
+            </div>
+        </section>
+
+        <!-- 10. Advantages -->
+        <section class="topic-card">
+            <h2>10. Advantages of Responsive Design</h2>
+
+            <ul>
+                <li>Works on different screen sizes.</li>
+                <li>Improves mobile browsing.</li>
+                <li>Makes content easier to read.</li>
+                <li>Provides a better user experience.</li>
+                <li>Reduces the need for separate mobile websites.</li>
+            </ul>
+        </section>
+
+        <!-- 11. Quick Revision -->
+        <section class="topic-card">
+            <h2>11. Quick Revision</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Term</th>
+                        <th>Meaning</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Responsive Design</td>
+                        <td>Design that adapts to different screen sizes.</td>
+                    </tr>
+                    <tr>
+                        <td>Viewport</td>
+                        <td>The visible area of a webpage.</td>
+                    </tr>
+                    <tr>
+                        <td>Media Query</td>
+                        <td>Applies CSS based on specified conditions.</td>
+                    </tr>
+                    <tr>
+                        <td>Flexible Layout</td>
+                        <td>Layout that adapts to available space.</td>
+                    </tr>
+                    <tr>
+                        <td>Flexbox</td>
+                        <td>Arranges items in rows or columns.</td>
+                    </tr>
+                    <tr>
+                        <td>CSS Grid</td>
+                        <td>Arranges items in rows and columns.</td>
+                    </tr>
+                    <tr>
+                        <td>Responsive Image</td>
+                        <td>Image that adjusts to its container.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a href="web-notes.html" class="back-btn">
+                ← Back to Web Technology
+            </a>
+        </section>
+
+    </main>
+
+    <script>
+        async function copyCode(button) {
+            const codeBox = button.closest(".code-box");
+            const code = codeBox.querySelector("pre code").innerText;
+            const status = codeBox.querySelector(".copy-status");
+
+            try {
+                await navigator.clipboard.writeText(code);
+
+                button.textContent = "Copied!";
+                status.textContent = "Code copied!";
+
+                setTimeout(function () {
+                    button.textContent = "Copy Code";
+                    status.textContent = "";
+                }, 2000);
+
+            } catch (error) {
+                status.textContent =
+                    "Copy unavailable. Please copy manually.";
+            }
+        }
+    </script>
+
+</body>
+</html>

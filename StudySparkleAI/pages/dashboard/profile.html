@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f7ff" />
+
+    <title>My Profile | StudySparkAI</title>
+    <meta
+      name="description"
+      content="View and manage your StudySparkAI student profile."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/profile.css" />
+    <script src="../../assets/js/profile.js" defer></script>
+  </head>
+
+  <body class="profile-page">
+    <div class="profile-bg-glow glow-left"></div>
+    <div class="profile-bg-glow glow-right"></div>
+
+    <!-- Navigation -->
+    <header class="profile-navbar">
+      <a
+        href="../../index.html"
+        class="profile-brand"
+        aria-label="StudySparkAI Home"
+      >
+        <span class="brand-mark">S</span>
+        <span>StudySpark<span class="brand-ai">AI</span></span>
+      </a>
+
+      <nav class="profile-nav-links" aria-label="Main navigation">
+        <a href="../../index.html" class="profile-nav-link">
+          <span aria-hidden="true">⌂</span> Home
+        </a>
+        <a href="dashboard.html" class="profile-nav-link">
+          <span aria-hidden="true">▦</span> Dashboard
+        </a>
+        <a
+          href="profile.html"
+          class="profile-nav-link active"
+          aria-current="page"
+        >
+          <span aria-hidden="true">♙</span> Profile
+        </a>
+      </nav>
+
+      <a href="../support/contact.html" class="profile-help-link">
+        Need Help? <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main class="profile-main">
+      <!-- Page heading -->
+      <section class="profile-page-heading">
+        <div class="profile-heading-copy">
+          <div class="profile-eyebrow">
+            <span class="eyebrow-dot"></span>
+            YOUR PERSONAL SPACE
+          </div>
+
+          <h1>My <span>Profile</span></h1>
+          <p>
+            Manage your personal details and keep your learning journey
+            organized.
+          </p>
+        </div>
+
+        <div class="profile-heading-badge">
+          <span class="heading-badge-icon" aria-hidden="true">✦</span>
+          <div>
+            <strong>Student Account</strong>
+            <small>Your learning profile</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profile layout -->
+      <section class="profile-layout">
+        <!-- Main profile card -->
+        <article class="profile-card">
+          <div class="profile-card-cover">
+            <div class="cover-orbit cover-orbit-one"></div>
+            <div class="cover-orbit cover-orbit-two"></div>
+            <span class="cover-star star-one">✦</span>
+            <span class="cover-star star-two">✧</span>
+            <span class="cover-label">STUDENT PROFILE</span>
+          </div>
+
+          <div class="profile-card-body">
+            <div class="profile-avatar-wrap">
+              <img
+                id="profileAvatar"
+                class="profile-avatar"
+                src="https://ui-avatars.com/api/?name=Student&background=7657f6&color=ffffff&size=256"
+                alt="Student profile avatar"
+                width="112"
+                height="112"
+              />
+              <span class="avatar-status" title="Profile active"></span>
+            </div>
+
+            <div class="profile-identity">
+              <span class="profile-label">WELCOME BACK</span>
+              <h2 id="profileName">Student</h2>
+              <p class="profile-role">
+                <span class="role-icon" aria-hidden="true">🎓</span>
+                StudySparkAI Student
+              </p>
+            </div>
+
+            <div class="profile-divider"></div>
+
+            <div class="profile-info-heading">
+              <div>
+                <h3>Personal Information</h3>
+                <p>Your basic account details</p>
+              </div>
+              <span class="info-heading-icon" aria-hidden="true">▤</span>
+            </div>
+
+            <div class="profile-info-list">
+              <div class="profile-info-item">
+                <div class="info-icon email-icon" aria-hidden="true">✉</div>
+                <div class="info-copy">
+                  <span class="info-label">Email Address</span>
+                  <span class="info-value" id="profileEmail">Not provided</span>
+                </div>
+              </div>
+
+              <div class="profile-info-item">
+                <div class="info-icon course-icon" aria-hidden="true">▣</div>
+                <div class="info-copy">
+                  <span class="info-label">Course</span>
+                  <span class="info-value" id="profileCourse">BCA</span>
+                </div>
+              </div>
+
+              <div class="profile-info-item">
+                <div class="info-icon score-icon" aria-hidden="true">✧</div>
+                <div class="info-copy">
+                  <span class="info-label">Quiz Score</span>
+                  <span class="info-value" id="profileQuizScore">0</span>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="edit-profile-button"
+              id="editProfileButton"
+            >
+              <span aria-hidden="true">✎</span>
+              Edit Profile
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Side panel -->
+        <aside class="profile-side-column">
+          <section class="profile-welcome-card">
+            <div class="welcome-decoration welcome-decoration-one"></div>
+            <div class="welcome-decoration welcome-decoration-two"></div>
+
+            <span class="welcome-overline">YOUR LEARNING JOURNEY</span>
+            <div class="welcome-symbol" aria-hidden="true">✦</div>
+
+            <h2>Keep moving<br />forward.</h2>
+            <p>Every small study session brings you closer to your goals.</p>
+
+            <a href="dashboard.html" class="welcome-button">
+              Go to Dashboard <span aria-hidden="true">↗</span>
+            </a>
+          </section>
+
+          <section class="profile-actions-card">
+            <div class="actions-heading">
+              <div>
+                <h3>Quick Actions</h3>
+                <p>Useful links for your account</p>
+              </div>
+              <span class="actions-heading-icon" aria-hidden="true">⌘</span>
+            </div>
+
+            <a href="dashboard.html" class="quick-action">
+              <span
+                class="quick-action-icon dashboard-action-icon"
+                aria-hidden="true"
+                >▦</span
+              >
+              <span class="quick-action-copy">
+                <strong>Dashboard</strong>
+                <small>Continue your learning</small>
+              </span>
+              <span class="quick-action-arrow" aria-hidden="true">›</span>
+            </a>
+
+            <a href="../support/contact.html" class="quick-action">
+              <span
+                class="quick-action-icon support-action-icon"
+                aria-hidden="true"
+                >✉</span
+              >
+              <span class="quick-action-copy">
+                <strong>Contact Us</strong>
+                <small>Get help and support</small>
+              </span>
+              <span class="quick-action-arrow" aria-hidden="true">›</span>
+            </a>
+
+            <button
+              type="button"
+              class="quick-action logout-action"
+              id="logoutButton"
+            >
+              <span
+                class="quick-action-icon logout-action-icon"
+                aria-hidden="true"
+                >↪</span
+              >
+              <span class="quick-action-copy">
+                <strong>Logout</strong>
+                <small>Sign out of your account</small>
+              </span>
+              <span class="quick-action-arrow" aria-hidden="true">›</span>
+            </button>
+          </section>
+
+          <div class="profile-tip">
+            <span class="tip-icon" aria-hidden="true">✦</span>
+            <p>
+              <strong>Study tip</strong> Keep your account details up to date
+              for a better learning experience.
+            </p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <!-- Edit profile dialog -->
+    <dialog
+      class="edit-profile-dialog"
+      id="editProfileDialog"
+      aria-labelledby="editDialogTitle"
+    >
+      <form id="editProfileForm" class="edit-profile-form">
+        <div class="dialog-header">
+          <div class="dialog-icon" aria-hidden="true">✎</div>
+          <button
+            type="button"
+            class="dialog-close"
+            id="closeEditDialog"
+            aria-label="Close dialog"
+          >
+            ×
+          </button>
+        </div>
+
+        <h2 id="editDialogTitle">Edit your profile</h2>
+        <p class="dialog-description">
+          Update the display name shown on your profile.
+        </p>
+
+        <label for="editProfileName">Display Name</label>
+        <input
+          type="text"
+          id="editProfileName"
+          name="displayName"
+          maxlength="60"
+          minlength="2"
+          autocomplete="name"
+          required
+          placeholder="Enter your name"
+        />
+
+        <p class="dialog-message" id="editProfileMessage" role="status"></p>
+
+        <div class="dialog-actions">
+          <button type="button" class="dialog-cancel" id="cancelEditDialog">
+            Cancel
+          </button>
+          <button type="submit" class="dialog-save">Save Changes</button>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- Logout confirmation -->
+    <dialog
+      class="edit-profile-dialog logout-dialog"
+      id="logoutDialog"
+      aria-labelledby="logoutDialogTitle"
+    >
+      <div class="edit-profile-form">
+        <div class="dialog-header">
+          <div class="dialog-icon logout-dialog-icon" aria-hidden="true">↪</div>
+          <button
+            type="button"
+            class="dialog-close"
+            id="closeLogoutDialog"
+            aria-label="Close dialog"
+          >
+            ×
+          </button>
+        </div>
+
+        <h2 id="logoutDialogTitle">Ready to leave?</h2>
+        <p class="dialog-description">
+          Are you sure you want to log out of StudySparkAI?
+        </p>
+
+        <div class="dialog-actions">
+          <button type="button" class="dialog-cancel" id="cancelLogout">
+            Stay Here
+          </button>
+          <button
+            type="button"
+            class="dialog-save logout-confirm-button"
+            id="confirmLogout"
+          >
+            Yes, Logout
+          </button>
+        </div>
+      </div>
+    </dialog>
+
+    <footer class="profile-footer">
+      <a href="../../index.html" class="footer-brand">
+        <span class="footer-brand-mark">S</span>
+        <span>StudySpark<span class="brand-ai">AI</span></span>
+      </a>
+
+      <p>Learn smarter. Grow further.</p>
+      <span>© <span id="currentYear"></span> StudySparkAI</span>
+    </footer>
+  </body>
+</html>

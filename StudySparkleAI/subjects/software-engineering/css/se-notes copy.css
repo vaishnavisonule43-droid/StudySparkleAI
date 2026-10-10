@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #2196f3, #1976d2);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+.search-box {
+    width: 80%;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.topics-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.topic-card {
+    background: white;
+    border-radius: 14px;
+    padding: 25px 20px;
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+
+    transition: 0.3s;
+
+    animation: cardShow 0.6s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-7px);
+}
+
+.topic-card h2 {
+    color: #1976d2;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.topic-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 55px;
+    margin-bottom: 15px;
+}
+
+.topic-card button {
+    background: #2196f3;
+    color: white;
+    border: none;
+
+    padding: 11px 22px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.topic-card button:hover {
+    background: #1565c0;
+    transform: scale(1.05);
+}
+
+.back-btn {
+    display: block;
+
+    margin: 30px auto 50px;
+
+    background: #1976d2;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+@keyframes cardShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 850px) {
+
+    .topics-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .topics-container {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+}

@@ -1,0 +1,219 @@
+Folder PATH listing for volume Windows
+Volume serial number is 0000007B 64B7:10BF
+C:.
+|   index.html
+|   structure.txt
+|   
++---ai-agent
+|   +---css
+|   |       ai.css
+|   |       
+|   +---html
+|   |       ai.html
+|   |       
+|   \---js
+|           ai.js
+|           
++---assets
+|   +---css
+|   |   +---components
+|   |   \---responsive
+|   +---icons
+|   +---images
+|   \---js
+|       +---main
+|       \---quiz
++---data
++---notes_page
+|       cp-notes.html
+|       dbms-notes.html
+|       dm-notes.html
+|       ds-notes.html
+|       se-notes.html
+|       
++---pages
+|   +---auth
+|   |       login.html
+|   |       signup.html
+|   |       
+|   +---dashboard
+|   |       dashboard.html
+|   |       get-started.html
+|   |       notes.html
+|   |       papers.html
+|   |       profile.html
+|   |       quiz.html
+|   |       subject.html
+|   |       
+|   \---support
+|           contact.html
+|           
++---papers
+\---subjects
+    +---ai-agent
+    |   +---css
+    |   +---html
+    |   \---js
+    +---c-programming
+    |   +---css
+    |   |       c-programming.css
+    |   |       
+    |   +---html
+    |   |       c-control-statement.html
+    |   |       c-data-types.html
+    |   |       c-input-output.html
+    |   |       c-introduction.html
+    |   |       c-operators.html
+    |   |       c-programming.html
+    |   |       c-token.html
+    |   |       c-variables.html
+    |   |       
+    |   \---js
+    +---data-structure
+    |   +---css
+    |   |       data-structure.css
+    |   |       
+    |   +---html
+    |   |       data-structure.html
+    |   |       ds-array.html
+    |   |       ds-complexity.html
+    |   |       ds-graph.html
+    |   |       ds-hashing.html
+    |   |       ds-heap.html
+    |   |       ds-introduction.html
+    |   |       ds-linked-list.html
+    |   |       ds-priority-queue.html
+    |   |       ds-queue.html
+    |   |       ds-recursion.html
+    |   |       ds-searching.html
+    |   |       ds-sorting.html
+    |   |       ds-stack.html
+    |   |       ds-tree.html
+    |   |       
+    |   \---js
+    |           ds-array.js
+    |           ds-complexity.js
+    |           ds-graph.js
+    |           ds-hashing.js
+    |           ds-heap.js
+    |           ds-linked-list.js
+    |           ds-notes.js
+    |           ds-priority-queue.js
+    |           ds-queue.js
+    |           ds-recursion.js
+    |           ds-searching.js
+    |           ds-sorting.js
+    |           ds-stack.js
+    |           ds-tree.js
+    |           
+    +---dbms
+    |   +---css
+    |   |       dbms.css
+    |   |       
+    |   +---html
+    |   |       dbms-architecture.html
+    |   |       dbms-backup-recovery.html
+    |   |       dbms-data-models.html
+    |   |       dbms-database.html
+    |   |       dbms-er-model.html
+    |   |       dbms-intro.html
+    |   |       dbms-keys.html
+    |   |       dbms-normalization.html
+    |   |       dbms-sql.html
+    |   |       dbms-transaction-management.html
+    |   |       dbms.html
+    |   |       
+    |   \---js
+    +---digital-marketing
+    |   +---css
+    |   |       digital-marketing.css
+    |   |       dm-adv-dis.css
+    |   |       dm-analytics.css
+    |   |       dm-introduction.css
+    |   |       dm-need.css
+    |   |       dm-process.css
+    |   |       dm-tools.css
+    |   |       dm-traditional-vs-digital.css
+    |   |       dm-types.css
+    |   |       
+    |   +---html
+    |   |       digital-marketing.html
+    |   |       dm-adv-dis.html
+    |   |       dm-analytics.html
+    |   |       dm-introduction.html
+    |   |       dm-need.html
+    |   |       dm-process.html
+    |   |       dm-tools.html
+    |   |       dm-traditional-vs-digital.html
+    |   |       dm-types.html
+    |   |       
+    |   \---js
+    +---java
+    |   +---css
+    |   |       java-programming.css
+    |   |       
+    |   +---html
+    |   |       java-programming.html
+    |   |       
+    |   \---js
+    +---operating-system
+    |   +---css
+    |   |       operating-system.css
+    |   |       
+    |   +---html
+    |   |       operating-system.html
+    |   |       
+    |   \---js
+    +---python
+    |   +---css
+    |   |       python-programming.css
+    |   |       
+    |   +---html
+    |   |       python-programming.html
+    |   |       
+    |   \---js
+    +---software-engineering
+    |   +---css
+    |   |       se-agile.css
+    |   |       se-design.css
+    |   |       se-introduction.css
+    |   |       se-maintenance.css
+    |   |       se-notes.css
+    |   |       se-requirements.css
+    |   |       se-sdlc.css
+    |   |       se-spiral.css
+    |   |       se-testing.css
+    |   |       se-waterfall.css
+    |   |       
+    |   +---html
+    |   |       se-agile.html
+    |   |       se-design.html
+    |   |       se-introduction.html
+    |   |       se-maintenance.html
+    |   |       se-requirements.html
+    |   |       se-sdlc.html
+    |   |       se-spiral.html
+    |   |       se-testing.html
+    |   |       se-waterfall.html
+    |   |       software-engineering.html
+    |   |       
+    |   \---js
+    |           se-agile.js
+    |           se-design.js
+    |           se-introduction.js
+    |           se-maintenance.js
+    |           se-notes.js
+    |           se-requirements.js
+    |           se-sdlc.js
+    |           se-spiral.js
+    |           se-testing.js
+    |           se-waterfall.js
+    |           
+    \---web-technology
+        +---css
+        |       web-technology.css
+        |       
+        +---html
+        |       web-technology.html
+        |       
+        \---js

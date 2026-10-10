@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Deadlock - OS Notes</title>
+
+  <link rel="stylesheet" href="../css/os.css">
+</head>
+
+<body>
+
+  <div class="notes-container">
+
+    <h1>Deadlock</h1>
+
+    <div class="notes-card">
+
+      <h2>1. What is Deadlock?</h2>
+
+      <p>
+        Deadlock is a situation in an Operating System where two or more
+        processes are waiting for resources held by each other.
+      </p>
+
+      <p>
+        In simple words, processes keep waiting for each other and
+        none of them can continue their execution.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b><br>
+        Process P1 has Resource R1 and is waiting for R2.<br>
+        Process P2 has Resource R2 and is waiting for R1.<br><br>
+        Both processes keep waiting. This situation is called Deadlock.
+      </div>
+
+
+      <h2>2. Need to Study Deadlock</h2>
+
+      <ul>
+        <li>It can stop processes from executing.</li>
+        <li>It can waste system resources.</li>
+        <li>It can reduce system performance.</li>
+        <li>It can cause programs to stop responding.</li>
+      </ul>
+
+
+      <h2>3. Conditions for Deadlock</h2>
+
+      <p>
+        Deadlock occurs when the following four conditions exist at
+        the same time:
+      </p>
+
+      <ol>
+        <li>Mutual Exclusion</li>
+        <li>Hold and Wait</li>
+        <li>No Preemption</li>
+        <li>Circular Wait</li>
+      </ol>
+
+
+      <h2>4. Mutual Exclusion</h2>
+
+      <p>
+        Mutual Exclusion means a resource can be used by only one
+        process at a time.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        Only one process can use a particular printer at a time.
+      </div>
+
+
+      <h2>5. Hold and Wait</h2>
+
+      <p>
+        Hold and Wait means a process is holding one resource and
+        waiting for another resource.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        P1 is holding R1 and waiting for R2.
+      </div>
+
+
+      <h2>6. No Preemption</h2>
+
+      <p>
+        No Preemption means a resource cannot be forcibly taken away
+        from a process. The process must release the resource itself.
+      </p>
+
+
+      <h2>7. Circular Wait</h2>
+
+      <p>
+        Circular Wait means processes form a circular chain where each
+        process is waiting for a resource held by another process.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b><br>
+        P1 → waiting for R2<br>
+        P2 → waiting for R3<br>
+        P3 → waiting for R1<br><br>
+        This forms a circular wait.
+      </div>
+
+
+      <h2>8. Deadlock Example</h2>
+
+      <table>
+
+        <tr>
+          <th>Process</th>
+          <th>Holding</th>
+          <th>Waiting For</th>
+        </tr>
+
+        <tr>
+          <td>P1</td>
+          <td>R1</td>
+          <td>R2</td>
+        </tr>
+
+        <tr>
+          <td>P2</td>
+          <td>R2</td>
+          <td>R1</td>
+        </tr>
+
+      </table>
+
+      <p>
+        P1 cannot continue until it gets R2, while P2 cannot continue
+        until it gets R1. Therefore, both processes wait forever.
+      </p>
+
+
+      <h2>9. Methods for Handling Deadlock</h2>
+
+      <p>
+        An Operating System can handle deadlocks using the following
+        methods:
+      </p>
+
+      <ul>
+        <li>Deadlock Prevention</li>
+        <li>Deadlock Avoidance</li>
+        <li>Deadlock Detection</li>
+        <li>Deadlock Recovery</li>
+      </ul>
+
+
+      <h2>10. Deadlock Prevention</h2>
+
+      <p>
+        Deadlock Prevention is a method in which the Operating System
+        prevents at least one of the four necessary conditions of
+        deadlock from occurring.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        The system can prevent a process from holding one resource
+        while waiting for another.
+      </div>
+
+
+      <h2>11. Deadlock Avoidance</h2>
+
+      <p>
+        Deadlock Avoidance checks whether giving a resource to a process
+        can lead to deadlock. The resource is given only when the system
+        remains in a safe state.
+      </p>
+
+      <p>
+        The <b>Banker's Algorithm</b> is a common deadlock avoidance
+        algorithm.
+      </p>
+
+
+      <h2>12. Deadlock Detection</h2>
+
+      <p>
+        In Deadlock Detection, the Operating System allows deadlock
+        to occur and then checks whether a deadlock has happened.
+      </p>
+
+      <p>
+        If a deadlock is detected, the system takes steps to recover
+        from it.
+      </p>
+
+
+      <h2>13. Deadlock Recovery</h2>
+
+      <p>
+        Deadlock Recovery means removing the deadlock after it has
+        been detected.
+      </p>
+
+      <p>Common recovery methods are:</p>
+
+      <ul>
+        <li>Terminate one or more processes.</li>
+        <li>Take resources back from a process.</li>
+        <li>Restart affected processes when necessary.</li>
+      </ul>
+
+
+      <h2>14. Banker's Algorithm</h2>
+
+      <p>
+        Banker's Algorithm is a deadlock avoidance algorithm.
+        It checks whether allocating resources will keep the system
+        in a safe state.
+      </p>
+
+      <p>
+        If the system remains safe, the resource is allocated.
+        Otherwise, the request is delayed.
+      </p>
+
+
+      <h2>15. Safe State</h2>
+
+      <p>
+        A system is in a safe state when there is at least one order
+        in which all processes can complete their execution without
+        causing deadlock.
+      </p>
+
+
+      <h2>16. Unsafe State</h2>
+
+      <p>
+        A system is in an unsafe state when the available resources
+        may not be sufficient to allow all processes to complete safely.
+      </p>
+
+      <p>
+        An unsafe state does not always mean that deadlock has already
+        occurred, but it means the system is at risk of deadlock.
+      </p>
+
+
+      <h2>17. Deadlock Prevention vs Avoidance</h2>
+
+      <table>
+
+        <tr>
+          <th>Prevention</th>
+          <th>Avoidance</th>
+        </tr>
+
+        <tr>
+          <td>Prevents deadlock conditions.</td>
+          <td>Checks resource allocation before giving resources.</td>
+        </tr>
+
+        <tr>
+          <td>Works by restricting resource usage.</td>
+          <td>Works by maintaining a safe state.</td>
+        </tr>
+
+        <tr>
+          <td>Example: Breaking a deadlock condition.</td>
+          <td>Example: Banker's Algorithm.</td>
+        </tr>
+
+      </table>
+
+
+      <h2>18. Advantages of Deadlock Handling</h2>
+
+      <ul>
+        <li>Prevents processes from waiting forever.</li>
+        <li>Improves system performance.</li>
+        <li>Uses resources efficiently.</li>
+        <li>Improves system reliability.</li>
+      </ul>
+
+
+      <h2>19. Real-Life Example</h2>
+
+      <p>
+        Imagine two people standing on a narrow road. Person A waits
+        for Person B to move, while Person B waits for Person A to move.
+        Neither can move forward. This is similar to deadlock in an
+        Operating System.
+      </p>
+
+
+      <h2>20. Summary</h2>
+
+      <p>
+        Deadlock is a situation where processes wait for resources
+        held by each other and cannot continue execution. The four
+        necessary conditions are Mutual Exclusion, Hold and Wait,
+        No Preemption and Circular Wait. Deadlock can be handled using
+        Prevention, Avoidance, Detection and Recovery techniques.
+      </p>
+
+
+      <button onclick="location.href = 'os-notes.html'">
+        ⬅️ Back to OS
+      </button>
+
+    </div>
+  </div>
+
+</body>
+</html>

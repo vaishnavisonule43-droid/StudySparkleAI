@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  padding: 35px 15px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  animation: slideDown 0.8s ease;
+}
+
+.page-header h1 {
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+.page-header p {
+  font-size: 16px;
+}
+
+/* Header Icon */
+.header-icon {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+/* Notes Container */
+.notes-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 35px auto;
+}
+
+/* Intro Card */
+.intro-card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+  animation: fadeUp 0.7s ease;
+}
+
+.intro-card h2 {
+  color: #5b4bc4;
+  margin-bottom: 12px;
+}
+
+.intro-card p {
+  margin-bottom: 12px;
+}
+
+/* Notes Section */
+.notes-section {
+  margin-bottom: 28px;
+  animation: fadeUp 0.7s ease;
+}
+
+.notes-section > h2 {
+  color: #5b4bc4;
+  margin-bottom: 15px;
+  font-size: 23px;
+}
+
+/* Note Card */
+.note-card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+  animation: fadeUp 0.7s ease;
+  transition: transform 0.3s ease;
+}
+
+.note-card:hover,
+.intro-card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.note-card h2 {
+  color: #5b4bc4;
+  margin-bottom: 12px;
+}
+
+.note-card h3 {
+  color: #333;
+  margin: 15px 0 8px;
+}
+
+.note-card p {
+  margin-bottom: 12px;
+}
+
+.note-card ul,
+.notes-section > ul {
+  margin-left: 25px;
+}
+
+.note-card li,
+.notes-section > ul li {
+  margin-bottom: 6px;
+}
+
+/* Notes Grid */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.notes-grid .note-card {
+  margin-bottom: 0;
+}
+
+.topic-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+/* Definition Box */
+.definition {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f0edff;
+  border-left: 5px solid #6c5ce7;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Code and Preformatted Text */
+pre,
+.code {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  background: white;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #eeeaff;
+  color: #5b4bc4;
+}
+
+/* Back Button */
+.back-btn {
+  display: block;
+  margin: 30px auto 50px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #5b4bc4;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+  background: #4938ad;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #e9e6fa;
+  color: #51458e;
+  margin-top: 30px;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .notes-container {
+    width: 92%;
+  }
+
+  .page-header h1 {
+    font-size: 26px;
+  }
+
+  .page-header p {
+    font-size: 14px;
+  }
+
+  .note-card,
+  .intro-card {
+    padding: 20px;
+  }
+
+  .note-card h2,
+  .notes-section > h2 {
+    font-size: 20px;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  th,
+  td {
+    padding: 7px;
+  }
+}

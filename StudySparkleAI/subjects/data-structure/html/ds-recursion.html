@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Recursion - Data Structure</title>
+
+  <link rel="stylesheet" href="../css/data-structure.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>🔄 Recursion</h1>
+    <p>Learn the basic concepts of Recursion in Data Structure.</p>
+  </header>
+
+
+  <!-- Main Content -->
+  <div class="notes-container">
+
+    <!-- Introduction -->
+    <div class="note-card">
+
+      <h2>What is Recursion?</h2>
+
+      <p>
+        Recursion is a programming technique in which a function
+        calls itself to solve a problem.
+      </p>
+
+      <div class="definition">
+        <strong>Definition:</strong>
+        Recursion is a process where a function repeatedly calls
+        itself until a specific condition is satisfied.
+      </div>
+
+      <h3>Example</h3>
+
+      <p>
+        A simple example of recursion is calculating the factorial
+        of a number.
+      </p>
+
+      <div class="example-box">
+        <strong>Example:</strong><br><br>
+
+        Factorial of 5 = 5 × 4 × 3 × 2 × 1 = 120
+      </div>
+
+    </div>
+
+
+    <!-- How Recursion Works -->
+    <div class="note-card">
+
+      <h2>How Recursion Works?</h2>
+
+      <p>
+        A recursive function generally has two important parts:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Base Case:</strong>
+          It stops the recursive calls.
+        </li>
+
+        <li>
+          <strong>Recursive Case:</strong>
+          It calls the same function again with a smaller or simpler
+          problem.
+        </li>
+      </ul>
+
+      <div class="definition">
+        <strong>Important:</strong>
+        Without a proper base case, recursion may continue
+        indefinitely and cause a stack overflow.
+      </div>
+
+    </div>
+
+
+    <!-- Factorial -->
+    <div class="note-card">
+
+      <h2>Factorial Using Recursion</h2>
+
+      <p>
+        Factorial of a number n is the multiplication of all positive
+        integers from 1 to n.
+      </p>
+
+      <div class="example-box">
+        <strong>Formula:</strong><br><br>
+
+        factorial(n) = n × factorial(n - 1)
+        <br><br>
+
+        Base case:
+        factorial(1) = 1
+      </div>
+
+      <h3>Example</h3>
+
+      <p>
+        factorial(4)
+        → 4 × factorial(3)
+        → 4 × 3 × factorial(2)
+        → 4 × 3 × 2 × factorial(1)
+        → 24
+      </p>
+
+    </div>
+
+
+    <!-- Recursion Animation -->
+    <div class="note-card">
+
+      <h2>Recursion Animation</h2>
+
+      <p>
+        Enter a number and see how recursive factorial calculation
+        works step by step.
+      </p>
+
+      <div class="recursion-animation">
+
+        <h2>Interactive Recursion</h2>
+
+        <div id="recursionContainer" class="recursion-container">
+        </div>
+
+        <div class="recursion-controls">
+
+          <input
+            type="number"
+            id="recursionValue"
+            placeholder="Enter number"
+            min="1"
+            max="10"
+          />
+
+          <button onclick="startRecursion()">
+            Start Recursion
+          </button>
+
+          <button onclick="clearRecursion()">
+            Clear
+          </button>
+
+        </div>
+
+        <p id="recursionMessage" class="recursion-message">
+          Enter a number to start recursion.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Types -->
+    <div class="note-card">
+
+      <h2>Types of Recursion</h2>
+
+      <ul>
+        <li>Direct Recursion</li>
+        <li>Indirect Recursion</li>
+        <li>Tail Recursion</li>
+        <li>Non-Tail Recursion</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Advantages -->
+    <div class="note-card">
+
+      <h2>Advantages of Recursion</h2>
+
+      <ul>
+        <li>It makes complex problems easier to solve.</li>
+        <li>Code can be shorter and easier to understand.</li>
+        <li>Useful for tree and graph problems.</li>
+        <li>Useful for divide and conquer algorithms.</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Disadvantages -->
+    <div class="note-card">
+
+      <h2>Disadvantages of Recursion</h2>
+
+      <ul>
+        <li>It can use more memory.</li>
+        <li>Recursive calls can be slower.</li>
+        <li>Incorrect recursion may cause stack overflow.</li>
+        <li>It can be difficult to understand for beginners.</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Applications -->
+    <div class="note-card">
+
+      <h2>Applications of Recursion</h2>
+
+      <ul>
+        <li>Tree Traversal</li>
+        <li>Graph Traversal</li>
+        <li>Factorial Calculation</li>
+        <li>Fibonacci Series</li>
+        <li>Searching and Sorting Algorithms</li>
+        <li>Divide and Conquer Algorithms</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Back Button -->
+    <button
+      class="back-btn"
+      onclick="location.href = 'ds-notes.html'"
+    >
+      ⬅️ Back to Data Structure Notes
+    </button>
+
+  </div>
+
+
+  <!-- Recursion JavaScript -->
+  <script>
+
+    function startRecursion() {
+
+      const input =
+        document.getElementById("recursionValue");
+
+      const number = parseInt(input.value);
+
+      const container =
+        document.getElementById("recursionContainer");
+
+      const message =
+        document.getElementById("recursionMessage");
+
+      container.innerHTML = "";
+
+      if (isNaN(number) || number < 1 || number > 10) {
+
+        message.textContent =
+          "Please enter a number between 1 and 10.";
+
+        return;
+      }
+
+      message.textContent =
+        "Starting recursion...";
+
+      showRecursion(number);
+
+    }
+
+
+    function showRecursion(number) {
+
+      const container =
+        document.getElementById("recursionContainer");
+
+      for (let i = number; i >= 1; i--) {
+
+        const box =
+          document.createElement("div");
+
+        box.className = "recursion-step";
+
+        box.textContent =
+          "factorial(" + i + ")";
+
+        container.appendChild(box);
+
+      }
+
+      const base =
+        document.createElement("div");
+
+      base.className = "recursion-step";
+
+      base.textContent =
+        "Base Case → factorial(1) = 1";
+
+      container.appendChild(base);
+
+      for (let i = 2; i <= number; i++) {
+
+        const arrow =
+          document.createElement("div");
+
+        arrow.className = "recursion-arrow";
+
+        arrow.textContent = "↓";
+
+        container.appendChild(arrow);
+
+        const result =
+          document.createElement("div");
+
+        result.className = "recursion-step";
+
+        result.textContent =
+          "Returning result for " + i;
+
+        container.appendChild(result);
+
+      }
+
+      let result = 1;
+
+      for (let i = 1; i <= number; i++) {
+        result *= i;
+      }
+
+      document.getElementById("recursionMessage").textContent =
+        "Factorial of " + number + " = " + result;
+
+    }
+
+
+    function clearRecursion() {
+
+      document.getElementById(
+        "recursionContainer"
+      ).innerHTML = "";
+
+      document.getElementById(
+        "recursionValue"
+      ).value = "";
+
+      document.getElementById(
+        "recursionMessage"
+      ).textContent =
+        "Enter a number to start recursion.";
+
+    }
+
+  </script>
+
+</body>
+</html>

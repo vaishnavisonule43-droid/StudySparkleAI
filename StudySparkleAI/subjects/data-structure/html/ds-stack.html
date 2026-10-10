@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Stack - Data Structure</title>
+
+  <link rel="stylesheet" href="../css/data-structure.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>📚 Stack</h1>
+    <p>Learn the basic concepts of Stack in Data Structure.</p>
+  </header>
+
+
+  <!-- Main Content -->
+  <div class="notes-container">
+
+    <!-- Introduction -->
+    <div class="note-card">
+
+      <h2>What is Stack?</h2>
+
+      <p>
+        A Stack is a linear data structure in which elements are
+        inserted and removed from the same end.
+      </p>
+
+      <div class="definition">
+        <strong>Definition:</strong>
+        Stack follows the LIFO principle, which means
+        <strong>Last In, First Out</strong>.
+      </div>
+
+      <h3>Example</h3>
+
+      <p>
+        A real-life example of a stack is a stack of plates.
+        The plate placed last on the top is removed first.
+      </p>
+
+    </div>
+
+
+    <!-- LIFO -->
+    <div class="note-card">
+
+      <h2>LIFO Principle</h2>
+
+      <p>
+        LIFO stands for <strong>Last In, First Out</strong>.
+        The element inserted last is removed first.
+      </p>
+
+      <div class="example-box">
+        <strong>Example:</strong><br><br>
+
+        If we push:
+        10 → 20 → 30
+
+        <br><br>
+
+        Then the first element removed will be:
+        <strong>30</strong>
+      </div>
+
+    </div>
+
+
+    <!-- Stack Operations -->
+    <div class="note-card">
+
+      <h2>Stack Operations</h2>
+
+      <h3>1. Push</h3>
+
+      <p>
+        Push is used to add an element to the top of the stack.
+      </p>
+
+      <h3>2. Pop</h3>
+
+      <p>
+        Pop is used to remove the top element from the stack.
+      </p>
+
+      <h3>3. Peek</h3>
+
+      <p>
+        Peek is used to view the top element without removing it.
+      </p>
+
+      <h3>4. IsEmpty</h3>
+
+      <p>
+        IsEmpty checks whether the stack contains any element or not.
+      </p>
+
+    </div>
+
+
+    <!-- Stack Animation -->
+    <div class="note-card">
+
+      <h2>Stack Animation</h2>
+
+      <p>
+        Use the buttons below to understand how Push, Pop and Peek
+        operations work.
+      </p>
+
+      <div class="stack-animation">
+
+        <h2>Interactive Stack</h2>
+
+        <div
+          id="stackContainer"
+          class="stack-container"
+        >
+        </div>
+
+        <div class="stack-controls">
+
+          <input
+            type="text"
+            id="stackValue"
+            placeholder="Enter value"
+          />
+
+          <button onclick="pushStack()">
+            Push
+          </button>
+
+          <button onclick="popStack()">
+            Pop
+          </button>
+
+          <button onclick="peekStack()">
+            Peek
+          </button>
+
+        </div>
+
+        <p
+          id="stackMessage"
+          class="stack-message"
+        >
+          Stack is empty.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Types -->
+    <div class="note-card">
+
+      <h2>Types of Stack</h2>
+
+      <ul>
+        <li>Static Stack</li>
+        <li>Dynamic Stack</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Applications -->
+    <div class="note-card">
+
+      <h2>Applications of Stack</h2>
+
+      <ul>
+        <li>Function Calls</li>
+        <li>Undo and Redo Operations</li>
+        <li>Expression Evaluation</li>
+        <li>Parentheses Matching</li>
+        <li>Browser Back Button</li>
+        <li>Recursion</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Advantages -->
+    <div class="note-card">
+
+      <h2>Advantages of Stack</h2>
+
+      <ul>
+        <li>Easy to implement.</li>
+        <li>Insertion and deletion are fast.</li>
+        <li>Follows the LIFO principle.</li>
+        <li>Useful in recursion and function calls.</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Disadvantages -->
+    <div class="note-card">
+
+      <h2>Disadvantages of Stack</h2>
+
+      <ul>
+        <li>Only the top element can be accessed directly.</li>
+        <li>Random access is not possible.</li>
+        <li>Stack overflow can occur when the stack is full.</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Back Button -->
+    <button
+      class="back-btn"
+      onclick="location.href = 'ds-notes.html'"
+    >
+      ⬅️ Back to Data Structure Notes
+    </button>
+
+  </div>
+
+
+  <!-- Stack JavaScript -->
+  <script>
+
+    let stack = [];
+
+    const maxStackSize = 8;
+
+
+    function pushStack() {
+
+      const input =
+        document.getElementById("stackValue");
+
+      const value = input.value.trim();
+
+      const message =
+        document.getElementById("stackMessage");
+
+      if (value === "") {
+
+        message.textContent =
+          "Please enter a value.";
+
+        return;
+      }
+
+      if (stack.length >= maxStackSize) {
+
+        message.textContent =
+          "Stack Overflow! Stack is full.";
+
+        return;
+      }
+
+      stack.push(value);
+
+      input.value = "";
+
+      displayStack();
+
+      message.textContent =
+        value + " pushed into the stack.";
+
+    }
+
+
+    function popStack() {
+
+      const message =
+        document.getElementById("stackMessage");
+
+      if (stack.length === 0) {
+
+        message.textContent =
+          "Stack Underflow! Stack is empty.";
+
+        return;
+      }
+
+      const removed =
+        stack.pop();
+
+      displayStack();
+
+      message.textContent =
+        removed + " popped from the stack.";
+
+    }
+
+
+    function peekStack() {
+
+      const message =
+        document.getElementById("stackMessage");
+
+      if (stack.length === 0) {
+
+        message.textContent =
+          "Stack is empty.";
+
+        return;
+      }
+
+      message.textContent =
+        "Top element is " + stack[stack.length - 1] + ".";
+
+    }
+
+
+    function displayStack() {
+
+      const container =
+        document.getElementById("stackContainer");
+
+      container.innerHTML = "";
+
+      stack.forEach((item) => {
+
+        const element =
+          document.createElement("div");
+
+        element.className = "stack-item";
+
+        element.textContent = item;
+
+        container.appendChild(element);
+
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>

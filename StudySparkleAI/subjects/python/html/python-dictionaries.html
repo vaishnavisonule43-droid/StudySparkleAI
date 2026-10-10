@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Python Dictionaries</title>
+
+  <link rel="stylesheet" href="../css/python-topic.css">
+</head>
+
+<body>
+
+<div class="notes-container">
+
+  <h1>🐍 Python Dictionaries</h1>
+
+  <div class="notes-card">
+
+    <h2>📘 What is a Dictionary?</h2>
+
+    <p>
+      A dictionary is a collection of data stored in
+      <strong>key-value pairs</strong>.
+    </p>
+
+    <p>
+      Each key is used to access its corresponding value.
+      Dictionaries are written using curly brackets <strong>{ }</strong>.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18,
+    "course": "BCA"
+}
+
+print(student)
+      </pre>
+    </div>
+
+
+    <h2>⭐ Features of Dictionary</h2>
+
+    <ul>
+      <li>Dictionaries store data in key-value pairs.</li>
+      <li>Dictionaries are changeable or mutable.</li>
+      <li>Keys must be unique.</li>
+      <li>Values can be duplicated.</li>
+      <li>Keys are used to access values.</li>
+      <li>A dictionary can contain different data types.</li>
+    </ul>
+
+
+    <h2>🔑 Dictionary Key and Value</h2>
+
+    <p>
+      In a dictionary, the word before the colon is called a
+      <strong>key</strong> and the data after the colon is called a
+      <strong>value</strong>.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18
+}
+      </pre>
+
+      <p>
+        Here, <strong>name</strong> and <strong>age</strong> are keys.
+        <strong>Vaishnavi</strong> and <strong>18</strong> are values.
+      </p>
+    </div>
+
+
+    <h2>📖 Accessing Dictionary Values</h2>
+
+    <p>
+      We can access a dictionary value by using its key.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18,
+    "course": "BCA"
+}
+
+print(student["name"])
+print(student["course"])
+      </pre>
+    </div>
+
+
+    <h2>🔍 Using get() Method</h2>
+
+    <p>
+      The <strong>get()</strong> method is another way to access
+      a value using its key.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18
+}
+
+print(student.get("name"))
+      </pre>
+    </div>
+
+
+    <h2>➕ Adding a New Item</h2>
+
+    <p>
+      A new key-value pair can be added to a dictionary by using
+      a new key.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "course": "BCA"
+}
+
+student["age"] = 18
+
+print(student)
+      </pre>
+    </div>
+
+
+    <h2>✏️ Changing a Dictionary Value</h2>
+
+    <p>
+      Since dictionaries are mutable, we can change an existing value.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18
+}
+
+student["age"] = 19
+
+print(student)
+      </pre>
+    </div>
+
+
+    <h2>❌ Removing an Item</h2>
+
+    <p>
+      The <strong>pop()</strong> method removes an item using its key.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18,
+    "course": "BCA"
+}
+
+student.pop("age")
+
+print(student)
+      </pre>
+    </div>
+
+
+    <h2>🗑️ Using del</h2>
+
+    <p>
+      The <strong>del</strong> keyword can also be used to remove
+      a specific dictionary item.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18
+}
+
+del student["age"]
+
+print(student)
+      </pre>
+    </div>
+
+
+    <h2>🧹 clear() Method</h2>
+
+    <p>
+      The <strong>clear()</strong> method removes all items from
+      the dictionary.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18
+}
+
+student.clear()
+
+print(student)
+      </pre>
+    </div>
+
+
+    <h2>🔑 keys() Method</h2>
+
+    <p>
+      The <strong>keys()</strong> method returns all the keys
+      present in a dictionary.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18,
+    "course": "BCA"
+}
+
+print(student.keys())
+      </pre>
+    </div>
+
+
+    <h2>📦 values() Method</h2>
+
+    <p>
+      The <strong>values()</strong> method returns all the values
+      present in a dictionary.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18,
+    "course": "BCA"
+}
+
+print(student.values())
+      </pre>
+    </div>
+
+
+    <h2>🔄 items() Method</h2>
+
+    <p>
+      The <strong>items()</strong> method returns all key-value pairs
+      from a dictionary.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18
+}
+
+print(student.items())
+      </pre>
+    </div>
+
+
+    <h2>📏 len() Function</h2>
+
+    <p>
+      The <strong>len()</strong> function returns the number of
+      key-value pairs in a dictionary.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18,
+    "course": "BCA"
+}
+
+print(len(student))
+      </pre>
+    </div>
+
+
+    <h2>🔎 Checking if a Key Exists</h2>
+
+    <p>
+      The <strong>in</strong> keyword is used to check whether a key
+      exists in a dictionary.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18
+}
+
+if "name" in student:
+    print("Key exists")
+      </pre>
+    </div>
+
+
+    <h2>🔁 Loop Through a Dictionary</h2>
+
+    <p>
+      A loop can be used to access dictionary keys and values.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18,
+    "course": "BCA"
+}
+
+for key in student:
+    print(key)
+      </pre>
+    </div>
+
+
+    <h2>🔄 Loop Through Values</h2>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18,
+    "course": "BCA"
+}
+
+for value in student.values():
+    print(value)
+      </pre>
+    </div>
+
+
+    <h2>🔑 Loop Through Keys and Values</h2>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18,
+    "course": "BCA"
+}
+
+for key, value in student.items():
+    print(key, value)
+      </pre>
+    </div>
+
+
+    <h2>📋 Common Dictionary Methods</h2>
+
+    <table>
+      <tr>
+        <th>Method</th>
+        <th>Purpose</th>
+      </tr>
+
+      <tr>
+        <td>get()</td>
+        <td>Returns the value of a key.</td>
+      </tr>
+
+      <tr>
+        <td>keys()</td>
+        <td>Returns all keys.</td>
+      </tr>
+
+      <tr>
+        <td>values()</td>
+        <td>Returns all values.</td>
+      </tr>
+
+      <tr>
+        <td>items()</td>
+        <td>Returns key-value pairs.</td>
+      </tr>
+
+      <tr>
+        <td>update()</td>
+        <td>Adds or changes dictionary items.</td>
+      </tr>
+
+      <tr>
+        <td>pop()</td>
+        <td>Removes an item using its key.</td>
+      </tr>
+
+      <tr>
+        <td>clear()</td>
+        <td>Removes all items.</td>
+      </tr>
+    </table>
+
+
+    <h2>🔄 update() Method</h2>
+
+    <p>
+      The <strong>update()</strong> method is used to add new items
+      or change existing items.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "age": 18
+}
+
+student.update({"course": "BCA"})
+
+print(student)
+      </pre>
+    </div>
+
+
+    <h2>📦 Nested Dictionary</h2>
+
+    <p>
+      A dictionary can contain another dictionary inside it.
+      This is called a nested dictionary.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+students = {
+    "student1": {
+        "name": "Vaishnavi",
+        "age": 18
+    },
+    "student2": {
+        "name": "Riya",
+        "age": 19
+    }
+}
+
+print(students["student1"]["name"])
+      </pre>
+    </div>
+
+
+    <h2>💻 Practical Example</h2>
+
+    <p>
+      The following example stores student information using
+      a dictionary.
+    </p>
+
+    <div class="example-box">
+      <strong>Student Information:</strong>
+
+      <pre>
+student = {
+    "name": "Vaishnavi",
+    "roll_no": 25,
+    "course": "BCA",
+    "marks": 85
+}
+
+print("Name:", student["name"])
+print("Roll No:", student["roll_no"])
+print("Course:", student["course"])
+print("Marks:", student["marks"])
+      </pre>
+    </div>
+
+
+    <h2>📚 Applications of Dictionaries</h2>
+
+    <ul>
+      <li>Storing student information.</li>
+      <li>Storing employee information.</li>
+      <li>Storing product details.</li>
+      <li>Managing user information.</li>
+      <li>Representing structured data.</li>
+      <li>Working with JSON-like data.</li>
+    </ul>
+
+
+    <h2>📌 Quick Revision</h2>
+
+    <ul>
+      <li>A dictionary stores data in key-value pairs.</li>
+      <li>Dictionaries are written using curly brackets { }.</li>
+      <li>Keys are used to access values.</li>
+      <li>Keys must be unique.</li>
+      <li>Dictionaries are mutable.</li>
+      <li>get() is used to access a value.</li>
+      <li>keys() returns all keys.</li>
+      <li>values() returns all values.</li>
+      <li>items() returns key-value pairs.</li>
+      <li>pop() removes an item.</li>
+      <li>clear() removes all dictionary items.</li>
+      <li>update() adds or changes items.</li>
+    </ul>
+
+
+    <button class="back-btn" onclick="location.href='python-notes.html'">
+      ⬅️ Back to Python Notes
+    </button>
+
+  </div>
+
+</div>
+
+</body>
+</html>

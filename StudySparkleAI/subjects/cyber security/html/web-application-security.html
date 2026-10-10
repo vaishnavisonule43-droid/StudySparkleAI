@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application Security | StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/notes.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <div class="header-icon">🌐</div>
+        <h1>Web Application Security</h1>
+        <p>Protect websites and web applications from cyber threats.</p>
+    </header>
+
+    <main class="notes-container">
+
+        <section class="intro-card">
+            <h2>📘 Introduction</h2>
+            <p>
+                Web applications are software programs that users access
+                through a web browser. Examples include online banking,
+                shopping websites and college portals.
+            </p>
+            <p>
+                Web application security helps protect these applications
+                from attacks, data theft and unauthorized access.
+            </p>
+        </section>
+
+        <section class="notes-section">
+            <h2>📖 1. Definition of Web Application Security</h2>
+
+            <div class="definition">
+                Web Application Security is the practice of protecting
+                websites and web applications from security weaknesses,
+                unauthorized access and cyberattacks.
+            </div>
+
+            <p>
+                <strong>Example:</strong> Protecting a college website
+                so that students cannot access or change another
+                student's private records.
+            </p>
+        </section>
+
+        <section class="notes-section">
+            <h2>🎯 2. Objectives of Web Application Security</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>To protect user information.</li>
+                    <li>To prevent unauthorized access.</li>
+                    <li>To protect websites from attacks.</li>
+                    <li>To maintain data accuracy.</li>
+                    <li>To provide secure online services.</li>
+                    <li>To build user trust.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>⚠️ 3. Common Web Application Attacks</h2>
+
+            <div class="note-card">
+                <h3>1. SQL Injection</h3>
+                <p>
+                    SQL injection occurs when unsafe handling of user
+                    input allows an attacker to interfere with database
+                    queries.
+                </p>
+                <p>
+                    <strong>Prevention:</strong> Use parameterized
+                    queries and validate input appropriately.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>2. Cross-Site Scripting (XSS)</h3>
+                <p>
+                    XSS occurs when a website handles untrusted content
+                    unsafely, allowing harmful scripts to run in
+                    another user's browser.
+                </p>
+                <p>
+                    <strong>Prevention:</strong> Apply context-aware
+                    output encoding and safe input handling.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>3. Broken Authentication</h3>
+                <p>
+                    Weak login or session management can allow attackers
+                    to gain unauthorized access to user accounts.
+                </p>
+                <p>
+                    <strong>Prevention:</strong> Use secure authentication,
+                    strong passwords and multi-factor authentication.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>4. Broken Access Control</h3>
+                <p>
+                    This occurs when users can access information or
+                    functions they are not authorized to use.
+                </p>
+                <p>
+                    <strong>Prevention:</strong> Check permissions on
+                    the server for every protected action.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>5. Cross-Site Request Forgery (CSRF)</h3>
+                <p>
+                    CSRF tricks a logged-in user's browser into sending
+                    an unwanted request to a website.
+                </p>
+                <p>
+                    <strong>Prevention:</strong> Use appropriate CSRF
+                    protection, secure cookies and request verification.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>6. Security Misconfiguration</h3>
+                <p>
+                    Incorrect settings, unnecessary services or exposed
+                    error details can create security weaknesses.
+                </p>
+                <p>
+                    <strong>Prevention:</strong> Use secure settings,
+                    remove unnecessary services and update software.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>🔒 4. Important Web Security Methods</h2>
+
+            <div class="note-card">
+                <h3>1. HTTPS</h3>
+                <p>
+                    HTTPS protects data sent between a browser and
+                    a website using encryption.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>2. Input Validation</h3>
+                <p>
+                    Input validation checks whether user input follows
+                    the expected rules and format.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>3. Authentication</h3>
+                <p>
+                    Authentication verifies the identity of a user
+                    before access is granted.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>4. Access Control</h3>
+                <p>
+                    Access control ensures that users can access only
+                    the data and functions they are permitted to use.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>5. Regular Updates</h3>
+                <p>
+                    Updating application frameworks, libraries and
+                    servers helps fix known security vulnerabilities.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>6. Secure Session Management</h3>
+                <p>
+                    Secure session handling protects login sessions
+                    and reduces the risk of session theft.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>🛠️ 5. Web Application Security Tools</h2>
+
+            <div class="note-card">
+                <h3>1. OWASP ZAP</h3>
+                <p>
+                    A tool used to test web application security
+                    in authorized environments.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>2. Burp Suite</h3>
+                <p>
+                    A platform used to examine and test web application
+                    security.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>3. Nmap</h3>
+                <p>
+                    A network discovery and security auditing tool
+                    that can help identify exposed services.
+                </p>
+            </div>
+
+            <div class="note-card">
+                <h3>4. Web Application Firewall (WAF)</h3>
+                <p>
+                    A WAF filters HTTP traffic to help protect web
+                    applications from certain malicious requests.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>📋 6. Best Practices for Web Application Security</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>Use HTTPS for websites.</li>
+                    <li>Use parameterized database queries.</li>
+                    <li>Validate input and encode output safely.</li>
+                    <li>Apply authentication and access controls.</li>
+                    <li>Keep software and dependencies updated.</li>
+                    <li>Store passwords using secure password hashing.</li>
+                    <li>Back up important data regularly.</li>
+                    <li>Test applications before releasing them.</li>
+                    <li>Never test systems without authorization.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>⭐ 7. Advantages of Web Application Security</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>Protects user data and privacy.</li>
+                    <li>Reduces the risk of data breaches.</li>
+                    <li>Improves website reliability.</li>
+                    <li>Protects online transactions.</li>
+                    <li>Builds trust among users.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>⚠️ 8. Challenges of Web Application Security</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>New vulnerabilities appear regularly.</li>
+                    <li>Complex applications are harder to secure.</li>
+                    <li>Security testing requires time and expertise.</li>
+                    <li>Outdated software can create risks.</li>
+                    <li>Security must be maintained continuously.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>📝 9. Conclusion</h2>
+
+            <p>
+                Web application security is essential for protecting
+                websites, users and online information. Secure coding,
+                proper authentication, regular updates and authorized
+                security testing help reduce cyber risks.
+            </p>
+        </section>
+
+        <button class="back-btn"
+                onclick="location.href='cyber-security-notes.html'">
+            ⬅️ Back to Cyber Security Topics
+        </button>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 StudySpark AI | Learn Smart, Grow Smart</p>
+    </footer>
+
+</body>
+</html>

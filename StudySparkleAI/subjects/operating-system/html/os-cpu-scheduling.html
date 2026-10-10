@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CPU Scheduling - OS Notes</title>
+
+  <link rel="stylesheet" href="../css/os.css">
+</head>
+
+<body>
+
+  <div class="notes-container">
+
+    <h1>CPU Scheduling</h1>
+
+    <div class="notes-card">
+
+      <h2>1. What is CPU Scheduling?</h2>
+
+      <p>
+        CPU Scheduling is the process of selecting a process from the
+        ready queue and giving the CPU to that process for execution.
+      </p>
+
+      <p>
+        In simple words, CPU scheduling decides <b>which process will
+        use the CPU next.</b>
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        If P1, P2 and P3 are waiting for CPU, the operating system
+        decides which process should execute first.
+      </div>
+
+
+      <h2>2. Need of CPU Scheduling</h2>
+
+      <ul>
+        <li>It keeps the CPU busy.</li>
+        <li>It reduces waiting time.</li>
+        <li>It reduces response time.</li>
+        <li>It improves CPU utilization.</li>
+        <li>It provides fair CPU access to processes.</li>
+      </ul>
+
+
+      <h2>3. Types of CPU Scheduling</h2>
+
+      <p>
+        CPU scheduling is mainly divided into two types:
+      </p>
+
+      <ul>
+        <li><b>Preemptive Scheduling</b></li>
+        <li><b>Non-Preemptive Scheduling</b></li>
+      </ul>
+
+
+      <h2>4. Preemptive Scheduling</h2>
+
+      <p>
+        In preemptive scheduling, the operating system can stop a
+        running process and give the CPU to another process.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        Round Robin and Preemptive Priority Scheduling.
+      </div>
+
+
+      <h2>5. Non-Preemptive Scheduling</h2>
+
+      <p>
+        In non-preemptive scheduling, once a process gets the CPU,
+        it keeps the CPU until it finishes or enters a waiting state.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        FCFS and Non-Preemptive SJF.
+      </div>
+
+
+      <h2>6. CPU Scheduling Algorithms</h2>
+
+      <p>
+        Common CPU scheduling algorithms are:
+      </p>
+
+      <ul>
+        <li>First Come First Serve (FCFS)</li>
+        <li>Shortest Job First (SJF)</li>
+        <li>Priority Scheduling</li>
+        <li>Round Robin (RR)</li>
+      </ul>
+
+
+      <h2>7. First Come First Serve (FCFS)</h2>
+
+      <p>
+        FCFS is a scheduling algorithm in which the process that
+        arrives first gets the CPU first.
+      </p>
+
+      <p><b>Example:</b></p>
+
+      <div class="example-box">
+        If the order of processes is P1 → P2 → P3,
+        then P1 executes first, followed by P2 and P3.
+      </div>
+
+      <p><b>Advantages:</b></p>
+
+      <ul>
+        <li>Simple and easy to understand.</li>
+        <li>Easy to implement.</li>
+      </ul>
+
+      <p><b>Disadvantage:</b></p>
+
+      <ul>
+        <li>It can cause long waiting time.</li>
+      </ul>
+
+
+      <h2>8. Shortest Job First (SJF)</h2>
+
+      <p>
+        In SJF, the process having the shortest CPU burst time
+        is selected first.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        If P1 needs 8 ms, P2 needs 3 ms and P3 needs 5 ms,
+        then P2 will execute first.
+      </div>
+
+      <p><b>Advantages:</b></p>
+
+      <ul>
+        <li>Reduces average waiting time.</li>
+        <li>Good for batch systems.</li>
+      </ul>
+
+      <p><b>Disadvantage:</b></p>
+
+      <ul>
+        <li>Long processes may have to wait for a long time.</li>
+      </ul>
+
+
+      <h2>9. Priority Scheduling</h2>
+
+      <p>
+        In Priority Scheduling, each process is assigned a priority.
+        The process with the higher priority gets the CPU first.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        If P1 has priority 3, P2 has priority 1 and P3 has priority 2,
+        then the process with the highest priority is selected according
+        to the system's priority convention.
+      </div>
+
+      <p><b>Advantages:</b></p>
+
+      <ul>
+        <li>Important processes can be executed first.</li>
+        <li>Useful for priority-based systems.</li>
+      </ul>
+
+      <p><b>Disadvantage:</b></p>
+
+      <ul>
+        <li>Low-priority processes may wait for a long time.</li>
+      </ul>
+
+
+      <h2>10. Round Robin (RR)</h2>
+
+      <p>
+        Round Robin is a preemptive scheduling algorithm.
+        Each process gets a fixed amount of CPU time called
+        <b>Time Quantum</b>.
+      </p>
+
+      <div class="example-box">
+        <b>Example:</b>
+        If the time quantum is 2 ms, each process gets the CPU
+        for 2 ms one by one.
+      </div>
+
+      <p><b>Advantages:</b></p>
+
+      <ul>
+        <li>Fair scheduling.</li>
+        <li>Good response time.</li>
+        <li>Suitable for time-sharing systems.</li>
+      </ul>
+
+      <p><b>Disadvantage:</b></p>
+
+      <ul>
+        <li>Too small time quantum can cause many context switches.</li>
+      </ul>
+
+
+      <h2>11. Comparison of Scheduling Algorithms</h2>
+
+      <table>
+
+        <tr>
+          <th>Algorithm</th>
+          <th>Type</th>
+          <th>Main Idea</th>
+        </tr>
+
+        <tr>
+          <td>FCFS</td>
+          <td>Non-Preemptive</td>
+          <td>First process executes first</td>
+        </tr>
+
+        <tr>
+          <td>SJF</td>
+          <td>Usually Non-Preemptive</td>
+          <td>Shortest job executes first</td>
+        </tr>
+
+        <tr>
+          <td>Priority</td>
+          <td>Preemptive / Non-Preemptive</td>
+          <td>Higher-priority process executes first</td>
+        </tr>
+
+        <tr>
+          <td>Round Robin</td>
+          <td>Preemptive</td>
+          <td>Each process gets fixed time</td>
+        </tr>
+
+      </table>
+
+
+      <h2>12. Important Terms</h2>
+
+      <ul>
+        <li>
+          <b>Waiting Time:</b> Time spent by a process waiting in the
+          ready queue.
+        </li>
+
+        <li>
+          <b>Turnaround Time:</b> Total time from process arrival
+          to its completion.
+        </li>
+
+        <li>
+          <b>Response Time:</b> Time from request/arrival until the
+          process gets CPU for the first time.
+        </li>
+
+        <li>
+          <b>Time Quantum:</b> Fixed amount of CPU time given to a
+          process in Round Robin scheduling.
+        </li>
+      </ul>
+
+
+      <h2>13. Advantages of CPU Scheduling</h2>
+
+      <ul>
+        <li>Improves CPU utilization.</li>
+        <li>Reduces waiting time.</li>
+        <li>Improves system performance.</li>
+        <li>Provides better response time.</li>
+        <li>Allows multiple processes to share the CPU.</li>
+      </ul>
+
+
+      <h2>14. Real-Life Example</h2>
+
+      <p>
+        CPU scheduling is similar to people waiting for service at
+        a counter. The system decides who should be served first
+        according to the scheduling rule.
+      </p>
+
+
+      <h2>15. Summary</h2>
+
+      <p>
+        CPU Scheduling is an important function of an operating system.
+        It decides which process gets the CPU next. FCFS, SJF,
+        Priority and Round Robin are common CPU scheduling algorithms.
+        Good scheduling improves CPU utilization and system performance.
+      </p>
+
+
+      <button onclick="location.href = 'os-notes.html'">
+        ⬅️ Back to OS
+      </button>
+
+    </div>
+  </div>
+
+</body>
+</html>

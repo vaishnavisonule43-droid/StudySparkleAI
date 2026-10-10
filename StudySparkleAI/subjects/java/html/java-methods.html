@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Methods | StudySpark AI</title>
+    <link rel="stylesheet" href="../css/java-topic.css">
+</head>
+<body>
+
+    <header class="topic-header">
+        <h1>Java Methods</h1>
+        <p>Learn methods in Java with simple explanations and examples.</p>
+    </header>
+
+    <main class="topic-container">
+
+        <section class="topic-card">
+            <h2>1. What is a Method?</h2>
+            <p>A method is a block of code that performs a specific task.
+            We can call a method whenever we need to perform that task.</p>
+            <div class="important-box">
+                <strong>Example:</strong> A method can calculate the sum
+                of two numbers.
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>2. Method Syntax</h2>
+            <p>A method generally contains a return type, method name,
+            parameters and a body.</p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <button class="copy-btn" onclick="copyJavaCode(this)">
+                        Copy Code
+                    </button>
+                    <span class="copy-status"></span>
+                </div>
+                <pre><code>returnType methodName(parameters) {
+    // code to execute
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>3. Types of Methods</h2>
+
+            <h3>Predefined Methods</h3>
+            <p>These methods are already provided by Java libraries.</p>
+            <p><strong>Example:</strong> <code>System.out.println()</code>
+            and <code>Math.sqrt()</code>.</p>
+
+            <h3>User-Defined Methods</h3>
+            <p>These methods are created by the programmer according to
+            the program's requirements.</p>
+        </section>
+
+        <section class="topic-card">
+            <h2>4. Method Without Parameters and Return Value</h2>
+            <p>This method does not accept any values and does not return
+            a result.</p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <button class="copy-btn" onclick="copyJavaCode(this)">
+                        Copy Code
+                    </button>
+                    <span class="copy-status"></span>
+                </div>
+                <pre><code>class Main {
+    static void greet() {
+        System.out.println("Hello Student!");
+    }
+
+    public static void main(String[] args) {
+        greet();
+    }
+}</code></pre>
+            </div>
+
+            <p><strong>Output:</strong></p>
+            <pre><code>Hello Student!</code></pre>
+        </section>
+
+        <section class="topic-card">
+            <h2>5. Method With Parameters</h2>
+            <p>Parameters allow us to pass values to a method.</p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <button class="copy-btn" onclick="copyJavaCode(this)">
+                        Copy Code
+                    </button>
+                    <span class="copy-status"></span>
+                </div>
+                <pre><code>class Main {
+    static void add(int a, int b) {
+        System.out.println(a + b);
+    }
+
+    public static void main(String[] args) {
+        add(10, 20);
+    }
+}</code></pre>
+            </div>
+
+            <p><strong>Output:</strong></p>
+            <pre><code>30</code></pre>
+
+            <div class="important-box">
+                Here, <code>a</code> and <code>b</code> are parameters.
+                The values <code>10</code> and <code>20</code> are arguments.
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>6. Method With a Return Value</h2>
+            <p>A method with a return type sends a result back to the
+            calling code using the <code>return</code> statement.</p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <button class="copy-btn" onclick="copyJavaCode(this)">
+                        Copy Code
+                    </button>
+                    <span class="copy-status"></span>
+                </div>
+                <pre><code>class Main {
+    static int square(int n) {
+        return n * n;
+    }
+
+    public static void main(String[] args) {
+        int result = square(5);
+        System.out.println(result);
+    }
+}</code></pre>
+            </div>
+
+            <p><strong>Output:</strong></p>
+            <pre><code>25</code></pre>
+        </section>
+
+        <section class="topic-card">
+            <h2>7. Static and Instance Methods</h2>
+
+            <h3>Static Method</h3>
+            <p>A static method belongs to the class. We can call it using
+            the class name without creating an object.</p>
+
+            <h3>Instance Method</h3>
+            <p>An instance method belongs to an object. We normally create
+            an object to call it.</p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <button class="copy-btn" onclick="copyJavaCode(this)">
+                        Copy Code
+                    </button>
+                    <span class="copy-status"></span>
+                </div>
+                <pre><code>class Student {
+    static void showCollege() {
+        System.out.println("ABC College");
+    }
+
+    void showName() {
+        System.out.println("Rahul");
+    }
+
+    public static void main(String[] args) {
+        Student.showCollege();
+
+        Student s = new Student();
+        s.showName();
+    }
+}</code></pre>
+            </div>
+
+            <p><strong>Output:</strong></p>
+            <pre><code>ABC College
+Rahul</code></pre>
+        </section>
+
+        <section class="topic-card">
+            <h2>8. Method Overloading</h2>
+            <p>Method overloading means creating multiple methods with the
+            same name but different parameter lists.</p>
+
+            <div class="code-box">
+                <div class="code-toolbar">
+                    <button class="copy-btn" onclick="copyJavaCode(this)">
+                        Copy Code
+                    </button>
+                    <span class="copy-status"></span>
+                </div>
+                <pre><code>class Main {
+    static int add(int a, int b) {
+        return a + b;
+    }
+
+    static int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(add(2, 3));
+        System.out.println(add(2, 3, 4));
+    }
+}</code></pre>
+            </div>
+
+            <p><strong>Output:</strong></p>
+            <pre><code>5
+9</code></pre>
+
+            <div class="important-box">
+                Method overloading can use different numbers or types of
+                parameters. Changing only the return type is not enough.
+            </div>
+        </section>
+
+        <section class="topic-card">
+            <h2>9. Advantages of Methods</h2>
+            <ul>
+                <li>Methods reduce repeated code.</li>
+                <li>They make programs easier to understand.</li>
+                <li>They make code easier to test and maintain.</li>
+                <li>They divide a large program into smaller tasks.</li>
+                <li>Methods can be called whenever required.</li>
+            </ul>
+        </section>
+
+        <section class="topic-card">
+            <h2>10. Important Points to Remember</h2>
+            <ul>
+                <li><code>void</code> means the method does not return a value.</li>
+                <li><code>return</code> sends a result back to the caller.</li>
+                <li>Parameters receive values passed to a method.</li>
+                <li>Static methods can be called using the class name.</li>
+                <li>Method overloading uses different parameter lists.</li>
+            </ul>
+        </section>
+
+        <section class="topic-card">
+            <h2>Topics Covered</h2>
+            <p>Methods, method syntax, predefined methods, user-defined
+            methods, parameters, return values, static methods, instance
+            methods and method overloading.</p>
+        </section>
+
+        <button class="back-btn"
+            onclick="location.href='java-notes.html'">
+            ⬅ Back to Java Topics
+        </button>
+
+    </main>
+
+    <script>
+        async function copyJavaCode(button) {
+            const codeBox = button.closest(".code-box");
+            const code = codeBox.querySelector("pre code").innerText;
+            const status = codeBox.querySelector(".copy-status");
+
+            try {
+                await navigator.clipboard.writeText(code);
+                button.textContent = "Copied!";
+                status.textContent = "Code copied successfully!";
+
+                setTimeout(() => {
+                    button.textContent = "Copy Code";
+                    status.textContent = "";
+                }, 2000);
+            } catch (error) {
+                status.textContent =
+                    "Copy unavailable. Please copy the code manually.";
+            }
+        }
+    </script>
+
+</body>
+</html>

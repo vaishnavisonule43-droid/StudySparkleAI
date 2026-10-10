@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Big Data Technologies - StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/notes.css" />
+  </head>
+
+  <body>
+    <header class="page-header">
+      <div class="header-icon">⚙️</div>
+      <h1>Big Data Technologies</h1>
+      <p>Learn the tools used to store, process and analyze Big Data.</p>
+    </header>
+
+    <main class="notes-container">
+
+      <section class="intro-card">
+        <h2>📖 Introduction</h2>
+        <p>
+          Big Data technologies are tools, frameworks and software used
+          to collect, store, process and analyze very large amounts of data.
+          They help organizations manage data efficiently and discover
+          useful information.
+        </p>
+      </section>
+
+      <!-- 1. Hadoop -->
+      <section class="notes-section">
+        <h2>1. Apache Hadoop</h2>
+
+        <div class="note-card">
+          <h3>Meaning</h3>
+          <p>
+            Apache Hadoop is an open-source framework used to store and
+            process large datasets across multiple computers.
+          </p>
+
+          <div class="definition">
+            <strong>Example:</strong> An organization can use Hadoop to
+            process large amounts of website activity data.
+          </div>
+
+          <h3>Main Components</h3>
+          <ul>
+            <li>HDFS – stores data across multiple computers.</li>
+            <li>MapReduce – processes data in parallel.</li>
+            <li>YARN – manages cluster resources and applications.</li>
+            <li>Hadoop Common – provides shared libraries and utilities.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 2. Apache Spark -->
+      <section class="notes-section">
+        <h2>2. Apache Spark</h2>
+
+        <div class="note-card">
+          <h3>Meaning</h3>
+          <p>
+            Apache Spark is an open-source data-processing engine used
+            for large-scale data processing and analytics. It can process
+            data in memory to speed up many workloads.
+          </p>
+
+          <div class="definition">
+            <strong>Example:</strong> A company can use Spark to analyze
+            customer shopping patterns.
+          </div>
+
+          <h3>Features</h3>
+          <ul>
+            <li>Fast data processing for many workloads.</li>
+            <li>Supports batch and stream processing.</li>
+            <li>Supports SQL and machine learning libraries.</li>
+            <li>Can work with Hadoop storage systems.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 3. HDFS -->
+      <section class="notes-section">
+        <h2>3. HDFS</h2>
+
+        <div class="note-card">
+          <h3>Meaning</h3>
+          <p>
+            HDFS stands for Hadoop Distributed File System. It stores
+            large files across multiple machines in a Hadoop cluster.
+          </p>
+
+          <div class="definition">
+            <strong>Example:</strong> A large dataset can be divided into
+            blocks and stored on different computers.
+          </div>
+
+          <h3>Features</h3>
+          <ul>
+            <li>Stores large files across multiple machines.</li>
+            <li>Supports distributed data storage.</li>
+            <li>Uses replication to improve fault tolerance.</li>
+            <li>Works as part of the Hadoop ecosystem.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 4. MapReduce -->
+      <section class="notes-section">
+        <h2>4. MapReduce</h2>
+
+        <div class="note-card">
+          <h3>Meaning</h3>
+          <p>
+            MapReduce is a programming model used to process large
+            datasets in parallel across multiple computers.
+          </p>
+
+          <h3>Main Phases</h3>
+          <ul>
+            <li>
+              <strong>Map:</strong> Processes input data and creates
+              intermediate key-value pairs.
+            </li>
+            <li>
+              <strong>Reduce:</strong> Combines intermediate results
+              to produce the final output.
+            </li>
+          </ul>
+
+          <div class="definition">
+            <strong>Example:</strong> MapReduce can count how many times
+            each word appears in a large collection of documents.
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. NoSQL -->
+      <section class="notes-section">
+        <h2>5. NoSQL Databases</h2>
+
+        <div class="note-card">
+          <h3>Meaning</h3>
+          <p>
+            NoSQL databases are databases designed for flexible data
+            models. They can be useful for storing large amounts of
+            structured, semi-structured or unstructured data.
+          </p>
+
+          <div class="definition">
+            <strong>Examples:</strong> MongoDB, Cassandra and Redis.
+          </div>
+
+          <h3>Features</h3>
+          <ul>
+            <li>Supports flexible data models.</li>
+            <li>Can handle large amounts of data.</li>
+            <li>Some systems support distributed storage.</li>
+            <li>Useful for applications with changing data needs.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 6. Apache Hive -->
+      <section class="notes-section">
+        <h2>6. Apache Hive</h2>
+
+        <div class="note-card">
+          <h3>Meaning</h3>
+          <p>
+            Apache Hive is a data warehouse tool used to query and
+            analyze data stored in distributed storage systems.
+            It provides an SQL-like language called HiveQL.
+          </p>
+
+          <div class="definition">
+            <strong>Example:</strong> Analysts can use HiveQL to summarize
+            sales records stored in a large dataset.
+          </div>
+
+          <h3>Features</h3>
+          <ul>
+            <li>Supports SQL-like queries.</li>
+            <li>Helps summarize large datasets.</li>
+            <li>Useful for data warehousing and analysis.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 7. Apache Kafka -->
+      <section class="notes-section">
+        <h2>7. Apache Kafka</h2>
+
+        <div class="note-card">
+          <h3>Meaning</h3>
+          <p>
+            Apache Kafka is a distributed event-streaming platform used
+            to publish, store and process streams of events.
+          </p>
+
+          <div class="definition">
+            <strong>Example:</strong> An online shopping system can use
+            Kafka to stream order events to other services.
+          </div>
+
+          <h3>Features</h3>
+          <ul>
+            <li>Handles continuous streams of events.</li>
+            <li>Supports communication between applications.</li>
+            <li>Can process high volumes of event data.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 8. Cloud Platforms -->
+      <section class="notes-section">
+        <h2>8. Cloud Platforms</h2>
+
+        <div class="note-card">
+          <h3>Meaning</h3>
+          <p>
+            Cloud platforms provide computing, storage and data services
+            over the internet. They allow organizations to use resources
+            without managing all the physical hardware themselves.
+          </p>
+
+          <div class="definition">
+            <strong>Examples:</strong> Amazon Web Services (AWS),
+            Microsoft Azure and Google Cloud.
+          </div>
+
+          <h3>Benefits</h3>
+          <ul>
+            <li>Flexible storage and computing resources.</li>
+            <li>Resources can be scaled when needed.</li>
+            <li>Supports data analysis services.</li>
+            <li>Reduces the need to maintain physical infrastructure.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 9. Data Visualization -->
+      <section class="notes-section">
+        <h2>9. Data Visualization Tools</h2>
+
+        <div class="note-card">
+          <h3>Meaning</h3>
+          <p>
+            Data visualization tools present data using charts, graphs,
+            dashboards and other visual formats.
+          </p>
+
+          <div class="definition">
+            <strong>Examples:</strong> Tableau, Microsoft Power BI
+            and Apache Superset.
+          </div>
+
+          <h3>Uses</h3>
+          <ul>
+            <li>Makes complex data easier to understand.</li>
+            <li>Helps identify trends and patterns.</li>
+            <li>Supports business reporting.</li>
+            <li>Helps communicate analytical results.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 10. Machine Learning -->
+      <section class="notes-section">
+        <h2>10. Machine Learning Tools</h2>
+
+        <div class="note-card">
+          <h3>Meaning</h3>
+          <p>
+            Machine learning tools help build models that learn patterns
+            from data and make predictions or classifications.
+          </p>
+
+          <div class="definition">
+            <strong>Examples:</strong> Apache Spark MLlib,
+            scikit-learn and TensorFlow.
+          </div>
+
+          <h3>Uses</h3>
+          <ul>
+            <li>Customer behavior prediction.</li>
+            <li>Fraud detection.</li>
+            <li>Recommendation systems.</li>
+            <li>Finding patterns in large datasets.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Comparison -->
+      <section class="notes-section">
+        <h2>📋 Summary of Big Data Technologies</h2>
+
+        <div class="note-card">
+          <table>
+            <thead>
+              <tr>
+                <th>Technology</th>
+                <th>Main Use</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Hadoop</td>
+                <td>Distributed storage and processing framework</td>
+              </tr>
+
+              <tr>
+                <td>Spark</td>
+                <td>Large-scale data processing and analytics</td>
+              </tr>
+
+              <tr>
+                <td>HDFS</td>
+                <td>Distributed file storage</td>
+              </tr>
+
+              <tr>
+                <td>MapReduce</td>
+                <td>Parallel data processing model</td>
+              </tr>
+
+              <tr>
+                <td>NoSQL</td>
+                <td>Flexible database models</td>
+              </tr>
+
+              <tr>
+                <td>Hive</td>
+                <td>SQL-like querying and data analysis</td>
+              </tr>
+
+              <tr>
+                <td>Kafka</td>
+                <td>Event streaming</td>
+              </tr>
+
+              <tr>
+                <td>Cloud Platforms</td>
+                <td>Online computing and storage services</td>
+              </tr>
+
+              <tr>
+                <td>Visualization Tools</td>
+                <td>Charts, dashboards and reports</td>
+              </tr>
+
+              <tr>
+                <td>Machine Learning Tools</td>
+                <td>Prediction and pattern recognition</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section class="notes-section">
+        <h2>✅ Conclusion</h2>
+
+        <div class="note-card">
+          <p>
+            Big Data technologies help collect, store, process and analyze
+            large datasets. Tools such as Hadoop, Spark, NoSQL databases,
+            Kafka and cloud platforms support different data-related tasks.
+          </p>
+        </div>
+      </section>
+
+      <button
+        class="back-btn"
+        onclick="location.href='big-data-notes.html'"
+      >
+        ⬅️ Back to Big Data Topics
+      </button>
+
+      <footer>
+        <p>© 2026 StudySpark AI | Learn • Practice • Grow</p>
+      </footer>
+
+    </main>
+  </body>
+</html>

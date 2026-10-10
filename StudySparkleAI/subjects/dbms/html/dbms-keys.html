@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Keys - DBMS Notes - StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/notes.css" />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header class="page-header">
+      <h1>🔑 Keys in DBMS</h1>
+      <p>Learn about different types of keys used in DBMS.</p>
+    </header>
+
+
+    <div class="notes-container">
+
+      <!-- What is Key -->
+      <div class="note-card">
+        <h2>📖 What is a Key?</h2>
+
+        <p>
+          A key is an attribute or a set of attributes used to
+          identify a record uniquely in a table.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          A key helps us to identify a particular record in a table.
+        </div>
+      </div>
+
+
+      <!-- Primary Key -->
+      <div class="note-card">
+        <h2>🔐 1. Primary Key</h2>
+
+        <p>
+          A Primary Key uniquely identifies each record in a table.
+          It cannot contain duplicate or NULL values.
+        </p>
+
+        <h3>Example:</h3>
+
+        <p>
+          In a Student table, Student_ID can be used as a Primary Key.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          Primary Key gives a unique identity to each record.
+        </div>
+      </div>
+
+
+      <!-- Foreign Key -->
+      <div class="note-card">
+        <h2>🔗 2. Foreign Key</h2>
+
+        <p>
+          A Foreign Key is an attribute that connects one table
+          with another table.
+        </p>
+
+        <h3>Example:</h3>
+
+        <p>
+          Student_ID in the Student table can be connected to
+          Student_ID in another related table.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          Foreign Key creates a connection between two tables.
+        </div>
+      </div>
+
+
+      <!-- Candidate Key -->
+      <div class="note-card">
+        <h2>⭐ 3. Candidate Key</h2>
+
+        <p>
+          A Candidate Key is an attribute that can uniquely identify
+          each record in a table.
+        </p>
+
+        <h3>Example:</h3>
+
+        <p>
+          Student_ID and Email_ID may both uniquely identify a student.
+          Both can be Candidate Keys.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          Candidate Keys are possible choices for the Primary Key.
+        </div>
+      </div>
+
+
+      <!-- Super Key -->
+      <div class="note-card">
+        <h2>🔑 4. Super Key</h2>
+
+        <p>
+          A Super Key is a set of one or more attributes that can
+          uniquely identify a record.
+        </p>
+
+        <h3>Example:</h3>
+
+        <p>
+          Student_ID alone can identify a student.
+          Student_ID + Name can also identify the student.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          Super Key is any combination of attributes that uniquely
+          identifies a record.
+        </div>
+      </div>
+
+
+      <!-- Alternate Key -->
+      <div class="note-card">
+        <h2>🔄 5. Alternate Key</h2>
+
+        <p>
+          An Alternate Key is a Candidate Key that is not selected
+          as the Primary Key.
+        </p>
+
+        <h3>Example:</h3>
+
+        <p>
+          If Student_ID is selected as the Primary Key and Email_ID
+          is another Candidate Key, then Email_ID becomes an
+          Alternate Key.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          Alternate Key is a Candidate Key that is not used as
+          the Primary Key.
+        </div>
+      </div>
+
+
+      <!-- Composite Key -->
+      <div class="note-card">
+        <h2>🧩 6. Composite Key</h2>
+
+        <p>
+          A Composite Key is made using two or more attributes
+          together to uniquely identify a record.
+        </p>
+
+        <h3>Example:</h3>
+
+        <p>
+          Student_ID + Course_ID together can uniquely identify
+          a student's course record.
+        </p>
+
+        <div class="definition">
+          <b>Simple Meaning:</b>
+          Two or more attributes together form a Composite Key.
+        </div>
+      </div>
+
+
+      <!-- Summary -->
+      <div class="note-card">
+        <h2>📊 Summary of Keys</h2>
+
+        <ul>
+          <li><b>Primary Key:</b> Uniquely identifies each record.</li>
+          <li><b>Foreign Key:</b> Connects two tables.</li>
+          <li><b>Candidate Key:</b> Possible Primary Key.</li>
+          <li><b>Super Key:</b> Uniquely identifies a record using one or more attributes.</li>
+          <li><b>Alternate Key:</b> Candidate Key not selected as Primary Key.</li>
+          <li><b>Composite Key:</b> Combination of two or more attributes.</li>
+        </ul>
+      </div>
+
+
+      <!-- Back Button -->
+      <button
+        class="back-btn"
+        onclick="location.href='dbms-notes.html'"
+      >
+        ⬅️ Back to DBMS Notes
+      </button>
+
+    </div>
+
+  </body>
+</html>

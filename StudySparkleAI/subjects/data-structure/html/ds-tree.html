@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tree - Data Structure</title>
+
+  <link rel="stylesheet" href="../css/data-structure.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>🌳 Tree</h1>
+    <p>Learn the basic concepts of Tree in Data Structure.</p>
+  </header>
+
+
+  <!-- Main Content -->
+  <div class="notes-container">
+
+    <!-- Introduction -->
+    <div class="note-card">
+
+      <h2>What is a Tree?</h2>
+
+      <p>
+        A Tree is a non-linear data structure that represents
+        data in a hierarchical form.
+      </p>
+
+      <div class="definition">
+        <strong>Definition:</strong>
+        A Tree is a collection of nodes connected by edges,
+        where one node is called the root node.
+      </div>
+
+      <h3>Example</h3>
+
+      <p>
+        A family tree is a real-life example of a tree structure.
+        It represents relationships between family members.
+      </p>
+
+    </div>
+
+
+    <!-- Basic Terms -->
+    <div class="note-card">
+
+      <h2>Basic Terms of Tree</h2>
+
+      <h3>1. Root</h3>
+
+      <p>
+        The topmost node of a tree is called the root node.
+      </p>
+
+      <h3>2. Parent</h3>
+
+      <p>
+        A node that has one or more child nodes is called a parent.
+      </p>
+
+      <h3>3. Child</h3>
+
+      <p>
+        A node directly connected below another node is called a child.
+      </p>
+
+      <h3>4. Leaf</h3>
+
+      <p>
+        A node that does not have any child is called a leaf node.
+      </p>
+
+      <h3>5. Edge</h3>
+
+      <p>
+        The connection between two nodes is called an edge.
+      </p>
+
+      <h3>6. Subtree</h3>
+
+      <p>
+        A smaller tree formed from a part of the main tree is
+        called a subtree.
+      </p>
+
+    </div>
+
+
+    <!-- Tree Structure -->
+    <div class="note-card">
+
+      <h2>Tree Structure</h2>
+
+      <div class="example-box">
+
+        <p style="text-align: center;">
+
+          <strong>Root</strong>
+          <br>
+          ↓
+          <br>
+          ┌───────────────┐
+          <br>
+          ↓               ↓
+          <br>
+          <strong>Child</strong>        <strong>Child</strong>
+          <br>
+          ↓               ↓
+          <br>
+          Leaf            Leaf
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Types -->
+    <div class="note-card">
+
+      <h2>Types of Tree</h2>
+
+      <h3>1. Binary Tree</h3>
+
+      <p>
+        A Binary Tree is a tree in which each node can have
+        at most two children.
+      </p>
+
+      <h3>2. Binary Search Tree</h3>
+
+      <p>
+        A Binary Search Tree is a binary tree where smaller
+        values are placed on the left and larger values on the right.
+      </p>
+
+      <h3>3. Full Binary Tree</h3>
+
+      <p>
+        A Full Binary Tree is a binary tree where every node
+        has either zero or two children.
+      </p>
+
+      <h3>4. Complete Binary Tree</h3>
+
+      <p>
+        A Complete Binary Tree has all levels completely filled
+        except possibly the last level.
+      </p>
+
+    </div>
+
+
+    <!-- Tree Traversal -->
+    <div class="note-card">
+
+      <h2>Tree Traversal</h2>
+
+      <p>
+        Tree Traversal means visiting all nodes of a tree
+        in a specific order.
+      </p>
+
+      <ul>
+        <li>
+          <strong>Preorder:</strong>
+          Root → Left → Right
+        </li>
+
+        <li>
+          <strong>Inorder:</strong>
+          Left → Root → Right
+        </li>
+
+        <li>
+          <strong>Postorder:</strong>
+          Left → Right → Root
+        </li>
+      </ul>
+
+    </div>
+
+
+    <!-- Tree Animation -->
+    <div class="note-card">
+
+      <h2>Tree Animation</h2>
+
+      <p>
+        Click the buttons to highlight different nodes of
+        the tree and understand the tree structure.
+      </p>
+
+      <div class="tree-animation">
+
+        <h2>Interactive Tree</h2>
+
+        <div id="treeContainer" class="tree-container">
+
+          <div>
+
+            <!-- Root -->
+            <div
+              id="treeRoot"
+              class="tree-node"
+            >
+              50
+            </div>
+
+
+            <!-- Level 1 -->
+            <div class="tree-level">
+
+              <div
+                id="treeLeft"
+                class="tree-node"
+              >
+                30
+              </div>
+
+              <div
+                id="treeRight"
+                class="tree-node"
+              >
+                70
+              </div>
+
+            </div>
+
+
+            <!-- Level 2 -->
+            <div class="tree-level">
+
+              <div
+                id="treeLeftLeft"
+                class="tree-node"
+              >
+                20
+              </div>
+
+              <div
+                id="treeLeftRight"
+                class="tree-node"
+              >
+                40
+              </div>
+
+              <div
+                id="treeRightLeft"
+                class="tree-node"
+              >
+                60
+              </div>
+
+              <div
+                id="treeRightRight"
+                class="tree-node"
+              >
+                80
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="tree-controls">
+
+          <button onclick="highlightRoot()">
+            Root
+          </button>
+
+          <button onclick="highlightLeft()">
+            Left Subtree
+          </button>
+
+          <button onclick="highlightRight()">
+            Right Subtree
+          </button>
+
+          <button onclick="highlightAll()">
+            Show All
+          </button>
+
+          <button onclick="resetTree()">
+            Reset
+          </button>
+
+        </div>
+
+
+        <p
+          id="treeMessage"
+          class="tree-message"
+        >
+          Select an option to explore the tree.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Applications -->
+    <div class="note-card">
+
+      <h2>Applications of Tree</h2>
+
+      <ul>
+        <li>File and Folder Management</li>
+        <li>Database Indexing</li>
+        <li>Searching Algorithms</li>
+        <li>Expression Evaluation</li>
+        <li>Decision Making Systems</li>
+        <li>Artificial Intelligence</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Advantages -->
+    <div class="note-card">
+
+      <h2>Advantages of Tree</h2>
+
+      <ul>
+        <li>Represents hierarchical data easily.</li>
+        <li>Searching can be efficient in suitable tree structures.</li>
+        <li>Useful for organizing large amounts of data.</li>
+        <li>Supports different traversal methods.</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Disadvantages -->
+    <div class="note-card">
+
+      <h2>Disadvantages of Tree</h2>
+
+      <ul>
+        <li>Tree implementation can be complex.</li>
+        <li>It requires extra memory for storing links.</li>
+        <li>An unbalanced tree can make searching slower.</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Back Button -->
+    <button
+      class="back-btn"
+      onclick="location.href = 'ds-notes.html'"
+    >
+      ⬅️ Back to Data Structure Notes
+    </button>
+
+  </div>
+
+
+  <!-- Tree JavaScript -->
+  <script>
+
+    const treeNodes = [
+      "treeRoot",
+      "treeLeft",
+      "treeRight",
+      "treeLeftLeft",
+      "treeLeftRight",
+      "treeRightLeft",
+      "treeRightRight"
+    ];
+
+
+    function clearTreeHighlight() {
+
+      treeNodes.forEach((id) => {
+
+        const node =
+          document.getElementById(id);
+
+        node.classList.remove("active");
+
+      });
+
+    }
+
+
+    function highlightRoot() {
+
+      clearTreeHighlight();
+
+      document
+        .getElementById("treeRoot")
+        .classList.add("active");
+
+      document.getElementById("treeMessage").textContent =
+        "Root node is 50.";
+
+    }
+
+
+    function highlightLeft() {
+
+      clearTreeHighlight();
+
+      document
+        .getElementById("treeRoot")
+        .classList.add("active");
+
+      document
+        .getElementById("treeLeft")
+        .classList.add("active");
+
+      document
+        .getElementById("treeLeftLeft")
+        .classList.add("active");
+
+      document
+        .getElementById("treeLeftRight")
+        .classList.add("active");
+
+      document.getElementById("treeMessage").textContent =
+        "Left subtree contains 30, 20 and 40.";
+
+    }
+
+
+    function highlightRight() {
+
+      clearTreeHighlight();
+
+      document
+        .getElementById("treeRoot")
+        .classList.add("active");
+
+      document
+        .getElementById("treeRight")
+        .classList.add("active");
+
+      document
+        .getElementById("treeRightLeft")
+        .classList.add("active");
+
+      document
+        .getElementById("treeRightRight")
+        .classList.add("active");
+
+      document.getElementById("treeMessage").textContent =
+        "Right subtree contains 70, 60 and 80.";
+
+    }
+
+
+    function highlightAll() {
+
+      clearTreeHighlight();
+
+      treeNodes.forEach((id) => {
+
+        document
+          .getElementById(id)
+          .classList.add("active");
+
+      });
+
+      document.getElementById("treeMessage").textContent =
+        "All nodes of the tree are highlighted.";
+
+    }
+
+
+    function resetTree() {
+
+      clearTreeHighlight();
+
+      document.getElementById("treeMessage").textContent =
+        "Select an option to explore the tree.";
+
+    }
+
+  </script>
+
+</body>
+</html>

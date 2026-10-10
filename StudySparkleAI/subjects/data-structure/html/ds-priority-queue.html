@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Priority Queue - Data Structure | StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/data-structure.css" />
+  </head>
+
+  <body>
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1>⭐ Priority Queue</h1>
+      <p>Learn the basic concepts of Priority Queue in Data Structure.</p>
+    </header>
+
+
+    <!-- Main Container -->
+    <div class="notes-container">
+
+      <div class="note-card">
+
+        <!-- 1. WHAT IS PRIORITY QUEUE -->
+
+        <h2>1. What is a Priority Queue?</h2>
+
+        <p>
+          A Priority Queue is a special type of queue in which each element
+          is associated with a priority. The element with higher priority is
+          served before the element with lower priority.
+        </p>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          A Priority Queue is a data structure in which elements are removed
+          according to their priority rather than only their insertion order.
+        </div>
+
+
+        <!-- 2. HOW PRIORITY QUEUE WORKS -->
+
+        <h2>2. How does Priority Queue Work?</h2>
+
+        <p>
+          In a normal queue, the first element inserted is removed first.
+          But in a priority queue, the element with the highest priority is
+          removed first.
+        </p>
+
+        <div class="example-box">
+          <strong>Example:</strong>
+
+          <p>
+            Suppose three patients have the following priorities:
+          </p>
+
+          <p>
+            Patient A → Priority 2
+          </p>
+
+          <p>
+            Patient B → Priority 1
+          </p>
+
+          <p>
+            Patient C → Priority 3
+          </p>
+
+          <p>
+            If 1 represents the highest priority, Patient B will be served
+            first.
+          </p>
+        </div>
+
+
+        <!-- 3. TYPES -->
+
+        <h2>3. Types of Priority Queue</h2>
+
+        <p>
+          There are mainly two types of Priority Queue:
+        </p>
+
+        <ul>
+          <li>Ascending Priority Queue</li>
+          <li>Descending Priority Queue</li>
+        </ul>
+
+
+        <!-- ASCENDING -->
+
+        <h3>🔹 1. Ascending Priority Queue</h3>
+
+        <p>
+          In an ascending priority queue, the element with the smallest
+          priority value is removed first.
+        </p>
+
+        <div class="definition">
+          Example: 1 → 2 → 3 → 4
+        </div>
+
+
+        <!-- DESCENDING -->
+
+        <h3>🔹 2. Descending Priority Queue</h3>
+
+        <p>
+          In a descending priority queue, the element with the largest
+          priority value is removed first.
+        </p>
+
+        <div class="definition">
+          Example: 4 → 3 → 2 → 1
+        </div>
+
+
+        <!-- 4. BASIC OPERATIONS -->
+
+        <h2>4. Basic Operations</h2>
+
+        <ul>
+          <li>
+            <strong>Insertion:</strong>
+            Adding an element with a priority.
+          </li>
+
+          <li>
+            <strong>Deletion:</strong>
+            Removing the element with the highest priority.
+          </li>
+
+          <li>
+            <strong>Peek:</strong>
+            Viewing the element with the highest priority.
+          </li>
+
+          <li>
+            <strong>isEmpty:</strong>
+            Checking whether the priority queue is empty.
+          </li>
+        </ul>
+
+
+        <!-- 5. PRIORITY QUEUE EXAMPLE -->
+
+        <h2>5. Simple Example</h2>
+
+        <table>
+          <tr>
+            <th>Element</th>
+            <th>Priority</th>
+          </tr>
+
+          <tr>
+            <td>A</td>
+            <td>3</td>
+          </tr>
+
+          <tr>
+            <td>B</td>
+            <td>1</td>
+          </tr>
+
+          <tr>
+            <td>C</td>
+            <td>2</td>
+          </tr>
+        </table>
+
+        <p>
+          If smaller number means higher priority, the elements will be
+          processed in this order:
+        </p>
+
+        <div class="definition">
+          B → C → A
+        </div>
+
+
+        <!-- 6. IMPLEMENTATION -->
+
+        <h2>6. Implementation of Priority Queue</h2>
+
+        <p>
+          A Priority Queue can be implemented using different data structures.
+        </p>
+
+        <ul>
+          <li>Array</li>
+          <li>Linked List</li>
+          <li>Heap</li>
+        </ul>
+
+
+        <!-- 7. PRIORITY QUEUE USING HEAP -->
+
+        <h2>7. Priority Queue using Heap</h2>
+
+        <p>
+          Heap is commonly used to implement a priority queue because it
+          provides efficient insertion and deletion operations.
+        </p>
+
+        <div class="definition">
+          <strong>Example:</strong>
+
+          <p>
+            A Min Heap can be used when the smallest value has the highest
+            priority.
+          </p>
+
+          <p>
+            A Max Heap can be used when the largest value has the highest
+            priority.
+          </p>
+        </div>
+
+
+        <!-- 8. REAL LIFE EXAMPLES -->
+
+        <h2>8. Real-Life Examples</h2>
+
+        <ul>
+          <li>Hospital emergency management</li>
+          <li>CPU process scheduling</li>
+          <li>Printer job scheduling</li>
+          <li>Network packet management</li>
+          <li>Emergency services</li>
+        </ul>
+
+
+        <!-- 9. ADVANTAGES -->
+
+        <h2>9. Advantages of Priority Queue</h2>
+
+        <ul>
+          <li>Important tasks can be processed first.</li>
+          <li>Useful for scheduling systems.</li>
+          <li>Efficient when implemented using a heap.</li>
+          <li>Useful for solving many algorithmic problems.</li>
+        </ul>
+
+
+        <!-- 10. DISADVANTAGES -->
+
+        <h2>10. Disadvantages of Priority Queue</h2>
+
+        <ul>
+          <li>Implementation can be more complex than a normal queue.</li>
+          <li>Maintaining priorities may require extra processing.</li>
+          <li>Searching for a specific element may not be efficient.</li>
+        </ul>
+
+
+        <!-- 11. APPLICATIONS -->
+
+        <h2>11. Applications of Priority Queue</h2>
+
+        <ul>
+          <li>CPU scheduling</li>
+          <li>Dijkstra's shortest path algorithm</li>
+          <li>Prim's algorithm</li>
+          <li>Huffman coding</li>
+          <li>Network traffic management</li>
+          <li>Event-driven simulation</li>
+        </ul>
+
+
+        <!-- 12. NORMAL QUEUE VS PRIORITY QUEUE -->
+
+        <h2>12. Normal Queue vs Priority Queue</h2>
+
+        <table>
+          <tr>
+            <th>Normal Queue</th>
+            <th>Priority Queue</th>
+          </tr>
+
+          <tr>
+            <td>Follows FIFO order.</td>
+            <td>Follows priority order.</td>
+          </tr>
+
+          <tr>
+            <td>First inserted element is served first.</td>
+            <td>Highest priority element is served first.</td>
+          </tr>
+
+          <tr>
+            <td>Priority is not considered.</td>
+            <td>Priority is considered.</td>
+          </tr>
+
+          <tr>
+            <td>Simple to implement.</td>
+            <td>Can be implemented using heap, array or linked list.</td>
+          </tr>
+        </table>
+
+
+        <!-- 13. ANIMATION -->
+
+        <div class="queue-animation">
+
+          <h2>🎬 Priority Queue Animation</h2>
+
+          <p>
+            Add elements with different priorities and see how the priority
+            queue works.
+          </p>
+
+          <div
+            id="priorityQueueContainer"
+            class="queue-container"
+          ></div>
+
+          <div class="queue-controls">
+
+            <input
+              type="number"
+              id="priorityValue"
+              placeholder="Enter value"
+            />
+
+            <input
+              type="number"
+              id="priority"
+              placeholder="Priority"
+            />
+
+            <button onclick="addPriority()">
+              ➕ Add
+            </button>
+
+            <button onclick="removePriority()">
+              ❌ Remove
+            </button>
+
+          </div>
+
+          <p
+            id="priorityMessage"
+            class="queue-message"
+          >
+            Add an element with priority to see the animation!
+          </p>
+
+        </div>
+
+
+        <!-- 14. IMPORTANT EXAM QUESTIONS -->
+
+        <h2>14. Important Exam Questions</h2>
+
+        <ol>
+          <li>What is a Priority Queue?</li>
+
+          <li>Explain the types of Priority Queue.</li>
+
+          <li>Explain the operations of Priority Queue.</li>
+
+          <li>Differentiate between Queue and Priority Queue.</li>
+
+          <li>Explain implementation of Priority Queue.</li>
+
+          <li>Explain Priority Queue using Heap.</li>
+
+          <li>Write applications of Priority Queue.</li>
+
+          <li>Write advantages and disadvantages of Priority Queue.</li>
+        </ol>
+
+
+        <!-- 15. QUICK REVISION -->
+
+        <h2>15. Quick Revision</h2>
+
+        <ul>
+          <li>Priority Queue stores elements according to priority.</li>
+
+          <li>Higher priority elements are processed first.</li>
+
+          <li>It can be implemented using arrays, linked lists and heaps.</li>
+
+          <li>Heap is commonly used for efficient implementation.</li>
+
+          <li>It is used in scheduling and graph algorithms.</li>
+        </ul>
+
+
+        <!-- 16. SUMMARY -->
+
+        <h2>16. Summary</h2>
+
+        <p>
+          A Priority Queue is a special queue where elements are processed
+          according to their priority. It is widely used in CPU scheduling,
+          emergency systems, graph algorithms and many other applications.
+        </p>
+
+      </div>
+
+
+      <!-- Back Button -->
+
+      <button
+        class="back-btn"
+        onclick="location.href = 'ds-notes.html'"
+      >
+        ⬅️ Back to Data Structure Notes
+      </button>
+
+    </div>
+
+  </body>
+</html>

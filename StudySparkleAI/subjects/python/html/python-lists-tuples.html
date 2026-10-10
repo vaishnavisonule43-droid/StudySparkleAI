@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Python Lists & Tuples</title>
+
+  <link rel="stylesheet" href="../css/python-topic.css">
+</head>
+
+<body>
+
+<div class="notes-container">
+
+  <h1>🐍 Python Lists & Tuples</h1>
+
+  <div class="notes-card">
+
+    <h2>📘 What is a List?</h2>
+
+    <p>
+      A list is a collection of multiple values stored in a single variable.
+      Lists are ordered, changeable and allow duplicate values.
+    </p>
+
+    <p>
+      Lists are created using square brackets <strong>[ ]</strong>.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+subjects = ["Python", "C", "DBMS"]
+
+print(subjects)
+      </pre>
+    </div>
+
+
+    <h2>⭐ Features of Lists</h2>
+
+    <ul>
+      <li>Lists are ordered.</li>
+      <li>Lists are changeable or mutable.</li>
+      <li>Lists allow duplicate values.</li>
+      <li>Lists can contain different data types.</li>
+      <li>Lists support indexing and slicing.</li>
+    </ul>
+
+
+    <h2>🔢 List Indexing</h2>
+
+    <p>
+      Each item in a list has an index number.
+      The first item has index 0.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+subjects = ["Python", "C", "DBMS"]
+
+print(subjects[0])
+print(subjects[1])
+print(subjects[2])
+      </pre>
+    </div>
+
+
+    <h2>✂️ List Slicing</h2>
+
+    <p>
+      List slicing is used to get a part of a list.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[1:4])
+      </pre>
+    </div>
+
+
+    <h2>➕ Adding Items to a List</h2>
+
+    <p>
+      The <strong>append()</strong> method adds an item at the end of a list.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+subjects = ["Python", "C"]
+
+subjects.append("DBMS")
+
+print(subjects)
+      </pre>
+    </div>
+
+
+    <h2>📍 Inserting Items</h2>
+
+    <p>
+      The <strong>insert()</strong> method adds an item at a specific
+      position in a list.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+subjects = ["Python", "DBMS"]
+
+subjects.insert(1, "C")
+
+print(subjects)
+      </pre>
+    </div>
+
+
+    <h2>❌ Removing Items</h2>
+
+    <p>
+      The <strong>remove()</strong> method removes a specified item
+      from a list.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+subjects = ["Python", "C", "DBMS"]
+
+subjects.remove("C")
+
+print(subjects)
+      </pre>
+    </div>
+
+
+    <h2>🗑️ pop() Method</h2>
+
+    <p>
+      The <strong>pop()</strong> method removes and returns an item
+      from a list. By default, it removes the last item.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+numbers = [10, 20, 30]
+
+numbers.pop()
+
+print(numbers)
+      </pre>
+    </div>
+
+
+    <h2>🧹 clear() Method</h2>
+
+    <p>
+      The <strong>clear()</strong> method removes all items from a list.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+numbers = [10, 20, 30]
+
+numbers.clear()
+
+print(numbers)
+      </pre>
+    </div>
+
+
+    <h2>🔄 Changing List Items</h2>
+
+    <p>
+      Since lists are mutable, their items can be changed after creation.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+subjects = ["Python", "C", "DBMS"]
+
+subjects[1] = "Java"
+
+print(subjects)
+      </pre>
+    </div>
+
+
+    <h2>📊 Common List Methods</h2>
+
+    <table>
+      <tr>
+        <th>Method</th>
+        <th>Purpose</th>
+      </tr>
+
+      <tr>
+        <td>append()</td>
+        <td>Adds an item at the end.</td>
+      </tr>
+
+      <tr>
+        <td>insert()</td>
+        <td>Adds an item at a specific position.</td>
+      </tr>
+
+      <tr>
+        <td>remove()</td>
+        <td>Removes a specified item.</td>
+      </tr>
+
+      <tr>
+        <td>pop()</td>
+        <td>Removes and returns an item.</td>
+      </tr>
+
+      <tr>
+        <td>clear()</td>
+        <td>Removes all items.</td>
+      </tr>
+
+      <tr>
+        <td>sort()</td>
+        <td>Sorts the list.</td>
+      </tr>
+
+      <tr>
+        <td>reverse()</td>
+        <td>Reverses the order of items.</td>
+      </tr>
+
+      <tr>
+        <td>count()</td>
+        <td>Counts occurrences of an item.</td>
+      </tr>
+    </table>
+
+
+    <h2>📦 What is a Tuple?</h2>
+
+    <p>
+      A tuple is an ordered collection of values.
+      Unlike a list, a tuple cannot be changed after it is created.
+    </p>
+
+    <p>
+      Tuples are generally created using parentheses <strong>( )</strong>.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+numbers = (10, 20, 30, 40)
+
+print(numbers)
+      </pre>
+    </div>
+
+
+    <h2>⭐ Features of Tuples</h2>
+
+    <ul>
+      <li>Tuples are ordered.</li>
+      <li>Tuples are immutable.</li>
+      <li>Tuples allow duplicate values.</li>
+      <li>Tuples support indexing.</li>
+      <li>Tuples support slicing.</li>
+      <li>Tuples can contain different data types.</li>
+    </ul>
+
+
+    <h2>🔢 Tuple Indexing</h2>
+
+    <p>
+      Tuple items can be accessed using their index numbers.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+numbers = (10, 20, 30)
+
+print(numbers[0])
+print(numbers[2])
+      </pre>
+    </div>
+
+
+    <h2>✂️ Tuple Slicing</h2>
+
+    <p>
+      Slicing can also be used to get a part of a tuple.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+numbers = (10, 20, 30, 40, 50)
+
+print(numbers[1:4])
+      </pre>
+    </div>
+
+
+    <h2>📊 Tuple Methods</h2>
+
+    <p>
+      Since tuples cannot be changed, they have fewer methods than lists.
+    </p>
+
+    <table>
+      <tr>
+        <th>Method</th>
+        <th>Purpose</th>
+      </tr>
+
+      <tr>
+        <td>count()</td>
+        <td>Counts how many times a value occurs.</td>
+      </tr>
+
+      <tr>
+        <td>index()</td>
+        <td>Returns the index of a value.</td>
+      </tr>
+    </table>
+
+
+    <h2>🔄 List vs Tuple</h2>
+
+    <table>
+      <tr>
+        <th>List</th>
+        <th>Tuple</th>
+      </tr>
+
+      <tr>
+        <td>Lists are mutable.</td>
+        <td>Tuples are immutable.</td>
+      </tr>
+
+      <tr>
+        <td>Lists use square brackets.</td>
+        <td>Tuples usually use parentheses.</td>
+      </tr>
+
+      <tr>
+        <td>Lists have more methods.</td>
+        <td>Tuples have fewer methods.</td>
+      </tr>
+
+      <tr>
+        <td>Lists are suitable for changeable data.</td>
+        <td>Tuples are suitable for fixed data.</td>
+      </tr>
+    </table>
+
+
+    <h2>💻 Practical Example</h2>
+
+    <div class="example-box">
+      <strong>List Example:</strong>
+
+      <pre>
+marks = [75, 80, 85, 90]
+
+marks.append(95)
+
+print(marks)
+      </pre>
+
+      <strong>Tuple Example:</strong>
+
+      <pre>
+days = ("Monday", "Tuesday", "Wednesday")
+
+print(days)
+      </pre>
+    </div>
+
+
+    <h2>📚 Applications of Lists and Tuples</h2>
+
+    <ul>
+      <li>Storing student marks.</li>
+      <li>Storing subject names.</li>
+      <li>Storing product information.</li>
+      <li>Managing collections of data.</li>
+      <li>Processing data in Python programs.</li>
+    </ul>
+
+
+    <h2>📌 Quick Revision</h2>
+
+    <ul>
+      <li>A list stores multiple values in one variable.</li>
+      <li>Lists are ordered and mutable.</li>
+      <li>Lists allow duplicate values.</li>
+      <li>append() adds an item at the end.</li>
+      <li>insert() adds an item at a specific position.</li>
+      <li>remove() removes a specified item.</li>
+      <li>A tuple is an ordered collection of values.</li>
+      <li>Tuples are immutable.</li>
+      <li>Tuples support indexing and slicing.</li>
+      <li>Lists are suitable for changeable data.</li>
+      <li>Tuples are suitable for fixed data.</li>
+    </ul>
+
+
+    <button class="back-btn" onclick="location.href='python-notes.html'">
+      ⬅️ Back to Python Notes
+    </button>
+
+  </div>
+
+</div>
+
+</body>
+</html>

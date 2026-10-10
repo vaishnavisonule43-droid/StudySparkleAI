@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>C Data Types - StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/c-programming.css" />
+  </head>
+
+  <body>
+    <div class="notes-container">
+      <h1>📚 Data Types in C</h1>
+
+      <div class="notes-card">
+        <h2>1. What is a Data Type?</h2>
+
+        <p>
+          A data type tells the compiler what type of data a variable can store.
+        </p>
+
+        <p>
+          For example, a variable can store an integer, decimal number or
+          character.
+        </p>
+
+        <h2>2. Definition</h2>
+
+        <p>
+          <b>Data Type:</b> A data type specifies the type of data that a
+          variable can store in a C program.
+        </p>
+
+        <h2>3. Types of Data Types in C</h2>
+
+        <p>C data types are mainly divided into four types:</p>
+
+        <ul>
+          <li>Basic Data Types</li>
+          <li>Derived Data Types</li>
+          <li>User-defined Data Types</li>
+          <li>Void Data Type</li>
+        </ul>
+
+        <h2>4. Basic Data Types</h2>
+
+        <p>Basic data types are used to store simple values.</p>
+
+        <table>
+          <tr>
+            <th>Data Type</th>
+            <th>Used For</th>
+            <th>Example</th>
+          </tr>
+
+          <tr>
+            <td>int</td>
+            <td>Whole numbers</td>
+            <td>10</td>
+          </tr>
+
+          <tr>
+            <td>float</td>
+            <td>Decimal numbers</td>
+            <td>10.5</td>
+          </tr>
+
+          <tr>
+            <td>double</td>
+            <td>Large decimal values</td>
+            <td>25.6789</td>
+          </tr>
+
+          <tr>
+            <td>char</td>
+            <td>Single character</td>
+            <td>'A'</td>
+          </tr>
+        </table>
+
+        <h2>5. int Data Type</h2>
+
+        <p>int is used to store whole numbers without decimal points.</p>
+
+        <div class="example-box">
+          <b>Example:</b>
+
+          <br /><br />
+
+          int age = 20;
+        </div>
+
+        <h2>6. float Data Type</h2>
+
+        <p>float is used to store decimal numbers.</p>
+
+        <div class="example-box">
+          <b>Example:</b>
+
+          <br /><br />
+
+          float marks = 85.5;
+        </div>
+
+        <h2>7. double Data Type</h2>
+
+        <p>
+          double is used to store decimal numbers with more precision than
+          float.
+        </p>
+
+        <div class="example-box">
+          <b>Example:</b>
+
+          <br /><br />
+
+          double price = 1250.75;
+        </div>
+
+        <h2>8. char Data Type</h2>
+
+        <p>char is used to store a single character.</p>
+
+        <div class="example-box">
+          <b>Example:</b>
+
+          <br /><br />
+
+          char grade = 'A';
+        </div>
+
+        <h2>9. Derived Data Types</h2>
+
+        <p>Derived data types are created from basic data types.</p>
+
+        <ul>
+          <li>Array</li>
+          <li>Pointer</li>
+          <li>Function</li>
+        </ul>
+
+        <h2>10. User-defined Data Types</h2>
+
+        <p>
+          User-defined data types are created by the programmer according to the
+          requirements of the program.
+        </p>
+
+        <ul>
+          <li>Structure</li>
+          <li>Union</li>
+          <li>Enumeration (enum)</li>
+          <li>typedef</li>
+        </ul>
+
+        <h2>11. Void Data Type</h2>
+
+        <p>
+          void means that there is no value or no data type. It is commonly used
+          with functions that do not return any value.
+        </p>
+
+        <div class="example-box">
+          <b>Example:</b>
+
+          <br /><br />
+
+          void display() {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("Hello");
+
+          <br />
+
+          }
+        </div>
+
+        <h2>12. Example Program</h2>
+
+        <div class="example-box">
+          #include &lt;stdio.h&gt;
+
+          <br /><br />
+
+          int main() {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;int age = 20;
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;float marks = 85.5;
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;char grade = 'A';
+
+          <br /><br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("%d", age);
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("%f", marks);
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("%c", grade);
+
+          <br /><br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;return 0;
+
+          <br />
+
+          }
+        </div>
+
+        <h2>13. Advantages of Data Types</h2>
+
+        <ul>
+          <li>Tell the compiler what type of data is stored.</li>
+          <li>Help to allocate memory properly.</li>
+          <li>Improve program efficiency.</li>
+          <li>Help to perform correct operations on data.</li>
+        </ul>
+
+        <h2>14. Summary</h2>
+
+        <p>
+          Data types specify what kind of data a variable can store. The main
+          types of C data types are basicm derived, user-defined and void data
+          types.
+        </p>
+      </div>
+
+      <button class="back-btn" onclick="location.href = 'cp-notes.html'">
+        ⬅️ Back to C Programming
+      </button>
+    </div>
+  </body>
+</html>

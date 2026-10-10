@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes | StudySpark AI</title>
+    <link rel="stylesheet" href="../css/web-topic.css">
+</head>
+
+<body>
+
+<header class="topic-header">
+    <h1>JavaScript Notes</h1>
+    <p>Learn JavaScript with Simple Explanations and Examples</p>
+</header>
+
+<main class="topic-container">
+
+    <section class="topic-card">
+
+        <h2>1. What is JavaScript?</h2>
+        <p>
+            JavaScript is a programming language used to make web pages
+            interactive. It can respond to button clicks, validate forms,
+            change page content and create animations.
+        </p>
+
+        <div class="important-box">
+            <h3>Example</h3>
+            <p>HTML creates a button, CSS styles it, and JavaScript can make it respond when clicked.</p>
+        </div>
+
+        <h2>2. Features of JavaScript</h2>
+        <ul>
+            <li>Makes web pages interactive.</li>
+            <li>Responds to user actions.</li>
+            <li>Can change HTML content and CSS styles.</li>
+            <li>Can validate user input in forms.</li>
+            <li>Runs in modern web browsers.</li>
+        </ul>
+
+        <h2>3. How to Add JavaScript to HTML</h2>
+
+        <h3>Internal JavaScript</h3>
+        <p>JavaScript can be written inside a script tag in an HTML file.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My Website&lt;/h1&gt;
+
+&lt;script&gt;
+    alert("Welcome to StudySpark AI!");
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <h3>External JavaScript</h3>
+        <p>JavaScript can also be written in a separate .js file.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+
+        <p>Write this line in HTML to connect the external JavaScript file.</p>
+
+        <h2>4. JavaScript Variables</h2>
+        <p>
+            Variables store data that a program can use.
+            JavaScript provides <strong>let</strong>, <strong>const</strong>
+            and <strong>var</strong> for declaring variables.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>let studentName = "Rahul";
+let age = 20;
+
+const college = "Sangamner College";
+
+console.log(studentName);
+console.log(age);
+console.log(college);</code></pre>
+        </div>
+
+        <div class="example-box">
+            <ul>
+                <li><strong>let:</strong> Declares a variable that can be reassigned.</li>
+                <li><strong>const:</strong> Declares a binding that cannot be reassigned.</li>
+                <li><strong>var:</strong> An older way to declare variables.</li>
+                <li><strong>console.log():</strong> Displays output in the browser console.</li>
+            </ul>
+        </div>
+
+        <h2>5. JavaScript Data Types</h2>
+        <p>Data types describe the kind of value stored in a variable.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>let name = "Amit";       // String
+let age = 20;            // Number
+let isStudent = true;    // Boolean
+let marks;               // Undefined
+let result = null;       // Null</code></pre>
+        </div>
+
+        <div class="example-box">
+            <ul>
+                <li><strong>String:</strong> Text data.</li>
+                <li><strong>Number:</strong> Numeric values.</li>
+                <li><strong>Boolean:</strong> True or false.</li>
+                <li><strong>Undefined:</strong> A variable declared without an assigned value.</li>
+                <li><strong>Null:</strong> An intentional absence of a value.</li>
+                <li><strong>Object:</strong> A collection of related data or properties.</li>
+            </ul>
+        </div>
+
+        <h2>6. JavaScript Operators</h2>
+        <p>Operators perform calculations and comparisons.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>let a = 10;
+let b = 5;
+
+console.log(a + b);  // Addition
+console.log(a - b);  // Subtraction
+console.log(a * b);  // Multiplication
+console.log(a / b);  // Division
+console.log(a > b);  // Comparison</code></pre>
+        </div>
+
+        <h2>7. Conditional Statements</h2>
+        <p>
+            Conditional statements execute different code depending on
+            whether a condition is true or false.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>let marks = 75;
+
+if (marks >= 35) {
+    console.log("Pass");
+} else {
+    console.log("Fail");
+}</code></pre>
+        </div>
+
+        <div class="example-box">
+            <strong>Explanation:</strong>
+            <p>If marks are 35 or more, the output is Pass. Otherwise, the output is Fail.</p>
+        </div>
+
+        <h2>8. JavaScript Loops</h2>
+        <p>
+            Loops repeat a block of code while a condition is satisfied
+            or for a specified number of iterations.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}</code></pre>
+        </div>
+
+        <p>This loop prints the numbers from 1 to 5.</p>
+
+        <h2>9. JavaScript Functions</h2>
+        <p>
+            A function is a reusable block of code that performs a task
+            when it is called.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>function greet() {
+    console.log("Hello Student!");
+}
+
+greet();</code></pre>
+        </div>
+
+        <div class="example-box">
+            <strong>Explanation:</strong>
+            <p>The function named greet displays a message when it is called.</p>
+        </div>
+
+        <h2>10. JavaScript Events</h2>
+        <p>
+            Events are actions or occurrences that JavaScript can respond to,
+            such as a button click or a keyboard input.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;button onclick="showMessage()"&gt;
+    Click Me
+&lt;/button&gt;
+
+&lt;script&gt;
+function showMessage() {
+    alert("Button clicked!");
+}
+&lt;/script&gt;</code></pre>
+        </div>
+
+        <p>When the user clicks the button, the function displays an alert message.</p>
+
+        <h2>11. DOM Manipulation</h2>
+        <p>
+            DOM stands for Document Object Model. It represents the HTML
+            page as objects that JavaScript can access and change.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;p id="message"&gt;Hello!&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById("message").textContent =
+    "Welcome to StudySpark AI!";
+&lt;/script&gt;</code></pre>
+        </div>
+
+        <p>This code changes the paragraph text on the web page.</p>
+
+        <h2>12. JavaScript Arrays</h2>
+        <p>
+            An array stores multiple values in a single variable.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>let subjects = ["HTML", "CSS", "JavaScript"];
+
+console.log(subjects[0]);
+console.log(subjects[1]);
+console.log(subjects[2]);</code></pre>
+        </div>
+
+        <p>Array indexing starts at 0, so the first item is at index 0.</p>
+
+        <h2>13. JavaScript Objects</h2>
+        <p>
+            An object stores related information as key-value pairs.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>let student = {
+    name: "Rahul",
+    course: "BCA",
+    age: 20
+};
+
+console.log(student.name);
+console.log(student.course);</code></pre>
+        </div>
+
+        <h2>14. Form Validation</h2>
+        <p>
+            JavaScript can check user input before a form is submitted.
+            For example, it can check whether a required field is empty.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;input type="text" id="username"
+       placeholder="Enter your name"&gt;
+
+&lt;button onclick="checkName()"&gt;
+    Submit
+&lt;/button&gt;
+
+&lt;script&gt;
+function checkName() {
+    let name =
+        document.getElementById("username").value;
+
+    if (name.trim() === "") {
+        alert("Please enter your name.");
+    } else {
+        alert("Welcome, " + name + "!");
+    }
+}
+&lt;/script&gt;</code></pre>
+        </div>
+
+        <h2>15. Advantages of JavaScript</h2>
+        <ul>
+            <li>Makes web pages interactive.</li>
+            <li>Responds to user actions.</li>
+            <li>Can update page content without reloading the entire page.</li>
+            <li>Supports form validation.</li>
+            <li>Works with HTML and CSS.</li>
+        </ul>
+
+        <div class="important-box">
+            <h3>Quick Revision</h3>
+            <ul>
+                <li>JavaScript makes web pages interactive.</li>
+                <li>Variables store data.</li>
+                <li>if-else statements make decisions.</li>
+                <li>Loops repeat code.</li>
+                <li>Functions contain reusable code.</li>
+                <li>Events respond to user actions.</li>
+                <li>DOM allows JavaScript to access and change page content.</li>
+                <li>Arrays store multiple values.</li>
+                <li>Objects store data as key-value pairs.</li>
+            </ul>
+        </div>
+
+        <a href="web-notes.html" class="back-btn">
+            ← Back to Web Technology
+        </a>
+
+    </section>
+
+</main>
+
+<script>
+async function copyCode(button) {
+    const codeBox = button.closest(".code-box");
+    const code = codeBox.querySelector("pre code").innerText;
+    const status = codeBox.querySelector(".copy-status");
+
+    try {
+        await navigator.clipboard.writeText(code);
+
+        button.textContent = "Copied!";
+        status.textContent = "Code copied!";
+
+        setTimeout(function () {
+            button.textContent = "Copy Code";
+            status.textContent = "";
+        }, 2000);
+
+    } catch (error) {
+        status.textContent =
+            "Copy unavailable. Please copy manually.";
+    }
+}
+</script>
+
+</body>
+</html>

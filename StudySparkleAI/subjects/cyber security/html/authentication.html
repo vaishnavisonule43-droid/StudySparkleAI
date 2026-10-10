@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication | StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/notes.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <div class="header-icon">🔑</div>
+        <h1>Authentication</h1>
+        <p>Learn how systems verify the identity of users.</p>
+    </header>
+
+    <main class="notes-container">
+
+        <section class="intro-card">
+            <h2>📘 Introduction</h2>
+            <p>
+                Authentication is an important part of Cyber Security.
+                It helps a computer system or website verify whether
+                a user is who they claim to be.
+            </p>
+            <p>
+                It protects personal accounts, business systems and
+                confidential information from unauthorized access.
+            </p>
+        </section>
+
+        <section class="notes-section">
+            <h2>📖 1. Definition of Authentication</h2>
+
+            <div class="definition">
+                Authentication is the process of verifying the identity
+                of a user, device or system before allowing access.
+            </div>
+
+            <p>
+                <strong>Example:</strong> Entering your username and
+                password to log in to your college website.
+            </p>
+        </section>
+
+        <section class="notes-section">
+            <h2>🎯 2. Need for Authentication</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>To prevent unauthorized access.</li>
+                    <li>To protect personal information.</li>
+                    <li>To secure online accounts.</li>
+                    <li>To protect confidential business data.</li>
+                    <li>To ensure that users are properly identified.</li>
+                    <li>To reduce the risk of account misuse.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>🧩 3. Types of Authentication</h2>
+
+            <div class="note-card">
+                <h3>1. Password-Based Authentication</h3>
+                <p>
+                    The user enters a password to prove their identity.
+                </p>
+                <p><strong>Example:</strong> Logging in with an email
+                address and password.</p>
+            </div>
+
+            <div class="note-card">
+                <h3>2. PIN-Based Authentication</h3>
+                <p>
+                    A PIN (Personal Identification Number) is a short
+                    numeric code used to verify a user.
+                </p>
+                <p><strong>Example:</strong> Entering a PIN to unlock
+                a smartphone.</p>
+            </div>
+
+            <div class="note-card">
+                <h3>3. Biometric Authentication</h3>
+                <p>
+                    It verifies identity using physical or behavioral
+                    characteristics of a person.
+                </p>
+                <p><strong>Example:</strong> Fingerprint or face recognition.</p>
+            </div>
+
+            <div class="note-card">
+                <h3>4. Token-Based Authentication</h3>
+                <p>
+                    A system uses a digital token to verify that a
+                    user or application has been authenticated.
+                </p>
+                <p><strong>Example:</strong> An access token used by
+                an application to access an authorized service.</p>
+            </div>
+
+            <div class="note-card">
+                <h3>5. OTP-Based Authentication</h3>
+                <p>
+                    An OTP (One-Time Password) is a temporary code
+                    used to verify a login or transaction.
+                </p>
+                <p><strong>Example:</strong> Entering a code received
+                during an online sign-in process.</p>
+            </div>
+
+            <div class="note-card">
+                <h3>6. Certificate-Based Authentication</h3>
+                <p>
+                    It uses digital certificates and cryptographic
+                    keys to verify the identity of a user or device.
+                </p>
+                <p><strong>Example:</strong> A device using a digital
+                certificate to connect to a secure company network.</p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>🔐 4. Authentication Factors</h2>
+
+            <div class="note-card">
+                <h3>1. Something You Know</h3>
+                <p>
+                    Information known by the user.
+                </p>
+                <p><strong>Example:</strong> Password or PIN.</p>
+            </div>
+
+            <div class="note-card">
+                <h3>2. Something You Have</h3>
+                <p>
+                    A physical device or item possessed by the user.
+                </p>
+                <p><strong>Example:</strong> A security key or
+                authentication token.</p>
+            </div>
+
+            <div class="note-card">
+                <h3>3. Something You Are</h3>
+                <p>
+                    A physical characteristic used to verify identity.
+                </p>
+                <p><strong>Example:</strong> Fingerprint or face recognition.</p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>🛡️ 5. Multi-Factor Authentication (MFA)</h2>
+
+            <div class="definition">
+                Multi-Factor Authentication uses two or more different
+                types of authentication factors to verify a user's identity.
+            </div>
+
+            <div class="note-card">
+                <p>
+                    <strong>Example:</strong> Logging in with a password
+                    and then approving the login using an authenticator app.
+                </p>
+                <p>
+                    MFA provides stronger protection than relying on
+                    a password alone.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>📊 6. Difference Between Authentication and Authorization</h2>
+
+            <div class="note-card">
+                <table>
+                    <tr>
+                        <th>Authentication</th>
+                        <th>Authorization</th>
+                    </tr>
+
+                    <tr>
+                        <td>Verifies the identity of a user.</td>
+                        <td>Decides what an authenticated user can access.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Answers: Who are you?</td>
+                        <td>Answers: What are you allowed to do?</td>
+                    </tr>
+
+                    <tr>
+                        <td>Example: Logging in to an account.</td>
+                        <td>Example: Permission to view or edit a file.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>⚠️ 7. Common Authentication Threats</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>Password theft through phishing.</li>
+                    <li>Guessing weak passwords.</li>
+                    <li>Credential stuffing using leaked passwords.</li>
+                    <li>SIM-swapping attacks that target SMS codes.</li>
+                    <li>Stolen devices or authentication tokens.</li>
+                    <li>Fake login pages that collect credentials.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>✅ 8. Best Practices for Secure Authentication</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>Use strong and unique passwords.</li>
+                    <li>Enable MFA whenever possible.</li>
+                    <li>Never share passwords or OTPs.</li>
+                    <li>Use a trusted password manager.</li>
+                    <li>Keep devices and applications updated.</li>
+                    <li>Never enter credentials on suspicious websites.</li>
+                    <li>Use passkeys where supported.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>⭐ 9. Advantages of Authentication</h2>
+
+            <div class="note-card">
+                <ul>
+                    <li>Protects user accounts.</li>
+                    <li>Prevents unauthorized access.</li>
+                    <li>Improves data security.</li>
+                    <li>Supports secure online transactions.</li>
+                    <li>Helps organizations manage user access.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>📝 10. Conclusion</h2>
+
+            <p>
+                Authentication verifies the identity of users and
+                helps protect systems from unauthorized access.
+                Using strong passwords, MFA and secure login practices
+                improves digital security.
+            </p>
+        </section>
+
+        <button class="back-btn"
+                onclick="location.href='cyber-security-notes.html'">
+            ⬅️ Back to Cyber Security Topics
+        </button>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 StudySpark AI | Learn Smart, Grow Smart</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+}
+
+
+/* Main Container */
+
+.subjects-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+
+/* Main Heading */
+
+.subjects-container > h1 {
+    text-align: center;
+    color: #1976d2;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subjects-container > p {
+    text-align: center;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* Information Boxes */
+
+.subject-info {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.subject-info:hover {
+    transform: translateY(-4px);
+}
+
+.subject-info h2 {
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.subject-info p {
+    line-height: 1.8;
+}
+
+.subject-info ul {
+    padding-left: 25px;
+    line-height: 2;
+}
+
+
+/* Topics Heading */
+
+.topics-title {
+    text-align: center;
+    color: #1976d2;
+    margin-top: 35px;
+    margin-bottom: 8px;
+}
+
+.topics-subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+
+/* Topic Grid */
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+
+/* Topic Cards */
+
+.subject-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+
+    border-top: 5px solid #2196f3;
+
+    transition: 0.3s;
+}
+
+.subject-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.subject-card h2 {
+    color: #1976d2;
+
+    margin-bottom: 10px;
+
+    font-size: 21px;
+}
+
+.subject-card p {
+    color: #666;
+
+    line-height: 1.6;
+}
+
+
+/* Back Button */
+
+.back-btn {
+    display: block;
+
+    margin: 35px auto 50px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #1976d2;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #0d47a1;
+
+    transform: scale(1.05);
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .subjects-container {
+        width: 94%;
+    }
+
+    .subjects-container > h1 {
+        font-size: 26px;
+    }
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subject-info {
+        padding: 20px;
+    }
+
+    .subject-card {
+        padding: 20px;
+    }
+
+}

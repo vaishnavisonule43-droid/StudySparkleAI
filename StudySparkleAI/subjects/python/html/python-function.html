@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Python Functions</title>
+
+  <link rel="stylesheet" href="../css/python-topic.css">
+</head>
+
+<body>
+
+<div class="notes-container">
+
+  <h1>🐍 Python Functions</h1>
+
+  <div class="notes-card">
+
+    <h2>📘 What is a Function?</h2>
+
+    <p>
+      A function is a block of reusable code that performs a specific task.
+      Functions help us avoid writing the same code again and again.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+def greet():
+    print("Hello, Welcome to Python!")
+
+greet()
+      </pre>
+
+      <p>
+        Here, <strong>greet()</strong> is a function that displays a message.
+      </p>
+    </div>
+
+
+    <h2>⭐ Advantages of Functions</h2>
+
+    <ul>
+      <li>Functions reduce code repetition.</li>
+      <li>They make programs easier to understand.</li>
+      <li>They make code reusable.</li>
+      <li>They make debugging easier.</li>
+      <li>They divide a large program into smaller parts.</li>
+    </ul>
+
+
+    <h2>🔹 Creating a Function</h2>
+
+    <p>
+      In Python, a function is created using the <strong>def</strong> keyword.
+    </p>
+
+    <div class="example-box">
+      <strong>Syntax:</strong>
+
+      <pre>
+def function_name():
+    statements
+      </pre>
+
+      <strong>Example:</strong>
+
+      <pre>
+def welcome():
+    print("Welcome to StudySpark AI")
+      </pre>
+    </div>
+
+
+    <h2>▶️ Calling a Function</h2>
+
+    <p>
+      After creating a function, we need to call it to execute its code.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+def welcome():
+    print("Welcome!")
+
+welcome()
+      </pre>
+
+      <p>
+        The statement <strong>welcome()</strong> calls the function.
+      </p>
+    </div>
+
+
+    <h2>📥 Function with Parameters</h2>
+
+    <p>
+      Parameters are values received by a function.
+      They allow us to pass data into a function.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+def greet(name):
+    print("Hello", name)
+
+greet("Vaishnavi")
+      </pre>
+    </div>
+
+
+    <h2>📤 Function with Return Value</h2>
+
+    <p>
+      A function can return a result using the <strong>return</strong>
+      statement.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print(result)
+      </pre>
+
+      <p>
+        The function returns the sum of the two numbers.
+      </p>
+    </div>
+
+
+    <h2>🔢 Function with Multiple Parameters</h2>
+
+    <p>
+      A function can have more than one parameter.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+def student_info(name, age):
+    print("Name:", name)
+    print("Age:", age)
+
+student_info("Vaishnavi", 18)
+      </pre>
+    </div>
+
+
+    <h2>🎯 Default Parameter</h2>
+
+    <p>
+      A default parameter has a value that is automatically used when
+      no value is provided during the function call.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+def greet(name="Student"):
+    print("Hello", name)
+
+greet()
+greet("Vaishnavi")
+      </pre>
+    </div>
+
+
+    <h2>🔄 Positional Arguments</h2>
+
+    <p>
+      In positional arguments, values are passed according to the
+      position of the parameters.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+def student(name, age):
+    print(name)
+    print(age)
+
+student("Vaishnavi", 18)
+      </pre>
+    </div>
+
+
+    <h2>🏷️ Keyword Arguments</h2>
+
+    <p>
+      Keyword arguments are passed by using the parameter names.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+def student(name, age):
+    print(name)
+    print(age)
+
+student(age=18, name="Vaishnavi")
+      </pre>
+    </div>
+
+
+    <h2>📦 Arbitrary Arguments</h2>
+
+    <p>
+      Arbitrary arguments allow a function to accept multiple values.
+      The <strong>*args</strong> syntax is commonly used for this purpose.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+def subjects(*names):
+    for name in names:
+        print(name)
+
+subjects("Python", "C", "DBMS")
+      </pre>
+    </div>
+
+
+    <h2>🧠 Local and Global Variables</h2>
+
+    <p>
+      A local variable is created inside a function and is normally
+      available only inside that function.
+    </p>
+
+    <p>
+      A global variable is created outside a function and can be
+      accessed from different parts of the program.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+college = "Sangamner College"
+
+def show():
+    course = "BCA"
+    print(college)
+    print(course)
+
+show()
+      </pre>
+    </div>
+
+
+    <h2>🔁 Recursive Function</h2>
+
+    <p>
+      A recursive function is a function that calls itself.
+      Recursion is useful for solving some problems by breaking them
+      into smaller similar problems.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+def countdown(n):
+
+    if n == 0:
+        return
+
+    print(n)
+    countdown(n - 1)
+
+countdown(5)
+      </pre>
+    </div>
+
+
+    <h2>λ Lambda Function</h2>
+
+    <p>
+      A lambda function is a small anonymous function written in a single
+      expression. It is created using the <strong>lambda</strong> keyword.
+    </p>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+square = lambda x: x * x
+
+print(square(5))
+      </pre>
+    </div>
+
+
+    <h2>📊 Built-in Functions</h2>
+
+    <p>
+      Python provides many built-in functions that can be used directly
+      without creating them ourselves.
+    </p>
+
+    <table>
+      <tr>
+        <th>Function</th>
+        <th>Purpose</th>
+      </tr>
+
+      <tr>
+        <td>print()</td>
+        <td>Displays output.</td>
+      </tr>
+
+      <tr>
+        <td>len()</td>
+        <td>Returns the length of an object.</td>
+      </tr>
+
+      <tr>
+        <td>type()</td>
+        <td>Returns the data type.</td>
+      </tr>
+
+      <tr>
+        <td>max()</td>
+        <td>Returns the largest value.</td>
+      </tr>
+
+      <tr>
+        <td>min()</td>
+        <td>Returns the smallest value.</td>
+      </tr>
+
+      <tr>
+        <td>sum()</td>
+        <td>Returns the sum of values.</td>
+      </tr>
+    </table>
+
+
+    <h2>💻 Practical Example</h2>
+
+    <div class="example-box">
+      <strong>Example:</strong>
+
+      <pre>
+def calculate_total(price, quantity):
+    return price * quantity
+
+total = calculate_total(100, 3)
+
+print("Total:", total)
+      </pre>
+
+      <p>
+        This function calculates the total price using price and quantity.
+      </p>
+    </div>
+
+
+    <h2>📚 Importance of Functions</h2>
+
+    <ul>
+      <li>Functions make code reusable.</li>
+      <li>They improve program structure.</li>
+      <li>They reduce duplicate code.</li>
+      <li>They make large programs easier to manage.</li>
+      <li>They improve readability and maintenance.</li>
+    </ul>
+
+
+    <h2>📌 Quick Revision</h2>
+
+    <ul>
+      <li>A function is a reusable block of code.</li>
+      <li>The def keyword is used to create a function.</li>
+      <li>A function is executed by calling it.</li>
+      <li>Parameters are used to receive data.</li>
+      <li>return sends a result back from a function.</li>
+      <li>Default parameters have predefined values.</li>
+      <li>Recursive functions call themselves.</li>
+      <li>Lambda functions are small anonymous functions.</li>
+      <li>Python provides many built-in functions.</li>
+    </ul>
+
+
+    <button class="back-btn" onclick="location.href='python-notes.html'">
+      ⬅️ Back to Python Notes
+    </button>
+
+  </div>
+
+</div>
+
+</body>
+</html>

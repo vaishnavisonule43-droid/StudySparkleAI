@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>Complexity in Data Structure - StudySpark AI</title>
+
+    <link rel="stylesheet" href="../../data-structure/css/data-structure.css" />
+  </head>
+
+  <body>
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1>⏱️ Complexity in Data Structure</h1>
+      <p>Learn the basic concepts of Time and Space Complexity.</p>
+    </header>
+
+
+    <!-- Notes Container -->
+    <div class="notes-container">
+
+      <!-- Introduction -->
+      <div class="note-card">
+        <h2>What is Complexity?</h2>
+
+        <p>
+          Complexity is used to measure how much time and memory
+          an algorithm requires to solve a problem.
+        </p>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Complexity is the measurement of the resources required
+          by an algorithm to solve a problem.
+        </div>
+      </div>
+
+
+      <!-- Types -->
+      <div class="note-card">
+        <h2>Types of Complexity</h2>
+
+        <p>
+          There are mainly two types of complexity in Data Structure:
+        </p>
+
+        <ul>
+          <li>Time Complexity</li>
+          <li>Space Complexity</li>
+        </ul>
+      </div>
+
+
+      <!-- Time Complexity -->
+      <div class="note-card">
+        <h2>1. Time Complexity</h2>
+
+        <p>
+          Time Complexity measures the amount of time an algorithm
+          takes to complete its execution as the input size increases.
+        </p>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Time Complexity is the amount of time required by an
+          algorithm to execute for a given input size.
+        </div>
+
+        <h3>Example</h3>
+
+        <p>
+          If an algorithm checks every element of an array one by one,
+          the time required increases when the number of elements increases.
+        </p>
+      </div>
+
+
+      <!-- Space Complexity -->
+      <div class="note-card">
+        <h2>2. Space Complexity</h2>
+
+        <p>
+          Space Complexity measures the amount of memory required
+          by an algorithm during its execution.
+        </p>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Space Complexity is the amount of memory required by an
+          algorithm to solve a problem.
+        </div>
+
+        <h3>Example</h3>
+
+        <p>
+          If an algorithm creates an additional array to store data,
+          the memory used by that array is considered in space complexity.
+        </p>
+      </div>
+
+
+      <!-- Big O -->
+      <div class="note-card">
+        <h2>Big O Notation</h2>
+
+        <p>
+          Big O notation is used to describe the performance of an
+          algorithm as the input size increases.
+        </p>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Big O notation represents the upper bound or worst-case
+          growth rate of an algorithm.
+        </div>
+      </div>
+
+
+      <!-- Common Complexities -->
+      <div class="note-card">
+        <h2>Common Time Complexities</h2>
+
+        <h3>1. O(1) - Constant Time</h3>
+
+        <p>
+          The algorithm takes almost the same amount of time
+          regardless of the input size.
+        </p>
+
+        <div class="definition">
+          <strong>Example:</strong>
+          Accessing an element of an array using its index.
+        </div>
+
+
+        <h3>2. O(n) - Linear Time</h3>
+
+        <p>
+          The execution time increases directly with the input size.
+        </p>
+
+        <div class="definition">
+          <strong>Example:</strong>
+          Searching an element using Linear Search.
+        </div>
+
+
+        <h3>3. O(n²) - Quadratic Time</h3>
+
+        <p>
+          The execution time increases approximately with the square
+          of the input size.
+        </p>
+
+        <div class="definition">
+          <strong>Example:</strong>
+          Bubble Sort in the worst case.
+        </div>
+
+
+        <h3>4. O(log n) - Logarithmic Time</h3>
+
+        <p>
+          The algorithm reduces the problem size step by step.
+          It is generally faster than linear time for large inputs.
+        </p>
+
+        <div class="definition">
+          <strong>Example:</strong>
+          Binary Search.
+        </div>
+      </div>
+
+
+      <!-- Comparison -->
+      <div class="note-card">
+        <h2>Complexity Comparison</h2>
+
+        <ul>
+          <li>O(1) → Very Fast</li>
+          <li>O(log n) → Fast</li>
+          <li>O(n) → Linear</li>
+          <li>O(n²) → Slower for large input</li>
+        </ul>
+
+        <div class="definition">
+          <strong>Simple Order:</strong><br />
+          O(1) → O(log n) → O(n) → O(n²)
+        </div>
+      </div>
+
+
+      <!-- Best Average Worst -->
+      <div class="note-card">
+        <h2>Best, Average and Worst Case</h2>
+
+        <h3>1. Best Case</h3>
+
+        <p>
+          Best Case represents the minimum time required by an
+          algorithm for a particular input.
+        </p>
+
+
+        <h3>2. Average Case</h3>
+
+        <p>
+          Average Case represents the expected time required for
+          normal or average inputs.
+        </p>
+
+
+        <h3>3. Worst Case</h3>
+
+        <p>
+          Worst Case represents the maximum time required by an
+          algorithm for a particular input.
+        </p>
+      </div>
+
+
+      <!-- Importance -->
+      <div class="note-card">
+        <h2>Importance of Complexity</h2>
+
+        <ul>
+          <li>Helps compare different algorithms.</li>
+          <li>Helps select an efficient algorithm.</li>
+          <li>Helps reduce execution time.</li>
+          <li>Helps reduce memory usage.</li>
+          <li>Useful when working with large amounts of data.</li>
+        </ul>
+      </div>
+
+
+      <!-- Example -->
+      <div class="note-card">
+        <h2>Simple Example</h2>
+
+        <p>
+          Suppose an array contains 100 elements. If we check every
+          element one by one, the algorithm may need to check many
+          elements. Therefore, its time complexity is O(n).
+        </p>
+
+        <div class="definition">
+          <strong>Simple Example:</strong><br />
+          Input increases → Work increases → Time Complexity increases
+        </div>
+      </div>
+
+
+      <!-- Conclusion -->
+      <div class="note-card">
+        <h2>Conclusion</h2>
+
+        <p>
+          Complexity helps us understand the time and memory required
+          by an algorithm. Time Complexity and Space Complexity are
+          important for designing efficient algorithms.
+        </p>
+      </div>
+
+
+      <!-- Back Button -->
+      <button
+        class="back-btn"
+        onclick="location.href='ds-notes.html'"
+      >
+        ⬅️ Back to Data Structure Notes
+      </button>
+
+    </div>
+
+  </body>
+</html>

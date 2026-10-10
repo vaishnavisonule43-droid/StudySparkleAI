@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms Notes | StudySpark AI</title>
+    <link rel="stylesheet" href="../css/web-topic.css">
+</head>
+
+<body>
+
+<header class="topic-header">
+    <h1>HTML Forms</h1>
+    <p>Learn Form Elements with Simple Examples</p>
+</header>
+
+<main class="topic-container">
+
+    <section class="topic-card">
+
+        <h2>1. What is an HTML Form?</h2>
+        <p>
+            An HTML form is used to collect information from users.
+            For example, a website can use a form to collect a person's
+            name, email address, password and feedback.
+        </p>
+
+        <div class="important-box">
+            <h3>Examples of Forms</h3>
+            <ul>
+                <li>Login form</li>
+                <li>Registration form</li>
+                <li>Contact form</li>
+                <li>Feedback form</li>
+                <li>Online application form</li>
+            </ul>
+        </div>
+
+        <h2>2. Basic Structure of a Form</h2>
+        <p>
+            The <code>&lt;form&gt;</code> tag creates a form.
+            Input elements are placed inside it.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+
+        <h2>3. Important Form Attributes</h2>
+        <div class="example-box">
+            <ul>
+                <li><strong>action:</strong> Specifies where form data should be sent.</li>
+                <li><strong>method:</strong> Specifies how data is sent, commonly GET or POST.</li>
+                <li><strong>name:</strong> Identifies a form field when its data is submitted.</li>
+                <li><strong>required:</strong> Makes a field compulsory.</li>
+                <li><strong>placeholder:</strong> Displays a hint inside an input field.</li>
+            </ul>
+        </div>
+
+        <h2>4. Text Input</h2>
+        <p>
+            The text input is used to accept short text, such as a person's name.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;label for="username"&gt;Name:&lt;/label&gt;
+&lt;input type="text"
+       id="username"
+       name="username"
+       placeholder="Enter your name"&gt;</code></pre>
+        </div>
+
+        <h2>5. Password Input</h2>
+        <p>
+            The password input hides the characters as the user types.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;label for="password"&gt;Password:&lt;/label&gt;
+&lt;input type="password"
+       id="password"
+       name="password"&gt;</code></pre>
+        </div>
+
+        <h2>6. Email Input</h2>
+        <p>
+            The email input is designed for email addresses and provides
+            basic browser validation when the form is submitted.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email"
+       id="email"
+       name="email"
+       placeholder="name@example.com"&gt;</code></pre>
+        </div>
+
+        <h2>7. Radio Buttons</h2>
+        <p>
+            Radio buttons allow the user to select one option from a group.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;p&gt;Select your course:&lt;/p&gt;
+
+&lt;input type="radio" id="bca"
+       name="course" value="BCA"&gt;
+&lt;label for="bca"&gt;BCA&lt;/label&gt;
+
+&lt;input type="radio" id="bba"
+       name="course" value="BBA"&gt;
+&lt;label for="bba"&gt;BBA&lt;/label&gt;</code></pre>
+        </div>
+
+        <div class="important-box">
+            <h3>Remember</h3>
+            <p>Radio buttons in the same group use the same name, allowing the user to select one option.</p>
+        </div>
+
+        <h2>8. Checkboxes</h2>
+        <p>
+            Checkboxes allow the user to select multiple options.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;p&gt;Select your skills:&lt;/p&gt;
+
+&lt;input type="checkbox" id="html" name="skills" value="HTML"&gt;
+&lt;label for="html"&gt;HTML&lt;/label&gt;
+
+&lt;input type="checkbox" id="css" name="skills" value="CSS"&gt;
+&lt;label for="css"&gt;CSS&lt;/label&gt;
+
+&lt;input type="checkbox" id="js" name="skills" value="JavaScript"&gt;
+&lt;label for="js"&gt;JavaScript&lt;/label&gt;</code></pre>
+        </div>
+
+        <h2>9. Dropdown List</h2>
+        <p>
+            A dropdown list displays options that the user can choose from.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;label for="city"&gt;Select City:&lt;/label&gt;
+
+&lt;select id="city" name="city"&gt;
+    &lt;option value=""&gt;Choose a city&lt;/option&gt;
+    &lt;option value="pune"&gt;Pune&lt;/option&gt;
+    &lt;option value="nashik"&gt;Nashik&lt;/option&gt;
+    &lt;option value="mumbai"&gt;Mumbai&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+        </div>
+
+        <h2>10. Textarea</h2>
+        <p>
+            A textarea is used to enter longer text, such as comments or feedback.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;label for="feedback"&gt;Feedback:&lt;/label&gt;
+
+&lt;textarea id="feedback"
+          name="feedback"
+          rows="4"
+          cols="30"
+          placeholder="Write your feedback"&gt;&lt;/textarea&gt;</code></pre>
+        </div>
+
+        <h2>11. Submit and Reset Buttons</h2>
+        <p>
+            A submit button submits a form. A reset button restores the
+            form fields to their initial values.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;button type="reset"&gt;Reset&lt;/button&gt;</code></pre>
+        </div>
+
+        <h2>12. Required Fields and Validation</h2>
+        <p>
+            HTML provides basic form validation. The required attribute
+            prevents submission when a compulsory field is empty.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;form&gt;
+    &lt;label for="fullName"&gt;Name:&lt;/label&gt;
+    &lt;input type="text"
+           id="fullName"
+           name="fullName"
+           required&gt;
+
+    &lt;label for="userEmail"&gt;Email:&lt;/label&gt;
+    &lt;input type="email"
+           id="userEmail"
+           name="userEmail"
+           required&gt;
+
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+
+        <h2>13. Complete Registration Form Example</h2>
+        <p>
+            This example combines several form elements into one page.
+            Copy the code into an HTML file and open it in your browser.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Registration Form&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Student Registration&lt;/h1&gt;
+
+    &lt;form&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt;
+        &lt;input type="text" id="name"
+               name="name" required&gt;
+        &lt;br&gt;&lt;br&gt;
+
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="email"
+               name="email" required&gt;
+        &lt;br&gt;&lt;br&gt;
+
+        &lt;label for="course"&gt;Course:&lt;/label&gt;
+        &lt;select id="course" name="course"&gt;
+            &lt;option value="BCA"&gt;BCA&lt;/option&gt;
+            &lt;option value="BBA"&gt;BBA&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;br&gt;&lt;br&gt;
+
+        &lt;button type="submit"&gt;Register&lt;/button&gt;
+        &lt;button type="reset"&gt;Clear&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="important-box">
+            <h3>Important Note</h3>
+            <p>
+                This example shows the form structure and basic browser validation.
+                To save registration details, the form needs a backend or a form-processing service.
+            </p>
+        </div>
+
+        <h2>14. Advantages of HTML Forms</h2>
+        <ul>
+            <li>Collects information from users.</li>
+            <li>Used for login and registration pages.</li>
+            <li>Supports different input types.</li>
+            <li>Provides basic browser validation.</li>
+            <li>Can send data to a server when properly configured.</li>
+        </ul>
+
+        <div class="important-box">
+            <h3>Quick Revision</h3>
+            <ul>
+                <li><code>&lt;form&gt;</code> creates a form.</li>
+                <li><code>type="text"</code> accepts text.</li>
+                <li><code>type="password"</code> hides typed characters.</li>
+                <li><code>type="radio"</code> selects one option in a group.</li>
+                <li><code>type="checkbox"</code> allows multiple selections.</li>
+                <li><code>&lt;select&gt;</code> creates a dropdown.</li>
+                <li><code>&lt;textarea&gt;</code> accepts longer text.</li>
+                <li><code>required</code> makes a field compulsory.</li>
+                <li><code>type="submit"</code> submits the form.</li>
+            </ul>
+        </div>
+
+        <a href="web-notes.html" class="back-btn">
+            ← Back to Web Technology
+        </a>
+
+    </section>
+
+</main>
+
+<script>
+async function copyCode(button) {
+    const codeBox = button.closest(".code-box");
+    const code = codeBox.querySelector("pre code").innerText;
+    const status = codeBox.querySelector(".copy-status");
+
+    try {
+        await navigator.clipboard.writeText(code);
+
+        button.textContent = "Copied!";
+        status.textContent = "Code copied!";
+
+        setTimeout(function () {
+            button.textContent = "Copy Code";
+            status.textContent = "";
+        }, 2000);
+
+    } catch (error) {
+        status.textContent =
+            "Copy unavailable. Please copy manually.";
+    }
+}
+</script>
+
+</body>
+</html>

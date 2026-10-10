@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f7ff" />
+    <meta
+      name="description"
+      content="Contact StudySpark AI for learning support, technical help, feedback and suggestions."
+    />
+
+    <title>Contact Us | StudySpark AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/contact.css" />
+    <script src="../../assets/js/contact.js" defer></script>
+  </head>
+
+  <body>
+    <div class="background-effects" aria-hidden="true">
+      <div class="orb orb-purple"></div>
+      <div class="orb orb-pink"></div>
+      <div class="orb orb-blue"></div>
+      <div class="grid-pattern"></div>
+    </div>
+
+    <header class="site-header">
+      <a href="../../index.html" class="brand" aria-label="StudySpark AI home">
+        <span class="brand-mark"><span>✦</span></span>
+        <span class="brand-name">StudySpark<span>AI</span></span>
+      </a>
+
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="../../index.html" class="nav-link">
+          <span aria-hidden="true">←</span>
+          Back to Home
+        </a>
+        <span class="header-divider"></span>
+        <span class="online-status"><span></span> Here to help</span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-badge">
+          <span class="badge-sparkle">✦</span>
+          YOUR IDEAS MATTER
+        </div>
+
+        <h1>
+          Let's make learning<br />
+          <span class="gradient-text">better, together.</span>
+        </h1>
+
+        <p class="hero-description">
+          Have a question, need a hand, or have an idea to share? We'd love to
+          hear from you. Choose a topic and tell us what's on your mind.
+        </p>
+
+        <div class="hero-trust">
+          <span class="trust-item"
+            ><span class="trust-check">✓</span> Simple support</span
+          >
+          <span class="trust-separator"></span>
+          <span class="trust-item"
+            ><span class="trust-check">✓</span> Direct WhatsApp contact</span
+          >
+          <span class="trust-separator"></span>
+          <span class="trust-item"
+            ><span class="trust-check">✓</span> Your message, your choice</span
+          >
+        </div>
+      </section>
+
+      <section class="contact-shell" aria-label="Contact StudySpark AI">
+        <!-- CONTACT FORM -->
+        <div class="form-panel">
+          <div class="panel-heading">
+            <div class="heading-icon">✉</div>
+            <div>
+              <p class="section-eyebrow">LET'S TALK</p>
+              <h2>Send us a message</h2>
+              <p class="panel-subtitle">
+                Fill in the details and we'll prepare your message.
+              </p>
+            </div>
+          </div>
+
+          <form id="contactForm">
+            <div class="field-grid">
+              <div class="field">
+                <label for="fullName">Full name <span>*</span></label>
+                <div class="input-shell">
+                  <span class="input-icon" aria-hidden="true">♙</span>
+                  <input
+                    id="fullName"
+                    name="fullName"
+                    type="text"
+                    placeholder="e.g. Rahul Patil"
+                    autocomplete="name"
+                    minlength="2"
+                    maxlength="80"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="email">Email address <span>*</span></label>
+                <div class="input-shell">
+                  <span class="input-icon" aria-hidden="true">✉</span>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    maxlength="120"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <div class="field">
+                <label for="phone"
+                  >Phone number <span class="optional">(optional)</span></label
+                >
+                <div class="input-shell">
+                  <span class="input-icon" aria-hidden="true">⌕</span>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+91 98765 43210"
+                    autocomplete="tel"
+                    maxlength="20"
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="topic">What can we help with? <span>*</span></label>
+                <div class="input-shell select-shell">
+                  <span class="input-icon" aria-hidden="true">◇</span>
+                  <select id="topic" name="topic" required>
+                    <option value="" selected disabled>Select a topic</option>
+                    <option value="General enquiry">General enquiry</option>
+                    <option value="Technical support">Technical support</option>
+                    <option value="Quiz and study materials">
+                      Quiz and study materials
+                    </option>
+                    <option value="Account or login help">
+                      Account or login help
+                    </option>
+                    <option value="Feedback and suggestions">
+                      Feedback and suggestions
+                    </option>
+                    <option value="Report a problem">Report a problem</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <span class="select-arrow" aria-hidden="true">⌄</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="subject">Subject <span>*</span></label>
+              <div class="input-shell">
+                <span class="input-icon" aria-hidden="true">✎</span>
+                <input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  placeholder="Give your message a clear title"
+                  minlength="3"
+                  maxlength="100"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="label-line">
+                <label for="message">Your message <span>*</span></label>
+                <span id="charCount" class="char-count">0 / 1000</span>
+              </div>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                minlength="10"
+                maxlength="1000"
+                placeholder="Tell us a little more about how we can help..."
+                required
+              ></textarea>
+              <p class="field-hint">
+                A little detail helps us understand your question better.
+              </p>
+            </div>
+
+            <label class="consent-row" for="consent">
+              <input type="checkbox" id="consent" required />
+              <span
+                >I have checked my details and agree to open this message in
+                WhatsApp.</span
+              >
+            </label>
+
+            <button type="submit" class="submit-button">
+              <span>Continue to WhatsApp</span>
+              <span class="submit-arrow" aria-hidden="true">→</span>
+            </button>
+
+            <p class="form-footnote">
+              <span aria-hidden="true">🔒</span>
+              WhatsApp opens with your message ready for you to review and send.
+            </p>
+
+            <p
+              id="formStatus"
+              class="form-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+            <a
+              id="whatsappFallback"
+              class="fallback-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              hidden
+            >
+              Open WhatsApp message ↗
+            </a>
+          </form>
+        </div>
+
+        <!-- LIVE PREVIEW AND SUPPORT -->
+        <aside class="preview-column">
+          <section class="preview-panel">
+            <div class="preview-topline">
+              <div>
+                <p class="section-eyebrow light-eyebrow">MESSAGE PREVIEW</p>
+                <h2>Your message,<br />beautifully prepared.</h2>
+              </div>
+              <span class="preview-sparkle" aria-hidden="true">✦</span>
+            </div>
+
+            <p class="preview-description">
+              As you fill in the form, your message takes shape here.
+            </p>
+
+            <div class="chat-window">
+              <div class="chat-header">
+                <div class="chat-avatar">✦</div>
+                <div class="chat-person">
+                  <strong>StudySpark AI</strong>
+                  <span><i></i> Contact message preview</span>
+                </div>
+                <span class="chat-more" aria-hidden="true">•••</span>
+              </div>
+
+              <div class="chat-body">
+                <div class="chat-date">YOUR MESSAGE</div>
+
+                <div class="chat-bubble">
+                  <p class="bubble-title">✨ Hello StudySpark AI Team!</p>
+
+                  <div class="bubble-divider"></div>
+
+                  <p>
+                    <span>👤</span> <strong>Name:</strong>
+                    <span id="previewName">Your name</span>
+                  </p>
+                  <p>
+                    <span>📧</span> <strong>Email:</strong>
+                    <span id="previewEmail">Your email</span>
+                  </p>
+                  <p>
+                    <span>📌</span> <strong>Topic:</strong>
+                    <span id="previewTopic">Not selected</span>
+                  </p>
+                  <p>
+                    <span>📝</span> <strong>Subject:</strong>
+                    <span id="previewSubject">Your subject</span>
+                  </p>
+
+                  <div class="bubble-divider"></div>
+
+                  <p class="preview-message-label">💬 Your message</p>
+                  <p id="previewMessage" class="preview-message">
+                    Your message will appear here as you type...
+                  </p>
+
+                  <p class="bubble-signoff">Thank you! 💜</p>
+                  <div class="bubble-time">Live preview <span>✓✓</span></div>
+                </div>
+              </div>
+
+              <div class="chat-footer">
+                <span>✧</span>
+                <p>Made with care by StudySpark AI</p>
+              </div>
+            </div>
+
+            <div class="preview-bottom">
+              <span class="preview-bottom-icon">✦</span>
+              <p>
+                Your details are used to prepare the message in your own
+                WhatsApp session.
+              </p>
+            </div>
+          </section>
+
+          <section class="support-card">
+            <div class="support-icon">✉</div>
+            <div class="support-copy">
+              <p class="support-title">Prefer email?</p>
+              <p>We're also reachable at</p>
+              <a href="mailto:studyspark@gmail.com">studyspark@gmail.com</a>
+            </div>
+            <span class="support-arrow" aria-hidden="true">↗</span>
+          </section>
+
+          <div class="mini-note">
+            <span aria-hidden="true">💡</span>
+            <p>
+              <strong>Quick tip</strong> — Include any relevant details in your
+              message so your question is clear.
+            </p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="../../index.html" class="footer-brand">
+        <span class="footer-mark">✦</span>
+        StudySpark<span>AI</span>
+      </a>
+
+      <p class="footer-tagline">Learn more. Grow every day. ✨</p>
+      <p class="copyright">
+        © <span id="currentYear"></span> StudySpark AI. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>

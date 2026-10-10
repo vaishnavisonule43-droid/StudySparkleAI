@@ -1,0 +1,663 @@
+/* =========================================
+   STUDYSPARK AI
+   COMMON NOTES CSS
+   DS + SOFTWARE ENGINEERING
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+  font-family: Arial, sans-serif;
+
+  background: #f4f7fb;
+
+  color: #222;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header,
+.page-header {
+  text-align: center;
+
+  padding: 35px 15px;
+
+  background: linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2
+  );
+
+  color: white;
+
+  animation: slideDown 0.8s ease;
+}
+
+header h1,
+.page-header h1 {
+  margin-bottom: 8px;
+
+  font-size: 30px;
+}
+
+header p,
+.page-header p {
+  font-size: 16px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+
+.notes-container {
+  width: 90%;
+
+  max-width: 900px;
+
+  margin: 35px auto;
+}
+
+
+/* =========================================
+   NOTES CARD
+   ========================================= */
+
+.note-card,
+.notes-card,
+.card {
+  background: white;
+
+  padding: 25px;
+
+  margin-bottom: 22px;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.10);
+
+  animation: fadeUp 0.7s ease;
+
+  transition: 0.3s ease;
+}
+
+
+/* Card Hover */
+
+.note-card:hover,
+.notes-card:hover,
+.card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================
+   HEADINGS
+   ========================================= */
+
+.note-card h2,
+.notes-card h2,
+.card h2 {
+  color: #5b4bc4;
+
+  margin-bottom: 12px;
+}
+
+.note-card h3,
+.notes-card h3 {
+  margin: 15px 0 8px;
+}
+
+
+/* =========================================
+   PARAGRAPH
+   ========================================= */
+
+.note-card p,
+.notes-card p,
+.card p {
+  margin-bottom: 12px;
+}
+
+
+/* =========================================
+   LIST
+   ========================================= */
+
+.note-card ul,
+.note-card ol,
+.notes-card ul,
+.notes-card ol {
+  margin-left: 25px;
+}
+
+.note-card li,
+.notes-card li {
+  margin-bottom: 6px;
+}
+
+
+/* =========================================
+   TOPIC BOX
+   ========================================= */
+
+.topic-box {
+  margin-top: 15px;
+
+  padding: 15px;
+
+  background: #f0edff;
+
+  border-left: 5px solid #6c5ce7;
+
+  border-radius: 8px;
+}
+
+
+/* =========================================
+   DEFINITION / EXAMPLE BOX
+   ========================================= */
+
+.definition,
+.example-box {
+  margin-top: 15px;
+
+  margin-bottom: 15px;
+
+  padding: 15px;
+
+  background: #f0edff;
+
+  border-left: 5px solid #6c5ce7;
+
+  border-radius: 8px;
+}
+
+
+/* =========================================
+   TABLE
+   ========================================= */
+
+.note-card table,
+.notes-card table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin: 20px 0;
+
+  background: white;
+}
+
+.note-card th,
+.note-card td,
+.notes-card th,
+.notes-card td {
+  border: 1px solid #ddd;
+
+  padding: 12px;
+
+  text-align: left;
+}
+
+.note-card th,
+.notes-card th {
+  background: #6c5ce7;
+
+  color: white;
+}
+
+
+/* =========================================
+   CODE / PRE
+   ========================================= */
+
+.note-card pre,
+.notes-card pre {
+  background: #f0edff;
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  overflow-x: auto;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.note-card button,
+.notes-card button,
+.card button {
+  display: block;
+
+  margin: 18px auto 0;
+
+  padding: 12px 25px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #5b4bc4;
+
+  color: white;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+/* Button Hover */
+
+.note-card button:hover,
+.notes-card button:hover,
+.card button:hover {
+  background: #6c5ce7;
+
+  transform: scale(1.05);
+
+  box-shadow:
+    0 5px 12px rgba(91, 75, 196, 0.25);
+}
+
+
+/* =========================================
+   BACK BUTTON
+   ========================================= */
+
+.back-btn,
+.back-button,
+.btn-back {
+  display: block;
+
+  margin: 30px auto 50px;
+
+  padding: 12px 28px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #5b4bc4;
+
+  color: white;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  animation: backButtonAnimation 0.9s ease;
+}
+
+
+/* Back Button Hover */
+
+.back-btn:hover,
+.back-button:hover,
+.btn-back:hover {
+  background: #6c5ce7;
+
+  transform: scale(1.08);
+
+  box-shadow:
+    0 6px 15px rgba(91, 75, 196, 0.30);
+}
+
+
+/* =========================================
+   INPUT
+   ========================================= */
+
+.note-card input,
+.notes-card input {
+  padding: 10px 14px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.note-card input:focus,
+.notes-card input:focus {
+  border-color: #6c5ce7;
+
+  box-shadow:
+    0 0 8px rgba(108, 92, 231, 0.20);
+}
+
+
+/* =========================================
+   COMMON ANIMATION BOX
+   ========================================= */
+
+.linked-animation,
+.queue-animation,
+.stack-animation,
+.search-animation,
+.sort-animation,
+.sorting-animation,
+.recursion-animation,
+.tree-animation,
+.hash-animation {
+  margin-top: 30px;
+
+  padding: 25px;
+
+  background: #f8f7ff;
+
+  border-left: 5px solid #6c5ce7;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  animation: fadeUp 0.8s ease;
+}
+
+
+/* Animation Heading */
+
+.linked-animation h2,
+.queue-animation h2,
+.stack-animation h2,
+.search-animation h2,
+.sort-animation h2,
+.sorting-animation h2,
+.recursion-animation h2,
+.tree-animation h2,
+.hash-animation h2 {
+  color: #5b4bc4;
+
+  margin-bottom: 10px;
+}
+
+
+/* Animation Buttons */
+
+.linked-animation button,
+.queue-animation button,
+.stack-animation button,
+.search-animation button,
+.sort-animation button,
+.sorting-animation button,
+.recursion-animation button,
+.tree-animation button,
+.hash-animation button {
+  padding: 10px 18px;
+
+  margin: 5px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: #5b4bc4;
+
+  color: white;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+/* Animation Button Hover */
+
+.linked-animation button:hover,
+.queue-animation button:hover,
+.stack-animation button:hover,
+.search-animation button:hover,
+.sort-animation button:hover,
+.sorting-animation button:hover,
+.recursion-animation button:hover,
+.tree-animation button:hover,
+.hash-animation button:hover {
+  background: #6c5ce7;
+
+  transform: scale(1.05);
+}
+
+
+/* Animation Inputs */
+
+.linked-animation input,
+.queue-animation input,
+.stack-animation input,
+.search-animation input,
+.sort-animation input,
+.sorting-animation input,
+.recursion-animation input,
+.tree-animation input,
+.hash-animation input {
+  padding: 10px 14px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+
+/* =========================================
+   TREE
+   ========================================= */
+
+.tree-container {
+  margin-top: 20px;
+
+  text-align: center;
+}
+
+.tree-level {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 40px;
+
+  margin: 15px 0;
+}
+
+.tree-node {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: #6c5ce7;
+
+  color: white;
+
+  font-weight: bold;
+
+  transition: 0.3s ease;
+}
+
+.tree-node:hover {
+  transform: scale(1.1);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+  text-align: center;
+
+  padding: 25px 15px;
+
+  color: #555;
+
+  animation: fadeUp 1s ease;
+}
+
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes slideDown {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes backButtonAnimation {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(25px) scale(0.90);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .notes-container {
+    width: 92%;
+  }
+
+  header,
+  .page-header {
+    padding: 28px 15px;
+  }
+
+  header h1,
+  .page-header h1 {
+    font-size: 26px;
+  }
+
+  header p,
+  .page-header p {
+    font-size: 14px;
+  }
+
+  .note-card,
+  .notes-card,
+  .card {
+    padding: 20px;
+  }
+
+  .note-card h2,
+  .notes-card h2,
+  .card h2 {
+    font-size: 20px;
+  }
+
+  .topic-box,
+  .definition,
+  .example-box {
+    padding: 13px;
+
+    font-size: 14px;
+  }
+
+  .note-card button,
+  .notes-card button,
+  .card button {
+    font-size: 14px;
+  }
+
+  .back-btn,
+  .back-button,
+  .btn-back {
+    width: 100%;
+
+    font-size: 14px;
+  }
+
+  .tree-level {
+    gap: 15px;
+  }
+
+  .tree-node {
+    width: 45px;
+
+    height: 45px;
+  }
+}

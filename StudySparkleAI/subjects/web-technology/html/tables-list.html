@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables and Lists | StudySpark AI</title>
+    <link rel="stylesheet" href="../css/web-topic.css">
+</head>
+
+<body>
+
+<header class="topic-header">
+    <h1>HTML Tables & Lists</h1>
+    <p>Learn Tables and Lists with Simple Examples</p>
+</header>
+
+<main class="topic-container">
+
+    <section class="topic-card">
+
+        <h2>1. Introduction to HTML Tables</h2>
+        <p>
+            An HTML table is used to display data in rows and columns.
+            Tables are useful for displaying student marks, product details,
+            timetables and other structured information.
+        </p>
+
+        <div class="important-box">
+            <h3>Important Table Tags</h3>
+            <ul>
+                <li><strong>table:</strong> Creates a table.</li>
+                <li><strong>tr:</strong> Creates a table row.</li>
+                <li><strong>th:</strong> Creates a header cell.</li>
+                <li><strong>td:</strong> Creates a data cell.</li>
+                <li><strong>caption:</strong> Adds a table title.</li>
+            </ul>
+        </div>
+
+        <h2>2. Basic HTML Table</h2>
+        <p>This example creates a table containing student names and courses.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Course&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;Rahul&lt;/td&gt;
+        &lt;td&gt;BCA&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;Priya&lt;/td&gt;
+        &lt;td&gt;BBA&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+
+        <div class="example-box">
+            <strong>Explanation:</strong>
+            <ul>
+                <li>The table tag creates the table.</li>
+                <li>The tr tag creates each row.</li>
+                <li>The th tag displays column headings.</li>
+                <li>The td tag displays the actual data.</li>
+            </ul>
+        </div>
+
+        <h2>3. Table with Caption</h2>
+        <p>The caption tag adds a title to a table.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;table border="1"&gt;
+    &lt;caption&gt;Student Details&lt;/caption&gt;
+
+    &lt;tr&gt;
+        &lt;th&gt;Roll No.&lt;/th&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;Amit&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+
+        <h2>4. Colspan Attribute</h2>
+        <p>
+            The colspan attribute allows one cell to cover multiple columns.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th colspan="2"&gt;Student Details&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;Name&lt;/td&gt;
+        &lt;td&gt;Rahul&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+
+        <h2>5. Rowspan Attribute</h2>
+        <p>
+            The rowspan attribute allows one cell to cover multiple rows.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Subject&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;Rahul&lt;/td&gt;
+        &lt;td&gt;HTML&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;CSS&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+
+        <div class="example-box">
+            <strong>Remember:</strong>
+            <ul>
+                <li><strong>colspan:</strong> Combines cells horizontally across columns.</li>
+                <li><strong>rowspan:</strong> Combines cells vertically across rows.</li>
+            </ul>
+        </div>
+
+        <h2>6. Introduction to HTML Lists</h2>
+        <p>
+            HTML lists are used to display related items in an organized way.
+            HTML provides ordered lists, unordered lists and description lists.
+        </p>
+
+        <h2>7. Ordered List</h2>
+        <p>
+            An ordered list displays items in a sequence, usually with numbers.
+            It uses the ol and li tags.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;ol&gt;
+    &lt;li&gt;Wake up&lt;/li&gt;
+    &lt;li&gt;Study&lt;/li&gt;
+    &lt;li&gt;Go to college&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </div>
+
+        <div class="important-box">
+            <h3>Output</h3>
+            <ol>
+                <li>Wake up</li>
+                <li>Study</li>
+                <li>Go to college</li>
+            </ol>
+        </div>
+
+        <h2>8. Ordered List Types</h2>
+        <p>
+            The type attribute changes the numbering style of an ordered list.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;ol type="A"&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type="I"&gt;
+    &lt;li&gt;First&lt;/li&gt;
+    &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </div>
+
+        <div class="example-box">
+            <ul>
+                <li><strong>type="1":</strong> 1, 2, 3</li>
+                <li><strong>type="A":</strong> A, B, C</li>
+                <li><strong>type="a":</strong> a, b, c</li>
+                <li><strong>type="I":</strong> I, II, III</li>
+                <li><strong>type="i":</strong> i, ii, iii</li>
+            </ul>
+        </div>
+
+        <h2>9. Unordered List</h2>
+        <p>
+            An unordered list displays items with bullets by default.
+            It uses the ul and li tags.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+
+        <div class="important-box">
+            <h3>Output</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+
+        <h2>10. Unordered List Styles</h2>
+        <p>
+            CSS can change the bullet style of an unordered list.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;ul style="list-style-type: square;"&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul style="list-style-type: circle;"&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+    &lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+
+        <div class="example-box">
+            <ul>
+                <li><strong>disc:</strong> Filled circular bullets.</li>
+                <li><strong>circle:</strong> Hollow circular bullets.</li>
+                <li><strong>square:</strong> Square bullets.</li>
+                <li><strong>none:</strong> No bullets.</li>
+            </ul>
+        </div>
+
+        <h2>11. Nested Lists</h2>
+        <p>
+            A nested list is a list placed inside another list item.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;Frontend
+        &lt;ul&gt;
+            &lt;li&gt;HTML&lt;/li&gt;
+            &lt;li&gt;CSS&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;Backend&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+
+        <h2>12. Description List</h2>
+        <p>
+            A description list displays terms and their descriptions.
+            It uses dl, dt and dd tags.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Used to structure web pages.&lt;/dd&gt;
+
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Used to style web pages.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+        </div>
+
+        <div class="example-box">
+            <ul>
+                <li><strong>dl:</strong> Creates the description list.</li>
+                <li><strong>dt:</strong> Specifies a term.</li>
+                <li><strong>dd:</strong> Provides the term's description.</li>
+            </ul>
+        </div>
+
+        <h2>13. Difference Between Tables and Lists</h2>
+
+        <table>
+            <tr>
+                <th>HTML Tables</th>
+                <th>HTML Lists</th>
+            </tr>
+            <tr>
+                <td>Display data in rows and columns.</td>
+                <td>Display related items in a sequence or group.</td>
+            </tr>
+            <tr>
+                <td>Use table, tr, th and td tags.</td>
+                <td>Use ol, ul, li and related tags.</td>
+            </tr>
+            <tr>
+                <td>Useful for marksheets and schedules.</td>
+                <td>Useful for steps and item collections.</td>
+            </tr>
+        </table>
+
+        <h2>14. Advantages of Tables and Lists</h2>
+        <ul>
+            <li>Organize information clearly.</li>
+            <li>Make web page content easier to read.</li>
+            <li>Tables help compare structured data.</li>
+            <li>Lists show steps and related items.</li>
+            <li>Nested lists organize information into levels.</li>
+        </ul>
+
+        <div class="important-box">
+            <h3>Quick Revision</h3>
+            <ul>
+                <li>table creates a table.</li>
+                <li>tr creates a row.</li>
+                <li>th creates a heading cell.</li>
+                <li>td creates a data cell.</li>
+                <li>colspan spans columns.</li>
+                <li>rowspan spans rows.</li>
+                <li>ol creates an ordered list.</li>
+                <li>ul creates an unordered list.</li>
+                <li>li creates a list item.</li>
+                <li>dl, dt and dd create a description list.</li>
+            </ul>
+        </div>
+
+        <a href="web-notes.html" class="back-btn">
+            ← Back to Web Technology
+        </a>
+
+    </section>
+
+</main>
+
+<script>
+async function copyCode(button) {
+    const codeBox = button.closest(".code-box");
+    const code = codeBox.querySelector("pre code").innerText;
+    const status = codeBox.querySelector(".copy-status");
+
+    try {
+        await navigator.clipboard.writeText(code);
+
+        button.textContent = "Copied!";
+        status.textContent = "Code copied!";
+
+        setTimeout(function () {
+            button.textContent = "Copy Code";
+            status.textContent = "";
+        }, 2000);
+
+    } catch (error) {
+        status.textContent =
+            "Copy unavailable. Please copy manually.";
+    }
+}
+</script>
+
+</body>
+</html>

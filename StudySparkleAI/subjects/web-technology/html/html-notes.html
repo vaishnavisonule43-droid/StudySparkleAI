@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Notes | StudySpark AI</title>
+    <link rel="stylesheet" href="../css/web-topic.css">
+</head>
+
+<body>
+
+<header class="topic-header">
+    <h1>HTML Notes</h1>
+    <p>Learn HTML from Basics with Simple Examples</p>
+</header>
+
+<main class="topic-container">
+
+    <section class="topic-card">
+
+        <h2>1. What is HTML?</h2>
+        <p>
+            HTML stands for <strong>HyperText Markup Language</strong>.
+            It is used to create the structure of web pages.
+            HTML tells the browser how to display headings, paragraphs,
+            images, links, tables and forms.
+        </p>
+
+        <div class="important-box">
+            <h3>Example</h3>
+            <p>HTML is used to create the structure of a website, such as its heading, text and links.</p>
+        </div>
+
+        <h2>2. Features of HTML</h2>
+        <ul>
+            <li>HTML is easy to learn.</li>
+            <li>It is used to create web pages.</li>
+            <li>It uses tags to organize content.</li>
+            <li>It works with CSS and JavaScript.</li>
+            <li>HTML files can be opened in a web browser.</li>
+        </ul>
+
+        <h2>3. Basic Structure of HTML</h2>
+        <p>Every basic HTML document contains the following elements:</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to StudySpark AI&lt;/h1&gt;
+    &lt;p&gt;This is my first web page.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="example-box">
+            <strong>Explanation:</strong>
+            <ul>
+                <li><strong>DOCTYPE:</strong> Declares an HTML5 document.</li>
+                <li><strong>html:</strong> Contains the complete HTML page.</li>
+                <li><strong>head:</strong> Contains page information.</li>
+                <li><strong>title:</strong> Sets the browser tab title.</li>
+                <li><strong>body:</strong> Contains the visible page content.</li>
+                <li><strong>h1:</strong> Displays a main heading.</li>
+                <li><strong>p:</strong> Displays a paragraph.</li>
+            </ul>
+        </div>
+
+        <h2>4. What are HTML Tags?</h2>
+        <p>
+            HTML tags are keywords written inside angle brackets.
+            They tell the browser what type of content to display.
+        </p>
+
+        <div class="example-box">
+            <p><strong>Examples:</strong></p>
+            <ul>
+                <li><code>&lt;h1&gt;</code> — Main heading</li>
+                <li><code>&lt;p&gt;</code> — Paragraph</li>
+                <li><code>&lt;br&gt;</code> — Line break</li>
+                <li><code>&lt;hr&gt;</code> — Horizontal line</li>
+                <li><code>&lt;img&gt;</code> — Image</li>
+                <li><code>&lt;a&gt;</code> — Link</li>
+            </ul>
+        </div>
+
+        <h2>5. Types of HTML Tags</h2>
+
+        <h3>Container Tags</h3>
+        <p>
+            These generally have an opening tag and a closing tag.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+
+            <pre><code>&lt;p&gt;Hello World&lt;/p&gt;
+&lt;h1&gt;Welcome&lt;/h1&gt;</code></pre>
+        </div>
+
+        <h3>Void Tags</h3>
+        <p>
+            These tags do not need a separate closing tag.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+
+            <pre><code>&lt;br&gt;
+&lt;hr&gt;
+&lt;img src="photo.jpg" alt="Photo"&gt;</code></pre>
+        </div>
+
+        <h2>6. HTML Headings</h2>
+        <p>
+            HTML provides six heading levels, from
+            <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>.
+            H1 is the highest-level heading and H6 is the lowest-level heading.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+
+            <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+        </div>
+
+        <h2>7. HTML Paragraph</h2>
+        <p>
+            The <code>&lt;p&gt;</code> tag is used to display a paragraph
+            on a web page.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+
+            <pre><code>&lt;p&gt;HTML is used to create web pages.&lt;/p&gt;</code></pre>
+        </div>
+
+        <h2>8. HTML Links</h2>
+        <p>
+            The <code>&lt;a&gt;</code> tag creates a hyperlink.
+            The <code>href</code> attribute specifies the destination.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+
+            <pre><code>&lt;a href="https://www.google.com"&gt;
+    Open Google
+&lt;/a&gt;</code></pre>
+        </div>
+
+        <h2>9. HTML Images</h2>
+        <p>
+            The <code>&lt;img&gt;</code> tag displays an image.
+            The <code>src</code> attribute specifies the image location,
+            and <code>alt</code> provides alternative text.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+
+            <pre><code>&lt;img src="flower.jpg" alt="Beautiful flower" width="300"&gt;</code></pre>
+        </div>
+
+        <h2>10. HTML Lists</h2>
+
+        <h3>Ordered List</h3>
+        <p>Displays list items with numbers by default.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+
+            <pre><code>&lt;ol&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </div>
+
+        <h3>Unordered List</h3>
+        <p>Displays list items with bullets by default.</p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+
+        <h2>11. HTML Tables</h2>
+        <p>
+            The <code>&lt;table&gt;</code> tag is used to display data
+            in rows and columns.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+
+            <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Course&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Rahul&lt;/td&gt;
+        &lt;td&gt;BCA&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+
+        <div class="example-box">
+            <strong>Important table tags:</strong>
+            <ul>
+                <li><code>&lt;table&gt;</code> — Creates a table.</li>
+                <li><code>&lt;tr&gt;</code> — Creates a table row.</li>
+                <li><code>&lt;th&gt;</code> — Creates a header cell.</li>
+                <li><code>&lt;td&gt;</code> — Creates a data cell.</li>
+            </ul>
+        </div>
+
+        <h2>12. HTML Forms</h2>
+        <p>
+            Forms collect information from users, such as their name,
+            email address and password.
+        </p>
+
+        <div class="code-box">
+            <div class="code-toolbar">
+                <span class="copy-status"></span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+
+            <pre><code>&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+
+        <h2>13. HTML Attributes</h2>
+        <p>
+            Attributes provide additional information about HTML elements.
+            They are usually written in the opening tag.
+        </p>
+
+        <div class="example-box">
+            <ul>
+                <li><strong>href:</strong> Specifies a link destination.</li>
+                <li><strong>src:</strong> Specifies a resource location.</li>
+                <li><strong>alt:</strong> Provides alternative image text.</li>
+                <li><strong>id:</strong> Gives an element a unique identifier.</li>
+                <li><strong>class:</strong> Groups elements for CSS or JavaScript.</li>
+            </ul>
+        </div>
+
+        <h2>14. Advantages of HTML</h2>
+        <ul>
+            <li>Easy to learn and use.</li>
+            <li>Free and supported by web browsers.</li>
+            <li>Helps structure web page content.</li>
+            <li>Works with CSS and JavaScript.</li>
+            <li>Useful for creating websites and web applications.</li>
+        </ul>
+
+        <div class="important-box">
+            <h3>Quick Revision</h3>
+            <ul>
+                <li>HTML stands for HyperText Markup Language.</li>
+                <li>HTML creates the structure of a web page.</li>
+                <li>Headings use H1 to H6 tags.</li>
+                <li>Paragraphs use the P tag.</li>
+                <li>Links use the A tag.</li>
+                <li>Images use the IMG tag.</li>
+                <li>Tables use TABLE, TR, TH and TD tags.</li>
+                <li>Forms collect user information.</li>
+            </ul>
+        </div>
+
+        <a href="web-notes.html" class="back-btn">← Back to Web Technology</a>
+
+    </section>
+
+</main>
+
+<script>
+async function copyCode(button) {
+    const codeBox = button.closest(".code-box");
+    const code = codeBox.querySelector("pre code").innerText;
+    const status = codeBox.querySelector(".copy-status");
+
+    try {
+        await navigator.clipboard.writeText(code);
+
+        button.textContent = "Copied!";
+        status.textContent = "Code copied!";
+
+        setTimeout(function () {
+            button.textContent = "Copy Code";
+            status.textContent = "";
+        }, 2000);
+
+    } catch (error) {
+        status.textContent = "Copy unavailable. Please copy manually.";
+    }
+}
+</script>
+
+</body>
+</html>

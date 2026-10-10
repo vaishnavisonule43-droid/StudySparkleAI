@@ -1,0 +1,350 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.7;
+}
+
+
+/* Header */
+
+header {
+  text-align: center;
+  padding: 35px 15px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  animation: slideDown 0.8s ease;
+}
+
+header h1 {
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+header p {
+  font-size: 16px;
+}
+
+
+/* Main Container */
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 35px auto;
+}
+
+
+/* Note Box */
+
+.note-box {
+  background: white;
+  padding: 25px;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+  animation: fadeUp 0.7s ease;
+  transition: 0.3s ease;
+}
+
+.note-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+}
+
+
+/* Headings */
+
+.note-box h2 {
+  color: #5b4bc4;
+  margin-bottom: 12px;
+  font-size: 23px;
+}
+
+.note-box h3 {
+  color: #444;
+  margin-bottom: 8px;
+}
+
+
+/* Paragraph */
+
+.note-box p {
+  margin-bottom: 12px;
+}
+
+
+/* Lists */
+
+.note-box ul,
+.note-box ol {
+  margin-left: 25px;
+}
+
+.note-box li {
+  margin-bottom: 7px;
+}
+
+
+/* Testing Process */
+
+.process {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.process div {
+  background: #f0edff;
+  border-left: 5px solid #6c5ce7;
+  padding: 13px 16px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #5b4bc4;
+  transition: 0.3s ease;
+}
+
+.process div:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 5px 15px rgba(91, 75, 196, 0.15);
+}
+
+.process span {
+  color: #6c5ce7;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+/* Testing Grid */
+
+.testing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+
+/* Testing Card */
+
+.testing-card {
+  background: #f0edff;
+  padding: 18px;
+  border-left: 5px solid #6c5ce7;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.testing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 7px 18px rgba(91, 75, 196, 0.15);
+}
+
+.testing-card h3 {
+  color: #5b4bc4;
+  margin-bottom: 8px;
+}
+
+.testing-card p {
+  margin-bottom: 0;
+}
+
+
+/* Example Box */
+
+.example {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f0edff;
+  border-left: 5px solid #6c5ce7;
+  border-radius: 8px;
+}
+
+
+/* Example List */
+
+.example-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.example-list div {
+  padding: 13px 15px;
+  background: #f0edff;
+  border-left: 5px solid #6c5ce7;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.example-list div:hover {
+  transform: translateX(5px);
+  background: #e8e3ff;
+}
+
+
+/* Summary Box */
+
+.summary-box {
+  background: white;
+  padding: 25px;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  border-left: 6px solid #6c5ce7;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+  animation: fadeUp 0.8s ease;
+}
+
+.summary-box h2 {
+  color: #5b4bc4;
+  margin-bottom: 12px;
+}
+
+
+/* Back Button */
+
+.back-btn {
+  display: block;
+  margin: 30px auto 50px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  background: #5b4bc4;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: backButtonAnimation 0.9s ease;
+}
+
+.back-btn:hover {
+  background: #6c5ce7;
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(91, 75, 196, 0.30);
+}
+
+
+/* Fade Up Animation */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Header Animation */
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Back Button Animation */
+
+@keyframes backButtonAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.90);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 92%;
+  }
+
+  header {
+    padding: 28px 15px;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  .note-box {
+    padding: 20px;
+  }
+
+  .note-box h2 {
+    font-size: 20px;
+  }
+
+
+  /* Process Mobile */
+
+  .process {
+    flex-direction: column;
+  }
+
+  .process div {
+    width: 100%;
+  }
+
+  .process span {
+    transform: rotate(90deg);
+  }
+
+
+  /* Testing Grid Mobile */
+
+  .testing-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Example List Mobile */
+
+  .example-list {
+    grid-template-columns: 1fr;
+  }
+
+
+  .summary-box {
+    padding: 20px;
+  }
+
+  .back-btn {
+    width: 100%;
+    font-size: 14px;
+  }
+}

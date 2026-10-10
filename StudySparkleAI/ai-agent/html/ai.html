@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#fcfbff" />
+    <meta
+      name="description"
+      content="StudySpark AI — your personal AI learning assistant."
+    />
+
+    <title>AI Assistant | StudySpark AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+<link rel="stylesheet" href="../css/ai.css" />
+<script src="../js/ai.js" defer></script>
+    
+  </head>
+
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="../../index.html">
+          <span class="brand-icon">✦</span>
+          <span>StudySpark<span class="brand-ai"> AI</span></span>
+        </a>
+
+        <button class="new-chat-btn" id="newChatBtn">
+          <span>＋</span> New conversation
+        </button>
+
+        <div class="sidebar-label">YOUR LEARNING SPACE</div>
+
+        <nav class="sidebar-nav">
+          <a href="../../index.html" class="nav-item"> <span>⌂</span> Home </a>
+          <button class="nav-item active" id="assistantNav">
+            <span>✧</span> AI Assistant
+          </button>
+          <button class="nav-item" id="clearChatBtn">
+            <span>▤</span> Clear conversation
+          </button>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+
+        <div class="sidebar-tip">
+          <div class="tip-icon">✦</div>
+          <h3>Learn smarter.</h3>
+          <p>Ask questions, explore concepts and learn at your own pace.</p>
+        </div>
+
+        <div class="sidebar-footer">
+          <span class="footer-dot"></span>
+          Your personal study space
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button
+              class="icon-btn mobile-menu"
+              id="menuBtn"
+              aria-label="Open menu"
+            >
+              ☰
+            </button>
+            <div>
+              <div class="topbar-title">AI Learning Assistant</div>
+              <div class="topbar-subtitle">
+                Your study partner, whenever you need it.
+              </div>
+            </div>
+          </div>
+
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span id="connectionStatus">AI assistant</span>
+          </div>
+        </header>
+
+        <section class="chat-area" id="chatArea">
+          <div class="welcome-screen" id="welcomeScreen">
+            <div class="welcome-orb">
+              <div class="orb-inner">✦</div>
+              <span class="orb-spark spark-one">✧</span>
+              <span class="orb-spark spark-two">✦</span>
+            </div>
+
+            <div class="welcome-badge">
+              <span>✦</span> YOUR PERSONAL AI TUTOR
+            </div>
+
+            <h1>Learning starts with<br /><span>a question.</span></h1>
+
+            <p class="welcome-description">
+              Confused about a topic? Need help with code, notes or exam
+              preparation? Let's make learning simple, clear and interesting.
+            </p>
+
+            <div class="suggestion-heading">WHAT WOULD YOU LIKE TO LEARN?</div>
+
+            <div class="suggestion-grid">
+              <button
+                class="suggestion-card"
+                data-prompt="Explain a difficult topic in very simple language with examples."
+              >
+                <span class="suggestion-icon purple">✧</span>
+                <span class="suggestion-text">
+                  <strong>Explain a concept</strong>
+                  <small>Simple explanations with examples</small>
+                </span>
+                <span class="suggestion-arrow">↗</span>
+              </button>
+
+              <button
+                class="suggestion-card"
+                data-prompt="Help me prepare short, easy-to-remember exam notes for my subject."
+              >
+                <span class="suggestion-icon pink">▤</span>
+                <span class="suggestion-text">
+                  <strong>Make study notes</strong>
+                  <small>Clear notes for exam preparation</small>
+                </span>
+                <span class="suggestion-arrow">↗</span>
+              </button>
+
+              <button
+                class="suggestion-card"
+                data-prompt="Teach me programming step by step with a simple example and explain the code line by line."
+              >
+                <span class="suggestion-icon blue">&lt;/&gt;</span>
+                <span class="suggestion-text">
+                  <strong>Learn programming</strong>
+                  <small>Code, examples and debugging</small>
+                </span>
+                <span class="suggestion-arrow">↗</span>
+              </button>
+
+              <button
+                class="suggestion-card"
+                data-prompt="Create 10 multiple-choice questions on a topic I choose, with answers and short explanations."
+              >
+                <span class="suggestion-icon orange">✓</span>
+                <span class="suggestion-text">
+                  <strong>Practice with MCQs</strong>
+                  <small>Test your understanding</small>
+                </span>
+                <span class="suggestion-arrow">↗</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="messages" id="messages" aria-live="polite"></div>
+
+          <div class="typing-row" id="typingRow" hidden>
+            <div class="assistant-avatar">✦</div>
+            <div class="typing-bubble" aria-label="AI is thinking">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="typing-label">Thinking through your question...</span>
+          </div>
+
+          <div id="errorNotice" class="error-notice" role="alert" hidden></div>
+        </section>
+
+        <footer class="composer-area">
+          <form class="composer" id="chatForm">
+            <textarea
+              id="question"
+              rows="1"
+              maxlength="6000"
+              placeholder="Ask anything about your studies..."
+              aria-label="Type your question"
+              required
+            ></textarea>
+
+            <div class="composer-bottom">
+              <div class="composer-hint">
+                <span class="hint-spark">✦</span>
+                Learn at your own pace
+                <span class="keyboard-hint"
+                  >Enter to send · Shift + Enter for a new line</span
+                >
+              </div>
+
+              <div class="composer-actions">
+                <span class="char-count" id="charCount">0 / 6000</span>
+                <button
+                  type="submit"
+                  class="send-btn"
+                  id="sendBtn"
+                  aria-label="Send message"
+                >
+                  <span id="sendIcon">↑</span>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <p class="disclaimer">
+            AI can make mistakes. Check important information with your study
+            materials.
+          </p>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

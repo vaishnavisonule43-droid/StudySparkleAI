@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Linked List - Data Structure | StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/data-structure.css" />
+  </head>
+
+  <body>
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1>🔗 Linked List</h1>
+      <p>Learn the basic concepts of Linked List in Data Structure.</p>
+    </header>
+
+    <div class="notes-container">
+
+      <div class="note-card">
+
+        <!-- 1. WHAT IS LINKED LIST -->
+
+        <h2>1. What is a Linked List?</h2>
+
+        <p>
+          A Linked List is a linear data structure in which elements are stored
+          in separate nodes. Each node contains data and a link to another node.
+        </p>
+
+        <p>
+          Unlike an array, linked list elements are not required to be stored in
+          continuous memory locations.
+        </p>
+
+
+        <!-- 2. DEFINITION -->
+
+        <h2>2. Definition</h2>
+
+        <p>
+          <b>Linked List:</b> A linked list is a collection of nodes where each
+          node contains data and a pointer that stores the address of another
+          node.
+        </p>
+
+
+        <!-- 3. NODE -->
+
+        <h2>3. What is a Node?</h2>
+
+        <p>
+          A node is the basic building block of a linked list. It contains two
+          main parts:
+        </p>
+
+        <ul>
+          <li>
+            <b>Data:</b> Stores the actual value.
+          </li>
+
+          <li>
+            <b>Link / Pointer:</b> Stores the address of the next node.
+          </li>
+        </ul>
+
+        <div class="definition">
+          [ Data | Next ] → [ Data | Next ] → NULL
+        </div>
+
+
+        <!-- 4. WHY LINKED LIST -->
+
+        <h2>4. Why do we use Linked Lists?</h2>
+
+        <ul>
+          <li>Dynamic size.</li>
+          <li>Easy insertion and deletion.</li>
+          <li>Memory is allocated when required.</li>
+          <li>Does not require continuous memory locations.</li>
+          <li>Useful for implementing stacks and queues.</li>
+        </ul>
+
+
+        <!-- 5. ARRAY VS LINKED LIST -->
+
+        <h2>5. Array vs Linked List</h2>
+
+        <table>
+          <tr>
+            <th>Array</th>
+            <th>Linked List</th>
+          </tr>
+
+          <tr>
+            <td>Fixed size</td>
+            <td>Dynamic size</td>
+          </tr>
+
+          <tr>
+            <td>Continuous memory</td>
+            <td>Non-continuous memory</td>
+          </tr>
+
+          <tr>
+            <td>Insertion can be difficult</td>
+            <td>Insertion is easier</td>
+          </tr>
+
+          <tr>
+            <td>Deletion can be difficult</td>
+            <td>Deletion is easier</td>
+          </tr>
+        </table>
+
+
+        <!-- 6. TYPES OF LINKED LIST -->
+
+        <h2>6. Types of Linked List</h2>
+
+        <h3>🔹 1. Singly Linked List</h3>
+
+        <p>
+          In a singly linked list, each node contains data and a pointer to the
+          next node.
+        </p>
+
+        <div class="definition">
+          [10 | •] → [20 | •] → [30 | NULL]
+        </div>
+
+        <p>The last node points to <b>NULL</b>.</p>
+
+
+        <h3>🔹 2. Doubly Linked List</h3>
+
+        <p>
+          In a doubly linked list, each node contains three parts: previous
+          pointer, data and next pointer.
+        </p>
+
+        <div class="definition">
+          NULL ← [10] ⇄ [20] ⇄ [30] → NULL
+        </div>
+
+        <p>
+          It allows movement in both forward and backward directions.
+        </p>
+
+
+        <h3>🔹 3. Circular Linked List</h3>
+
+        <p>
+          In a circular linked list, the last node points back to the first
+          node. Therefore, the list forms a circle and does not end with NULL.
+        </p>
+
+
+        <!-- CIRCULAR SINGLY -->
+
+        <h3>🔸 3.1 Circular Singly Linked List</h3>
+
+        <p>
+          A Circular Singly Linked List is a type of linked list in which each
+          node contains data and a next pointer. The last node points back to
+          the first node.
+        </p>
+
+        <div class="definition">
+          [10] → [20] → [30] ↑ ↓ └──────────────┘
+        </div>
+
+        <ul>
+          <li>Each node contains <b>Data</b> and <b>Next</b>.</li>
+          <li>The last node points to the first node.</li>
+          <li>There is no NULL at the end.</li>
+          <li>Traversal can continue in a circular manner.</li>
+        </ul>
+
+
+        <!-- CIRCULAR DOUBLY -->
+
+        <h3>🔸 3.2 Circular Doubly Linked List</h3>
+
+        <p>
+          A Circular Doubly Linked List is a type of linked list in which each
+          node contains Previous, Data and Next. The last node is connected to
+          the first node and the first node is connected back to the last node.
+        </p>
+
+        <div class="definition">
+          [10] ⇄ [20] ⇄ [30] ↑ ↓ └──────────────┘
+        </div>
+
+        <ul>
+          <li>Each node contains <b>Previous, Data and Next</b>.</li>
+          <li>Last node's Next points to the first node.</li>
+          <li>First node's Previous points to the last node.</li>
+          <li>Traversal is possible in both directions.</li>
+        </ul>
+
+
+        <!-- 7. BASIC OPERATIONS -->
+
+        <h2>7. Basic Operations on Linked List</h2>
+
+        <ul>
+          <li>Traversal</li>
+          <li>Insertion</li>
+          <li>Deletion</li>
+          <li>Searching</li>
+          <li>Updating</li>
+        </ul>
+
+
+        <!-- TRAVERSAL -->
+
+        <h3>🔄 Traversal</h3>
+
+        <p>
+          Visiting every node of a linked list one by one is called traversal.
+        </p>
+
+        <div class="definition">
+          Start → 10 → 20 → 30 → NULL
+        </div>
+
+
+        <!-- INSERTION -->
+
+        <h3>➕ Insertion</h3>
+
+        <p>
+          Adding a new node to a linked list is called insertion.
+        </p>
+
+        <p>
+          A node can be inserted at the beginning, at the end, or at a specific
+          position.
+        </p>
+
+
+        <!-- DELETION -->
+
+        <h3>❌ Deletion</h3>
+
+        <p>
+          Removing a node from a linked list is called deletion.
+        </p>
+
+        <p>
+          A node can be deleted from the beginning, end, or a specific position.
+        </p>
+
+
+        <!-- SEARCHING -->
+
+        <h3>🔍 Searching</h3>
+
+        <p>
+          Searching means finding a particular value or node in the linked list.
+        </p>
+
+
+        <!-- UPDATING -->
+
+        <h3>✏️ Updating</h3>
+
+        <p>
+          Updating means changing the data stored in an existing node.
+        </p>
+
+
+        <!-- 8. ADVANTAGES -->
+
+        <h2>8. Advantages of Linked List</h2>
+
+        <ul>
+          <li>Dynamic size.</li>
+          <li>Easy insertion and deletion.</li>
+          <li>Memory is allocated as required.</li>
+          <li>Does not require continuous memory.</li>
+          <li>Useful for implementing other data structures.</li>
+        </ul>
+
+
+        <!-- 9. DISADVANTAGES -->
+
+        <h2>9. Disadvantages of Linked List</h2>
+
+        <ul>
+          <li>Extra memory is required for pointers.</li>
+          <li>Direct access using index is not possible.</li>
+          <li>Searching can take more time.</li>
+          <li>Implementation is more complex than arrays.</li>
+        </ul>
+
+
+        <!-- 10. REAL LIFE EXAMPLES -->
+
+        <h2>10. Real-Life Examples</h2>
+
+        <ul>
+          <li>Music playlist</li>
+          <li>Browser history</li>
+          <li>Undo and redo operations</li>
+          <li>Image slideshow</li>
+          <li>Navigation systems</li>
+        </ul>
+
+
+        <!-- 11. NODE STRUCTURE -->
+
+        <h2>11. Node Structure in C</h2>
+
+        <div class="definition">
+          <pre>
+struct Node
+{
+    int data;
+    struct Node *next;
+};
+          </pre>
+        </div>
+
+        <p>
+          Here, <b>data</b> stores the value and <b>next</b> stores the address
+          of the next node.
+        </p>
+
+
+        <!-- 12. MEMORY REPRESENTATION -->
+
+        <h2>12. Linked List Memory Representation</h2>
+
+        <p>
+          Nodes of a linked list can be stored at different memory locations.
+          The pointer connects one node to another.
+        </p>
+
+        <div class="definition">
+          Head ↓ [10 | •] → [20 | •] → [30 | NULL]
+        </div>
+
+
+        <!-- 13. ANIMATION -->
+
+        <div class="linked-animation">
+
+          <h2>🎬 Understand Linked List with Animation</h2>
+
+          <p>
+            Each node contains data and a link to the next node.
+          </p>
+
+          <div
+            id="linkedListContainer"
+            class="linked-list-container"
+          ></div>
+
+          <div class="linked-controls">
+
+            <input
+              type="number"
+              id="nodeValue"
+              placeholder="Enter value"
+            />
+
+            <button onclick="addNode()">
+              ➕ Add Node
+            </button>
+
+            <button onclick="removeNode()">
+              ❌ Delete Last
+            </button>
+
+          </div>
+
+          <p
+            id="linkedMessage"
+            class="linked-message"
+          >
+            Add a node to see the linked list!
+          </p>
+
+        </div>
+
+
+        <!-- 14. IMPORTANT EXAM QUESTIONS -->
+
+        <h2>14. Important Exam Questions</h2>
+
+        <ol>
+          <li>What is a Linked List? Explain with example.</li>
+          <li>Explain the structure of a node.</li>
+          <li>Explain different types of Linked List.</li>
+          <li>Explain singly linked list.</li>
+          <li>Explain doubly linked list.</li>
+          <li>Explain circular singly linked list.</li>
+          <li>Explain circular doubly linked list.</li>
+          <li>Explain insertion and deletion in Linked List.</li>
+          <li>Explain advantages and disadvantages of Linked List.</li>
+          <li>Differentiate between Array and Linked List.</li>
+          <li>Write a C program to create a Linked List.</li>
+        </ol>
+
+
+        <!-- 15. QUICK REVISION -->
+
+        <h2>15. Quick Revision</h2>
+
+        <ul>
+          <li>Linked List is a linear data structure.</li>
+          <li>It consists of nodes.</li>
+          <li>Each node contains data and a pointer.</li>
+          <li>Nodes do not need continuous memory.</li>
+          <li>Linked List has dynamic size.</li>
+          <li>Insertion and deletion are easier than arrays.</li>
+          <li>Circular linked lists do not end with NULL.</li>
+          <li>Doubly linked lists can be traversed in both directions.</li>
+        </ul>
+
+
+        <!-- 16. SUMMARY -->
+
+        <h2>16. Summary</h2>
+
+        <p>
+          A linked list is a dynamic linear data structure made up of nodes.
+          Each node stores data and a link to another node. Linked lists are
+          useful when frequent insertion and deletion operations are required.
+        </p>
+
+      </div>
+
+
+      <!-- BACK BUTTON -->
+
+      <button
+        class="back-btn"
+        onclick="location.href = 'ds-notes.html'"
+      >
+        ⬅️ Back to Data Structure Notes
+      </button>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/ds-linked-list.js"></script>
+
+  </body>
+</html>

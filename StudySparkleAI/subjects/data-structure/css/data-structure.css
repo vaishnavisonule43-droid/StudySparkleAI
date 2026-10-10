@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   PAGE HEADER
+   ========================= */
+
+.page-header {
+  text-align: center;
+
+  padding: 35px 15px;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+  color: white;
+
+  animation: slideDown 0.8s ease;
+
+  box-shadow: 0 5px 18px rgba(91, 75, 196, 0.20);
+}
+
+.page-header h1 {
+  margin-bottom: 8px;
+
+  font-size: 30px;
+}
+
+.page-header p {
+  font-size: 16px;
+}
+
+
+/* =========================
+   NOTES CONTAINER
+   ========================= */
+
+.notes-container {
+  width: 90%;
+
+  max-width: 900px;
+
+  margin: 35px auto;
+}
+
+
+/* =========================
+   NOTE CARD
+   ========================= */
+
+.note-card {
+  background: white;
+
+  padding: 25px;
+
+  margin-bottom: 22px;
+
+  border-radius: 16px;
+
+  border-left: 5px solid #6c5ce7;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+
+  animation: fadeUp 0.7s ease;
+
+  transition: all 0.3s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(91, 75, 196, 0.20);
+}
+
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+.note-card h2 {
+  color: #5b4bc4;
+
+  margin-bottom: 12px;
+
+  font-size: 23px;
+}
+
+.note-card h3 {
+  color: #444;
+
+  margin: 18px 0 8px;
+
+  font-size: 18px;
+}
+
+
+/* =========================
+   PARAGRAPH
+   ========================= */
+
+.note-card p {
+  margin-bottom: 12px;
+
+  color: #444;
+}
+
+
+/* =========================
+   LIST
+   ========================= */
+
+.note-card ul,
+.note-card ol {
+  margin-left: 25px;
+}
+
+.note-card li {
+  margin-bottom: 7px;
+}
+
+
+/* =========================
+   DEFINITION BOX
+   ========================= */
+
+.definition {
+  margin-top: 15px;
+
+  margin-bottom: 15px;
+
+  padding: 15px;
+
+  background: #f0edff;
+
+  border-left: 5px solid #6c5ce7;
+
+  border-radius: 8px;
+
+  transition: all 0.3s ease;
+}
+
+.definition:hover {
+  background: #e9e5ff;
+
+  transform: translateX(5px);
+}
+
+
+/* =========================
+   BACK BUTTON
+   ========================= */
+
+.back-btn {
+  display: block;
+
+  margin: 30px auto 50px;
+
+  padding: 12px 28px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #5b4bc4;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  animation: backButtonAnimation 0.9s ease;
+}
+
+.back-btn:hover {
+  background: #6c5ce7;
+
+  transform: scale(1.08);
+
+  box-shadow: 0 6px 15px rgba(91, 75, 196, 0.30);
+}
+
+.back-btn:active {
+  transform: scale(0.95);
+}
+
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes backButtonAnimation {
+  from {
+    opacity: 0;
+
+    transform: translateY(25px) scale(0.90);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+  .notes-container {
+    width: 92%;
+  }
+
+  .page-header {
+    padding: 28px 15px;
+  }
+
+  .page-header h1 {
+    font-size: 26px;
+  }
+
+  .page-header p {
+    font-size: 14px;
+  }
+
+  .note-card {
+    padding: 20px;
+  }
+
+  .note-card h2 {
+    font-size: 20px;
+  }
+
+  .note-card h3 {
+    font-size: 17px;
+  }
+
+  .note-card p,
+  .note-card li {
+    font-size: 14px;
+  }
+
+  .definition {
+    padding: 13px;
+
+    font-size: 14px;
+  }
+
+  .back-btn {
+    width: 100%;
+
+    font-size: 14px;
+  }
+
+}

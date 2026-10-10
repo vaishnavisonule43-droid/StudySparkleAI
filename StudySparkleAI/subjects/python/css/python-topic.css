@@ -1,0 +1,392 @@
+/* =========================================
+   PYTHON PROGRAMMING - TOPIC PAGES CSS
+   Used for all individual Python topic pages
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.7;
+  padding: 25px 15px;
+}
+
+/* MAIN CONTAINER */
+.notes-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  animation: fadeUp 0.8s ease;
+}
+
+/* PAGE HEADING */
+.notes-container > h1 {
+  text-align: center;
+  padding: 28px 15px;
+  margin-bottom: 25px;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+
+  border-radius: 16px;
+  font-size: 32px;
+
+  box-shadow: 0 6px 20px rgba(91, 75, 196, 0.20);
+
+  animation: slideDown 0.8s ease;
+}
+
+/* MAIN NOTE CARD */
+.notes-card {
+  background: white;
+  padding: 28px;
+
+  border-radius: 16px;
+  border: 1px solid #e0e4f0;
+  border-left: 6px solid #6c5ce7;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+
+  animation: cardAppear 0.8s ease;
+
+  transition: all 0.3s ease;
+}
+
+.notes-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(91, 75, 196, 0.18);
+}
+
+/* HEADINGS */
+.notes-card h2 {
+  color: #5b4bc4;
+
+  font-size: 22px;
+
+  margin: 28px 0 12px;
+  padding: 9px 13px;
+
+  border-left: 5px solid #6c5ce7;
+  background: #f4f2ff;
+
+  border-radius: 6px;
+
+  transition: all 0.3s ease;
+}
+
+.notes-card h2:hover {
+  background: #ece9ff;
+  padding-left: 18px;
+}
+
+/* PARAGRAPH */
+.notes-card p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+/* LIST */
+.notes-card ul,
+.notes-card ol {
+  margin: 10px 0 18px 28px;
+}
+
+.notes-card li {
+  margin: 7px 0;
+  color: #444;
+}
+
+.notes-card li::marker {
+  color: #6c5ce7;
+}
+
+/* EXAMPLE BOX */
+.example-box {
+  background: #f4f2ff;
+
+  border-left: 5px solid #6c5ce7;
+
+  padding: 16px;
+  margin: 18px 0;
+
+  border-radius: 9px;
+
+  color: #444;
+
+  box-shadow: 0 3px 10px rgba(91, 75, 196, 0.08);
+
+  animation: fadeUp 0.7s ease;
+}
+
+.example-box strong,
+.example-box b {
+  color: #5b4bc4;
+}
+
+/* CODE BOX */
+.notes-card pre {
+  background: #1e1e2f;
+  color: #f5f5f5;
+
+  padding: 18px;
+  margin: 15px 0;
+
+  border-radius: 10px;
+
+  overflow-x: auto;
+
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* INLINE CODE */
+.notes-card code {
+  background: #f0edff;
+  color: #5b4bc4;
+
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  margin: 20px 0;
+
+  background: white;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+
+  padding: 12px;
+
+  text-align: left;
+}
+
+th {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+
+  font-size: 15px;
+}
+
+tr:nth-child(even) {
+  background: #f8f7ff;
+}
+
+tr:hover {
+  background: #eeeaff;
+  transition: 0.3s;
+}
+
+/* =========================================
+   BACK TO PYTHON NOTES BUTTON
+   ========================================= */
+
+.back-btn {
+  display: block;
+
+  width: fit-content;
+
+  margin: 35px auto 20px;
+
+  padding: 13px 30px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  box-shadow: 0 5px 15px rgba(91, 75, 196, 0.25);
+
+  transition: all 0.3s ease;
+
+  animation: buttonAppear 1s ease;
+}
+
+/* BUTTON HOVER */
+.back-btn:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+
+  transform: translateY(-3px) scale(1.05);
+
+  box-shadow: 0 8px 20px rgba(91, 75, 196, 0.35);
+}
+
+/* BUTTON CLICK */
+.back-btn:active {
+  transform: scale(0.95);
+}
+
+/* BUTTON FOCUS */
+.back-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.20);
+}
+
+/* HORIZONTAL LINE */
+hr {
+  border: none;
+
+  height: 1px;
+
+  background: #ddd;
+
+  margin: 25px 0;
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes buttonAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.90);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 15px 10px;
+  }
+
+  .notes-container {
+    width: 100%;
+  }
+
+  .notes-container > h1 {
+    font-size: 26px;
+    padding: 24px 12px;
+  }
+
+  .notes-card {
+    padding: 18px;
+  }
+
+  .notes-card h2 {
+    font-size: 19px;
+    margin-top: 24px;
+  }
+
+  .notes-card p,
+  .notes-card li {
+    font-size: 15px;
+  }
+
+  .notes-card ul,
+  .notes-card ol {
+    margin-left: 22px;
+  }
+
+  .example-box {
+    padding: 13px;
+  }
+
+  .notes-card pre {
+    font-size: 13px;
+    padding: 14px;
+  }
+
+  table {
+    font-size: 14px;
+
+    display: block;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  /* MOBILE BACK BUTTON */
+  .back-btn {
+    width: 100%;
+
+    padding: 13px 20px;
+
+    font-size: 14px;
+
+    margin-top: 30px;
+  }
+}

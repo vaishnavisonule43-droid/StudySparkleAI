@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Variables & Constants - StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/c-programming.css" />
+  </head>
+
+  <body>
+    <div class="notes-container">
+      <h1>📚 Variables & Constants in C</h1>
+
+      <div class="notes-card">
+        <h2>1. What is a Variable?</h2>
+
+        <p>
+          A variable is a named memory location used to store a value in a C
+          program.
+        </p>
+
+        <p>The value of a variable can be changed during program execution.</p>
+
+        <h2>2. Definition of Variable</h2>
+
+        <p>
+          <b>Variable:</b> A variable is a name given to a memory location that
+          stores a value which can change.
+        </p>
+
+        <h2>3. Syntax of Variable</h2>
+
+        <div class="example-box">
+          <b>Syntax:</b>
+
+          <br /><br />
+
+          data_type variable_name;
+
+          <br /><br />
+
+          <b>Example:</b>
+
+          <br /><br />
+
+          int age;
+
+          <br />
+
+          float marks;
+
+          <br />
+
+          char grade;
+        </div>
+
+        <h2>4. Assigning Value to a Variable</h2>
+
+        <p>
+          We can assign a value to a variable using the assignment operator (=).
+        </p>
+
+        <div class="example-box">
+          <b>Example:</b>
+
+          <br /><br />
+
+          int age = 20;
+
+          <br />
+
+          float marks = 85.5;
+        </div>
+
+        <h2>5. Rules for Naming Variables</h2>
+
+        <ul>
+          <li>Variable name can contain letters, digits and underscore.</li>
+          <li>Variable name cannot start with a digit.</li>
+          <li>Spaces are not allowed in variable names.</li>
+          <li>Keywords cannot be used as variable names.</li>
+          <li>C language is case-sensitive.</li>
+        </ul>
+
+        <h2>6. Examples of Valid Variables</h2>
+
+        <ul>
+          <li>age</li>
+          <li>studentName</li>
+          <li>total_marks</li>
+          <li>number1</li>
+        </ul>
+
+        <h2>7. Examples of Invalid Variables</h2>
+
+        <ul>
+          <li>1age</li>
+          <li>student name</li>
+          <li>float</li>
+          <li>total-marks</li>
+        </ul>
+
+        <h2>8. What is a Constant?</h2>
+
+        <p>
+          A constant is a fixed value that cannot be changed during program
+          execution.
+        </p>
+
+        <h2>9. Definition of Constant</h2>
+
+        <p>
+          <b>Constant:</b> A constant is a value that remains the same
+          throughout the execution of a program.
+        </p>
+
+        <h2>10. Types of Constants</h2>
+
+        <ul>
+          <li>Integer Constants</li>
+          <li>Floating-point Constants</li>
+          <li>Character Constants</li>
+          <li>String Constants</li>
+        </ul>
+
+        <h2>11. Examples of Constants</h2>
+
+        <div class="example-box">
+          <b>Integer:</b> 10
+
+          <br /><br />
+
+          <b>Float:</b> 25.5
+
+          <br /><br />
+
+          <b>Character:</b> 'A'
+
+          <br /><br />
+
+          <b>String:</b> "Hello"
+        </div>
+
+        <h2>12. Constant using #define</h2>
+
+        <p>
+          The #define preprocessor directive can be used to create a constant
+          value.
+        </p>
+
+        <div class="example-box">
+          <b>Example:</b>
+
+          <br /><br />
+
+          #define PI 3.14
+
+          <br /><br />
+
+          Here, PI is a constant value.
+        </div>
+
+        <h2>13. Variable vs Constant</h2>
+
+        <table>
+          <tr>
+            <th>Variable</th>
+            <th>Constant</th>
+          </tr>
+
+          <tr>
+            <td>Value can be changed.</td>
+            <td>Value cannot be changed.</td>
+          </tr>
+
+          <tr>
+            <td>Used for changing data.</td>
+            <td>Used for fixed data.</td>
+          </tr>
+
+          <tr>
+            <td>Example: int age = 20;</td>
+            <td>Example: #define PI 3.14</td>
+          </tr>
+        </table>
+
+        <h2>14. Example Program</h2>
+
+        <div class="example-box">
+          #include &lt;stdio.h&gt;
+
+          <br /><br />
+
+          #define PI 3.14
+
+          <br /><br />
+
+          int main() {
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;int age = 20;
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("Age = %d", age);
+
+          <br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;printf("PI = %f", PI);
+
+          <br /><br />
+
+          &nbsp;&nbsp;&nbsp;&nbsp;return 0;
+
+          <br />
+
+          }
+        </div>
+
+        <h2>15. Summary</h2>
+
+        <p>
+          A variable stores a value that can be changed during program
+          execution. A constant stores a fixed value that cannot be changed.
+        </p>
+      </div>
+
+      <button class="back-btn" onclick="location.href = 'cp-notes.html'">
+        ⬅️ Back to C Programming
+      </button>
+    </div>
+  </body>
+</html>

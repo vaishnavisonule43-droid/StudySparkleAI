@@ -1,0 +1,760 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+
+    color: #222;
+
+    line-height: 1.7;
+}
+
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+.page-header {
+
+    text-align: center;
+
+    padding: 35px 15px;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    color: white;
+
+    animation: slideDown 0.8s ease;
+}
+
+
+.page-header h1 {
+
+    margin-bottom: 8px;
+
+    font-size: 30px;
+}
+
+
+.page-header p {
+
+    font-size: 16px;
+}
+
+
+/* ========================= */
+/* MAIN */
+/* ========================= */
+
+.notes-container {
+
+    width: 90%;
+
+    max-width: 950px;
+
+    margin: 35px auto;
+}
+
+
+/* ========================= */
+/* NOTES CARD */
+/* ========================= */
+
+.note-card {
+
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 22px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.10);
+
+    animation: fadeUp 0.7s ease;
+}
+
+
+.note-card:hover {
+
+    transform: translateY(-5px);
+
+    transition: 0.3s;
+}
+
+
+.note-card h2 {
+
+    color: #5b4bc4;
+
+    margin-bottom: 12px;
+}
+
+
+.note-card p {
+
+    margin-bottom: 12px;
+}
+
+
+.note-card ul,
+.note-card ol {
+
+    margin-left: 25px;
+}
+
+
+.note-card li {
+
+    margin-bottom: 7px;
+}
+
+
+/* ========================= */
+/* DEFINITION */
+/* ========================= */
+
+.definition {
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    background: #f0edff;
+
+    border-left: 5px solid #6c5ce7;
+
+    border-radius: 8px;
+}
+
+
+/* ========================= */
+/* DIAGRAM CARD */
+/* ========================= */
+
+.diagram-card {
+
+    background: white;
+
+    padding: 30px 15px;
+
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.10);
+
+    text-align: center;
+
+    animation: fadeUp 0.8s ease;
+}
+
+
+.diagram-card h2 {
+
+    color: #5b4bc4;
+
+    margin-bottom: 3px;
+}
+
+
+.diagram-subtitle {
+
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================= */
+/* MAIN ROUND DIAGRAM */
+/* ========================= */
+
+.sdlc-circle {
+
+    width: 600px;
+
+    height: 600px;
+
+    max-width: 90vw;
+
+    max-height: 90vw;
+
+    margin: 20px auto;
+
+    position: relative;
+
+    border-radius: 50%;
+
+    animation: diagramFloat 4s ease-in-out infinite;
+}
+
+
+/* ========================= */
+/* OUTER RING */
+/* ========================= */
+
+.circle-ring {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 50%;
+
+    background:
+
+        conic-gradient(
+
+            from 0deg,
+
+            #f5b916 0deg 55deg,
+
+            white 55deg 60deg,
+
+            #f57c00 60deg 115deg,
+
+            white 115deg 120deg,
+
+            #c62828 120deg 175deg,
+
+            white 175deg 180deg,
+
+            #283f73 180deg 235deg,
+
+            white 235deg 240deg,
+
+            #159bd3 240deg 295deg,
+
+            white 295deg 300deg,
+
+            #16a394 300deg 355deg,
+
+            white 355deg 360deg
+
+        );
+
+    box-shadow:
+
+        0 8px 25px rgba(0, 0, 0, 0.15);
+
+    animation: ringGlow 3s ease-in-out infinite;
+}
+
+
+/* ========================= */
+/* INNER WHITE CIRCLE */
+/* ========================= */
+
+.circle-ring::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 48%;
+
+    height: 48%;
+
+    top: 26%;
+
+    left: 26%;
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow:
+
+        inset 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================= */
+/* CENTER TEXT */
+/* ========================= */
+
+.circle-center {
+
+    position: absolute;
+
+    width: 44%;
+
+    height: 44%;
+
+    top: 28%;
+
+    left: 28%;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    z-index: 10;
+
+    box-shadow:
+
+        0 0 20px rgba(0, 0, 0, 0.08);
+
+    padding: 20px;
+}
+
+
+.circle-center span {
+
+    font-size: 15px;
+
+    color: #244f4c;
+}
+
+
+.circle-center strong {
+
+    font-size: 24px;
+
+    line-height: 1.25;
+
+    color: #174d48;
+
+    margin: 3px 0;
+}
+
+
+/* ========================= */
+/* PHASE TEXT */
+/* ========================= */
+
+.phase {
+
+    position: absolute;
+
+    width: 145px;
+
+    min-height: 70px;
+
+    color: white;
+
+    z-index: 20;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    line-height: 1.2;
+
+    animation: phasePulse 2s ease-in-out infinite;
+}
+
+
+.phase span {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-bottom: 4px;
+}
+
+
+.phase strong {
+
+    font-size: 13px;
+}
+
+
+/* ========================= */
+/* PHASE POSITIONS */
+/* ========================= */
+
+
+/* Planning - bottom right */
+
+.phase1 {
+
+    right: 65px;
+
+    bottom: 80px;
+}
+
+
+/* Analysis - bottom left */
+
+.phase2 {
+
+    left: 65px;
+
+    bottom: 80px;
+}
+
+
+/* Design - left */
+
+.phase3 {
+
+    left: 15px;
+
+    top: 250px;
+}
+
+
+/* Implementation - top left */
+
+.phase4 {
+
+    left: 70px;
+
+    top: 80px;
+}
+
+
+/* Testing - top right */
+
+.phase5 {
+
+    right: 60px;
+
+    top: 75px;
+}
+
+
+/* Maintenance - right */
+
+.phase6 {
+
+    right: 10px;
+
+    top: 255px;
+}
+
+
+/* ========================= */
+/* ARROW */
+/* ========================= */
+
+.cycle-arrow {
+
+    position: absolute;
+
+    z-index: 30;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #5b4bc4;
+
+    font-size: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow:
+
+        0 3px 12px rgba(0, 0, 0, 0.15);
+
+    animation: arrowRotate 2s linear infinite;
+}
+
+
+/* ========================= */
+/* CYCLE NOTE */
+/* ========================= */
+
+.cycle-note {
+
+    margin-top: 15px;
+
+    color: #555;
+
+    font-size: 15px;
+}
+
+
+/* ========================= */
+/* BACK BUTTON */
+/* ========================= */
+
+.back-btn {
+
+    display: block;
+
+    margin: 30px auto 50px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #5b4bc4;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.back-btn:hover {
+
+    transform: scale(1.05);
+
+    transition: 0.3s;
+}
+
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slideDown {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes diagramFloat {
+
+    0% {
+
+        transform: translateY(0);
+    }
+
+    50% {
+
+        transform: translateY(-5px);
+    }
+
+    100% {
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes ringGlow {
+
+    0% {
+
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    50% {
+
+        box-shadow:
+            0 8px 32px rgba(91, 75, 196, 0.25);
+    }
+
+    100% {
+
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+}
+
+
+@keyframes phasePulse {
+
+    0% {
+
+        transform: scale(1);
+    }
+
+    50% {
+
+        transform: scale(1.04);
+    }
+
+    100% {
+
+        transform: scale(1);
+    }
+}
+
+
+@keyframes arrowRotate {
+
+    from {
+
+        transform: rotate(0deg);
+    }
+
+    to {
+
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 700px) {
+
+    .sdlc-circle {
+
+        width: 430px;
+
+        height: 430px;
+    }
+
+
+    .phase {
+
+        width: 105px;
+
+        min-height: 55px;
+
+        font-size: 10px;
+    }
+
+
+    .phase span {
+
+        font-size: 16px;
+    }
+
+
+    .phase strong {
+
+        font-size: 9px;
+    }
+
+
+    .phase1 {
+
+        right: 40px;
+
+        bottom: 55px;
+    }
+
+
+    .phase2 {
+
+        left: 40px;
+
+        bottom: 55px;
+    }
+
+
+    .phase3 {
+
+        left: 0;
+
+        top: 180px;
+    }
+
+
+    .phase4 {
+
+        left: 45px;
+
+        top: 50px;
+    }
+
+
+    .phase5 {
+
+        right: 35px;
+
+        top: 45px;
+    }
+
+
+    .phase6 {
+
+        right: -5px;
+
+        top: 185px;
+    }
+
+
+    .circle-center strong {
+
+        font-size: 15px;
+    }
+
+
+    .circle-center span {
+
+        font-size: 10px;
+    }
+
+}

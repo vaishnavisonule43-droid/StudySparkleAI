@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sorting - Data Structure</title>
+
+  <link rel="stylesheet" href="../css/data-structure.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>🔢 Sorting</h1>
+    <p>Learn the basic concepts of Sorting in Data Structure.</p>
+  </header>
+
+
+  <!-- Main Content -->
+  <div class="notes-container">
+
+    <!-- Introduction -->
+    <div class="note-card">
+
+      <h2>What is Sorting?</h2>
+
+      <p>
+        Sorting is the process of arranging data in a particular
+        order, such as ascending or descending order.
+      </p>
+
+      <div class="definition">
+        <strong>Definition:</strong>
+        Sorting is a technique used to arrange elements in a
+        specific order to make data easier to read, search and manage.
+      </div>
+
+      <h3>Example</h3>
+
+      <div class="example-box">
+        Unsorted: 40, 10, 30, 20, 50
+        <br><br>
+        Ascending: 10, 20, 30, 40, 50
+        <br><br>
+        Descending: 50, 40, 30, 20, 10
+      </div>
+
+    </div>
+
+
+    <!-- Types -->
+    <div class="note-card">
+
+      <h2>Types of Sorting</h2>
+
+      <h3>1. Bubble Sort</h3>
+
+      <p>
+        Bubble Sort repeatedly compares adjacent elements and
+        swaps them if they are in the wrong order.
+      </p>
+
+
+      <h3>2. Selection Sort</h3>
+
+      <p>
+        Selection Sort finds the smallest element and places it
+        at the correct position.
+      </p>
+
+
+      <h3>3. Insertion Sort</h3>
+
+      <p>
+        Insertion Sort builds the sorted array one element at a time.
+      </p>
+
+
+      <h3>4. Merge Sort</h3>
+
+      <p>
+        Merge Sort divides the array into smaller parts, sorts them
+        and then merges them together.
+      </p>
+
+
+      <h3>5. Quick Sort</h3>
+
+      <p>
+        Quick Sort selects a pivot element and divides the array
+        around the pivot.
+      </p>
+
+    </div>
+
+
+    <!-- Bubble Sort -->
+    <div class="note-card">
+
+      <h2>Bubble Sort</h2>
+
+      <p>
+        Bubble Sort compares adjacent elements. If the first element
+        is greater than the second element, they are swapped.
+      </p>
+
+      <h3>Steps</h3>
+
+      <ol>
+        <li>Compare two adjacent elements.</li>
+        <li>Swap them if they are in the wrong order.</li>
+        <li>Continue comparing the remaining elements.</li>
+        <li>Repeat the process until the array is sorted.</li>
+      </ol>
+
+      <div class="example-box">
+        Example:
+        <br><br>
+        30, 10, 20
+        <br><br>
+        Compare 30 and 10 → Swap
+        <br>
+        10, 30, 20
+        <br><br>
+        Compare 30 and 20 → Swap
+        <br>
+        10, 20, 30
+      </div>
+
+    </div>
+
+
+    <!-- Sorting Animation -->
+    <div class="note-card">
+
+      <h2>Sorting Animation</h2>
+
+      <p>
+        Click the buttons below to see how different sorting
+        algorithms arrange the elements.
+      </p>
+
+      <div class="sorting-animation">
+
+        <h2>Interactive Sorting</h2>
+
+        <div
+          id="sortingArray"
+          class="sorting-container"
+        >
+        </div>
+
+        <div class="sorting-controls">
+
+          <button onclick="bubbleSort()">
+            Bubble Sort
+          </button>
+
+          <button onclick="selectionSort()">
+            Selection Sort
+          </button>
+
+          <button onclick="insertionSort()">
+            Insertion Sort
+          </button>
+
+          <button onclick="resetSorting()">
+            Reset
+          </button>
+
+        </div>
+
+        <p
+          id="sortingMessage"
+          class="sorting-message"
+        >
+          Choose a sorting algorithm.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Comparison -->
+    <div class="note-card">
+
+      <h2>Sorting Algorithms Comparison</h2>
+
+      <table>
+
+        <tr>
+          <th>Algorithm</th>
+          <th>Best Case</th>
+          <th>Average Case</th>
+          <th>Worst Case</th>
+        </tr>
+
+        <tr>
+          <td>Bubble Sort</td>
+          <td>O(n)</td>
+          <td>O(n²)</td>
+          <td>O(n²)</td>
+        </tr>
+
+        <tr>
+          <td>Selection Sort</td>
+          <td>O(n²)</td>
+          <td>O(n²)</td>
+          <td>O(n²)</td>
+        </tr>
+
+        <tr>
+          <td>Insertion Sort</td>
+          <td>O(n)</td>
+          <td>O(n²)</td>
+          <td>O(n²)</td>
+        </tr>
+
+        <tr>
+          <td>Merge Sort</td>
+          <td>O(n log n)</td>
+          <td>O(n log n)</td>
+          <td>O(n log n)</td>
+        </tr>
+
+        <tr>
+          <td>Quick Sort</td>
+          <td>O(n log n)</td>
+          <td>O(n log n)</td>
+          <td>O(n²)</td>
+        </tr>
+
+      </table>
+
+    </div>
+
+
+    <!-- Applications -->
+    <div class="note-card">
+
+      <h2>Applications of Sorting</h2>
+
+      <ul>
+        <li>Arranging student marks.</li>
+        <li>Arranging products by price.</li>
+        <li>Organizing names alphabetically.</li>
+        <li>Searching data efficiently.</li>
+        <li>Arranging records in databases.</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Advantages -->
+    <div class="note-card">
+
+      <h2>Advantages of Sorting</h2>
+
+      <ul>
+        <li>Makes data easier to understand.</li>
+        <li>Helps in faster searching.</li>
+        <li>Makes data organization easier.</li>
+        <li>Useful for processing large amounts of data.</li>
+      </ul>
+
+    </div>
+
+
+    <!-- Back Button -->
+    <button
+      class="back-btn"
+      onclick="location.href = 'ds-notes.html'"
+    >
+      ⬅️ Back to Data Structure Notes
+    </button>
+
+  </div>
+
+
+  <!-- Sorting JavaScript -->
+  <script>
+
+    let sortingData = [40, 10, 30, 20, 50];
+
+    let sortingRunning = false;
+
+
+    function displaySortingArray(activeIndex = -1, compareIndex = -1) {
+
+      const container =
+        document.getElementById("sortingArray");
+
+      container.innerHTML = "";
+
+      sortingData.forEach((value, index) => {
+
+        const element =
+          document.createElement("div");
+
+        element.className = "sort-element";
+
+        element.textContent = value;
+
+        if (index === activeIndex) {
+          element.classList.add("active");
+        }
+
+        if (index === compareIndex) {
+          element.classList.add("comparing");
+        }
+
+        container.appendChild(element);
+
+      });
+
+    }
+
+
+    function delay(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+
+    async function bubbleSort() {
+
+      if (sortingRunning) return;
+
+      sortingRunning = true;
+
+      document.getElementById("sortingMessage").textContent =
+        "Bubble Sort is running...";
+
+      for (let i = 0; i < sortingData.length; i++) {
+
+        for (let j = 0; j < sortingData.length - i - 1; j++) {
+
+          displaySortingArray(j, j + 1);
+
+          await delay(700);
+
+          if (sortingData[j] > sortingData[j + 1]) {
+
+            let temp = sortingData[j];
+
+            sortingData[j] = sortingData[j + 1];
+
+            sortingData[j + 1] = temp;
+
+          }
+
+          displaySortingArray();
+
+        }
+
+      }
+
+      sortingRunning = false;
+
+      document.getElementById("sortingMessage").textContent =
+        "Bubble Sort completed.";
+
+    }
+
+
+    async function selectionSort() {
+
+      if (sortingRunning) return;
+
+      sortingRunning = true;
+
+      document.getElementById("sortingMessage").textContent =
+        "Selection Sort is running...";
+
+      for (let i = 0; i < sortingData.length - 1; i++) {
+
+        let minIndex = i;
+
+        for (let j = i + 1; j < sortingData.length; j++) {
+
+          displaySortingArray(minIndex, j);
+
+          await delay(700);
+
+          if (sortingData[j] < sortingData[minIndex]) {
+            minIndex = j;
+          }
+
+        }
+
+        let temp = sortingData[i];
+
+        sortingData[i] = sortingData[minIndex];
+
+        sortingData[minIndex] = temp;
+
+        displaySortingArray();
+
+      }
+
+      sortingRunning = false;
+
+      document.getElementById("sortingMessage").textContent =
+        "Selection Sort completed.";
+
+    }
+
+
+    async function insertionSort() {
+
+      if (sortingRunning) return;
+
+      sortingRunning = true;
+
+      document.getElementById("sortingMessage").textContent =
+        "Insertion Sort is running...";
+
+      for (let i = 1; i < sortingData.length; i++) {
+
+        let key = sortingData[i];
+
+        let j = i - 1;
+
+        displaySortingArray(i, j);
+
+        await delay(700);
+
+        while (j >= 0 && sortingData[j] > key) {
+
+          sortingData[j + 1] = sortingData[j];
+
+          displaySortingArray(j, j + 1);
+
+          await delay(700);
+
+          j--;
+
+        }
+
+        sortingData[j + 1] = key;
+
+        displaySortingArray();
+
+      }
+
+      sortingRunning = false;
+
+      document.getElementById("sortingMessage").textContent =
+        "Insertion Sort completed.";
+
+    }
+
+
+    function resetSorting() {
+
+      sortingData = [40, 10, 30, 20, 50];
+
+      sortingRunning = false;
+
+      displaySortingArray();
+
+      document.getElementById("sortingMessage").textContent =
+        "Array reset. Choose a sorting algorithm.";
+
+    }
+
+
+    displaySortingArray();
+
+  </script>
+
+</body>
+</html>

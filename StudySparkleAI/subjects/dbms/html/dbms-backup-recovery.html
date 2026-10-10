@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Backup and Recovery - StudySpark AI</title>
+
+    <link rel="stylesheet" href="../css/notes.css" />
+  </head>
+
+  <body>
+
+    <!-- Page Header -->
+    <header class="page-header">
+
+      <h1>💾 Backup & Recovery</h1>
+
+      <p>
+        Learn how database data is backed up and recovered after failure.
+      </p>
+
+    </header>
+
+
+    <!-- Notes Container -->
+    <div class="notes-container">
+
+
+      <!-- Introduction -->
+      <div class="note-card">
+
+        <h2>📌 What is Database Backup?</h2>
+
+        <div class="definition">
+
+          <b>Definition:</b>
+          Database backup is a copy of database data that is stored safely
+          so that it can be used when the original data is lost or damaged.
+
+        </div>
+
+      </div>
+
+
+      <!-- Recovery -->
+      <div class="note-card">
+
+        <h2>🔄 What is Database Recovery?</h2>
+
+        <div class="definition">
+
+          <b>Definition:</b>
+          Database recovery is the process of restoring the database
+          to a correct state after a failure or data loss.
+
+        </div>
+
+      </div>
+
+
+      <!-- Need -->
+      <div class="note-card">
+
+        <h2>⭐ Need of Backup and Recovery</h2>
+
+        <ul>
+          <li>Protects important data.</li>
+          <li>Prevents permanent data loss.</li>
+          <li>Helps after system failure.</li>
+          <li>Helps recover deleted or damaged data.</li>
+          <li>Provides data safety.</li>
+        </ul>
+
+      </div>
+
+
+      <!-- Types of Backup -->
+      <div class="note-card">
+
+        <h2>📚 Types of Database Backup</h2>
+
+        <h3>1. Full Backup</h3>
+
+        <p>
+          A full backup copies the complete database.
+        </p>
+
+        <h3>2. Incremental Backup</h3>
+
+        <p>
+          It stores only the data changed after the previous backup.
+        </p>
+
+        <h3>3. Differential Backup</h3>
+
+        <p>
+          It stores the data changed after the last full backup.
+        </p>
+
+      </div>
+
+
+      <!-- Types of Failure -->
+      <div class="note-card">
+
+        <h2>⚠️ Types of Database Failures</h2>
+
+        <ul>
+          <li>System failure</li>
+          <li>Hardware failure</li>
+          <li>Software failure</li>
+          <li>Power failure</li>
+          <li>Disk failure</li>
+          <li>Human error</li>
+        </ul>
+
+      </div>
+
+
+      <!-- Recovery Techniques -->
+      <div class="note-card">
+
+        <h2>🛠️ Recovery Techniques</h2>
+
+        <h3>1. Log-Based Recovery</h3>
+
+        <p>
+          The system keeps a record of database changes in a log.
+          The log is used to recover the database after failure.
+        </p>
+
+        <h3>2. Checkpoint</h3>
+
+        <p>
+          A checkpoint saves the current database state.
+          It helps to make recovery faster.
+        </p>
+
+        <h3>3. Backup Recovery</h3>
+
+        <p>
+          The database is restored using a previously created backup.
+        </p>
+
+      </div>
+
+
+      <!-- Simple Example -->
+      <div class="note-card">
+
+        <h2>💡 Simple Example</h2>
+
+        <p>
+          Suppose a college database contains student records.
+          If the computer crashes and the data is lost, the college
+          can use the backup to restore the student records.
+        </p>
+
+      </div>
+
+
+      <!-- Advantages -->
+      <div class="note-card">
+
+        <h2>✅ Advantages</h2>
+
+        <ul>
+          <li>Protects data from loss.</li>
+          <li>Helps restore data quickly.</li>
+          <li>Improves data safety.</li>
+          <li>Reduces the effect of system failure.</li>
+          <li>Provides reliable database management.</li>
+        </ul>
+
+      </div>
+
+
+      <!-- Back Button -->
+      <button
+        class="back-btn"
+        onclick="location.href='dbms-notes.html'"
+      >
+        ⬅️ Back to DBMS Notes
+      </button>
+
+
+    </div>
+
+  </body>
+</html>
