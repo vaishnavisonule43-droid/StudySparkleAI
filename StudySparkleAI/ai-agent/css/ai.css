@@ -1313,3 +1313,32 @@ a:focus-visible {
   border-top: 1px solid #d1d5db;
   margin: 16px 0;
 }
+
+/* Code Block Design */
+.message-bubble pre {
+  background: #161b22;
+  color: #e6edf3;
+  padding: 16px;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 14px 0;
+  border: 1px solid #30363d;
+}
+
+/* Code Text */
+.message-bubble pre code {
+  background: transparent;
+  color: #e6edf3;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+/* Inline Code */
+.message-bubble :not(pre)>code {
+  background: #e5e7eb;
+  color: #c7254e;
+  padding: 2px 5px;
+  border-radius: 4px;
+}

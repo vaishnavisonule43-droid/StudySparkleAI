@@ -1,4 +1,3 @@
-
 "use strict";
 
 const API_URL = "/api/chat";
@@ -168,22 +167,40 @@ The final answer should be natural, accurate, helpful, and easy to read.
 
 // Convert Markdown to safe HTML.
 // If the libraries are unavailable, use plain text.
-function renderMarkdown(text) {
-  try {
-    if (
-      window.marked &&
-      typeof window.marked.parse === "function" &&
-      window.DOMPurify &&
-      typeof window.DOMPurify.sanitize === "function"
-    ) {
-      const html = window.marked.parse(text);
-      return window.DOMPurify.sanitize(html);
-    }
-  } catch (error) {
-    console.error("Markdown rendering failed:", error);
-  }
 
-  return null;
+function renderMarkdown(text) {
+    try {
+        if (
+            !window.marked ||
+            typeof window.marked.parse !== "function" ||
+            !window.DOMPurify
+        ) {
+            return null;
+        }
+
+        // Convert Markdown into HTML
+        const rawHTML = window.marked.parse(text);
+
+        // Make HTML safe
+        const safeHTML = window.DOMPurify.sanitize(rawHTML);
+
+        // Create temporary container
+        const container = document.createElement("div");
+        container.innerHTML = safeHTML;
+
+        // Add colorful code highlighting
+        if (window.hljs) {
+            container.querySelectorAll("pre code").forEach((block) => {
+                window.hljs.highlightElement(block);
+            });
+        }
+
+        return container.innerHTML;
+
+    } catch (error) {
+        console.error("Markdown error:", error);
+        return null;
+    }
 }
 
 /* =========================================
@@ -214,19 +231,23 @@ function addMessage(role, text, animate = false) {
 
   // User messages remain plain text.
   // Assistant messages support safe Markdown.
-  if (animate && role === "assistant") {
-    typeText(bubble, text);
-  } else if (role === "assistant") {
-    const html = renderMarkdown(text);
 
-    if (html !== null) {
-      bubble.innerHTML = html;
-    } else {
-      bubble.textContent = text;
-    }
+
+if (animate && role === "assistant") {
+  typeText(bubble, text);
+} else if (role === "assistant") {
+  const html = renderMarkdown(text);
+
+  if (html !== null) {
+    bubble.innerHTML = html;
   } else {
     bubble.textContent = text;
   }
+} else {
+  bubble.textContent = text;
+}
+
+
 
   // Copy Answer button
   if (role === "assistant") {
@@ -268,6 +289,7 @@ function addMessage(role, text, animate = false) {
 
 // Reveal the response as plain text first.
 // Render Markdown only after the complete response is shown.
+
 function typeText(element, text) {
   let index = 0;
   const step = 3;
@@ -275,6 +297,7 @@ function typeText(element, text) {
   function renderChunk() {
     index = Math.min(index + step, text.length);
 
+    // Show plain text during animation.
     element.textContent = text.slice(0, index);
 
     scrollToLatest();
@@ -284,7 +307,7 @@ function typeText(element, text) {
       return;
     }
 
-    // Apply formatting once, after animation finishes.
+    // Render Markdown after the complete response.
     const html = renderMarkdown(text);
 
     if (html !== null) {
@@ -298,6 +321,7 @@ function typeText(element, text) {
 
   renderChunk();
 }
+
 
 /* =========================================
    SCROLL TO LATEST MESSAGE
