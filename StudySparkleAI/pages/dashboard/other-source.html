@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Studio | StudySpark AI</title>
+  <link rel="stylesheet" href="../../assets/css/other-source.css">
+  <script src="../../assets/js/other-source.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-icon">✦</span>
+    <span>StudySpark <small>AI</small></span>
+  </a>
+  <div class="top-status"><span class="status-dot"></span> Code Studio</div>
+  <a class="back-link" href="../../index.html">← Home</a>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <span class="eyebrow">YOUR CODING SPACE</span>
+    <h1>Build. <span>Run.</span> Create.</h1>
+    <p>Write your code, execute it and see the results in one place.</p>
+  </section>
+
+  <section class="workspace">
+    <div class="toolbar">
+      <div class="file-label">
+        <span class="file-icon">⌘</span>
+        <span id="fileName">main.py</span>
+        <span class="live-badge">Editor</span>
+      </div>
+
+      <div class="toolbar-actions">
+        <label class="language-label" for="language">Language</label>
+        <select id="language">
+          <option value="python">Python</option>
+          <option value="javascript">JavaScript</option>
+          <option value="c">C</option>
+          <option value="cpp">C++</option>
+          <option value="java">Java</option>
+          <option value="php">PHP</option>
+          <option value="html">HTML Preview</option>
+        </select>
+        <button id="resetBtn" class="btn btn-ghost" type="button">Reset</button>
+        <button id="runBtn" class="btn btn-run" type="button">
+          <span>▶</span> Run Code
+        </button>
+      </div>
+    </div>
+
+    <div class="editor-layout">
+      <div class="editor-panel">
+        <div class="panel-heading">
+          <span>✧ &nbsp; SOURCE CODE</span>
+          <span id="editorHint">Python editor</span>
+        </div>
+        <div class="editor-wrap">
+          <div class="line-numbers" id="lineNumbers">1</div>
+          <textarea
+            id="editor"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            autocorrect="off"
+            aria-label="Code editor"
+            wrap="off"
+          ></textarea>
+        </div>
+        <div class="editor-footer">
+          <span id="lineCount">1 line</span>
+          <span>StudySpark Code Studio</span>
+        </div>
+      </div>
+
+      <aside class="side-panel">
+        <div class="panel-heading"><span>⌨ &nbsp; PROGRAM INPUT</span></div>
+        <p class="panel-description">Enter input here if your program asks for it.</p>
+        <textarea id="stdin" class="stdin" placeholder="Enter input here..." spellcheck="false"></textarea>
+
+        <div class="tip-card">
+          <span class="tip-icon">✦</span>
+          <div>
+            <strong>Quick tip</strong>
+            <p>Write your code, add input if needed, then press Run Code.</p>
+          </div>
+        </div>
+
+        <div class="shortcuts">
+          <span>ENTER</span> New line
+          <span> TAB</span> Indentation
+        </div>
+      </aside>
+    </div>
+
+    <section class="results-panel">
+      <div class="results-heading">
+        <div class="result-tabs">
+          <button class="result-tab active" data-tab="output" type="button">Output</button>
+          <button class="result-tab" data-tab="errors" type="button">Errors</button>
+          <button class="result-tab" data-tab="preview" type="button">Preview</button>
+        </div>
+        <button id="clearOutputBtn" class="clear-btn" type="button">Clear results</button>
+      </div>
+
+      <div id="outputView" class="result-view">
+        <div id="outputPlaceholder" class="empty-state">
+          <span class="empty-icon">▷</span>
+          <strong>Your output will appear here</strong>
+          <p>Run your program to see the result.</p>
+        </div>
+        <pre id="output" hidden></pre>
+        <div id="runStatus" class="run-status" aria-live="polite"></div>
+      </div>
+
+      <div id="errorsView" class="result-view" hidden>
+        <div id="errorPlaceholder" class="empty-state">
+          <span class="empty-icon">✓</span>
+          <strong>No errors to show</strong>
+          <p>Compilation and runtime errors will appear here.</p>
+        </div>
+        <pre id="errors" hidden></pre>
+      </div>
+
+      <div id="previewView" class="result-view preview-view" hidden>
+        <div class="empty-state" id="previewPlaceholder">
+          <span class="empty-icon">◫</span>
+          <strong>HTML preview</strong>
+          <p>Select HTML Preview and run your HTML code.</p>
+        </div>
+        <iframe
+          id="htmlPreview"
+          title="HTML code preview"
+          sandbox="allow-scripts"
+          hidden
+        ></iframe>
+      </div>
+    </section>
+  </section>
+
+  <footer class="page-footer">
+    <span>✦ Made for learners</span>
+    <span>StudySpark AI · Code Studio</span>
+  </footer>
+</main>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>

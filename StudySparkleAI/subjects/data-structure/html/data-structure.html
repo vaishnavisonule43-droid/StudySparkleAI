@@ -3,258 +3,1418 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#7857f6" />
 
-    <title>Data Structure - StudySpark AI</title>
+    <title>Data Structures | StudySpark AI</title>
+    <meta
+      name="description"
+      content="Learn Data Structures with clear BCA study notes, topic summaries, searching, sorting, trees, graphs, algorithms and complexity."
+    />
 
-    <!-- Common Subject Overview CSS -->
     <link rel="stylesheet" href="../css/subject.css" />
   </head>
 
   <body>
-    <div class="subjects-container">
-      <!-- =========================
-           SUBJECT TITLE
-      ========================== -->
-
-      <h1>📚 Data Structure</h1>
-
-      <p>Learn how data is organized, stored and managed in a computer.</p>
-
-      <!-- =========================
-           INTRODUCTION
-      ========================== -->
-
-      <div class="subject-info">
-        <h2>📖 Introduction</h2>
-
-        <p>
-          Data Structure is a way of organizing and storing data in a computer
-          so that data can be accessed and used efficiently.
-        </p>
-      </div>
-
-      <!-- =========================
-           WHAT YOU WILL LEARN
-      ========================== -->
-
-      <div class="subject-info">
-        <h2>🎯 What You Will Learn</h2>
-
-        <ul>
-          <li>How data is organized and stored</li>
-
-          <li>Different types of Data Structures</li>
-
-          <li>How to insert and delete data</li>
-
-          <li>How to search data</li>
-
-          <li>How sorting works</li>
-
-          <li>How algorithms work with data structures</li>
-
-          <li>How to solve programming problems efficiently</li>
-        </ul>
-      </div>
-
-      <!-- =========================
-           WHY IMPORTANT
-      ========================== -->
-
-      <div class="subject-info">
-        <h2>⭐ Why Is Data Structure Important?</h2>
-
-        <p>
-          Data Structure helps programmers store and manage data efficiently. It
-          helps programs work faster and makes problem-solving easier.
-        </p>
-      </div>
-
-      <!-- =========================
-           WHERE USED
-      ========================== -->
-
-      <div class="subject-info">
-        <h2>💡 Where Is Data Structure Used?</h2>
-
-        <ul>
-          <li>Websites and Web Applications</li>
-
-          <li>Mobile Applications</li>
-
-          <li>Operating Systems</li>
-
-          <li>Databases</li>
-
-          <li>Search Engines</li>
-
-          <li>Computer Networks</li>
-
-          <li>Games and Software Applications</li>
-        </ul>
-      </div>
-
-      <!-- =========================
-           CAREER
-      ========================== -->
-
-      <div class="subject-info">
-        <h2>💼 Career Opportunities</h2>
-
-        <p>
-          Knowledge of Data Structure is useful for many programming and
-          technology careers.
-        </p>
-
-        <ul>
-          <li>Software Developer</li>
-
-          <li>Software Engineer</li>
-
-          <li>Web Developer</li>
-
-          <li>App Developer</li>
-
-          <li>Data Analyst</li>
-
-          <li>Database Developer</li>
-        </ul>
-      </div>
-
-      <!-- =========================
-           TOPICS
-      ========================== -->
-
-      <h2 class="topics-title">📚 Data Structure Topics</h2>
-
-      <p class="topics-subtitle">
-        These are the important topics covered in Data Structure.
-      </p>
-
-      <div class="subject-grid">
-        <!-- Introduction -->
-
-        <div class="subject-card">
-          <h2>📌 Introduction</h2>
-
-          <p>Basics of Data Structure and its types.</p>
-        </div>
-
-        <!-- Arrays -->
-
-        <div class="subject-card">
-          <h2>📦 Arrays</h2>
-
-          <p>Array concepts, types and basic operations.</p>
-        </div>
-
-        <!-- Linked List -->
-
-        <div class="subject-card">
-          <h2>🔗 Linked List</h2>
-
-          <p>Singly, Doubly and Circular Linked List.</p>
-        </div>
-
-        <!-- Stack -->
-
-        <div class="subject-card">
-          <h2>📚 Stack</h2>
-
-          <p>Stack concepts, operations and applications.</p>
-        </div>
-
-        <!-- Queue -->
-
-        <div class="subject-card">
-          <h2>🚶 Queue</h2>
-
-          <p>Queue concepts and different types of queues.</p>
-        </div>
-
-        <!-- Trees -->
-
-        <div class="subject-card">
-          <h2>🌳 Trees</h2>
-
-          <p>Tree concepts, types and basic operations.</p>
-        </div>
-
-        <!-- Heap -->
-
-        <div class="subject-card">
-          <h2>🏔️ Heap</h2>
-
-          <p>Min Heap, Max Heap and Heap operations.</p>
-        </div>
-
-        <!-- Priority Queue -->
-
-        <div class="subject-card">
-          <h2>⭐ Priority Queue</h2>
-
-          <p>Processing elements according to their priority.</p>
-        </div>
-
-        <!-- Searching -->
-
-        <div class="subject-card">
-          <h2>🔍 Searching</h2>
-
-          <p>Linear Search and Binary Search.</p>
-        </div>
-
-        <!-- Sorting -->
-
-        <div class="subject-card">
-          <h2>📊 Sorting</h2>
-
-          <p>Different sorting techniques and algorithms.</p>
-        </div>
-
-        <!-- Hashing -->
-
-        <div class="subject-card">
-          <h2>🔐 Hashing</h2>
-
-          <p>Hash Table, Hash Function and Collision.</p>
-        </div>
-
-        <!-- Recursion -->
-
-        <div class="subject-card">
-          <h2>🔁 Recursion</h2>
-
-          <p>A function calling itself to solve a problem.</p>
-        </div>
-
-        <!-- Graph -->
-
-        <div class="subject-card">
-          <h2>🕸️ Graph</h2>
-
-          <p>Vertices, edges and graph representation.</p>
-        </div>
-
-        <!-- Complexity -->
-
-        <div class="subject-card">
-          <h2>🕑 Time &amp; Space Complexity</h2>
-
-          <p>Big O notation and algorithm efficiency.</p>
-        </div>
-      </div>
-
-      <!-- =========================
-           BACK BUTTON
-      ========================== -->
-
-      <button
-        class="back-btn"
-        onclick="location.href = '../../../pages/dashboard/subject.html'"
-      >
-        ⬅️ Back to BCA Subjects
-      </button>
+    <div class="ambient-background" aria-hidden="true">
+      <span class="ambient-orb orb-one"></span>
+      <span class="ambient-orb orb-two"></span>
+      <span class="ambient-orb orb-three"></span>
+      <span class="ambient-grid"></span>
     </div>
+
+    <div class="page-shell">
+      <!-- TOP NAVIGATION -->
+      <header class="topbar">
+        <a
+          class="brand"
+          href="../../../index.html"
+          aria-label="StudySpark AI Home"
+        >
+          <span class="brand-mark">S<span>✦</span></span>
+          <span class="brand-copy">
+            <strong>StudySpark <span>AI</span></strong>
+            <small>YOUR BCA LEARNING SPACE</small>
+          </span>
+        </a>
+
+        <div class="topbar-actions">
+          <span class="status-pill">
+            <span class="status-dot"></span>
+            Learning mode
+          </span>
+
+          <a class="nav-home" href="../../../index.html">
+            <span aria-hidden="true">⌂</span>
+            <span>Home</span>
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <!-- HERO -->
+        <section class="hero-section" id="top">
+          <div class="hero-content">
+            <div class="eyebrow">
+              <span class="eyebrow-icon">✦</span>
+              BCA LEARNING PATH
+              <span class="eyebrow-line"></span>
+            </div>
+
+            <h1>
+              Master the art of
+              <span class="gradient-text">Data Structures.</span>
+            </h1>
+
+            <p class="hero-description">
+              Understand how data is organized, stored and processed. Explore
+              core concepts, practical applications and algorithms through a
+              structured learning experience.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#topics">
+                Explore Topics
+                <span aria-hidden="true">↘</span>
+              </a>
+
+              <a class="button button-glass" href="#topic-notes">
+                Quick Notes
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="hero-trust-row">
+              <span
+                ><span class="check-icon">✓</span> BCA-friendly concepts</span
+              >
+              <span><span class="check-icon">✓</span> Structured learning</span>
+              <span
+                ><span class="check-icon">✓</span> Revision-ready notes</span
+              >
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Illustration of organized data">
+            <div class="visual-glow"></div>
+
+            <div class="visual-label label-top">
+              <span class="label-dot"></span>
+              DATA ORGANIZATION
+            </div>
+
+            <div class="structure-window">
+              <div class="window-top">
+                <div class="window-dots"><i></i><i></i><i></i></div>
+                <span>data_structure.exe</span>
+                <span class="window-menu">•••</span>
+              </div>
+
+              <div class="visual-code">
+                <span class="code-comment"
+                  >// Organize. Process. Optimize.</span
+                >
+                <p>
+                  <span class="code-purple">class</span>
+                  <span class="code-blue">DataStructure</span> {
+                </p>
+                <p class="code-indent">
+                  <span class="code-pink">data</span> = [10, 20, 30];
+                </p>
+                <p class="code-indent">
+                  <span class="code-green">search</span>(target) {
+                </p>
+                <p class="code-indent code-indent-two">return find(target);</p>
+                <p class="code-indent">}</p>
+                <p>}</p>
+              </div>
+
+              <div class="array-visual">
+                <span class="array-caption">ARRAY · INDEXED DATA</span>
+                <div class="array-cells">
+                  <span><small>0</small>10</span>
+                  <span><small>1</small>20</span>
+                  <span><small>2</small>30</span>
+                  <span><small>3</small>40</span>
+                </div>
+              </div>
+
+              <div class="visual-footer">
+                <span><i class="mini-pulse"></i> SYSTEM READY</span>
+                <span>O(n) · O(log n)</span>
+              </div>
+            </div>
+
+            <div class="floating-chip chip-one">
+              <span class="chip-icon purple-icon">⌘</span>
+              <span
+                ><strong>Algorithms</strong
+                ><small>Step-by-step logic</small></span
+              >
+            </div>
+
+            <div class="floating-chip chip-two">
+              <span class="chip-icon pink-icon">↗</span>
+              <span
+                ><strong>Efficiency</strong><small>Time & space</small></span
+              >
+            </div>
+
+            <div class="visual-label label-bottom">
+              <span>01</span> LEARN BY UNDERSTANDING
+            </div>
+          </div>
+
+          <div class="hero-bottom-line">
+            <span>BUILD YOUR FOUNDATION</span>
+            <span class="bottom-line"></span>
+            <span>THINK · CODE · IMPROVE</span>
+          </div>
+        </section>
+
+        <!-- QUICK OVERVIEW -->
+        <section
+          class="overview-section section-block"
+          aria-labelledby="overview-title"
+        >
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">YOUR LEARNING OVERVIEW</span>
+              <h2 id="overview-title">
+                Everything starts with <span>structure.</span>
+              </h2>
+            </div>
+            <p>
+              Build a strong foundation before moving on to complex programming
+              problems.
+            </p>
+          </div>
+
+          <div class="overview-grid">
+            <article class="overview-card overview-purple">
+              <div class="overview-icon">▦</div>
+              <span class="overview-label">CORE CONCEPT</span>
+              <h3>Organize Data</h3>
+              <p>
+                Understand how information is arranged for efficient access and
+                updates.
+              </p>
+              <span class="card-watermark">01</span>
+            </article>
+
+            <article class="overview-card overview-pink">
+              <div class="overview-icon">⌕</div>
+              <span class="overview-label">PROBLEM SOLVING</span>
+              <h3>Think in Algorithms</h3>
+              <p>
+                Choose the right operations and logical steps to solve a
+                problem.
+              </p>
+              <span class="card-watermark">02</span>
+            </article>
+
+            <article class="overview-card overview-blue">
+              <div class="overview-icon">◷</div>
+              <span class="overview-label">PERFORMANCE</span>
+              <h3>Improve Efficiency</h3>
+              <p>
+                Compare time and space requirements to understand algorithm
+                performance.
+              </p>
+              <span class="card-watermark">03</span>
+            </article>
+          </div>
+        </section>
+
+        <!-- INTRODUCTION AND LEARNING -->
+        <section
+          class="foundation-grid section-block"
+          aria-label="Data Structure fundamentals"
+        >
+          <article class="content-panel intro-panel">
+            <div class="panel-heading">
+              <span class="panel-icon">📘</span>
+              <div>
+                <span class="section-kicker">THE FOUNDATION</span>
+                <h2>What is a Data Structure?</h2>
+              </div>
+            </div>
+
+            <p>
+              A <strong>data structure</strong> is a method of organizing and
+              storing data in a computer so that it can be accessed, updated,
+              searched and processed efficiently.
+            </p>
+
+            <p>
+              Different structures are suited to different tasks. For example,
+              arrays provide indexed access, stacks follow LIFO order, queues
+              follow FIFO order, and trees represent hierarchical relationships.
+            </p>
+
+            <div class="concept-callout">
+              <span class="callout-icon">✦</span>
+              <p>
+                <strong>Remember:</strong> The right data structure can make a
+                program easier to understand and more efficient.
+              </p>
+            </div>
+
+            <div class="mini-definition-list">
+              <div>
+                <span class="definition-mark mark-purple"></span>
+                <span
+                  ><strong>Data</strong
+                  ><small>Information processed by a program</small></span
+                >
+              </div>
+              <div>
+                <span class="definition-mark mark-pink"></span>
+                <span
+                  ><strong>Structure</strong
+                  ><small>A way to organize that information</small></span
+                >
+              </div>
+              <div>
+                <span class="definition-mark mark-blue"></span>
+                <span
+                  ><strong>Algorithm</strong
+                  ><small>Steps used to solve a problem</small></span
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="content-panel learn-panel">
+            <div class="panel-heading">
+              <span class="panel-icon">🎯</span>
+              <div>
+                <span class="section-kicker">YOUR OUTCOMES</span>
+                <h2>What will you learn?</h2>
+              </div>
+            </div>
+
+            <ul class="learning-list">
+              <li><span>✓</span> How data is organized and stored</li>
+              <li><span>✓</span> Linear and non-linear data structures</li>
+              <li><span>✓</span> Insertion, deletion and traversal</li>
+              <li><span>✓</span> Searching and sorting algorithms</li>
+              <li><span>✓</span> Stacks, queues, trees and graphs</li>
+              <li><span>✓</span> Recursion and algorithm analysis</li>
+              <li><span>✓</span> Time and space complexity basics</li>
+              <li>
+                <span>✓</span> Applying structures to programming problems
+              </li>
+            </ul>
+
+            <a class="text-link" href="#topics">
+              Start exploring topics <span>↗</span>
+            </a>
+          </article>
+        </section>
+
+        <!-- TYPES -->
+        <section class="types-section section-block">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">THE BIG PICTURE</span>
+              <h2>Two ways to structure <span>data.</span></h2>
+            </div>
+            <p>
+              These broad categories help you understand how different
+              structures organize relationships between elements.
+            </p>
+          </div>
+
+          <div class="type-cards">
+            <article class="type-card">
+              <div class="type-topline">
+                <span class="type-icon type-icon-purple">↔</span>
+                <span class="type-number">TYPE 01</span>
+              </div>
+              <h3>Linear Data Structures</h3>
+              <p>
+                Elements are arranged in a sequence. Each element typically has
+                a preceding or following element, except at the ends.
+              </p>
+              <div class="type-tags">
+                <span>Arrays</span>
+                <span>Linked Lists</span>
+                <span>Stacks</span>
+                <span>Queues</span>
+              </div>
+            </article>
+
+            <article class="type-card">
+              <div class="type-topline">
+                <span class="type-icon type-icon-pink">⑂</span>
+                <span class="type-number">TYPE 02</span>
+              </div>
+              <h3>Non-linear Data Structures</h3>
+              <p>
+                Elements can connect in hierarchical or network-like
+                relationships instead of a single sequence.
+              </p>
+              <div class="type-tags">
+                <span>Trees</span>
+                <span>Graphs</span>
+                <span>Heaps</span>
+                <span>Hash Tables*</span>
+              </div>
+              <small class="type-note"
+                >*Hash tables are commonly classified separately by organization
+                and access method.</small
+              >
+            </article>
+          </div>
+        </section>
+
+        <!-- TOPIC EXPLORER -->
+        <section class="topics-section section-block" id="topics">
+          <div class="section-heading topics-heading">
+            <div>
+              <span class="section-kicker">EXPLORE THE SYLLABUS</span>
+              <h2>Your Data Structure <span>roadmap.</span></h2>
+            </div>
+            <p>
+              Choose a topic, explore its key concepts and open the quick notes
+              section for revision.
+            </p>
+          </div>
+
+          <div class="topic-toolbar">
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input
+                id="topicSearch"
+                type="search"
+                placeholder="Search topics, e.g. arrays, sorting..."
+                autocomplete="off"
+                aria-label="Search Data Structure topics"
+              />
+              <kbd>SEARCH</kbd>
+            </label>
+
+            <label class="filter-box">
+              <span class="filter-label">CATEGORY</span>
+              <select id="topicFilter" aria-label="Filter topics by category">
+                <option value="all">All topics</option>
+                <option value="basics">Fundamentals</option>
+                <option value="linear">Linear structures</option>
+                <option value="nonlinear">Non-linear structures</option>
+                <option value="algorithms">Algorithms</option>
+                <option value="analysis">Analysis & techniques</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="topic-result-row" aria-live="polite">
+            <span><strong id="visibleCount">14</strong> learning topics</span>
+            <a href="#topic-notes" class="result-notes-link"
+              >Go to quick notes <span>↓</span></a
+            >
+          </div>
+
+          <div class="topic-grid" id="topicGrid">
+            <article
+              class="topic-card"
+              data-category="basics"
+              data-search="introduction basics data structure types operations"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-purple">⌘</span>
+                <span class="topic-index">01 / 14</span>
+              </div>
+              <span class="topic-category">FUNDAMENTALS</span>
+              <h3>Introduction</h3>
+              <p>
+                Learn the meaning, purpose, basic operations and classifications
+                of data structures.
+              </p>
+              <div class="topic-meta">
+                <span>● Beginner</span><span>Concepts</span>
+              </div>
+              <a class="topic-button" href="#notes-introduction"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <article
+              class="topic-card"
+              data-category="linear"
+              data-search="arrays array indexing insertion deletion traversal"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-pink">▤</span>
+                <span class="topic-index">02 / 14</span>
+              </div>
+              <span class="topic-category">LINEAR STRUCTURE</span>
+              <h3>Arrays</h3>
+              <p>
+                Understand indexed elements, traversal, updating, insertion and
+                deletion.
+              </p>
+              <div class="topic-meta">
+                <span>● Beginner</span><span>Data storage</span>
+              </div>
+              <a class="topic-button" href="#notes-arrays"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <article
+              class="topic-card"
+              data-category="linear"
+              data-search="linked list singly doubly circular nodes pointers"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-blue">⛓</span>
+                <span class="topic-index">03 / 14</span>
+              </div>
+              <span class="topic-category">LINEAR STRUCTURE</span>
+              <h3>Linked List</h3>
+              <p>
+                Explore nodes, links, singly linked, doubly linked and circular
+                lists.
+              </p>
+              <div class="topic-meta">
+                <span>● Intermediate</span><span>Nodes & links</span>
+              </div>
+              <a class="topic-button" href="#notes-linked-list"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <article
+              class="topic-card"
+              data-category="linear"
+              data-search="stack push pop peek lifo applications"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-orange">▥</span>
+                <span class="topic-index">04 / 14</span>
+              </div>
+              <span class="topic-category">LINEAR STRUCTURE</span>
+              <h3>Stack</h3>
+              <p>Learn LIFO order and operations such as push, pop and peek.</p>
+              <div class="topic-meta">
+                <span>● Beginner</span><span>LIFO</span>
+              </div>
+              <a class="topic-button" href="#notes-stack"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <article
+              class="topic-card"
+              data-category="linear"
+              data-search="queue enqueue dequeue fifo circular queue deque"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-green">⇥</span>
+                <span class="topic-index">05 / 14</span>
+              </div>
+              <span class="topic-category">LINEAR STRUCTURE</span>
+              <h3>Queue</h3>
+              <p>
+                Understand FIFO order, enqueue, dequeue, circular queues and
+                deques.
+              </p>
+              <div class="topic-meta">
+                <span>● Beginner</span><span>FIFO</span>
+              </div>
+              <a class="topic-button" href="#notes-queue"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <article
+              class="topic-card"
+              data-category="nonlinear"
+              data-search="trees root node parent child leaf binary tree traversal"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-green">♧</span>
+                <span class="topic-index">06 / 14</span>
+              </div>
+              <span class="topic-category">NON-LINEAR STRUCTURE</span>
+              <h3>Trees</h3>
+              <p>
+                Study roots, nodes, leaves, binary trees and common traversal
+                methods.
+              </p>
+              <div class="topic-meta">
+                <span>● Intermediate</span><span>Hierarchy</span>
+              </div>
+              <a class="topic-button" href="#notes-trees"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <article
+              class="topic-card"
+              data-category="nonlinear"
+              data-search="heap min heap max heap priority complete binary tree"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-orange">⌃</span>
+                <span class="topic-index">07 / 14</span>
+              </div>
+              <span class="topic-category">NON-LINEAR STRUCTURE</span>
+              <h3>Heap</h3>
+              <p>
+                Learn min-heaps, max-heaps and how heaps support priority-based
+                operations.
+              </p>
+              <div class="topic-meta">
+                <span>● Intermediate</span><span>Heap property</span>
+              </div>
+              <a class="topic-button" href="#notes-heap"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <article
+              class="topic-card"
+              data-category="linear"
+              data-search="priority queue priority element scheduling heap"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-pink">★</span>
+                <span class="topic-index">08 / 14</span>
+              </div>
+              <span class="topic-category">SPECIALIZED STRUCTURE</span>
+              <h3>Priority Queue</h3>
+              <p>
+                Understand how elements are served according to priority rather
+                than arrival alone.
+              </p>
+              <div class="topic-meta">
+                <span>● Intermediate</span><span>Priorities</span>
+              </div>
+              <a class="topic-button" href="#notes-priority-queue"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <article
+              class="topic-card"
+              data-category="algorithms"
+              data-search="searching linear search binary search target element"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-blue">⌕</span>
+                <span class="topic-index">09 / 14</span>
+              </div>
+              <span class="topic-category">ALGORITHMS</span>
+              <h3>Searching</h3>
+              <p>
+                Compare linear search with binary search and learn when each is
+                suitable.
+              </p>
+              <div class="topic-meta">
+                <span>● Beginner</span><span>Finding data</span>
+              </div>
+              <a class="topic-button" href="#notes-searching"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <article
+              class="topic-card"
+              data-category="algorithms"
+              data-search="sorting bubble selection insertion merge quick sort"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-purple">⇅</span>
+                <span class="topic-index">10 / 14</span>
+              </div>
+              <span class="topic-category">ALGORITHMS</span>
+              <h3>Sorting</h3>
+              <p>
+                Explore bubble, selection, insertion, merge and quick sort at a
+                conceptual level.
+              </p>
+              <div class="topic-meta">
+                <span>● Intermediate</span><span>Ordering data</span>
+              </div>
+              <a class="topic-button" href="#notes-sorting"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <article
+              class="topic-card"
+              data-category="nonlinear"
+              data-search="hashing hash table hash function collision chaining probing"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-pink">#</span>
+                <span class="topic-index">11 / 14</span>
+              </div>
+              <span class="topic-category">DATA ACCESS</span>
+              <h3>Hashing</h3>
+              <p>
+                Learn hash functions, hash tables and common ways to handle
+                collisions.
+              </p>
+              <div class="topic-meta">
+                <span>● Intermediate</span><span>Fast lookup</span>
+              </div>
+              <a class="topic-button" href="#notes-hashing"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <article
+              class="topic-card"
+              data-category="algorithms"
+              data-search="recursion base case recursive function call stack"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-green">⟳</span>
+                <span class="topic-index">12 / 14</span>
+              </div>
+              <span class="topic-category">PROBLEM SOLVING</span>
+              <h3>Recursion</h3>
+              <p>
+                Understand recursive calls, base cases and how problems can be
+                broken down.
+              </p>
+              <div class="topic-meta">
+                <span>● Intermediate</span><span>Function calls</span>
+              </div>
+              <a class="topic-button" href="#notes-recursion"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <article
+              class="topic-card"
+              data-category="nonlinear"
+              data-search="graph vertices edges directed undirected bfs dfs"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-blue">⌘</span>
+                <span class="topic-index">13 / 14</span>
+              </div>
+              <span class="topic-category">NON-LINEAR STRUCTURE</span>
+              <h3>Graph</h3>
+              <p>
+                Explore vertices, edges, graph representations and traversal
+                basics.
+              </p>
+              <div class="topic-meta">
+                <span>● Intermediate</span><span>Networks</span>
+              </div>
+              <a class="topic-button" href="#notes-graph"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <article
+              class="topic-card"
+              data-category="analysis"
+              data-search="time space complexity big o algorithm efficiency best worst average"
+            >
+              <div class="topic-card-top">
+                <span class="topic-icon icon-orange">◷</span>
+                <span class="topic-index">14 / 14</span>
+              </div>
+              <span class="topic-category">ANALYSIS & TECHNIQUES</span>
+              <h3>Time &amp; Space Complexity</h3>
+              <p>
+                Understand Big O notation and how to reason about algorithm
+                efficiency.
+              </p>
+              <div class="topic-meta">
+                <span>● Important</span><span>Big O</span>
+              </div>
+              <a class="topic-button" href="#notes-complexity"
+                >View Notes <span>↗</span></a
+              >
+            </article>
+
+            <div class="empty-state" id="emptyState" hidden>
+              <span>⌕</span>
+              <h3>No topics found</h3>
+              <p>Try another keyword or select a different category.</p>
+              <button
+                class="button button-primary"
+                type="button"
+                id="resetSearch"
+              >
+                Show all topics
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- QUICK NOTES -->
+        <section class="quick-notes-section section-block" id="topic-notes">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">QUICK REVISION LIBRARY</span>
+              <h2>Understand the <span>essentials.</span></h2>
+            </div>
+            <p>
+              Select a topic above to jump directly to its quick notes. These
+              summaries are a starting point for revision.
+            </p>
+          </div>
+
+          <div class="notes-toolbar">
+            <div>
+              <span class="notes-toolbar-icon">✦</span>
+              <span
+                ><strong>Topic Notes</strong
+                ><small>Key definitions and concepts</small></span
+              >
+            </div>
+
+            <label class="jump-control">
+              <span>JUMP TO</span>
+              <select id="notesJump" aria-label="Jump to quick notes">
+                <option value="">Choose a topic...</option>
+                <option value="notes-introduction">Introduction</option>
+                <option value="notes-arrays">Arrays</option>
+                <option value="notes-linked-list">Linked List</option>
+                <option value="notes-stack">Stack</option>
+                <option value="notes-queue">Queue</option>
+                <option value="notes-trees">Trees</option>
+                <option value="notes-heap">Heap</option>
+                <option value="notes-priority-queue">Priority Queue</option>
+                <option value="notes-searching">Searching</option>
+                <option value="notes-sorting">Sorting</option>
+                <option value="notes-hashing">Hashing</option>
+                <option value="notes-recursion">Recursion</option>
+                <option value="notes-graph">Graph</option>
+                <option value="notes-complexity">
+                  Time &amp; Space Complexity
+                </option>
+              </select>
+            </label>
+          </div>
+
+          <div class="notes-list">
+            <article class="note-detail" id="notes-introduction">
+              <div class="note-number">01</div>
+              <div class="note-body">
+                <span class="note-label">FUNDAMENTALS</span>
+                <h3>Introduction to Data Structures</h3>
+                <p>
+                  Data structures organize data so operations can be performed
+                  in a useful and efficient way. Common operations include
+                  traversal, searching, insertion, deletion and updating.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Linear:</strong> Arrays, linked lists, stacks and
+                    queues.
+                  </li>
+                  <li><strong>Non-linear:</strong> Trees and graphs.</li>
+                  <li>
+                    <strong>Selection:</strong> Choose a structure based on the
+                    operations and requirements of the problem.
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Study tip:</strong> Learn each structure's layout,
+                  operations, advantages and limitations.
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+
+            <article class="note-detail" id="notes-arrays">
+              <div class="note-number">02</div>
+              <div class="note-body">
+                <span class="note-label">LINEAR STRUCTURE</span>
+                <h3>Arrays</h3>
+                <p>
+                  An array stores elements in indexed positions. In many
+                  languages, array elements have the same declared type and
+                  occupy a contiguous memory region.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Access:</strong> Index-based access is typically
+                    O(1).
+                  </li>
+                  <li>
+                    <strong>Traversal:</strong> Visiting every element takes
+                    O(n) time.
+                  </li>
+                  <li>
+                    <strong>Insertion/deletion:</strong> May require shifting
+                    elements, often O(n).
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Example:</strong> <code>[10, 20, 30, 40]</code> stores
+                  four values at indexes 0 through 3 in a zero-indexed language.
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+
+            <article class="note-detail" id="notes-linked-list">
+              <div class="note-number">03</div>
+              <div class="note-body">
+                <span class="note-label">LINEAR STRUCTURE</span>
+                <h3>Linked List</h3>
+                <p>
+                  A linked list is made of nodes. Each node stores data and one
+                  or more links to other nodes.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Singly linked:</strong> Each node links to the next
+                    node.
+                  </li>
+                  <li>
+                    <strong>Doubly linked:</strong> Each node can link forward
+                    and backward.
+                  </li>
+                  <li>
+                    <strong>Circular linked:</strong> The final node links back
+                    to a node at the start, often the head.
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Remember:</strong> Direct access by index is not
+                  usually O(1); reaching a particular node often requires
+                  traversal.
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+
+            <article class="note-detail" id="notes-stack">
+              <div class="note-number">04</div>
+              <div class="note-body">
+                <span class="note-label">LINEAR STRUCTURE</span>
+                <h3>Stack</h3>
+                <p>
+                  A stack follows <strong>LIFO</strong> — Last In, First Out.
+                  The most recently added item is the first one removed.
+                </p>
+                <ul>
+                  <li><strong>Push:</strong> Add an item to the top.</li>
+                  <li><strong>Pop:</strong> Remove the top item.</li>
+                  <li>
+                    <strong>Peek/Top:</strong> Inspect the top item without
+                    removing it.
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Applications:</strong> Function-call management, undo
+                  operations, expression evaluation and backtracking.
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+
+            <article class="note-detail" id="notes-queue">
+              <div class="note-number">05</div>
+              <div class="note-body">
+                <span class="note-label">LINEAR STRUCTURE</span>
+                <h3>Queue</h3>
+                <p>
+                  A standard queue follows <strong>FIFO</strong> — First In,
+                  First Out. Items are added at the rear and removed from the
+                  front.
+                </p>
+                <ul>
+                  <li><strong>Enqueue:</strong> Add an item.</li>
+                  <li><strong>Dequeue:</strong> Remove an item.</li>
+                  <li>
+                    <strong>Variants:</strong> Circular queue, deque and
+                    priority queue.
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Applications:</strong> Task scheduling, print queues
+                  and processing requests in order.
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+
+            <article class="note-detail" id="notes-trees">
+              <div class="note-number">06</div>
+              <div class="note-body">
+                <span class="note-label">NON-LINEAR STRUCTURE</span>
+                <h3>Trees</h3>
+                <p>
+                  A tree represents hierarchical relationships through nodes and
+                  edges. A rooted tree has a root node, and nodes can have
+                  children.
+                </p>
+                <ul>
+                  <li><strong>Root:</strong> The top node of a rooted tree.</li>
+                  <li><strong>Leaf:</strong> A node with no children.</li>
+                  <li>
+                    <strong>Traversals:</strong> Preorder, inorder and postorder
+                    are common binary-tree traversals; level-order uses levels.
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Applications:</strong> File systems, hierarchical data
+                  and search structures.
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+
+            <article class="note-detail" id="notes-heap">
+              <div class="note-number">07</div>
+              <div class="note-body">
+                <span class="note-label">NON-LINEAR STRUCTURE</span>
+                <h3>Heap</h3>
+                <p>
+                  A binary heap is a complete binary tree that follows a heap
+                  property. It is commonly implemented using an array.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Min-heap:</strong> Each parent is less than or equal
+                    to its children.
+                  </li>
+                  <li>
+                    <strong>Max-heap:</strong> Each parent is greater than or
+                    equal to its children.
+                  </li>
+                  <li>
+                    <strong>Typical operations:</strong> Read the root in O(1),
+                    insert in O(log n), and remove the root in O(log n).
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Applications:</strong> Priority queues and heap sort.
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+
+            <article class="note-detail" id="notes-priority-queue">
+              <div class="note-number">08</div>
+              <div class="note-body">
+                <span class="note-label">SPECIALIZED STRUCTURE</span>
+                <h3>Priority Queue</h3>
+                <p>
+                  A priority queue removes the element with the highest or
+                  lowest priority according to its defined ordering. It does not
+                  necessarily follow arrival order.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Insert:</strong> Add an element with a priority.
+                  </li>
+                  <li>
+                    <strong>Peek:</strong> Inspect the next element to be
+                    served.
+                  </li>
+                  <li>
+                    <strong>Remove:</strong> Extract the element with the next
+                    priority.
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Applications:</strong> Scheduling, shortest-path
+                  algorithms and event simulation. A heap is a common
+                  implementation.
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+
+            <article class="note-detail" id="notes-searching">
+              <div class="note-number">09</div>
+              <div class="note-body">
+                <span class="note-label">ALGORITHMS</span>
+                <h3>Searching</h3>
+                <p>
+                  Searching finds whether a target value exists in a collection
+                  and, when appropriate, returns its location.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Linear search:</strong> Checks elements one by one;
+                    worst-case time O(n).
+                  </li>
+                  <li>
+                    <strong>Binary search:</strong> Repeatedly halves a sorted
+                    search range; time O(log n).
+                  </li>
+                  <li>
+                    <strong>Requirement:</strong> Binary search generally
+                    requires sorted data and efficient access to the middle
+                    element.
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Exam point:</strong> State the input condition as well
+                  as the time complexity when comparing algorithms.
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+
+            <article class="note-detail" id="notes-sorting">
+              <div class="note-number">10</div>
+              <div class="note-body">
+                <span class="note-label">ALGORITHMS</span>
+                <h3>Sorting</h3>
+                <p>
+                  Sorting arranges data according to a chosen order, such as
+                  ascending or descending.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Bubble sort:</strong> Repeatedly compares and swaps
+                    adjacent elements.
+                  </li>
+                  <li>
+                    <strong>Selection sort:</strong> Selects the next smallest
+                    or largest element for its position.
+                  </li>
+                  <li>
+                    <strong>Insertion sort:</strong> Inserts each new element
+                    into a sorted portion.
+                  </li>
+                  <li>
+                    <strong>Merge sort:</strong> Divides data and merges sorted
+                    parts; typically O(n log n).
+                  </li>
+                  <li>
+                    <strong>Quick sort:</strong> Partitions around a pivot;
+                    average time O(n log n), worst case O(n²) in common
+                    implementations.
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Remember:</strong> Compare time complexity, extra
+                  memory, stability and the nature of the input.
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+
+            <article class="note-detail" id="notes-hashing">
+              <div class="note-number">11</div>
+              <div class="note-body">
+                <span class="note-label">DATA ACCESS</span>
+                <h3>Hashing</h3>
+                <p>
+                  Hashing uses a hash function to map a key to an index or
+                  bucket in a hash table.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Hash function:</strong> Computes a location from a
+                    key.
+                  </li>
+                  <li>
+                    <strong>Collision:</strong> Occurs when different keys map
+                    to the same bucket.
+                  </li>
+                  <li>
+                    <strong>Collision handling:</strong> Separate chaining and
+                    open addressing are common methods.
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Performance:</strong> Hash tables can provide
+                  average-case O(1) lookup under suitable conditions, but
+                  worst-case lookup can be O(n).
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+
+            <article class="note-detail" id="notes-recursion">
+              <div class="note-number">12</div>
+              <div class="note-body">
+                <span class="note-label">PROBLEM SOLVING</span>
+                <h3>Recursion</h3>
+                <p>
+                  Recursion occurs when a function solves a problem by calling
+                  itself on a smaller or simpler version of that problem.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Base case:</strong> Stops further recursive calls.
+                  </li>
+                  <li>
+                    <strong>Recursive case:</strong> Reduces the problem and
+                    calls the function again.
+                  </li>
+                  <li>
+                    <strong>Call stack:</strong> Tracks active function calls
+                    and their local state.
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Important:</strong> Without a reachable base case,
+                  recursion may continue until a runtime limit is reached.
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+
+            <article class="note-detail" id="notes-graph">
+              <div class="note-number">13</div>
+              <div class="note-body">
+                <span class="note-label">NON-LINEAR STRUCTURE</span>
+                <h3>Graph</h3>
+                <p>
+                  A graph consists of vertices (nodes) and edges (connections).
+                  Graphs can model relationships and routes between entities.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Directed graph:</strong> Edges have direction.
+                  </li>
+                  <li>
+                    <strong>Undirected graph:</strong> Edges represent two-way
+                    connections.
+                  </li>
+                  <li>
+                    <strong>Representations:</strong> Adjacency lists and
+                    adjacency matrices.
+                  </li>
+                  <li>
+                    <strong>Traversal:</strong> Breadth-first search (BFS) and
+                    depth-first search (DFS).
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Applications:</strong> Maps, computer networks,
+                  dependency systems and social connections.
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+
+            <article class="note-detail" id="notes-complexity">
+              <div class="note-number">14</div>
+              <div class="note-body">
+                <span class="note-label">ANALYSIS & TECHNIQUES</span>
+                <h3>Time &amp; Space Complexity</h3>
+                <p>
+                  Complexity describes how an algorithm's resource requirements
+                  grow as input size increases. Big O is commonly used to
+                  express an upper-bound growth rate.
+                </p>
+                <ul>
+                  <li><strong>O(1):</strong> Constant growth.</li>
+                  <li><strong>O(log n):</strong> Logarithmic growth.</li>
+                  <li><strong>O(n):</strong> Linear growth.</li>
+                  <li>
+                    <strong>O(n log n):</strong> Common in efficient comparison
+                    sorting.
+                  </li>
+                  <li>
+                    <strong>O(n²):</strong> Often seen in algorithms with nested
+                    passes over input.
+                  </li>
+                </ul>
+                <div class="note-tip">
+                  <strong>Remember:</strong> Time complexity concerns
+                  running-time growth; space complexity concerns memory usage
+                  growth. Actual performance also depends on implementation and
+                  hardware.
+                </div>
+              </div>
+              <a class="note-back-link" href="#topics">All topics ↑</a>
+            </article>
+          </div>
+        </section>
+
+        <!-- WHY IT MATTERS -->
+        <section class="applications-section section-block">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">BEYOND THE CLASSROOM</span>
+              <h2>Where are data structures <span>used?</span></h2>
+            </div>
+            <p>
+              Data structures are part of many everyday technologies, from
+              websites to databases and operating systems.
+            </p>
+          </div>
+
+          <div class="applications-grid">
+            <article class="application-card">
+              <span class="application-icon app-purple">⌘</span>
+              <h3>Web &amp; Mobile Apps</h3>
+              <p>
+                Manage interface state, cached information and application data.
+              </p>
+            </article>
+            <article class="application-card">
+              <span class="application-icon app-pink">▤</span>
+              <h3>Databases</h3>
+              <p>
+                Organize records and support indexes and efficient data
+                retrieval.
+              </p>
+            </article>
+            <article class="application-card">
+              <span class="application-icon app-blue">⚙</span>
+              <h3>Operating Systems</h3>
+              <p>
+                Support scheduling, memory management and internal resource
+                tracking.
+              </p>
+            </article>
+            <article class="application-card">
+              <span class="application-icon app-green">⌕</span>
+              <h3>Search &amp; Networks</h3>
+              <p>
+                Represent relationships, explore connections and process search
+                tasks.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- CAREER -->
+        <section class="career-banner section-block">
+          <div class="career-art" aria-hidden="true">
+            <span class="career-orbit orbit-a"></span>
+            <span class="career-orbit orbit-b"></span>
+            <span class="career-center">DS</span>
+            <span class="career-spark spark-a">✦</span>
+            <span class="career-spark spark-b">✧</span>
+          </div>
+
+          <div class="career-copy">
+            <span class="section-kicker">BUILD SKILLS THAT TRANSFER</span>
+            <h2>A stronger foundation for your <span>tech career.</span></h2>
+            <p>
+              Data structures are useful for software development, web and app
+              development, database work, technical interviews and many other
+              programming tasks.
+            </p>
+            <div class="career-tags">
+              <span>Software Developer</span>
+              <span>Web Developer</span>
+              <span>App Developer</span>
+              <span>Database Developer</span>
+              <span>Data Analyst</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- BOTTOM NAVIGATION -->
+        <section class="next-step-section">
+          <div class="next-step-copy">
+            <span class="section-kicker">KEEP YOUR MOMENTUM</span>
+            <h2>Small concepts. <span>Stronger skills.</span></h2>
+            <p>
+              Review a topic, practise the fundamentals and keep moving forward.
+            </p>
+          </div>
+
+          <div class="next-step-actions">
+            <a class="button button-primary" href="#topics"
+              >Explore Topics <span>↑</span></a
+            >
+            <a
+              class="button button-outline"
+              href="../../../pages/dashboard/notes.html"
+            >
+              Main Notes Page <span>↗</span>
+            </a>
+            <a
+              class="button button-outline"
+              href="../../../pages/dashboard/subject.html"
+            >
+              All BCA Subjects <span>↗</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a class="footer-brand" href="../../../index.html"
+          >StudySpark <span>AI</span></a
+        >
+        <p>Learn with clarity. Build with confidence.</p>
+        <a href="#top" class="back-to-top">Back to top ↑</a>
+        <div class="footer-bottom">
+          <span>© <span id="currentYear"></span> StudySpark AI</span>
+          <span>Designed for your learning journey</span>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (() => {
+        "use strict";
+
+        const searchInput = document.getElementById("topicSearch");
+        const filterSelect = document.getElementById("topicFilter");
+        const topicCards = Array.from(document.querySelectorAll(".topic-card"));
+        const visibleCount = document.getElementById("visibleCount");
+        const emptyState = document.getElementById("emptyState");
+        const resetSearch = document.getElementById("resetSearch");
+        const notesJump = document.getElementById("notesJump");
+
+        function filterTopics() {
+          const query = searchInput.value.trim().toLowerCase();
+          const category = filterSelect.value;
+          let count = 0;
+
+          topicCards.forEach((card) => {
+            const searchableText = (
+              card.dataset.search +
+              " " +
+              card.textContent
+            ).toLowerCase();
+
+            const matchesSearch = searchableText.includes(query);
+            const matchesCategory =
+              category === "all" || card.dataset.category === category;
+
+            const visible = matchesSearch && matchesCategory;
+            card.hidden = !visible;
+
+            if (visible) count++;
+          });
+
+          visibleCount.textContent = String(count);
+          emptyState.hidden = count !== 0;
+        }
+
+        searchInput.addEventListener("input", filterTopics);
+        filterSelect.addEventListener("change", filterTopics);
+
+        resetSearch.addEventListener("click", () => {
+          searchInput.value = "";
+          filterSelect.value = "all";
+          filterTopics();
+          searchInput.focus();
+        });
+
+        notesJump.addEventListener("change", () => {
+          const targetId = notesJump.value;
+          if (!targetId) return;
+
+          const target = document.getElementById(targetId);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            history.replaceState(null, "", "#" + targetId);
+          }
+        });
+
+        document.getElementById("currentYear").textContent = String(
+          new Date().getFullYear(),
+        );
+
+        filterTopics();
+      })();
+    </script>
   </body>
 </html>
