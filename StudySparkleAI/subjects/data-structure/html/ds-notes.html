@@ -1,164 +1,847 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Structures | StudySpark AI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="../css/ds-notes.css">
+    <title>Data Structures Notes | StudySpark AI</title>
+
+    <meta
+        name="description"
+        content="Study Data Structures with simple notes, topic-wise navigation and video resources on StudySpark AI."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../css/ds-notes.css">
 </head>
+
 <body>
 
-  <header class="topbar">
-    <a href="../../../index.html" class="brand">
-      <span class="brand-icon">S</span>
-      <span>StudySpark <b>AI</b></span>
-    </a>
+    <!-- ================= HEADER ================= -->
 
-    <div class="header-right">
-      <a href="../../../index.html" class="home-link">← Home</a>
-      <button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button>
-    </div>
-  </header>
+    <header class="topbar">
 
-  <div class="page-layout">
+        <div class="topbar-left">
 
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar-heading">📚 Study Materials</div>
+            <button
+                type="button"
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Toggle sidebar"
+                aria-controls="sidebar"
+                aria-expanded="true"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-      <button class="topic-btn active" data-note="intro">
-        Introduction
-      </button>
-      <button class="topic-btn" data-note="types">
-        Types of Data Structures
-      </button>
-      <button class="topic-btn" data-note="operations">
-        Basic Operations
-      </button>
+            <a href="../../../index.html" class="brand">
 
-      <button class="group-heading"type="button"
-      onclick="toggleTopics(this)"aria-expanded="true">
-      📦 Array ▾
-    </button>
-      <button class="topic-btn" data-note="array-intro">Introduction to Array</button>
-      <button class="topic-btn" data-note="array-types">Types of Arrays</button>
-      <button class="topic-btn" data-note="array-access">Traversal and Access</button>
-      <button class="topic-btn" data-note="array-insert">Insertion</button>
-      <button class="topic-btn" data-note="array-delete">Deletion</button>
-      <button class="topic-btn" data-note="array-search">Searching</button>
-      <button class="topic-btn" data-note="array-sort">Sorting</button>
-      <button class="topic-btn" data-note="array-pros">Advantages and Disadvantages</button>
+                <span class="brand-icon">S</span>
 
-      <button class="group-heading" type="button"
-        onclick="toggleTopics(this)" aria-expanded="true">
-  🔗 Linked List ▾
-      </button>
-      <button class="topic-btn" data-note="linked-intro">Introduction</button>
-      <button class="topic-btn" data-note="linked-types">Types</button>
-      <button class="topic-btn" data-note="linked-insert">Insertion</button>
-      <button class="topic-btn" data-note="linked-delete">Deletion</button>
-      <button class="topic-btn" data-note="linked-traverse">Traversal</button>
+                <span class="brand-text">
+                    StudySpark <span>AI</span>
+                </span>
 
-      <button class="group-heading" type="button"
-        onclick="toggleTopics(this)" aria-expanded="true">
-  📚 Stack ▾
-</button>
-      <button class="topic-btn" data-note="stack-intro">Introduction</button>
-      <button class="topic-btn" data-note="stack-pushpop">Push and Pop</button>
-      <button class="topic-btn" data-note="stack-errors">Overflow and Underflow</button>
-      <button class="topic-btn" data-note="stack-expressions">Expressions</button>
-      <button class="topic-btn" data-note="stack-apps">Applications</button>
+            </a>
 
-      <button class="group-heading" type="button"
-        onclick="toggleTopics(this)" aria-expanded="true">
-  🚶 Queue ▾
-</button>
-      <button class="topic-btn" data-note="queue-intro">Introduction</button>
-      <button class="topic-btn" data-note="queue-types">Types</button>
-      <button class="topic-btn" data-note="queue-operations">Operations</button>
-      <button class="topic-btn" data-note="queue-circular">Circular Queue</button>
-      <button class="topic-btn" data-note="queue-priority">Priority Queue</button>
-
-      <button class="group-heading" type="button"
-        onclick="toggleTopics(this)" aria-expanded="true">
-  🌳 Tree ▾
-</button>
-      <button class="topic-btn" data-note="tree-intro">Introduction</button>
-      <button class="topic-btn" data-note="tree-binary">Binary Tree</button>
-      <button class="topic-btn" data-note="tree-bst">Binary Search Tree</button>
-      <button class="topic-btn" data-note="tree-traversal">Tree Traversal</button>
-
-      <button class="group-heading" type="button"
-        onclick="toggleTopics(this)" aria-expanded="true">
-  🕸️ Graph ▾
-</button>
-      <button class="topic-btn" data-note="graph-intro">Introduction</button>
-      <button class="topic-btn" data-note="graph-representation">Representation</button>
-      <button class="topic-btn" data-note="graph-bfs">BFS</button>
-      <button class="topic-btn" data-note="graph-dfs">DFS</button>
-    </aside>
-
-    <div class="mobile-overlay" id="mobileOverlay"></div>
-
-    <main class="main-content">
-      <section class="welcome-card">
-        <div>
-          <p class="eyebrow">STUDYSPARK AI • BCA NOTES</p>
-          <h1>Data Structures</h1>
-          <p>Learn concepts, explore examples and practise algorithms.</p>
         </div>
-        <div class="welcome-icon">💻</div>
-      </section>
 
-      <section class="search-card">
-        <label for="searchInput">Find a topic</label>
-        <input
-          type="search"
-          id="searchInput"
-          placeholder="Search Array, Stack, Queue..."
-          autocomplete="off"
-        >
-        <p id="searchMessage">Choose a topic from the left menu.</p>
-      </section>
+        <div class="topbar-center">
 
-      <div class="progress-row">
-        <span id="progressText">Topic 1</span>
-        <span>Explore at your own pace ✨</span>
-      </div>
+            <div class="breadcrumb">
+                <a href="../../../index.html">Home</a>
+                <span>/</span>
+                <span>Study Materials</span>
+                <span>/</span>
+                <strong>Data Structures</strong>
+            </div>
 
-      <article class="notes-panel" id="notesPanel" aria-live="polite">
-        <div class="loading">Loading your notes...</div>
-      </article>
+        </div>
 
-      <nav class="page-navigation" aria-label="Notes navigation">
-        <button id="prevBtn" disabled>← Previous</button>
-        <button id="nextBtn">Next topic →</button>
-      </nav>
+        <div class="topbar-right">
 
-      <footer class="page-footer">
-        Made for learners · StudySpark AI
-      </footer>
-    </main>
-  </div>
-<script>
-function toggleTopics(button) {
-  const isOpen = button.getAttribute("aria-expanded") === "true";
-  let item = button.nextElementSibling;
+            <a href="../../../index.html" class="home-btn">
+                <span>⌂</span>
+                <span>Home</span>
+            </a>
 
-  while (item && !item.classList.contains("group-heading")) {
-    if (item.classList.contains("topic-btn")) {
-      item.style.display = isOpen ? "none" : "block";
-    }
-    item = item.nextElementSibling;
-  }
+        </div>
 
-  button.setAttribute("aria-expanded", String(!isOpen));
-  button.textContent = button.textContent.replace(
-    isOpen ? "▾" : "▸",
-    isOpen ? "▸" : "▾"
-  );
-}
-</script>
-  <script src="../js/ds-notes.js"></script>
+    </header>
+
+
+    <!-- ================= MOBILE OVERLAY ================= -->
+
+    <div
+        class="mobile-overlay"
+        id="mobileOverlay"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- ================= PAGE LAYOUT ================= -->
+
+    <div class="page-layout" id="pageLayout">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-heading">
+
+                    <div class="sidebar-heading-icon">📚</div>
+
+                    <div>
+                        <h2>Study Materials</h2>
+                        <p>Data Structures</p>
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="sidebar-close-btn"
+                    id="sidebarCloseBtn"
+                    aria-label="Close sidebar"
+                >
+                    ✕
+                </button>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="sidebar-search">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search topics..."
+                    aria-label="Search Data Structures topics"
+                    autocomplete="off"
+                >
+
+                <kbd>⌘ K</kbd>
+
+            </div>
+
+
+            <!-- TOPIC NAVIGATION -->
+
+            <nav class="topic-navigation" aria-label="Data Structures topics">
+
+                <div class="sidebar-section-label">
+                    COURSE CONTENT
+                </div>
+
+
+                <!-- INTRODUCTION -->
+
+                <div class="topic-group-wrapper">
+
+                    <button
+                        type="button"
+                        class="topic-btn"
+                        data-note="intro"
+                    >
+                        <span class="topic-icon">📘</span>
+                        <span class="topic-label">Introduction</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="topic-btn"
+                        data-note="types"
+                    >
+                        <span class="topic-icon">🧩</span>
+                        <span class="topic-label">Types of Data Structures</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="topic-btn"
+                        data-note="operations"
+                    >
+                        <span class="topic-icon">⚙️</span>
+                        <span class="topic-label">Basic Operations</span>
+                    </button>
+
+                </div>
+
+
+                <!-- ARRAYS -->
+
+                <div class="topic-group-wrapper">
+
+                    <button
+                        type="button"
+                        class="group-heading"
+                        aria-expanded="true"
+                        aria-controls="arrayTopics"
+                    >
+                        <span class="group-icon">▦</span>
+                        <span>Arrays</span>
+                        <span class="arrow">⌄</span>
+                    </button>
+
+                    <div class="topic-group" id="arrayTopics">
+
+                        <button type="button" class="topic-btn" data-note="array-intro">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Introduction</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="array-types">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Types of Arrays</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="array-access">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Accessing Elements</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="array-insert">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Insertion</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="array-delete">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Deletion</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="array-search">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Searching</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="array-sort">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Sorting</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="array-pros">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Advantages & Disadvantages</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LINKED LIST -->
+
+                <div class="topic-group-wrapper">
+
+                    <button
+                        type="button"
+                        class="group-heading"
+                        aria-expanded="true"
+                        aria-controls="linkedTopics"
+                    >
+                        <span class="group-icon">🔗</span>
+                        <span>Linked List</span>
+                        <span class="arrow">⌄</span>
+                    </button>
+
+                    <div class="topic-group" id="linkedTopics">
+
+                        <button type="button" class="topic-btn" data-note="linked-intro">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Introduction</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="linked-types">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Types of Linked List</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="linked-insert">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Insertion</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="linked-delete">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Deletion</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="linked-traverse">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Traversal</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STACK -->
+
+                <div class="topic-group-wrapper">
+
+                    <button
+                        type="button"
+                        class="group-heading"
+                        aria-expanded="true"
+                        aria-controls="stackTopics"
+                    >
+                        <span class="group-icon">📚</span>
+                        <span>Stack</span>
+                        <span class="arrow">⌄</span>
+                    </button>
+
+                    <div class="topic-group" id="stackTopics">
+
+                        <button type="button" class="topic-btn" data-note="stack-intro">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Introduction</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="stack-pushpop">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Push & Pop</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="stack-errors">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Stack Overflow & Underflow</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="stack-expressions">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Expression Conversion</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="stack-apps">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Applications of Stack</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUEUE -->
+
+                <div class="topic-group-wrapper">
+
+                    <button
+                        type="button"
+                        class="group-heading"
+                        aria-expanded="true"
+                        aria-controls="queueTopics"
+                    >
+                        <span class="group-icon">↔️</span>
+                        <span>Queue</span>
+                        <span class="arrow">⌄</span>
+                    </button>
+
+                    <div class="topic-group" id="queueTopics">
+
+                        <button type="button" class="topic-btn" data-note="queue-intro">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Introduction</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="queue-types">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Types of Queue</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="queue-operations">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Queue Operations</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="queue-circular">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Circular Queue</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="queue-priority">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Priority Queue</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TREE -->
+
+                <div class="topic-group-wrapper">
+
+                    <button
+                        type="button"
+                        class="group-heading"
+                        aria-expanded="true"
+                        aria-controls="treeTopics"
+                    >
+                        <span class="group-icon">🌳</span>
+                        <span>Tree</span>
+                        <span class="arrow">⌄</span>
+                    </button>
+
+                    <div class="topic-group" id="treeTopics">
+
+                        <button type="button" class="topic-btn" data-note="tree-intro">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Introduction</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="tree-binary">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Binary Tree</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="tree-bst">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Binary Search Tree</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="tree-traversal">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Tree Traversal</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GRAPH -->
+
+                <div class="topic-group-wrapper">
+
+                    <button
+                        type="button"
+                        class="group-heading"
+                        aria-expanded="true"
+                        aria-controls="graphTopics"
+                    >
+                        <span class="group-icon">🕸️</span>
+                        <span>Graph</span>
+                        <span class="arrow">⌄</span>
+                    </button>
+
+                    <div class="topic-group" id="graphTopics">
+
+                        <button type="button" class="topic-btn" data-note="graph-intro">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Introduction</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="graph-representation">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Graph Representation</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="graph-bfs">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Breadth First Search</span>
+                        </button>
+
+                        <button type="button" class="topic-btn" data-note="graph-dfs">
+                            <span class="topic-dot"></span>
+                            <span class="topic-label">Depth First Search</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESOURCES -->
+
+                <div class="sidebar-section-label resources-label">
+                    LEARNING RESOURCES
+                </div>
+
+                <button
+                    type="button"
+                    class="topic-btn"
+                    id="videosMenuBtn"
+                >
+                    <span class="topic-icon">🎓</span>
+                    <span class="topic-label">Other Study Materials</span>
+                    <span class="resource-arrow">↗</span>
+                </button>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-help-card">
+
+                    <div class="help-icon">✨</div>
+
+                    <div>
+                        <h3>Keep Learning!</h3>
+                        <p>Small steps lead to big results.</p>
+                    </div>
+
+                </div>
+
+                <div class="sidebar-version">
+                    <span class="status-dot"></span>
+                    StudySpark AI
+                    <span class="version-number">v1.0</span>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content" id="mainContent">
+
+
+            <!-- PAGE INTRODUCTION -->
+
+            <section class="welcome-card">
+
+                <div class="welcome-content">
+
+                    <div class="welcome-badge">
+                        <span class="badge-dot"></span>
+                        YOUR LEARNING SPACE
+                    </div>
+
+                    <h1>
+                        Data Structures
+                        <span class="gradient-text">Notes</span>
+                    </h1>
+
+                    <p>
+                        Learn concepts step by step with easy notes.
+                        Select a topic from the sidebar to begin learning.
+                    </p>
+
+                    <div class="welcome-stats">
+
+                        <div class="welcome-stat">
+                            <span class="stat-icon">📖</span>
+                            <div>
+                                <strong>Topic-wise</strong>
+                                <small>Learning</small>
+                            </div>
+                        </div>
+
+                        <div class="welcome-stat">
+                            <span class="stat-icon">🎯</span>
+                            <div>
+                                <strong>Easy</strong>
+                                <small>Understanding</small>
+                            </div>
+                        </div>
+
+                        <div class="welcome-stat">
+                            <span class="stat-icon">🚀</span>
+                            <div>
+                                <strong>Learn</strong>
+                                <small>At your pace</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="welcome-illustration" aria-hidden="true">
+
+                    <div class="illustration-orbit orbit-one"></div>
+                    <div class="illustration-orbit orbit-two"></div>
+
+                    <div class="illustration-card card-one">
+                        <span>01</span>
+                        <div></div>
+                    </div>
+
+                    <div class="illustration-card card-two">
+                        <span>02</span>
+                        <div></div>
+                    </div>
+
+                    <div class="illustration-card card-three">
+                        <span>03</span>
+                        <div></div>
+                    </div>
+
+                    <div class="illustration-center">DS</div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SEARCH RESULTS -->
+
+            <section
+                class="search-results"
+                id="searchResults"
+                hidden
+                aria-live="polite"
+            ></section>
+
+
+            <!-- NOTES PANEL -->
+
+            <section class="notes-panel" id="notesPanel">
+
+                <div class="notes-loading-placeholder">
+                    <div class="loading-icon">📘</div>
+                    <h2>Select a topic</h2>
+                    <p>Your selected topic notes will appear here.</p>
+                </div>
+
+            </section>
+
+
+            <!-- PREVIOUS / NEXT NAVIGATION -->
+
+            <div class="page-navigation" id="pageNavigation">
+
+                <button
+                    type="button"
+                    class="navigation-btn previous-btn"
+                    id="prevBtn"
+                >
+                    <span class="navigation-arrow">←</span>
+
+                    <span class="navigation-text">
+                        <small>PREVIOUS TOPIC</small>
+                        <strong>Previous</strong>
+                    </span>
+                </button>
+
+
+                <div class="navigation-progress">
+
+                    <span id="progressText">Topic 1 of 34</span>
+
+                    <div class="progress-track">
+                        <div
+                            class="progress-fill"
+                            id="progressFill"
+                            style="width: 3%;"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="navigation-btn next-btn"
+                    id="nextBtn"
+                >
+                    <span class="navigation-text">
+                        <small>NEXT TOPIC</small>
+                        <strong>Next</strong>
+                    </span>
+
+                    <span class="navigation-arrow">→</span>
+                </button>
+
+            </div>
+
+
+            <!-- ================= VIDEO LIBRARY ================= -->
+
+            <section
+                class="videos-panel"
+                id="videosPanel"
+                hidden
+            >
+
+                <div class="videos-header">
+
+                    <div>
+
+                        <div class="welcome-badge">
+                            <span class="badge-dot"></span>
+                            WATCH & LEARN
+                        </div>
+
+                        <h2>
+                            Data Structures
+                            <span class="gradient-text">Video Library</span>
+                        </h2>
+
+                        <p>
+                            Explore topic-related video resources to understand
+                            concepts visually.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="back-to-notes-btn"
+                        id="backToNotesBtn"
+                    >
+                        ← Back to Notes
+                    </button>
+
+                </div>
+
+
+                <!-- VIDEO CARDS WILL BE CREATED BY JAVASCRIPT -->
+
+                <div class="video-grid" id="videoGrid"></div>
+
+
+                <!-- VIDEO PLAYER -->
+
+                <div
+                    class="video-player-container"
+                    id="videoPlayer"
+                    hidden
+                >
+
+                    <div class="video-player-header">
+
+                        <div>
+                            <span class="player-label">NOW PLAYING</span>
+                            <h3 id="videoTitle">Video title</h3>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="close-player-btn"
+                            id="closePlayerBtn"
+                            aria-label="Close video player"
+                        >
+                            ✕
+                        </button>
+
+                    </div>
+
+                    <div class="video-frame-wrapper">
+
+                        <iframe
+                            id="youtubeFrame"
+                            src=""
+                            title="Data Structures learning video"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REFERENCE LINKS -->
+
+                <div class="resource-cards">
+
+                    <a
+                        href="../../../pages/youtube-videos.html"
+                        class="resource-card"
+                    >
+
+                        <span class="resource-card-icon">🎬</span>
+
+                        <span class="resource-card-text">
+                            <strong>All YouTube Videos</strong>
+                            <small>Explore more learning videos</small>
+                        </span>
+
+                        <span class="resource-card-arrow">↗</span>
+
+                    </a>
+
+
+                    <a
+                        href="../../../pages/reference-websites.html"
+                        class="resource-card"
+                    >
+
+                        <span class="resource-card-icon">🌐</span>
+
+                        <span class="resource-card-text">
+                            <strong>Reference Websites</strong>
+                            <small>Explore useful learning websites</small>
+                        </span>
+
+                        <span class="resource-card-arrow">↗</span>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <footer class="page-footer">
+
+                <div class="footer-left">
+
+                    <a href="../../../index.html" class="footer-brand">
+                        <span class="footer-brand-icon">S</span>
+                        <span>StudySpark <strong>AI</strong></span>
+                    </a>
+
+                    <p>
+                        Learn better. Grow smarter.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-center">
+                    Made for learners, with ❤️
+                </div>
+
+
+                <div class="footer-right">
+
+                    <a href="../../../index.html">Home</a>
+
+                    <span class="footer-divider">•</span>
+
+                    <span>Data Structures</span>
+
+                </div>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="../js/ds-notes.js"></script>
+
 </body>
 </html>

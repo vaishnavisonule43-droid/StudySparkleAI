@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Structures | StudySpark AI</title>
+
+  <link rel="stylesheet" href="../css/ds-notes copy.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="../../../index.html" class="brand">
+      <span class="brand-icon">S</span>
+      <span>StudySpark <b>AI</b></span>
+    </a>
+
+    <div class="header-right">
+      <a href="../../../index.html" class="home-link">← Home</a>
+      <button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <div class="page-layout">
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-heading">📚 Study Materials</div>
+
+      <button class="topic-btn active" data-note="intro">
+        Introduction
+      </button>
+      <button class="topic-btn" data-note="types">
+        Types of Data Structures
+      </button>
+      <button class="topic-btn" data-note="operations">
+        Basic Operations
+      </button>
+
+      <button class="group-heading"type="button"
+      onclick="toggleTopics(this)"aria-expanded="true">
+      📦 Array ▾
+    </button>
+      <button class="topic-btn" data-note="array-intro">Introduction to Array</button>
+      <button class="topic-btn" data-note="array-types">Types of Arrays</button>
+      <button class="topic-btn" data-note="array-access">Traversal and Access</button>
+      <button class="topic-btn" data-note="array-insert">Insertion</button>
+      <button class="topic-btn" data-note="array-delete">Deletion</button>
+      <button class="topic-btn" data-note="array-search">Searching</button>
+      <button class="topic-btn" data-note="array-sort">Sorting</button>
+      <button class="topic-btn" data-note="array-pros">Advantages and Disadvantages</button>
+
+      <button class="group-heading" type="button"
+        onclick="toggleTopics(this)" aria-expanded="true">
+  🔗 Linked List ▾
+      </button>
+      <button class="topic-btn" data-note="linked-intro">Introduction</button>
+      <button class="topic-btn" data-note="linked-types">Types</button>
+      <button class="topic-btn" data-note="linked-insert">Insertion</button>
+      <button class="topic-btn" data-note="linked-delete">Deletion</button>
+      <button class="topic-btn" data-note="linked-traverse">Traversal</button>
+
+      <button class="group-heading" type="button"
+        onclick="toggleTopics(this)" aria-expanded="true">
+  📚 Stack ▾
+</button>
+      <button class="topic-btn" data-note="stack-intro">Introduction</button>
+      <button class="topic-btn" data-note="stack-pushpop">Push and Pop</button>
+      <button class="topic-btn" data-note="stack-errors">Overflow and Underflow</button>
+      <button class="topic-btn" data-note="stack-expressions">Expressions</button>
+      <button class="topic-btn" data-note="stack-apps">Applications</button>
+
+      <button class="group-heading" type="button"
+        onclick="toggleTopics(this)" aria-expanded="true">
+  🚶 Queue ▾
+</button>
+      <button class="topic-btn" data-note="queue-intro">Introduction</button>
+      <button class="topic-btn" data-note="queue-types">Types</button>
+      <button class="topic-btn" data-note="queue-operations">Operations</button>
+      <button class="topic-btn" data-note="queue-circular">Circular Queue</button>
+      <button class="topic-btn" data-note="queue-priority">Priority Queue</button>
+
+      <button class="group-heading" type="button"
+        onclick="toggleTopics(this)" aria-expanded="true">
+  🌳 Tree ▾
+</button>
+      <button class="topic-btn" data-note="tree-intro">Introduction</button>
+      <button class="topic-btn" data-note="tree-binary">Binary Tree</button>
+      <button class="topic-btn" data-note="tree-bst">Binary Search Tree</button>
+      <button class="topic-btn" data-note="tree-traversal">Tree Traversal</button>
+
+      <button class="group-heading" type="button"
+        onclick="toggleTopics(this)" aria-expanded="true">
+  🕸️ Graph ▾
+</button>
+      <button class="topic-btn" data-note="graph-intro">Introduction</button>
+      <button class="topic-btn" data-note="graph-representation">Representation</button>
+      <button class="topic-btn" data-note="graph-bfs">BFS</button>
+      <button class="topic-btn" data-note="graph-dfs">DFS</button>
+    </aside>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <main class="main-content">
+      <section class="welcome-card">
+        <div>
+          <p class="eyebrow">STUDYSPARK AI • BCA NOTES</p>
+          <h1>Data Structures</h1>
+          <p>Learn concepts, explore examples and practise algorithms.</p>
+        </div>
+        <div class="welcome-icon">💻</div>
+      </section>
+
+      <section class="search-card">
+        <label for="searchInput">Find a topic</label>
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search Array, Stack, Queue..."
+          autocomplete="off"
+        >
+        <p id="searchMessage">Choose a topic from the left menu.</p>
+      </section>
+
+      <div class="progress-row">
+        <span id="progressText">Topic 1</span>
+        <span>Explore at your own pace ✨</span>
+      </div>
+
+      <article class="notes-panel" id="notesPanel" aria-live="polite">
+        <div class="loading">Loading your notes...</div>
+      </article>
+
+      <nav class="page-navigation" aria-label="Notes navigation">
+        <button id="prevBtn" disabled>← Previous</button>
+        <button id="nextBtn">Next topic →</button>
+      </nav>
+
+      <footer class="page-footer">
+        Made for learners · StudySpark AI
+      </footer>
+    </main>
+  </div>
+<script>
+function toggleTopics(button) {
+  const isOpen = button.getAttribute("aria-expanded") === "true";
+  let item = button.nextElementSibling;
+
+  while (item && !item.classList.contains("group-heading")) {
+    if (item.classList.contains("topic-btn")) {
+      item.style.display = isOpen ? "none" : "block";
+    }
+    item = item.nextElementSibling;
+  }
+
+  button.setAttribute("aria-expanded", String(!isOpen));
+  button.textContent = button.textContent.replace(
+    isOpen ? "▾" : "▸",
+    isOpen ? "▸" : "▾"
+  );
+}
+</script>
+  <script src="../js/ds-notes copy.js"></script>
+</body>
+</html>

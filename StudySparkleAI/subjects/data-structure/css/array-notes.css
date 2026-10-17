@@ -1,0 +1,605 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.7;
+}
+
+/* PAGE HEADER */
+
+.page-header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 42px 18px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    animation: slideDown 0.8s ease both;
+    box-shadow: 0 5px 18px rgba(91, 75, 196, 0.20);
+}
+
+.page-header::before,
+.page-header::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.page-header::before {
+    top: -100px;
+    left: 8%;
+    animation: floatShape 7s ease-in-out infinite;
+}
+
+.page-header::after {
+    right: 7%;
+    bottom: -130px;
+    width: 230px;
+    height: 230px;
+    animation: floatShape 9s ease-in-out infinite reverse;
+}
+
+.header-badge {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.page-header h1 {
+    position: relative;
+    margin-bottom: 8px;
+    font-size: clamp(26px, 4vw, 38px);
+    line-height: 1.3;
+}
+
+.page-header p {
+    position: relative;
+    font-size: 15px;
+    opacity: 0.94;
+}
+
+/* NOTES CONTAINER */
+
+.notes-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+/* NOTE CARDS */
+
+.note-card {
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    border-left: 5px solid #6c5ce7;
+    background: white;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    animation: fadeUp 0.7s ease both;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #a18cd1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.note-card:hover::before {
+    transform: scaleX(1);
+}
+
+.note-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(91, 75, 196, 0.15);
+}
+
+.topic-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 4px 11px;
+    border-radius: 20px;
+    background: #f0edff;
+    color: #5b4bc4;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* HEADINGS */
+
+.note-card h2 {
+    margin-bottom: 16px;
+    color: #5b4bc4;
+    font-size: clamp(22px, 3vw, 27px);
+    line-height: 1.4;
+}
+
+.note-card h3 {
+    margin: 25px 0 10px;
+    color: #444;
+    font-size: 20px;
+    line-height: 1.45;
+}
+
+.note-card h4 {
+    margin: 18px 0 8px;
+    color: #6c5ce7;
+    font-size: 16px;
+}
+
+/* PARAGRAPHS AND LISTS */
+
+.note-card p {
+    margin-bottom: 13px;
+    color: #444;
+}
+
+.note-card ul,
+.note-card ol {
+    margin: 12px 0 18px 25px;
+}
+
+.note-card li {
+    margin-bottom: 8px;
+    padding-left: 3px;
+}
+
+.note-card li::marker {
+    color: #6c5ce7;
+}
+
+.note-card strong {
+    color: #38305f;
+}
+
+.note-card code {
+    padding: 2px 6px;
+    border-radius: 5px;
+    background: #f0edff;
+    color: #5b3ab7;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.94em;
+    overflow-wrap: anywhere;
+}
+
+/* DEFINITION BOX */
+
+.definition {
+    margin: 15px 0 20px;
+    padding: 17px;
+    border-left: 5px solid #6c5ce7;
+    border-radius: 8px;
+    background: #f0edff;
+    color: #3d356f;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.definition:hover {
+    background: #e9e5ff;
+    transform: translateX(4px);
+}
+
+/* CODE BLOCK AND COPY BUTTON */
+
+.code-block {
+    position: relative;
+    margin: 16px 0 20px;
+    padding: 45px 18px 18px;
+    overflow-x: auto;
+    border: 1px solid #39305f;
+    border-radius: 12px;
+    background: #201a35;
+    color: #f4efff;
+    box-shadow: 0 5px 14px rgba(35, 25, 65, 0.12);
+    scrollbar-width: thin;
+    scrollbar-color: #8c7ad8 #201a35;
+}
+
+.code-block code {
+    display: block;
+    padding: 0;
+    background: transparent;
+    color: #f4efff;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.75;
+    white-space: pre;
+    overflow-wrap: normal;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    padding: 7px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 7px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.copy-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(118, 75, 162, 0.35);
+}
+
+.copy-btn:active {
+    transform: scale(0.96);
+}
+
+.copy-btn.copied {
+    border-color: #a7edc4;
+    background: #238653;
+}
+
+/* PROGRAM OUTPUT */
+
+.output-block {
+    margin: 12px 0 18px;
+    padding: 13px 16px;
+    overflow-x: auto;
+    border: 1px solid #c9ead7;
+    border-left: 5px solid #35a66c;
+    border-radius: 9px;
+    background: #effaf3;
+    color: #17663c;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: pre-wrap;
+}
+
+/* TABLES */
+
+.table-wrap {
+    width: 100%;
+    margin: 18px 0 22px;
+    overflow-x: auto;
+    border: 1px solid #e4dff5;
+    border-radius: 10px;
+    background: white;
+}
+
+.note-card table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.note-card th,
+.note-card td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e9e6f3;
+    white-space: nowrap;
+}
+
+.note-card th {
+    background: #f0edff;
+    color: #5b4bc4;
+    font-weight: bold;
+}
+
+.note-card tr:last-child th,
+.note-card tr:last-child td {
+    border-bottom: none;
+}
+
+.note-card tbody tr:nth-child(even),
+.note-card tr:nth-child(even) {
+    background: #fbfaff;
+}
+
+/* ARRAY DIAGRAM */
+
+.array-diagram {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    margin: 20px 0 25px;
+}
+
+.array-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    padding: 14px 5px;
+    border: 1px solid #ddd5ff;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #f6f3ff, #e9e3ff);
+    animation: fadeUp 0.5s ease both;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.array-cell:nth-child(2) {
+    animation-delay: 0.06s;
+}
+
+.array-cell:nth-child(3) {
+    animation-delay: 0.12s;
+}
+
+.array-cell:nth-child(4) {
+    animation-delay: 0.18s;
+}
+
+.array-cell:nth-child(5) {
+    animation-delay: 0.24s;
+}
+
+.array-cell:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(91, 75, 196, 0.14);
+}
+
+.array-cell span {
+    color: #6e6594;
+    font-size: 12px;
+}
+
+.array-cell strong {
+    color: #5b4bc4;
+    font-size: 22px;
+}
+
+/* STEP-BY-STEP AND FORMULA */
+
+.step-box {
+    margin: 16px 0 20px;
+    padding: 14px 18px;
+    border-left: 5px solid #6c5ce7;
+    border-radius: 9px;
+    background: #f6f3ff;
+}
+
+.step-box p {
+    margin: 7px 0;
+}
+
+.formula-box {
+    margin: 18px 0;
+    padding: 18px 12px;
+    border: 1px dashed #a69be8;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f0edff, #faf7ff);
+    color: #5b4bc4;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* WARNING AND SMALL NOTES */
+
+.warning-box {
+    margin: 18px 0;
+    padding: 15px;
+    border-left: 5px solid #e0a12f;
+    border-radius: 8px;
+    background: #fff8e9;
+    color: #74531e;
+}
+
+.small-note {
+    color: #737083 !important;
+    font-size: 13px;
+}
+
+/* BACK BUTTON */
+
+.back-btn {
+    display: block;
+    margin: 35px auto 45px;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: backButtonAnimation 0.9s ease both;
+}
+
+.back-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(91, 75, 196, 0.30);
+}
+
+.back-btn:active {
+    transform: scale(0.97);
+}
+
+/* FOOTER */
+
+.page-footer {
+    padding: 25px 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+}
+
+.page-footer p {
+    margin: 4px 0;
+    font-size: 13px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes backButtonAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes floatShape {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(12px) rotate(8deg);
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+    .page-header {
+        padding: 30px 15px;
+    }
+
+    .page-header p {
+        font-size: 13px;
+    }
+
+    .notes-container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .note-card {
+        padding: 20px 16px;
+        margin-bottom: 18px;
+        border-radius: 13px;
+    }
+
+    .note-card h3 {
+        font-size: 18px;
+    }
+
+    .note-card p,
+    .note-card li {
+        font-size: 14px;
+    }
+
+    .definition {
+        padding: 13px;
+        font-size: 14px;
+    }
+
+    .code-block {
+        padding: 43px 13px 14px;
+    }
+
+    .code-block code {
+        font-size: 12px;
+    }
+
+    .copy-btn {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    .note-card th,
+    .note-card td {
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+
+    .array-diagram {
+        gap: 5px;
+    }
+
+    .array-cell {
+        padding: 10px 2px;
+    }
+
+    .array-cell span {
+        font-size: 9px;
+    }
+
+    .array-cell strong {
+        font-size: 17px;
+    }
+
+    .formula-box {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    .back-btn {
+        width: 100%;
+        font-size: 14px;
+    }
+}
