@@ -1,231 +1,838 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Graph in Data Structure - StudySpark AI</title>
+    <title>Graph - Data Structure | StudySpark AI</title>
 
-    <link rel="stylesheet" href="../css/data-structure.css" />
-  </head>
+    <link rel="stylesheet" href="../css/ds-graph.css">
+    <link rel="stylesheet" href="../css/introduction-notes.css">
+</head>
 
-  <body>
+<body>
 
-    <!-- Page Header -->
+    <!-- PAGE HEADER -->
+
     <header class="page-header">
-      <h1>📈 Graph in Data Structure</h1>
-      <p>Learn the basic concepts of Graph in Data Structure.</p>
+
+        <span class="header-badge">STUDYSPARK AI • DATA STRUCTURE</span>
+
+        <h1>Graph in Data Structure</h1>
+
+        <p>Learn Graph concepts, types, representation and traversal techniques.</p>
+
     </header>
 
 
-    <!-- Notes Container -->
-    <div class="notes-container">
+    <!-- MAIN NOTES -->
 
-      <!-- Introduction -->
-      <div class="note-card">
-        <h2>What is a Graph?</h2>
+    <main class="notes-container">
 
-        <p>
-          A Graph is a non-linear data structure that consists of
-          vertices and edges. It is used to represent relationships
-          between different objects or entities.
-        </p>
+        <!-- INTRODUCTION -->
 
-        <div class="definition">
-          <strong>Definition:</strong>
-          A Graph is a collection of vertices and edges used to
-          represent relationships between objects.
+        <section class="note-card">
+
+            <span class="topic-label">TOPIC 01</span>
+
+            <h2>1. Introduction to Graph</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                A graph is a non-linear data structure consisting of vertices
+                and edges. Vertices represent points, and edges connect them.
+            </div>
+
+            <h3>Basic Components</h3>
+
+            <ul>
+                <li><strong>Vertex:</strong> A point or node in a graph.</li>
+                <li><strong>Edge:</strong> A connection between two vertices.</li>
+                <li><strong>Adjacent Vertices:</strong> Vertices connected by an edge.</li>
+                <li><strong>Path:</strong> A sequence of connected vertices.</li>
+            </ul>
+
+            <h3>Example</h3>
+
+            <div class="formula-box">
+                Graph G = (V, E)
+                <br>
+                V = {A, B, C, D}
+                <br>
+                E = {(A, B), (A, C), (B, D), (C, D)}
+            </div>
+
+            <p>
+                Here, A, B, C and D are vertices.
+                The connections between them are edges.
+            </p>
+
+        </section>
+
+
+        <!-- GRAPH TYPES -->
+
+        <section class="note-card">
+
+            <span class="topic-label">TOPIC 02</span>
+
+            <h2>2. Types of Graph</h2>
+
+            <h3>1. Directed Graph</h3>
+
+            <p>
+                A directed graph has edges with a specific direction.
+            </p>
+
+            <div class="formula-box">
+                A → B
+            </div>
+
+            <p>
+                The edge shows a direction from A to B.
+            </p>
+
+            <h3>2. Undirected Graph</h3>
+
+            <p>
+                An undirected graph has edges without direction.
+            </p>
+
+            <div class="formula-box">
+                A — B
+            </div>
+
+            <p>
+                The connection between A and B works in both directions.
+            </p>
+
+            <h3>3. Weighted Graph</h3>
+
+            <p>
+                A weighted graph has a weight or cost assigned to its edges.
+            </p>
+
+            <div class="formula-box">
+                A — 5 — B
+            </div>
+
+            <p>
+                Here, 5 represents the weight of the edge.
+            </p>
+
+            <h3>4. Unweighted Graph</h3>
+
+            <p>
+                An unweighted graph has edges without assigned numerical weights.
+            </p>
+
+            <h3>5. Connected Graph</h3>
+
+            <p>
+                An undirected graph is connected if a path exists between
+                every pair of vertices.
+            </p>
+
+            <h3>6. Complete Graph</h3>
+
+            <p>
+                A simple graph is complete when every pair of distinct
+                vertices is connected by an edge.
+            </p>
+
+        </section>
+
+
+        <!-- GRAPH TERMINOLOGY -->
+
+        <section class="note-card">
+
+            <span class="topic-label">TOPIC 03</span>
+
+            <h2>3. Graph Terminology</h2>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Term</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Vertex</td>
+                            <td>A point in a graph.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Edge</td>
+                            <td>A connection between vertices.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Degree</td>
+                            <td>Number of edges incident on a vertex in an undirected graph.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Path</td>
+                            <td>A sequence of connected vertices.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Cycle</td>
+                            <td>A path that starts and ends at the same vertex.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Loop</td>
+                            <td>An edge connecting a vertex to itself.</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- GRAPH REPRESENTATION -->
+
+        <section class="note-card">
+
+            <span class="topic-label">TOPIC 04</span>
+
+            <h2>4. Graph Representation</h2>
+
+            <p>
+                A graph can be represented in memory using different methods.
+                Two common methods are:
+            </p>
+
+            <h3>1. Adjacency Matrix</h3>
+
+            <div class="definition">
+                An adjacency matrix is a two-dimensional array used to
+                represent connections between vertices.
+            </div>
+
+            <p>Consider a graph with three vertices: A, B and C.</p>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Vertex</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>A</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>B</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+
+                        <tr>
+                            <td>C</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p>
+                <strong>0:</strong> No edge exists.
+                <br>
+                <strong>1:</strong> An edge exists.
+            </p>
+
+            <h3>2. Adjacency List</h3>
+
+            <div class="definition">
+                An adjacency list stores the neighbouring vertices of each vertex.
+            </div>
+
+            <div class="code-block">
+                <code>A → B, C
+B → A
+C → A</code>
+            </div>
+
+            <p>
+                This representation stores the neighbours of each vertex.
+            </p>
+
+        </section>
+
+<!-- INTERACTIVE GRAPH VISUALIZATION -->
+
+<section class="note-card graph-visual-section">
+
+    <span class="topic-label">INTERACTIVE LEARNING</span>
+
+    <h2>Graph Visualization</h2>
+
+    <p>
+        A graph is made up of vertices and edges.
+        In this visualization, you can see how vertices are connected
+        and how graph traversal works.
+    </p>
+
+    <div class="graph-definition-box">
+        <strong>Vertex:</strong> A point or node in a graph.
+        <br>
+        <strong>Edge:</strong> A connection between two vertices.
+    </div>
+
+    <div class="graph-visualization">
+
+        <div class="graph-toolbar">
+
+            <span class="graph-status" id="graphStatus">
+                Ready to explore
+            </span>>
+
+            <button type="button" id="resetGraphBtn">
+                Reset
+            </button>
+
+        <div class="graph-canvas">
+
+            <svg id="graphSvg"
+                 viewBox="0 0 600 340"
+                 role="img"
+                 aria-label="Interactive graph with six connected vertices">
+
+                <!-- EDGES -->
+
+                <line x1="100" y1="80" x2="250" y2="80"
+                      class="graph-edge" data-edge="A-B"/>
+
+                <line x1="100" y1="80" x2="100" y2="220"
+                      class="graph-edge" data-edge="A-C"/>
+
+                <line x1="250" y1="80" x2="400" y2="80"
+                      class="graph-edge" data-edge="B-D"/>
+
+                <line x1="100" y1="220" x2="250" y2="220"
+                      class="graph-edge" data-edge="C-E"/>
+
+                <line x1="250" y1="220" x2="400" y2="220"
+                      class="graph-edge" data-edge="E-F"/>
+
+                <line x1="400" y1="80" x2="400" y2="220"
+                      class="graph-edge" data-edge="D-F"/>
+
+                <line x1="250" y1="80" x2="250" y2="220"
+                      class="graph-edge" data-edge="B-E"/>
+
+                <!-- VERTICES -->
+
+                <g class="graph-node" data-node="A"
+                   transform="translate(100 80)">
+                    <circle r="25"></circle>
+                    <text y="6">A</text>
+                </g>
+
+                <g class="graph-node" data-node="B"
+                   transform="translate(250 80)">
+                    <circle r="25"></circle>
+                    <text y="6">B</text>
+                </g>
+
+                <g class="graph-node" data-node="D"
+                   transform="translate(400 80)">
+                    <circle r="25"></circle>
+                    <text y="6">D</text>
+                </g>
+
+                <g class="graph-node" data-node="C"
+                   transform="translate(100 220)">
+                    <circle r="25"></circle>
+                    <text y="6">C</text>
+                </g>
+
+                <g class="graph-node" data-node="E"
+                   transform="translate(250 220)">
+                    <circle r="25"></circle>
+                    <text y="6">E</text>
+                </g>
+
+                <g class="graph-node" data-node="F"
+                   transform="translate(400 220)">
+                    <circle r="25"></circle>
+                    <text y="6">F</text>
+                </g>
+
+            </svg>
+
         </div>
-      </div>
 
+        <div class="graph-controls">
 
-      <!-- Basic Terms -->
-      <div class="note-card">
-        <h2>Basic Terms of Graph</h2>
+            <button type="button" id="bfsBtn">
+                ▶ Start BFS
+            </button>
 
-        <h3>1. Vertex</h3>
+            <button type="button" id="dfsBtn">
+                ▶ Start DFS
+            </button>
 
-        <p>
-          A vertex is a node or point in a graph that represents
-          an object or entity.
-        </p>
+            <button type="button" id="nextStepBtn" disabled>
+                Next Step →
+            </button>
 
-        <h3>2. Edge</h3>
+            <button type="button" id="autoPlayBtn" disabled>
+                ▶ Play Animation
+            </button>
 
-        <p>
-          An edge is a connection between two vertices.
-        </p>
-
-        <div class="definition">
-          <strong>Example:</strong>
-          In a social network, people can be represented as vertices
-          and their friendships can be represented as edges.
         </div>
-      </div>
 
+        <div class="graph-legend">
 
-      <!-- Types of Graph -->
-      <div class="note-card">
-        <h2>Types of Graph</h2>
+            <span>
+                <i class="legend-dot"></i>
+                Unvisited Vertex
+            </span>
 
-        <h3>1. Undirected Graph</h3>
+            <span>
+                <i class="legend-dot visited-dot"></i>
+                Visited Vertex
+            </span>
 
-        <p>
-          In an undirected graph, edges do not have a specific
-          direction. The connection works in both directions.
-        </p>
+            <span>
+                <i class="legend-dot active-dot"></i>
+                Current Vertex
+            </span>
 
-        <h3>2. Directed Graph</h3>
-
-        <p>
-          In a directed graph, each edge has a specific direction
-          from one vertex to another.
-        </p>
-
-        <h3>3. Weighted Graph</h3>
-
-        <p>
-          In a weighted graph, each edge has a value or weight.
-          The weight can represent distance, cost or time.
-        </p>
-
-        <h3>4. Unweighted Graph</h3>
-
-        <p>
-          In an unweighted graph, edges do not have any specific
-          weight or value.
-        </p>
-      </div>
-
-
-      <!-- Graph Representation -->
-      <div class="note-card">
-        <h2>Graph Representation</h2>
-
-        <p>
-          A graph can be represented in different ways in a computer.
-          The two common methods are:
-        </p>
-
-        <ul>
-          <li>Adjacency Matrix</li>
-          <li>Adjacency List</li>
-        </ul>
-
-        <h3>1. Adjacency Matrix</h3>
-
-        <p>
-          An adjacency matrix uses a two-dimensional array to
-          represent connections between vertices.
-        </p>
-
-        <h3>2. Adjacency List</h3>
-
-        <p>
-          An adjacency list stores the neighbouring vertices
-          of each vertex in a list.
-        </p>
-      </div>
-
-
-      <!-- Graph Traversal -->
-      <div class="note-card">
-        <h2>Graph Traversal</h2>
-
-        <p>
-          Graph traversal means visiting all the vertices of a graph
-          in a systematic way.
-        </p>
-
-        <h3>1. Breadth First Search (BFS)</h3>
-
-        <p>
-          BFS visits vertices level by level. It uses a queue
-          data structure.
-        </p>
-
-        <h3>2. Depth First Search (DFS)</h3>
-
-        <p>
-          DFS explores one path deeply before moving to another path.
-          It can be implemented using a stack or recursion.
-        </p>
-      </div>
-
-
-      <!-- Applications -->
-      <div class="note-card">
-        <h2>Applications of Graph</h2>
-
-        <ul>
-          <li>Social networking systems.</li>
-          <li>Google Maps and route finding.</li>
-          <li>Computer networks.</li>
-          <li>Airline and railway route systems.</li>
-          <li>Web page linking.</li>
-          <li>Network and communication systems.</li>
-        </ul>
-      </div>
-
-
-      <!-- Advantages -->
-      <div class="note-card">
-        <h2>Advantages of Graph</h2>
-
-        <ul>
-          <li>Represents relationships easily.</li>
-          <li>Useful for solving real-world problems.</li>
-          <li>Helps represent networks and connections.</li>
-          <li>Supports different traversal techniques.</li>
-          <li>Useful in path-finding and network problems.</li>
-        </ul>
-      </div>
-
-
-      <!-- Example -->
-      <div class="note-card">
-        <h2>Simple Example</h2>
-
-        <p>
-          Consider four cities: Pune, Nashik, Mumbai and Nagpur.
-          Each city can be represented as a vertex, while roads
-          connecting the cities can be represented as edges.
-        </p>
-
-        <div class="definition">
-          <strong>Simple Example:</strong><br />
-          Cities → Vertices<br />
-          Roads → Edges
         </div>
-      </div>
 
+        <div class="graph-result">
 
-      <!-- Conclusion -->
-      <div class="note-card">
-        <h2>Conclusion</h2>
+            <h3>Traversal Order</h3>
 
-        <p>
-          Graph is an important non-linear data structure used to
-          represent relationships and connections. It is widely used
-          in computer networks, maps, social media and many other
-          real-world applications.
-        </p>
-      </div>
+            <div id="traversalOrder">
+                Start BFS or DFS to see the order.
+            </div>
 
+            <p id="graphExplanation">
+                Select a traversal technique to begin learning.
+            </p>
 
-      <!-- Back Button -->
-      <button
-        class="back-btn"
-        onclick="location.href='ds-notes.html'"
-      >
-        ⬅️ Back to Data Structure Notes
-      </button>
+        </div>
 
     </div>
 
-  </body>
+</section>
+
+
+<!-- GRAPH CONCEPTS -->
+
+<section class="note-card">
+
+    <span class="topic-label">CONCEPT EXPLANATION</span>
+
+    <h2>Understanding Graph Step by Step</h2>
+
+    <h3>1. What is a Vertex?</h3>
+
+    <p>
+        A vertex is a point or node in a graph.
+        Each vertex represents an object, place or person.
+    </p>
+
+    <div class="definition">
+        Example: In a city map, each city can be represented
+        as a vertex.
+    </div>
+
+    <h3>2. What is an Edge?</h3>
+
+    <p>
+        An edge connects two vertices.
+        It shows the relationship or connection between them.
+    </p>
+
+    <div class="definition">
+        Example: A road connecting two cities can be represented
+        as an edge.
+    </div>
+
+    <h3>3. What is a Neighbour?</h3>
+
+    <p>
+        Two vertices are neighbours when an edge directly connects them.
+    </p>
+
+    <div class="definition">
+        In the visualization, A is connected to B and C.
+        Therefore, B and C are neighbours of A.
+    </div>
+
+    <h3>4. What is a Degree?</h3>
+
+    <p>
+        In an undirected graph, the degree of a vertex is the
+        number of edges connected to it.
+    </p>
+
+    <div class="formula-box">
+        Degree = Number of edges connected to a vertex
+    </div>
+
+    <p>
+        In this graph, vertex A has degree 2 because it connects
+        to B and C.
+    </p>
+
+    <h3>5. What is a Path?</h3>
+
+    <p>
+        A path is a sequence of vertices connected by edges.
+    </p>
+
+    <div class="formula-box">
+        A → B → D
+    </div>
+
+    <p>
+        This is a path from A to D through B.
+    </p>
+
+    <h3>6. What is a Cycle?</h3>
+
+    <p>
+        A cycle is a path that starts and ends at the same vertex
+        without repeating other vertices in a simple cycle.
+    </p>
+
+    <div class="formula-box">
+        A → B → E → C → A
+    </div>
+
+    <p>
+        This example forms a cycle because it returns to A.
+    </p>
+
+    <h3>7. What is a Connected Graph?</h3>
+
+    <p>
+        An undirected graph is connected when every vertex can
+        be reached from every other vertex through a path.
+    </p>
+
+    <h3>8. What is a Weighted Graph?</h3>
+
+    <p>
+        A weighted graph assigns a numerical value, such as distance
+        or cost, to each edge.
+    </p>
+
+    <div class="formula-box">
+        City A — 10 km — City B
+    </div>
+
+    <h3>9. What is a Directed Graph?</h3>
+
+    <p>
+        A directed graph has edges with a specific direction.
+        An edge from A to B does not automatically mean that an
+        edge from B to A exists.
+    </p>
+
+    <div class="formula-box">
+        A → B
+    </div>
+
+</section>
+
+
+<!-- BFS AND DFS EXPLANATION -->
+
+<section class="note-card">
+
+    <span class="topic-label">TRAVERSAL TECHNIQUES</span>
+
+    <h2>How BFS and DFS Work</h2>
+
+    <h3>Breadth First Search (BFS)</h3>
+
+    <p>
+        BFS visits vertices level by level. It uses a queue,
+        which follows the First In, First Out (FIFO) principle.
+    </p>
+
+    <ol>
+        <li>Start from vertex A.</li>
+        <li>Visit A and add its neighbours to the queue.</li>
+        <li>Visit the next unvisited vertex in the queue.</li>
+        <li>Continue until all reachable vertices are visited.</li>
+    </ol>
+
+    <div class="definition">
+        <strong>Remember:</strong> BFS explores nearby vertices first.
+    </div>
+
+    <h3>Depth First Search (DFS)</h3>
+
+    <p>
+        DFS explores one path as deeply as possible before
+        returning to explore other paths.
+    </p>
+
+    <ol>
+        <li>Start from vertex A.</li>
+        <li>Visit an unvisited neighbour.</li>
+        <li>Continue deeper along the current path.</li>
+        <li>Return when no unvisited neighbour remains.</li>
+        <li>Continue until all reachable vertices are visited.</li>
+    </ol>
+
+    <div class="definition">
+        <strong>Remember:</strong> DFS explores deeply before backtracking.
+    </div>
+
+</section>
+
+        <!-- GRAPH TRAVERSAL -->
+
+        <section class="note-card">
+
+            <span class="topic-label">TOPIC 05</span>
+
+            <h2>5. Graph Traversal</h2>
+
+            <div class="definition">
+                Graph traversal is the process of visiting vertices
+                of a graph in a systematic way.
+            </div>
+
+            <p>The two common graph traversal techniques are:</p>
+
+            <ul>
+                <li>Breadth First Search (BFS)</li>
+                <li>Depth First Search (DFS)</li>
+            </ul>
+
+            <h3>1. Breadth First Search (BFS)</h3>
+
+            <p>
+                BFS visits vertices level by level. It uses a queue
+                to manage the vertices waiting to be visited.
+            </p>
+
+            <h4>Steps of BFS</h4>
+
+            <ol>
+                <li>Start from a selected vertex.</li>
+                <li>Mark the vertex as visited.</li>
+                <li>Add it to the queue.</li>
+                <li>Visit its unvisited neighbours.</li>
+                <li>Continue until the queue becomes empty.</li>
+            </ol>
+
+            <h3>2. Depth First Search (DFS)</h3>
+
+            <p>
+                DFS explores one path as deeply as possible before
+                returning to explore other paths. It uses recursion
+                or a stack.
+            </p>
+
+            <h4>Steps of DFS</h4>
+
+            <ol>
+                <li>Start from a selected vertex.</li>
+                <li>Mark the vertex as visited.</li>
+                <li>Visit an unvisited neighbour.</li>
+                <li>Continue exploring deeper vertices.</li>
+                <li>Return when no unvisited neighbour remains.</li>
+            </ol>
+
+        </section>
+
+
+        <!-- BFS VS DFS -->
+
+        <section class="note-card">
+
+            <span class="topic-label">TOPIC 06</span>
+
+            <h2>6. Difference Between BFS and DFS</h2>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>BFS</th>
+                            <th>DFS</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Visits level by level.</td>
+                            <td>Explores deeply first.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Uses a queue.</td>
+                            <td>Uses a stack or recursion.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Finds shortest paths in unweighted graphs.</td>
+                            <td>Does not always find the shortest path.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Useful for level-wise exploration.</td>
+                            <td>Useful for exploring paths and connectivity.</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- GRAPH APPLICATIONS -->
+
+        <section class="note-card">
+
+            <span class="topic-label">TOPIC 07</span>
+
+            <h2>7. Applications of Graph</h2>
+
+            <ul>
+                <li><strong>Social Networks:</strong> Connecting people.</li>
+                <li><strong>Google Maps:</strong> Representing roads and locations.</li>
+                <li><strong>Computer Networks:</strong> Connecting computers.</li>
+                <li><strong>Web Pages:</strong> Representing links between pages.</li>
+                <li><strong>Airline Routes:</strong> Representing routes between cities.</li>
+            </ul>
+
+        </section>
+
+
+        <!-- ADVANTAGES -->
+
+        <section class="note-card">
+
+            <span class="topic-label">TOPIC 08</span>
+
+            <h2>8. Advantages of Graph</h2>
+
+            <ul>
+                <li>It represents complex relationships easily.</li>
+                <li>It helps find paths between locations.</li>
+                <li>It represents networks effectively.</li>
+                <li>It supports searching and traversal operations.</li>
+                <li>It is useful in many real-world applications.</li>
+            </ul>
+
+        </section>
+
+
+        <!-- DISADVANTAGES -->
+
+        <section class="note-card">
+
+            <span class="topic-label">TOPIC 09</span>
+
+            <h2>9. Disadvantages of Graph</h2>
+
+            <ul>
+                <li>Graph implementation can be complex.</li>
+                <li>Adjacency matrices may use more memory for sparse graphs.</li>
+                <li>Large graphs can be difficult to manage.</li>
+                <li>Some graph algorithms require more processing time.</li>
+            </ul>
+
+        </section>
+
+
+        <!-- IMPORTANT POINTS -->
+
+        <section class="note-card">
+
+            <span class="topic-label">QUICK REVISION</span>
+
+            <h2>10. Important Points</h2>
+
+            <ul>
+                <li>A graph consists of vertices and edges.</li>
+                <li>BFS uses a queue.</li>
+                <li>DFS uses a stack or recursion.</li>
+                <li>Adjacency matrix uses a two-dimensional array.</li>
+                <li>Adjacency list stores neighbouring vertices.</li>
+                <li>Graphs are used in networks and route planning.</li>
+            </ul>
+
+        </section>
+
+
+        <!-- BACK BUTTON -->
+
+        <button
+            class="back-btn"
+            type="button"
+            onclick="history.back()">
+            ← Back to Previous Page
+        </button>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="page-footer">
+
+        <p>© 2026 StudySpark AI</p>
+
+        <p>Learn Smart • Study Better • Grow Faster</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/ds-graph.js"></script>
+
+</body>
+
 </html>

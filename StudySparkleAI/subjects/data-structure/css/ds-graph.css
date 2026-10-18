@@ -1,0 +1,1531 @@
+/* ========================================
+   STUDYSPARK AI - GRAPH NOTES CSS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fc;
+    color: #263247;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   PAGE HEADER
+======================================== */
+
+.page-header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 55px 20px 60px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.page-header::before,
+.page-header::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+.page-header::before {
+    width: 250px;
+    height: 250px;
+    top: -100px;
+    left: -70px;
+    animation: floatCircle 7s ease-in-out infinite;
+}
+
+.page-header::after {
+    width: 300px;
+    height: 300px;
+    right: -100px;
+    bottom: -170px;
+    animation: floatCircle 9s ease-in-out infinite reverse;
+}
+
+.header-badge {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 7px 18px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.14);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.page-header h1 {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.3;
+    margin-bottom: 12px;
+    animation: fadeDown 0.8s ease;
+}
+
+.page-header p {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: auto;
+    color: #f1edff;
+    font-size: 16px;
+    animation: fadeUp 0.8s ease;
+}
+
+/* ========================================
+   MAIN NOTES CONTAINER
+======================================== */
+
+.notes-container {
+    width: min(1100px, 92%);
+    margin: 35px auto;
+}
+
+.note-card {
+    position: relative;
+    padding: 28px;
+    margin-bottom: 25px;
+    border: 1px solid #e7eaf3;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 6px 24px rgba(31, 45, 85, 0.06);
+    animation: fadeUp 0.7s ease both;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(80, 76, 160, 0.12);
+}
+
+.note-card h2 {
+    color: #5b55c6;
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #efedff;
+}
+
+.note-card h3 {
+    color: #3c4b70;
+    font-size: 19px;
+    margin: 20px 0 10px;
+}
+
+.note-card p {
+    margin-bottom: 13px;
+    color: #4b5568;
+}
+
+.note-card ul,
+.note-card ol {
+    padding-left: 25px;
+    margin: 12px 0 18px;
+}
+
+.note-card li {
+    margin-bottom: 8px;
+    padding-left: 3px;
+}
+
+.note-card li::marker {
+    color: #7664d8;
+}
+
+.note-card strong {
+    color: #3945a5;
+}
+
+/* ========================================
+   TOPIC LABEL
+======================================== */
+
+.topic-label {
+    display: inline-block;
+    padding: 5px 13px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    color: #5d4ec7;
+    background: #f0edff;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+/* ========================================
+   DEFINITION BOX
+======================================== */
+
+.definition {
+    padding: 18px 20px;
+    margin: 15px 0;
+    border-left: 5px solid #7664d8;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f5f3ff, #f8faff);
+}
+
+.definition p {
+    margin: 0;
+    color: #38466a;
+}
+
+/* ========================================
+   INFORMATION GRID
+======================================== */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.info-box {
+    padding: 20px;
+    border: 1px solid #e7e5ff;
+    border-radius: 14px;
+    background: #faf9ff;
+    transition: all 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-4px);
+    border-color: #a69aef;
+    background: #f3f0ff;
+}
+
+.info-box h3 {
+    margin-top: 0;
+    color: #6254c7;
+}
+
+/* ========================================
+   CODE BLOCK
+======================================== */
+
+.code-block {
+    position: relative;
+    overflow-x: auto;
+    margin: 15px 0;
+    padding: 22px;
+    border: 1px solid #303c55;
+    border-radius: 12px;
+    background: #172033;
+    color: #e5eaff;
+}
+
+.code-block pre {
+    margin: 0;
+    overflow-x: auto;
+    white-space: pre;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.code-block code {
+    color: #e5eaff;
+    font-family: inherit;
+}
+
+/* ========================================
+   COPY BUTTON
+======================================== */
+
+.copy-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #6c63d9;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: #5147bd;
+    transform: translateY(-2px);
+}
+
+.copy-btn:active {
+    transform: scale(0.97);
+}
+
+/* ========================================
+   OUTPUT BLOCK
+======================================== */
+
+.output-block {
+    padding: 18px;
+    margin: 15px 0;
+    border: 1px solid #ccebd8;
+    border-radius: 10px;
+    background: #f0fff5;
+}
+
+.output-block h3 {
+    margin-top: 0;
+    color: #16834c;
+}
+
+.output-block pre {
+    overflow-x: auto;
+    color: #245a3c;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+/* ========================================
+   TABLE
+======================================== */
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 18px 0;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+table th,
+table td {
+    padding: 13px 16px;
+    border: 1px solid #e3e6f0;
+    text-align: left;
+}
+
+table th {
+    background: #6960d5;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background: #f7f7ff;
+}
+
+table tr:hover {
+    background: #efedff;
+}
+
+/* ========================================
+   GRAPH VISUALIZATION CARD
+======================================== */
+
+.graph-visualization {
+    padding: 25px;
+    margin: 20px 0;
+    border: 1px solid #e2e5f5;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #ffffff, #f7f8ff);
+    box-shadow: 0 8px 25px rgba(57, 67, 120, 0.08);
+}
+
+.graph-visualization h3 {
+    margin-top: 0;
+    color: #5148b8;
+    font-size: 22px;
+}
+
+.graph-visualization > p {
+    color: #657087;
+}
+
+/* ========================================
+   GRAPH SVG AREA
+======================================== */
+
+.graph-svg-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    padding: 12px;
+    border: 1px solid #e6e8f5;
+    border-radius: 15px;
+    background-color: #ffffff;
+    background-image: radial-gradient(#dfe3f4 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.graph-svg {
+    display: block;
+    width: 100%;
+    min-width: 320px;
+    max-width: 700px;
+    height: auto;
+    margin: auto;
+    overflow: visible;
+}
+
+/* ========================================
+   GRAPH EDGES
+======================================== */
+
+.graph-edge {
+    stroke: #aab2ca;
+    stroke-width: 3;
+    stroke-linecap: round;
+    transition: stroke 0.3s ease, stroke-width 0.3s ease;
+}
+
+.graph-edge.active-edge {
+    stroke: #f59e0b;
+    stroke-width: 5;
+    animation: edgeGlow 0.8s ease-in-out infinite alternate;
+}
+
+/* ========================================
+   GRAPH NODES
+======================================== */
+
+.graph-node {
+    cursor: pointer;
+    outline: none;
+}
+
+.graph-node circle {
+    fill: #ebe9ff;
+    stroke: #7768dc;
+    stroke-width: 3;
+    transition:
+        fill 0.3s ease,
+        stroke 0.3s ease,
+        transform 0.3s ease;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.graph-node text {
+    fill: #433b9b;
+    font-size: 17px;
+    font-weight: 700;
+    text-anchor: middle;
+    dominant-baseline: central;
+    pointer-events: none;
+    user-select: none;
+}
+
+.graph-node:hover circle {
+    fill: #d9d3ff;
+    stroke: #594bd0;
+    transform: scale(1.12);
+}
+
+.graph-node.visited circle {
+    fill: #b7f0d0;
+    stroke: #20a36b;
+}
+
+.graph-node.visited text {
+    fill: #126944;
+}
+
+.graph-node.current circle {
+    fill: #ffd88a;
+    stroke: #f59e0b;
+    stroke-width: 5;
+    animation: nodePulse 0.8s ease-in-out infinite alternate;
+}
+
+.graph-node.current text {
+    fill: #754300;
+}
+
+.graph-node.just-visited circle {
+    animation: nodePop 0.45s ease;
+}
+
+/* ========================================
+   GRAPH LEGEND
+======================================== */
+
+.graph-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 18px 0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #59647b;
+    font-size: 13px;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border: 2px solid #7768dc;
+    border-radius: 50%;
+    background: #ebe9ff;
+}
+
+.legend-dot.visited-dot {
+    border-color: #20a36b;
+    background: #b7f0d0;
+}
+
+.legend-dot.current-dot {
+    border-color: #f59e0b;
+    background: #ffd88a;
+}
+
+/* ========================================
+   GRAPH CONTROL BUTTONS
+======================================== */
+
+.graph-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 22px 0;
+}
+
+.graph-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 43px;
+    padding: 11px 19px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7165df, #8a5bd2);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(105, 91, 210, 0.2);
+    transition: all 0.25s ease;
+}
+
+.graph-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(105, 91, 210, 0.3);
+}
+
+.graph-btn:active {
+    transform: scale(0.97);
+}
+
+.graph-btn:focus-visible {
+    outline: 3px solid #b7adff;
+    outline-offset: 3px;
+}
+
+.graph-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.graph-btn.secondary {
+    background: #edf0fa;
+    color: #4d5570;
+    box-shadow: none;
+}
+
+.graph-btn.secondary:hover {
+    background: #dfe4f5;
+}
+
+.graph-btn.success {
+    background: linear-gradient(135deg, #159c68, #20b982);
+}
+
+/* ========================================
+   TRAVERSAL RESULT
+======================================== */
+
+.traversal-result {
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #dedbff;
+    border-radius: 14px;
+    background: #f6f4ff;
+}
+
+.traversal-result h3 {
+    margin-top: 0;
+    color: #5c4fc3;
+}
+
+.traversal-result p {
+    margin-bottom: 8px;
+}
+
+.traversal-order {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 14px 0;
+}
+
+.result-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #c8c0ff;
+    border-radius: 10px;
+    background: #eae6ff;
+    color: #5144b8;
+    font-weight: 700;
+    animation: fadeUp 0.35s ease both;
+}
+
+.result-chip.active {
+    border-color: #f59e0b;
+    background: #ffdfa1;
+    color: #704300;
+}
+
+/* ========================================
+   STATUS MESSAGE
+======================================== */
+
+.graph-status {
+    min-height: 30px;
+    padding: 10px 14px;
+    margin-top: 12px;
+    border-left: 4px solid #7165df;
+    border-radius: 6px;
+    background: #f0efff;
+    color: #4b4597;
+    font-size: 14px;
+}
+
+/* ========================================
+   GRAPH CONCEPT CARDS
+======================================== */
+
+.concept-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+    margin-top: 20px;
+}
+
+.concept-card {
+    padding: 20px;
+    border: 1px solid #e5e7f4;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(50, 60, 100, 0.04);
+    transition: all 0.3s ease;
+}
+
+.concept-card:hover {
+    transform: translateY(-5px);
+    border-color: #b9b0fa;
+    box-shadow: 0 10px 22px rgba(88, 76, 170, 0.1);
+}
+
+.concept-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 13px;
+    border-radius: 12px;
+    background: #eeebff;
+    color: #6355c9;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.concept-card h3 {
+    margin: 0 0 8px;
+    color: #5148b8;
+    font-size: 17px;
+}
+
+.concept-card p {
+    margin: 0;
+    color: #667085;
+    font-size: 14px;
+}
+
+/* ========================================
+   ADVANTAGES / DISADVANTAGES
+======================================== */
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 18px;
+}
+
+.pros-box,
+.cons-box {
+    padding: 22px;
+    border-radius: 14px;
+}
+
+.pros-box {
+    border: 1px solid #bfe8d1;
+    background: #f1fff6;
+}
+
+.cons-box {
+    border: 1px solid #ffd5d5;
+    background: #fff6f6;
+}
+
+.pros-box h3 {
+    color: #14834d;
+    margin-top: 0;
+}
+
+.cons-box h3 {
+    color: #c44747;
+    margin-top: 0;
+}
+
+/* ========================================
+   BACK BUTTON
+======================================== */
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    margin: 5px 0 25px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.25);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.page-footer {
+    padding: 25px 18px;
+    margin-top: 45px;
+    background: #202944;
+    color: #dce2f5;
+    text-align: center;
+}
+
+.page-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.page-footer a {
+    color: #c4baff;
+    text-decoration: none;
+}
+
+.page-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   BACK TO TOP BUTTON
+======================================== */
+
+.back-to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    box-shadow: 0 5px 15px rgba(70, 60, 150, 0.25);
+    transition: all 0.3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-4px);
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatCircle {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(18px, 22px);
+    }
+}
+
+@keyframes nodePulse {
+    from {
+        filter: drop-shadow(0 0 1px rgba(245, 158, 11, 0.2));
+    }
+
+    to {
+        filter: drop-shadow(0 0 9px rgba(245, 158, 11, 0.7));
+    }
+}
+
+@keyframes nodePop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes edgeGlow {
+    from {
+        filter: drop-shadow(0 0 1px rgba(245, 158, 11, 0.2));
+    }
+
+    to {
+        filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.6));
+    }
+}
+
+/* ========================================
+   SCROLL ANIMATION SUPPORT
+======================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+    .concept-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .notes-container {
+        width: 94%;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-header {
+        padding: 42px 17px;
+    }
+
+    .page-header h1 {
+        font-size: 30px;
+    }
+
+    .page-header p {
+        font-size: 14px;
+    }
+
+    .notes-container {
+        width: 94%;
+        margin: 22px auto;
+    }
+
+    .note-card {
+        padding: 19px;
+        margin-bottom: 18px;
+        border-radius: 14px;
+    }
+
+    .note-card h2 {
+        font-size: 21px;
+    }
+
+    .note-card h3 {
+        font-size: 17px;
+    }
+
+    .info-grid,
+    .pros-cons,
+    .concept-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .graph-visualization {
+        padding: 15px;
+    }
+
+    .graph-visualization h3 {
+        font-size: 19px;
+    }
+
+    .graph-svg-wrapper {
+        padding: 5px;
+    }
+
+    .graph-controls {
+        gap: 9px;
+    }
+
+    .graph-btn {
+        flex: 1 1 130px;
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .graph-legend {
+        gap: 10px;
+    }
+
+    .legend-item {
+        font-size: 12px;
+    }
+
+    .code-block {
+        padding: 15px;
+    }
+
+    .code-block pre {
+        font-size: 12px;
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* ========================================
+   BFS / DFS ANIMATION CONTROLS
+======================================== */
+
+.graph-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 25px auto;
+    padding: 18px;
+    border: 1px solid #e4e7f5;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ffffff, #f5f3ff);
+    box-shadow: 0 6px 20px rgba(80, 70, 160, 0.08);
+}
+
+/* ALL BUTTONS */
+
+.graph-controls button,
+.graph-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 125px;
+    min-height: 46px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 11px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(70, 60, 160, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* START BFS */
+
+#bfsBtn,
+#startBfs,
+.start-bfs {
+    background: linear-gradient(135deg, #4776e6, #3154c9);
+}
+
+#bfsBtn:hover,
+#startBfs:hover,
+.start-bfs:hover {
+    background: linear-gradient(135deg, #3154c9, #243da0);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(49, 84, 201, 0.3);
+}
+
+/* START DFS */
+
+#dfsBtn,
+#startDfs,
+.start-dfs {
+    background: linear-gradient(135deg, #9b59d0, #7437ad);
+}
+
+#dfsBtn:hover,
+#startDfs:hover,
+.start-dfs:hover {
+    background: linear-gradient(135deg, #7437ad, #5b268d);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(116, 55, 173, 0.3);
+}
+
+/* NEXT STEP */
+
+#nextBtn,
+.next-step {
+    background: linear-gradient(135deg, #f5a623, #e58a00);
+}
+
+#nextBtn:hover,
+.next-step:hover {
+    background: linear-gradient(135deg, #e58a00, #c87500);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(229, 138, 0, 0.3);
+}
+
+/* PLAY ANIMATION */
+
+#playBtn,
+.play-animation {
+    background: linear-gradient(135deg, #20b77a, #128458);
+}
+
+#playBtn:hover,
+.play-animation:hover {
+    background: linear-gradient(135deg, #2d4a83, #52449a);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(18, 132, 88, 0.3);
+}
+
+/* RESET BUTTON */
+
+#resetBtn,
+.reset-btn {
+    background: linear-gradient(135deg, #738aaa, #475569);
+}
+
+#resetBtn:hover,
+.reset-btn:hover {
+    background: linear-gradient(135deg, #475569, #334155);
+    transform: translateY(-3px);
+}
+
+/* BUTTON CLICK EFFECT */
+
+.graph-controls button:active,
+.graph-btn:active {
+    transform: scale(0.96);
+}
+
+/* KEYBOARD FOCUS */
+
+.graph-controls button:focus-visible,
+.graph-btn:focus-visible {
+    outline: 3px solid #b8b0ff;
+    outline-offset: 4px;
+}
+
+/* DISABLED BUTTON */
+
+.graph-controls button:disabled,
+.graph-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* TRAVERSAL STATUS */
+
+#graphStatus,
+#traversalStatus,
+.graph-status {
+    min-height: 45px;
+    margin: 15px 0;
+    padding: 12px 16px;
+    border-left: 5px solid #7564dc;
+    border-radius: 8px;
+    background: #f0edff;
+    color: #4c419c;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* TRAVERSAL ORDER */
+
+#traversalOrder,
+.traversal-order {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.result-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    min-height: 42px;
+    padding: 10px 14px;
+    border: 2px solid #c8c0ff;
+    border-radius: 10px;
+    background: #eeebff;
+    color: #5142b5;
+    font-weight: 700;
+    animation: chipAppear 0.35s ease both;
+}
+
+/* ANIMATION */
+
+@keyframes chipAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.7) translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+    .graph-controls {
+        gap: 10px;
+        padding: 13px;
+    }
+
+    .graph-controls button,
+    .graph-btn {
+        flex: 1 1 42%;
+        min-width: 0;
+        min-height: 44px;
+        padding: 11px 8px;
+        font-size: 12px;
+    }
+}
+/* ========================================
+   FIX: ALL GRAPH ANIMATION BUTTONS
+======================================== */
+
+.graph-controls {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 75px !important;
+    overflow: visible !important;
+    padding: 18px !important;
+}
+
+/* Target every button inside graph controls */
+
+.graph-controls button,
+.graph-controls .graph-btn,
+.graph-controls a {
+    display: inline-flex !important;
+    position: relative !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    flex: 0 1 auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 125px !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 46px !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 12px 18px !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 10px !important;
+    color: #ffffff !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 1.5 !important;
+    white-space: normal !important;
+    cursor: pointer !important;
+    transform: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* BFS */
+
+#bfsBtn,
+#startBfs,
+#startBFS,
+#startBfsBtn {
+    background: #4169e1 !important;
+    color: #ffffff !important;
+}
+
+/* DFS */
+
+#dfsBtn,
+#startDfs,
+#startDFS,
+#startDfsBtn {
+    background: #8050c8 !important;
+    color: #ffffff !important;
+}
+
+/* NEXT STEP */
+
+#nextBtn,
+#nextStep,
+#nextStepBtn,
+#stepBtn {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-width: 125px !important;
+    min-height: 46px !important;
+    padding: 12px 18px !important;
+    background: #ed990b !important;
+    color: #ffffff !important;
+}
+
+/* PLAY ANIMATION */
+
+#playBtn,
+#playAnimation,
+#playAnimationBtn,
+#animateBtn {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-width: 125px !important;
+    min-height: 46px !important;
+    padding: 12px 18px !important;
+    background: #159967 !important;
+    color: #ffffff !important;
+}
+
+/* RESET */
+
+#resetBtn,
+#reset,
+#resetGraph,
+#resetButton {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-width: 125px !important;
+    min-height: 46px !important;
+    padding: 12px 18px !important;
+    background: #53657d !important;
+    color: #ffffff !important;
+}
+
+/* HOVER */
+
+#nextBtn:hover,
+#nextStep:hover,
+#nextStepBtn:hover,
+#stepBtn:hover {
+    background: #c77c00 !important;
+}
+
+#playBtn:hover,
+#playAnimation:hover,
+#playAnimationBtn:hover,
+#animateBtn:hover {
+    background: #08764d !important;
+}
+
+#resetBtn:hover,
+#reset:hover,
+#resetGraph:hover,
+#resetButton:hover {
+    background: #34445a !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .graph-controls button,
+    .graph-controls .graph-btn,
+    .graph-controls a {
+        flex: 1 1 40% !important;
+        min-width: 0 !important;
+        padding: 11px 8px !important;
+        font-size: 12px !important;
+    }
+}
+/* FIX PLAY ANIMATION AND RESET BUTTONS */
+
+.graph-controls {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    height: auto !important;
+    min-height: 60px !important;
+    overflow: visible !important;
+}
+
+/* Play Animation */
+
+.graph-controls button:nth-of-type(4),
+#playBtn,
+#playAnimation,
+#playAnimationBtn,
+#animateBtn {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    flex: 0 1 auto !important;
+    width: auto !important;
+    min-width: 135px !important;
+    height: auto !important;
+    min-height: 46px !important;
+    padding: 12px 18px !important;
+    background: linear-gradient(135deg, #20b77a, #128458) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    overflow: visible !important;
+}
+
+/* Reset */
+
+.graph-controls button:nth-of-type(5),
+#resetBtn,
+#reset,
+#resetGraph,
+#resetButton {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    flex: 0 1 auto !important;
+    width: auto !important;
+    min-width: 125px !important;
+    height: auto !important;
+    min-height: 46px !important;
+    padding: 12px 18px !important;
+    background: linear-gradient(135deg, #64748b, #475569) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    overflow: visible !important;
+}
+
+/* Hover */
+
+#playBtn:hover,
+#playAnimation:hover,
+#playAnimationBtn:hover,
+#animateBtn:hover {
+    background: #08764d !important;
+}
+
+#resetBtn:hover,
+#reset:hover,
+#resetGraph:hover,
+#resetButton:hover {
+    background: #34445a !important;
+}
+
+@media (max-width: 600px) {
+    .graph-controls button:nth-of-type(4),
+    .graph-controls button:nth-of-type(5) {
+        flex: 1 1 40% !important;
+        min-width: 120px !important;
+    }
+}
+/* RESET BUTTON CSS */
+
+#resetBtn,
+#reset,
+#resetGraph,
+#resetButton,
+#resetBtn button,
+.reset-btn,
+.reset-button,
+button[onclick*="reset" i] {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px !important;
+    background: #ef4444 !important;
+    color: #ffffff !important;
+    border: 2px solid #dc2626 !important;
+    border-radius: 10px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    cursor: pointer;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.2);
+    transition: all 0.3s ease;
+}
+
+#resetBtn:hover,
+#reset:hover,
+#resetGraph:hover,
+#resetButton:hover,
+.reset-btn:hover,
+.reset-button:hover,
+button[onclick*="reset" i]:hover {
+    background: #dc2626 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(239, 68, 68, 0.3);
+}
+#resetGraphBtn {
+    background: linear-gradient(135deg, #7657f6, #6343e8);
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#resetGraphBtn:hover {
+    background: linear-gradient(135deg, #6343e8, #4f32d4);
+    box-shadow: 0 4px 12px rgba(99, 67, 232, 0.3);
+}
+
+#resetGraphBtn:active {
+    transform: scale(0.96);
+}

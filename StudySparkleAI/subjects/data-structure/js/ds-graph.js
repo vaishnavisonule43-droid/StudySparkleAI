@@ -1,271 +1,309 @@
-var vertices = [];
+// ==============================
+// GRAPH VISUALIZATION
+// StudySpark AI
+// ==============================
 
-var positions = [
-    { x: 50, y: 40 },
-    { x: 250, y: 40 },
-    { x: 150, y: 130 },
-    { x: 50, y: 220 },
-    { x: 250, y: 220 },
-    { x: 150, y: 270 }
-];
+document.addEventListener("DOMContentLoaded", function () {
 
-var animationTimer;
+    const nodes = ["A", "B", "C", "D", "E", "F"];
 
+    const graph = {
+        A: ["B", "C"],
+        B: ["A", "D", "E"],
+        C: ["A", "E"],
+        D: ["B", "F"],
+        E: ["B", "C", "F"],
+        F: ["D", "E"]
+    };
 
-/* =========================
-   ADD VERTEX
-========================= */
+    const status = document.getElementById("graphStatus");
+    const orderBox = document.getElementById("traversalOrder");
+    const explanation = document.getElementById("graphExplanation");
 
-function addVertex() {
+    const bfsBtn = document.getElementById("bfsBtn");
+    const dfsBtn = document.getElementById("dfsBtn");
+    const nextBtn = document.getElementById("nextStepBtn");
+    const playBtn = document.getElementById("autoPlayBtn");
+    const resetBtn = document.getElementById("resetGraphBtn");
 
-    var message =
-        document.getElementById("graphMessage");
+    const nodeElements = document.querySelectorAll(".graph-node");
+    const edgeElements = document.querySelectorAll(".graph-edge");
 
-    if (vertices.length >= 6) {
+    let steps = [];
+    let stepIndex = 0;
+    let timer = null;
 
-        message.innerHTML =
-            "⚠️ Maximum 6 vertices allowed.";
+    // RESET VISUALIZATION
 
-        return;
+    function resetGraph() {
+
+        clearInterval(timer);
+        timer = null;
+
+        nodeElements.forEach(function (node) {
+            node.classList.remove("visited", "current", "just-visited");
+        });
+
+        edgeElements.forEach(function (edge) {
+            edge.classList.remove("active-edge");
+        });
+
+        steps = [];
+        stepIndex = 0;
+
+        orderBox.innerHTML = "Start BFS or DFS to see the order.";
+
+        status.textContent = "Ready to explore";
+        explanation.textContent =
+            "Choose BFS or DFS to see how vertices are visited.";
+
+        nextBtn.disabled = true;
+        playBtn.disabled = true;
+        playBtn.textContent = "▶ Play Animation";
     }
 
+    // DISPLAY VISITED ORDER
 
-    var letter =
-        String.fromCharCode(65 + vertices.length);
+    function updateOrder(visited) {
 
-    vertices.push(letter);
+        orderBox.innerHTML = "";
 
-    displayGraph();
+        visited.forEach(function (vertex) {
 
+            const chip = document.createElement("span");
 
-    message.innerHTML =
-        "✅ Vertex " + letter + " added.";
+            chip.className = "traversal-chip";
+            chip.textContent = vertex;
 
-}
+            orderBox.appendChild(chip);
+        });
+    }
 
+    // BFS
 
-/* =========================
-   DISPLAY GRAPH
-========================= */
+    function createBfsSteps() {
 
-function displayGraph() {
+        const visited = new Set();
+        const queue = ["A"];
+        const result = [];
 
-    var visual =
-        document.getElementById("graphVisual");
+        visited.add("A");
 
-    visual.innerHTML = "";
+        while (queue.length > 0) {
 
+            const current = queue.shift();
 
-    for (var i = 0; i < vertices.length; i++) {
+            result.push({
+                vertex: current,
+                visited: [...result.map(function (step) {
+                    return step.vertex;
+                }), current],
+                explanation:
+                    "BFS visits vertex " + current +
+                    " and explores its unvisited neighbours."
+            });
 
-        var node =
-            document.createElement("div");
+            graph[current].forEach(function (neighbour) {
 
-        node.className = "graph-node";
+                if (!visited.has(neighbour)) {
 
-        node.innerHTML = vertices[i];
+                    visited.add(neighbour);
+                    queue.push(neighbour);
+                }
+            });
+        }
 
-        node.style.left =
-            positions[i].x + "px";
+        return result;
+    }
 
-        node.style.top =
-            positions[i].y + "px";
+    // DFS
 
+    function createDfsSteps() {
 
-        node.setAttribute(
-            "data-node",
-            vertices[i]
+        const visited = new Set();
+        const result = [];
+
+        function visit(vertex) {
+
+            visited.add(vertex);
+
+            result.push({
+                vertex: vertex,
+                visited: Array.from(visited),
+                explanation:
+                    "DFS visits vertex " + vertex +
+                    " and explores an unvisited neighbour before backtracking."
+            });
+
+            graph[vertex].forEach(function (neighbour) {
+
+                if (!visited.has(neighbour)) {
+                    visit(neighbour);
+                }
+            });
+        }
+
+        visit("A");
+
+        return result;
+    }
+
+    // RUN TRAVERSAL
+
+    function startTraversal(type) {
+
+        resetGraph();
+
+        steps = type === "BFS"
+            ? createBfsSteps()
+            : createDfsSteps();
+
+        status.textContent = type + " traversal started";
+
+        explanation.textContent =
+            type === "BFS"
+                ? "BFS uses a queue and explores nearby vertices first."
+                : "DFS explores deeper along a path before backtracking.";
+
+        nextBtn.disabled = false;
+        playBtn.disabled = false;
+
+        showNextStep();
+    }
+
+    // SHOW NEXT STEP
+
+    function showNextStep() {
+
+        if (stepIndex >= steps.length) {
+
+            clearInterval(timer);
+            timer = null;
+
+            status.textContent = "Traversal completed!";
+
+            explanation.textContent =
+                "All reachable vertices have been visited.";
+
+            nextBtn.disabled = true;
+            playBtn.disabled = true;
+
+            playBtn.textContent = "▶ Play Animation";
+
+            return;
+        }
+
+        const step = steps[stepIndex];
+
+        nodeElements.forEach(function (node) {
+
+            const vertex = node.dataset.node;
+
+            node.classList.remove("current", "just-visited");
+
+            if (step.visited.includes(vertex)) {
+                node.classList.add("visited");
+            } else {
+                node.classList.remove("visited");
+            }
+        });
+
+        const currentNode = document.querySelector(
+            '.graph-node[data-node="' + step.vertex + '"]'
         );
 
+        if (currentNode) {
+            currentNode.classList.add("current", "just-visited");
+        }
 
-        visual.appendChild(node);
+        edgeElements.forEach(function (edge) {
+            edge.classList.remove("active-edge");
+        });
 
+        orderBox.innerHTML = "";
+
+        step.visited.forEach(function (vertex) {
+
+            const chip = document.createElement("span");
+
+            chip.className = "traversal-chip";
+            chip.textContent = vertex;
+
+            orderBox.appendChild(chip);
+        });
+
+        status.textContent =
+            "Step " + (stepIndex + 1) + " of " + steps.length;
+
+        explanation.textContent = step.explanation;
+
+        stepIndex++;
     }
 
-}
+    // NEXT STEP BUTTON
 
+    nextBtn.addEventListener("click", function () {
 
-/* =========================
-   BFS
-========================= */
+        if (timer !== null) {
+            clearInterval(timer);
+            timer = null;
+        }
 
-function startBFS() {
+        playBtn.textContent = "▶ Play Animation";
 
-    if (vertices.length === 0) {
+        showNextStep();
+    });
 
-        document.getElementById(
-            "graphMessage"
-        ).innerHTML =
-            "⚠️ First add some vertices.";
+    // AUTO PLAY ANIMATION
 
-        return;
-    }
+    playBtn.addEventListener("click", function () {
 
+        if (timer !== null) {
 
-    stopAnimation();
+            clearInterval(timer);
+            timer = null;
 
-    removeClasses();
+            playBtn.textContent = "▶ Play Animation";
 
+            return;
+        }
 
-    var i = 0;
+        if (stepIndex >= steps.length) {
+            startTraversal("BFS");
+            return;
+        }
 
-    document.getElementById(
-        "graphMessage"
-    ).innerHTML =
-        "🔵 BFS visits vertices level by level.";
+        playBtn.textContent = "⏸ Pause Animation";
 
+        timer = setInterval(function () {
 
-    animationTimer =
-        setInterval(function () {
+            showNextStep();
 
-            if (i >= vertices.length) {
+            if (stepIndex >= steps.length) {
 
-                stopAnimation();
+                clearInterval(timer);
+                timer = null;
 
-                return;
+                playBtn.textContent = "▶ Play Animation";
             }
 
+        }, 1100);
+    });
 
-            var nodes =
-                document.querySelectorAll(
-                    ".graph-node"
-                );
+    // BUTTON EVENTS
 
+    bfsBtn.addEventListener("click", function () {
+        startTraversal("BFS");
+    });
 
-            nodes[i].classList.add(
-                "bfs-active"
-            );
+    dfsBtn.addEventListener("click", function () {
+        startTraversal("DFS");
+    });
 
+    resetBtn.addEventListener("click", resetGraph);
 
-            i++;
+    // INITIAL STATE
 
-        }, 700);
+    resetGraph();
 
-}
-
-
-/* =========================
-   DFS
-========================= */
-
-function startDFS() {
-
-    if (vertices.length === 0) {
-
-        document.getElementById(
-            "graphMessage"
-        ).innerHTML =
-            "⚠️ First add some vertices.";
-
-        return;
-    }
-
-
-    stopAnimation();
-
-    removeClasses();
-
-
-    var i = vertices.length - 1;
-
-
-    document.getElementById(
-        "graphMessage"
-    ).innerHTML =
-        "🟢 DFS goes deep before coming back.";
-
-
-    animationTimer =
-        setInterval(function () {
-
-            if (i < 0) {
-
-                stopAnimation();
-
-                return;
-            }
-
-
-            var nodes =
-                document.querySelectorAll(
-                    ".graph-node"
-                );
-
-
-            nodes[i].classList.add(
-                "dfs-active"
-            );
-
-
-            i--;
-
-        }, 700);
-
-}
-
-
-/* =========================
-   REMOVE CLASSES
-========================= */
-
-function removeClasses() {
-
-    var nodes =
-        document.querySelectorAll(
-            ".graph-node"
-        );
-
-
-    for (var i = 0; i < nodes.length; i++) {
-
-        nodes[i].classList.remove(
-            "bfs-active"
-        );
-
-        nodes[i].classList.remove(
-            "dfs-active"
-        );
-
-    }
-
-}
-
-
-/* =========================
-   STOP
-========================= */
-
-function stopAnimation() {
-
-    if (animationTimer) {
-
-        clearInterval(animationTimer);
-
-        animationTimer = null;
-
-    }
-
-}
-
-
-/* =========================
-   CLEAR
-========================= */
-
-function clearGraph() {
-
-    stopAnimation();
-
-    vertices = [];
-
-    document.getElementById(
-        "graphVisual"
-    ).innerHTML = "";
-
-
-    document.getElementById(
-        "graphMessage"
-    ).innerHTML =
-        "🗑️ Graph cleared. Add vertices to start!";
-
-}
+});
