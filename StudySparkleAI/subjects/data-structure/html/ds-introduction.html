@@ -1,229 +1,706 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction to Data Structure | StudySpark AI</title>
+  <link rel="stylesheet" href="../css/introduction-notes.css" />
+</head>
 
-    <title>Introduction to Data Structure | StudySpark AI</title>
+<body>
+  <div class="notes-page">
 
-    <link rel="stylesheet" href="../css/data-structure.css" />
-  </head>
-
-  <body>
-
-    <!-- Page Header -->
     <header class="page-header">
-      <h1>📚 Introduction to Data Structure</h1>
-      <p>Learn the basic concepts of Data Structure.</p>
+      
+
+      <span class="header-badge">DATA STRUCTURES NOTES</span>
+      <h1>Introduction to Data Structure</h1>
+
+      <p>
+        Complete Notes • Definitions • Examples • Classification •
+        Exam Preparation
+      </p>
     </header>
 
-    <!-- Notes Container -->
-    <div class="notes-container">
+    <main class="notes-container">
 
-      <!-- Introduction Card -->
-      <div class="note-card">
+      <!-- 01 INTRODUCTION -->
+      <section class="note-card" id="introduction">
+        <span class="topic-label">01 • BASICS</span>
+        <h2>1. Introduction to Data Structure</h2>
 
-        <h2>What is Data Structure?</h2>
-
-        <p>
-          A Data Structure is a way of organizing and storing data in a
-          computer so that it can be used efficiently.
-        </p>
+        <h3>What is Data?</h3>
 
         <div class="definition">
           <strong>Definition:</strong>
-          Data Structure is a method of organizing and storing data so that
-          operations can be performed efficiently.
+          Data means raw facts and figures that can be processed to obtain
+          useful information.
         </div>
 
-
-        <h2>Why Data Structure is Important?</h2>
-
         <p>
-          Data Structure helps us to store, manage and access data easily.
-          It makes programs faster and more efficient.
+          Data can include numbers, names, marks, addresses and other values.
+          For example, student marks are data. When we calculate their total
+          and percentage, we get useful information.
         </p>
 
-        <ul>
-          <li>It helps to organize data properly.</li>
-          <li>It makes data searching easier.</li>
-          <li>It improves program performance.</li>
-          <li>It helps in efficient memory usage.</li>
-          <li>It makes complex problems easier to solve.</li>
-        </ul>
-
-
-        <h2>Types of Data Structure</h2>
-
-        <p>
-          Data Structures are mainly divided into two types:
-        </p>
-
-        <ul>
-          <li>Linear Data Structure</li>
-          <li>Non-Linear Data Structure</li>
-        </ul>
-
-
-        <h2>Linear Data Structure</h2>
-
-        <p>
-          In a Linear Data Structure, elements are arranged in a sequential
-          or linear order.
-        </p>
+        <h3>What is a Data Structure?</h3>
 
         <div class="definition">
-          <strong>Examples:</strong>
-          Array, Linked List, Stack and Queue.
+          <strong>Definition:</strong>
+          A data structure is a way of organizing and storing data in a
+          computer so that it can be accessed and processed efficiently.
         </div>
 
-
-        <h2>Non-Linear Data Structure</h2>
-
         <p>
-          In a Non-Linear Data Structure, elements are not arranged in a
-          simple sequential order. Elements can have multiple connections.
+          In programming, we work with different types of data. If the data
+          is not organized properly, it can become difficult to search,
+          update or manage it. Data structures help us organize data
+          systematically.
         </p>
 
-        <div class="definition">
-          <strong>Examples:</strong>
-          Tree and Graph.
-        </div>
-
-
-        <h2>Basic Operations on Data Structure</h2>
+        <h3>Simple Example</h3>
 
         <p>
-          Different operations can be performed on data structures to manage
-          and use the stored data.
+          Suppose we want to store the marks of five students. We can use an
+          array to store all the marks under one variable name.
         </p>
+
+        <pre class="code-block"><code>int marks[5] = {70, 80, 65, 90, 75};</code><button class="copy-btn" type="button">Copy Code</button></pre>
+
+        <p>
+          Here, the array stores five integer values. We can access each
+          mark using its index.
+        </p>
+
+        <h3>Real-Life Examples</h3>
 
         <ul>
-          <li>
-            <strong>Traversal:</strong>
-            Visiting each element of a data structure.
-          </li>
-
-          <li>
-            <strong>Insertion:</strong>
-            Adding a new element.
-          </li>
-
-          <li>
-            <strong>Deletion:</strong>
-            Removing an existing element.
-          </li>
-
-          <li>
-            <strong>Searching:</strong>
-            Finding a particular element.
-          </li>
-
-          <li>
-            <strong>Sorting:</strong>
-            Arranging data in a specific order.
-          </li>
-
-          <li>
-            <strong>Updating:</strong>
-            Changing the value of an existing element.
-          </li>
+          <li><strong>Array:</strong> Storing student marks.</li>
+          <li><strong>Stack:</strong> Managing undo operations.</li>
+          <li><strong>Queue:</strong> Managing people waiting in a line.</li>
+          <li><strong>Linked List:</strong> Connecting a sequence of records.</li>
+          <li><strong>Tree:</strong> Organizing files and folders.</li>
+          <li><strong>Graph:</strong> Representing connections between cities.</li>
         </ul>
+      </section>
 
+      <!-- 02 NEED -->
+      <section class="note-card" id="need">
+        <span class="topic-label">02 • IMPORTANCE</span>
+        <h2>2. Need of Data Structure</h2>
 
-        <h2>Examples of Data Structures</h2>
+        <p>
+          Data structures are needed to organize large amounts of data and
+          perform operations efficiently.
+        </p>
+
+        <h3>Why Do We Need Data Structures?</h3>
+
+        <ol>
+          <li>
+            <strong>Organize Data:</strong>
+            They help us store data in a proper format.
+          </li>
+          <li>
+            <strong>Easy Searching:</strong>
+            They help us find required data.
+          </li>
+          <li>
+            <strong>Fast Processing:</strong>
+            They can make operations faster.
+          </li>
+          <li>
+            <strong>Easy Updating:</strong>
+            They help us add, remove or change data.
+          </li>
+          <li>
+            <strong>Memory Management:</strong>
+            They help us use computer memory effectively.
+          </li>
+          <li>
+            <strong>Handle Large Data:</strong>
+            They help manage large collections of information.
+          </li>
+        </ol>
+
+        <div class="definition">
+          <strong>Remember:</strong>
+          Data structures make data easier to store, access, search and
+          process.
+        </div>
+      </section>
+
+      <!-- 03 CLASSIFICATION -->
+      <section class="note-card" id="classification">
+        <span class="topic-label">03 • CLASSIFICATION</span>
+        <h2>3. Classification of Data Structure</h2>
+
+        <p>
+          Data structures can be classified into two main categories:
+          primitive and non-primitive data structures.
+        </p>
+
+        <div class="classification-box">
+          <div class="classification-root">Data Structure</div>
+
+          <div class="classification-branches">
+            <div class="classification-item">
+              <h3>Primitive</h3>
+              <p>Integer, Character, Float, Boolean</p>
+            </div>
+
+            <div class="classification-item">
+              <h3>Non-Primitive</h3>
+              <p>Array, Linked List, Stack, Queue, Tree, Graph</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>3.1 Primitive Data Structure</h3>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Primitive data types are the basic data types provided by a
+          programming language.
+        </div>
+
+        <p>Examples of primitive types in C include:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Data Type</th>
+                <th>Purpose</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>int</td>
+                <td>Stores integer values</td>
+                <td><code>int age = 18;</code></td>
+              </tr>
+
+              <tr>
+                <td>char</td>
+                <td>Stores a character</td>
+                <td><code>char grade = 'A';</code></td>
+              </tr>
+
+              <tr>
+                <td>float</td>
+                <td>Stores decimal values</td>
+                <td><code>float price = 12.5f;</code></td>
+              </tr>
+
+              <tr>
+                <td>double</td>
+                <td>Stores floating-point values with greater precision</td>
+                <td><code>double value = 12.567;</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>3.2 Non-Primitive Data Structure</h3>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Non-primitive data structures organize collections of data or
+          relationships between data elements.
+        </div>
+
+        <p>Examples include:</p>
+
+        <ul>
+          <li><strong>Array:</strong> Stores elements of the same declared type.</li>
+          <li><strong>Linked List:</strong> Connects elements using links.</li>
+          <li><strong>Stack:</strong> Follows the LIFO principle.</li>
+          <li><strong>Queue:</strong> Usually follows the FIFO principle.</li>
+          <li><strong>Tree:</strong> Organizes data hierarchically.</li>
+          <li><strong>Graph:</strong> Represents connections between elements.</li>
+        </ul>
+      </section>
+
+      <!-- 04 LINEAR AND NON-LINEAR -->
+      <section class="note-card" id="linear-nonlinear">
+        <span class="topic-label">04 • TYPES</span>
+        <h2>4. Linear and Non-Linear Data Structures</h2>
+
+        <h3>4.1 Linear Data Structure</h3>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          A linear data structure arranges elements in a sequence, one after
+          another.
+        </div>
+
+        <p>Examples:</p>
 
         <ul>
           <li>Array</li>
           <li>Linked List</li>
           <li>Stack</li>
           <li>Queue</li>
+        </ul>
+
+        <div class="structure-visual">
+          <div class="structure-node">10</div>
+          <span>→</span>
+          <div class="structure-node">20</div>
+          <span>→</span>
+          <div class="structure-node">30</div>
+          <span>→</span>
+          <div class="structure-node">40</div>
+        </div>
+
+        <p>
+          In this representation, the elements are shown in a sequence.
+          This is a simple illustration of a linear arrangement.
+        </p>
+
+        <h3>4.2 Non-Linear Data Structure</h3>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          A non-linear data structure organizes elements in a hierarchy or
+          network instead of one simple sequence.
+        </div>
+
+        <p>Examples:</p>
+
+        <ul>
           <li>Tree</li>
           <li>Graph</li>
-          <li>Heap</li>
-          <li>Hash Table</li>
         </ul>
 
+        <div class="tree-visual">
+          <div class="tree-node">A</div>
+          <div class="tree-branches">
+            <div class="tree-branch">
+              <div class="tree-node">B</div>
+            </div>
 
-        <h2>Real-Life Examples</h2>
+            <div class="tree-branch">
+              <div class="tree-node">C</div>
+            </div>
+          </div>
+        </div>
 
         <p>
-          Data Structures are also used in real-life applications.
+          In this tree example, A is the parent node, while B and C are
+          child nodes.
         </p>
 
-        <ul>
-          <li>
-            <strong>Stack:</strong>
-            Used in undo operations and browser history.
-          </li>
+        <h3>Difference Between Linear and Non-Linear</h3>
 
-          <li>
-            <strong>Queue:</strong>
-            Used in printer jobs and waiting lines.
-          </li>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Linear</th>
+                <th>Non-Linear</th>
+              </tr>
+            </thead>
 
-          <li>
-            <strong>Tree:</strong>
-            Used to represent folders and files.
-          </li>
+            <tbody>
+              <tr>
+                <td>Elements are arranged in a sequence.</td>
+                <td>Elements form a hierarchy or network.</td>
+              </tr>
 
-          <li>
-            <strong>Graph:</strong>
-            Used in maps and social networks.
-          </li>
+              <tr>
+                <td>Represents a simple sequential relationship.</td>
+                <td>Can represent complex relationships.</td>
+              </tr>
 
-          <li>
-            <strong>Hash Table:</strong>
-            Used for fast searching and data retrieval.
-          </li>
-        </ul>
+              <tr>
+                <td>Examples: Array, Stack, Queue.</td>
+                <td>Examples: Tree, Graph.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
+      <!-- 05 STATIC AND DYNAMIC -->
+      <section class="note-card" id="static-dynamic">
+        <span class="topic-label">05 • MEMORY</span>
+        <h2>5. Static and Dynamic Data Structures</h2>
 
-        <h2>Advantages of Data Structure</h2>
+        <h3>5.1 Static Data Structure</h3>
 
-        <ul>
-          <li>Efficient data management.</li>
-          <li>Fast searching and processing.</li>
-          <li>Better use of memory.</li>
-          <li>Helps to solve complex problems.</li>
-          <li>Improves program efficiency.</li>
-        </ul>
-
-
-        <h2>Applications of Data Structure</h2>
-
-        <ul>
-          <li>Database management</li>
-          <li>Operating systems</li>
-          <li>Computer networks</li>
-          <li>Web applications</li>
-          <li>Artificial intelligence</li>
-          <li>Compiler design</li>
-          <li>Software development</li>
-        </ul>
-
-
-        <h2>Conclusion</h2>
+        <div class="definition">
+          <strong>Definition:</strong>
+          A static data structure has a size that is fixed for its lifetime
+          after it is created.
+        </div>
 
         <p>
-          Data Structure is an important concept in computer science. It helps
-          us organize, store and process data efficiently. Understanding
-          different data structures is useful for programming and problem
-          solving.
+          In C, a normal fixed-size array is an example. Its declared capacity
+          does not automatically increase when more elements are needed.
         </p>
 
-      </div>
+        <pre class="code-block"><code>int marks[5];</code><button class="copy-btn" type="button">Copy Code</button></pre>
 
+        <p>
+          This array has capacity for five integers.
+        </p>
 
-      <!-- Back Button -->
-      <button
-        class="back-btn"
-        onclick="location.href = 'ds-notes.html'"
-      >
-        ⬅️ Back to Data Structure Notes
+        <h3>5.2 Dynamic Data Structure</h3>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          A dynamic data structure can change its size during program
+          execution, depending on how it is designed and used.
+        </div>
+
+        <p>
+          Linked lists are common examples. Nodes can be created or removed
+          as required. Dynamic memory allocation in C can be performed using
+          functions such as <code>malloc()</code> and <code>free()</code>.
+        </p>
+
+        <h3>Difference Between Static and Dynamic</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Static</th>
+                <th>Dynamic</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Size or capacity is fixed.</td>
+                <td>Size can change during execution.</td>
+              </tr>
+
+              <tr>
+                <td>Capacity is decided in advance.</td>
+                <td>Memory can be allocated as needed.</td>
+              </tr>
+
+              <tr>
+                <td>Example: Fixed-size array.</td>
+                <td>Example: Linked list.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 06 OPERATIONS -->
+      <section class="note-card" id="operations">
+        <span class="topic-label">06 • BASIC OPERATIONS</span>
+        <h2>6. Basic Operations on Data Structures</h2>
+
+        <p>
+          The following are common operations performed on data structures.
+        </p>
+
+        <h3>6.1 Traversal</h3>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Traversal means visiting each element of a data structure one by one.
+        </div>
+
+        <h3>6.2 Insertion</h3>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Insertion means adding a new element to a data structure.
+        </div>
+
+        <h3>6.3 Deletion</h3>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Deletion means removing an element from a data structure.
+        </div>
+
+        <h3>6.4 Searching</h3>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Searching means finding a required element in a data structure.
+        </div>
+
+        <h3>6.5 Sorting</h3>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Sorting means arranging data in a particular order, such as
+          ascending or descending order.
+        </div>
+
+        <h3>6.6 Updating</h3>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Updating means changing an existing value in a data structure.
+        </div>
+
+        <h3>6.7 Merging</h3>
+
+        <div class="definition">
+          <strong>Definition:</strong>
+          Merging means combining two similar collections of data into one.
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Operation</th>
+                <th>Meaning</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Traversal</td>
+                <td>Visit elements one by one.</td>
+              </tr>
+
+              <tr>
+                <td>Insertion</td>
+                <td>Add an element.</td>
+              </tr>
+
+              <tr>
+                <td>Deletion</td>
+                <td>Remove an element.</td>
+              </tr>
+
+              <tr>
+                <td>Searching</td>
+                <td>Find an element.</td>
+              </tr>
+
+              <tr>
+                <td>Sorting</td>
+                <td>Arrange elements in order.</td>
+              </tr>
+
+              <tr>
+                <td>Updating</td>
+                <td>Change an element's value.</td>
+              </tr>
+
+              <tr>
+                <td>Merging</td>
+                <td>Combine collections.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 07 APPLICATIONS -->
+      <section class="note-card" id="applications">
+        <span class="topic-label">07 • PRACTICAL USES</span>
+        <h2>7. Applications of Data Structure</h2>
+
+        <h3>1. Database Management</h3>
+        <p>
+          Data structures help organize, retrieve and manage information.
+        </p>
+
+        <h3>2. Operating Systems</h3>
+        <p>
+          They are used in process scheduling, memory management and other
+          operating system tasks.
+        </p>
+
+        <h3>3. Computer Networks</h3>
+        <p>
+          Graphs can represent connections between computers and network
+          devices.
+        </p>
+
+        <h3>4. Artificial Intelligence</h3>
+        <p>
+          Trees, graphs, queues and other structures are used in many
+          search and problem-solving algorithms.
+        </p>
+
+        <h3>5. Web Browsers</h3>
+        <p>
+          Stacks can help implement features such as back and forward
+          navigation.
+        </p>
+
+        <h3>6. Banking Systems</h3>
+        <p>
+          Data structures can help organize customer and transaction records.
+        </p>
+
+        <h3>7. Searching and Sorting</h3>
+        <p>
+          Data structures help algorithms organize data and find required
+          information.
+        </p>
+      </section>
+
+      <!-- 08 ADVANTAGES -->
+      <section class="note-card" id="advantages">
+        <span class="topic-label">08 • BENEFITS</span>
+        <h2>8. Advantages of Data Structure</h2>
+
+        <ul>
+          <li>
+            <strong>Better Organization:</strong>
+            Data can be stored in a systematic way.
+          </li>
+
+          <li>
+            <strong>Efficient Searching:</strong>
+            Suitable structures can help find data faster.
+          </li>
+
+          <li>
+            <strong>Easy Modification:</strong>
+            Data can be inserted, deleted or updated.
+          </li>
+
+          <li>
+            <strong>Better Memory Use:</strong>
+            Appropriate structures can use memory effectively.
+          </li>
+
+          <li>
+            <strong>Code Reusability:</strong>
+            Common data structures can be reused in different programs.
+          </li>
+
+          <li>
+            <strong>Better Performance:</strong>
+            Choosing the right structure can improve program efficiency.
+          </li>
+        </ul>
+
+        <h3>Limitations</h3>
+
+        <ul>
+          <li>Some data structures are difficult to implement.</li>
+          <li>Different structures may require extra memory.</li>
+          <li>Choosing an unsuitable structure can reduce efficiency.</li>
+          <li>Some operations require more time than others.</li>
+        </ul>
+      </section>
+
+      <!-- 09 REVISION -->
+      <section class="note-card" id="revision">
+        <span class="topic-label">09 • EXAM PREPARATION</span>
+        <h2>9. Quick Revision</h2>
+
+        <h3>Important Points</h3>
+
+        <ul>
+          <li>A data structure organizes and stores data.</li>
+          <li>Primitive types include int, char, float and double.</li>
+          <li>Array, Stack, Queue and Linked List are linear structures.</li>
+          <li>Tree and Graph are non-linear structures.</li>
+          <li>A fixed-size C array has a declared capacity.</li>
+          <li>A linked list can grow or shrink by creating or removing nodes.</li>
+          <li>Traversal means visiting elements.</li>
+          <li>Insertion means adding an element.</li>
+          <li>Deletion means removing an element.</li>
+          <li>Searching means finding an element.</li>
+          <li>Sorting means arranging elements in order.</li>
+        </ul>
+
+        <h3>Short Questions</h3>
+
+        <ol>
+          <li>Define data structure.</li>
+          <li>Why do we need data structures?</li>
+          <li>What is a primitive data structure?</li>
+          <li>What is a non-primitive data structure?</li>
+          <li>Define linear data structure with examples.</li>
+          <li>Define non-linear data structure with examples.</li>
+          <li>What is a static data structure?</li>
+          <li>What is a dynamic data structure?</li>
+          <li>List any four basic operations on data structures.</li>
+          <li>State any four applications of data structures.</li>
+        </ol>
+
+        <h3>Long Questions</h3>
+
+        <ol>
+          <li>Define data structure and explain its need.</li>
+          <li>Explain the classification of data structures with examples.</li>
+          <li>Differentiate between linear and non-linear data structures.</li>
+          <li>Differentiate between static and dynamic data structures.</li>
+          <li>Explain the basic operations on data structures.</li>
+          <li>Explain the applications and advantages of data structures.</li>
+        </ol>
+
+        <div class="definition">
+          <strong>Exam Tip:</strong>
+          For a 4-mark answer, write the definition first and then explain
+          the required points in simple sentences. Add examples or a diagram
+          when the question asks for them.
+        </div>
+      </section>
+
+      <button class="back-btn" type="button" onclick="history.back()">
+        ← Back to Previous Page
       </button>
 
-    </div>
+    </main>
 
-  </body>
+    <footer class="page-footer">
+      <p>Data Structures | Introduction Notes</p>
+      <p>Learn the concept • Understand the logic • Prepare for exams</p>
+    </footer>
+
+  </div>
+
+  <script>
+    document.querySelectorAll(".copy-btn").forEach(function (button) {
+      button.addEventListener("click", async function () {
+        const code = button.parentElement.querySelector("code").innerText;
+        const originalText = button.innerText;
+
+        try {
+          await navigator.clipboard.writeText(code);
+          button.innerText = "Copied!";
+          button.classList.add("copied");
+
+          setTimeout(function () {
+            button.innerText = originalText;
+            button.classList.remove("copied");
+          }, 1500);
+        } catch (error) {
+          const textArea = document.createElement("textarea");
+          textArea.value = code;
+          textArea.style.position = "fixed";
+          textArea.style.opacity = "0";
+          document.body.appendChild(textArea);
+          textArea.select();
+
+          try {
+            document.execCommand("copy");
+            button.innerText = "Copied!";
+          } catch (copyError) {
+            button.innerText = "Copy failed";
+          }
+
+          textArea.remove();
+
+          setTimeout(function () {
+            button.innerText = originalText;
+          }, 1500);
+        }
+      });
+    });
+  </script>
+</body>
 </html>
