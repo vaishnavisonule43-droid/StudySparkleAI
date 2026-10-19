@@ -1,457 +1,289 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete Linked List notes with animated visualizations, operations, algorithms and C examples.">
+  <title>Linked List Notes | StudySpark AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/ds-linked-list.css">
+  <script src="../js/ds-linked-list.js" defer></script>
+</head>
+<body>
+  <div class="reading-progress" id="readingProgress"></div>
+  <header class="site-header">
+    <a class="brand" href="../../../index.html" aria-label="StudySpark AI home">
+      <span class="brand-mark">S</span>
+      <span>StudySpark <b>AI</b><small>DATA STRUCTURES NOTES</small></span>
+    </a>
+    <nav class="header-actions" aria-label="Page actions">
+      <a class="header-link" href="../ds-notes.html">← All Data Structures</a>
+      <button class="theme-toggle" id="motionToggle" type="button" aria-pressed="false">Motion: On</button>
+    </nav>
+  </header>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Linked List - Data Structure | StudySpark AI</title>
-
-    <link rel="stylesheet" href="../css/data-structure.css" />
-  </head>
-
-  <body>
-
-    <!-- Page Header -->
-    <header class="page-header">
-      <h1>🔗 Linked List</h1>
-      <p>Learn the basic concepts of Linked List in Data Structure.</p>
-    </header>
-
-    <div class="notes-container">
-
-      <div class="note-card">
-
-        <!-- 1. WHAT IS LINKED LIST -->
-
-        <h2>1. What is a Linked List?</h2>
-
-        <p>
-          A Linked List is a linear data structure in which elements are stored
-          in separate nodes. Each node contains data and a link to another node.
-        </p>
-
-        <p>
-          Unlike an array, linked list elements are not required to be stored in
-          continuous memory locations.
-        </p>
-
-
-        <!-- 2. DEFINITION -->
-
-        <h2>2. Definition</h2>
-
-        <p>
-          <b>Linked List:</b> A linked list is a collection of nodes where each
-          node contains data and a pointer that stores the address of another
-          node.
-        </p>
-
-
-        <!-- 3. NODE -->
-
-        <h2>3. What is a Node?</h2>
-
-        <p>
-          A node is the basic building block of a linked list. It contains two
-          main parts:
-        </p>
-
-        <ul>
-          <li>
-            <b>Data:</b> Stores the actual value.
-          </li>
-
-          <li>
-            <b>Link / Pointer:</b> Stores the address of the next node.
-          </li>
-        </ul>
-
-        <div class="definition">
-          [ Data | Next ] → [ Data | Next ] → NULL
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> DATA STRUCTURES • COMPLETE NOTES</span>
+        <h1>Linked <span>List</span></h1>
+        <p class="hero-lead">Learn how nodes connect through pointers, understand every major type, and practise insertion, deletion, traversal and searching with interactive animations.</p>
+        <div class="hero-pills">
+          <span>✓ Exam-ready theory</span><span>↗ Live visualizer</span><span>{ } C examples</span>
         </div>
-
-
-        <!-- 4. WHY LINKED LIST -->
-
-        <h2>4. Why do we use Linked Lists?</h2>
-
-        <ul>
-          <li>Dynamic size.</li>
-          <li>Easy insertion and deletion.</li>
-          <li>Memory is allocated when required.</li>
-          <li>Does not require continuous memory locations.</li>
-          <li>Useful for implementing stacks and queues.</li>
-        </ul>
-
-
-        <!-- 5. ARRAY VS LINKED LIST -->
-
-        <h2>5. Array vs Linked List</h2>
-
-        <table>
-          <tr>
-            <th>Array</th>
-            <th>Linked List</th>
-          </tr>
-
-          <tr>
-            <td>Fixed size</td>
-            <td>Dynamic size</td>
-          </tr>
-
-          <tr>
-            <td>Continuous memory</td>
-            <td>Non-continuous memory</td>
-          </tr>
-
-          <tr>
-            <td>Insertion can be difficult</td>
-            <td>Insertion is easier</td>
-          </tr>
-
-          <tr>
-            <td>Deletion can be difficult</td>
-            <td>Deletion is easier</td>
-          </tr>
-        </table>
-
-
-        <!-- 6. TYPES OF LINKED LIST -->
-
-        <h2>6. Types of Linked List</h2>
-
-        <h3>🔹 1. Singly Linked List</h3>
-
-        <p>
-          In a singly linked list, each node contains data and a pointer to the
-          next node.
-        </p>
-
-        <div class="definition">
-          [10 | •] → [20 | •] → [30 | NULL]
-        </div>
-
-        <p>The last node points to <b>NULL</b>.</p>
-
-
-        <h3>🔹 2. Doubly Linked List</h3>
-
-        <p>
-          In a doubly linked list, each node contains three parts: previous
-          pointer, data and next pointer.
-        </p>
-
-        <div class="definition">
-          NULL ← [10] ⇄ [20] ⇄ [30] → NULL
-        </div>
-
-        <p>
-          It allows movement in both forward and backward directions.
-        </p>
-
-
-        <h3>🔹 3. Circular Linked List</h3>
-
-        <p>
-          In a circular linked list, the last node points back to the first
-          node. Therefore, the list forms a circle and does not end with NULL.
-        </p>
-
-
-        <!-- CIRCULAR SINGLY -->
-
-        <h3>🔸 3.1 Circular Singly Linked List</h3>
-
-        <p>
-          A Circular Singly Linked List is a type of linked list in which each
-          node contains data and a next pointer. The last node points back to
-          the first node.
-        </p>
-
-        <div class="definition">
-          [10] → [20] → [30] ↑ ↓ └──────────────┘
-        </div>
-
-        <ul>
-          <li>Each node contains <b>Data</b> and <b>Next</b>.</li>
-          <li>The last node points to the first node.</li>
-          <li>There is no NULL at the end.</li>
-          <li>Traversal can continue in a circular manner.</li>
-        </ul>
-
-
-        <!-- CIRCULAR DOUBLY -->
-
-        <h3>🔸 3.2 Circular Doubly Linked List</h3>
-
-        <p>
-          A Circular Doubly Linked List is a type of linked list in which each
-          node contains Previous, Data and Next. The last node is connected to
-          the first node and the first node is connected back to the last node.
-        </p>
-
-        <div class="definition">
-          [10] ⇄ [20] ⇄ [30] ↑ ↓ └──────────────┘
-        </div>
-
-        <ul>
-          <li>Each node contains <b>Previous, Data and Next</b>.</li>
-          <li>Last node's Next points to the first node.</li>
-          <li>First node's Previous points to the last node.</li>
-          <li>Traversal is possible in both directions.</li>
-        </ul>
-
-
-        <!-- 7. BASIC OPERATIONS -->
-
-        <h2>7. Basic Operations on Linked List</h2>
-
-        <ul>
-          <li>Traversal</li>
-          <li>Insertion</li>
-          <li>Deletion</li>
-          <li>Searching</li>
-          <li>Updating</li>
-        </ul>
-
-
-        <!-- TRAVERSAL -->
-
-        <h3>🔄 Traversal</h3>
-
-        <p>
-          Visiting every node of a linked list one by one is called traversal.
-        </p>
-
-        <div class="definition">
-          Start → 10 → 20 → 30 → NULL
-        </div>
-
-
-        <!-- INSERTION -->
-
-        <h3>➕ Insertion</h3>
-
-        <p>
-          Adding a new node to a linked list is called insertion.
-        </p>
-
-        <p>
-          A node can be inserted at the beginning, at the end, or at a specific
-          position.
-        </p>
-
-
-        <!-- DELETION -->
-
-        <h3>❌ Deletion</h3>
-
-        <p>
-          Removing a node from a linked list is called deletion.
-        </p>
-
-        <p>
-          A node can be deleted from the beginning, end, or a specific position.
-        </p>
-
-
-        <!-- SEARCHING -->
-
-        <h3>🔍 Searching</h3>
-
-        <p>
-          Searching means finding a particular value or node in the linked list.
-        </p>
-
-
-        <!-- UPDATING -->
-
-        <h3>✏️ Updating</h3>
-
-        <p>
-          Updating means changing the data stored in an existing node.
-        </p>
-
-
-        <!-- 8. ADVANTAGES -->
-
-        <h2>8. Advantages of Linked List</h2>
-
-        <ul>
-          <li>Dynamic size.</li>
-          <li>Easy insertion and deletion.</li>
-          <li>Memory is allocated as required.</li>
-          <li>Does not require continuous memory.</li>
-          <li>Useful for implementing other data structures.</li>
-        </ul>
-
-
-        <!-- 9. DISADVANTAGES -->
-
-        <h2>9. Disadvantages of Linked List</h2>
-
-        <ul>
-          <li>Extra memory is required for pointers.</li>
-          <li>Direct access using index is not possible.</li>
-          <li>Searching can take more time.</li>
-          <li>Implementation is more complex than arrays.</li>
-        </ul>
-
-
-        <!-- 10. REAL LIFE EXAMPLES -->
-
-        <h2>10. Real-Life Examples</h2>
-
-        <ul>
-          <li>Music playlist</li>
-          <li>Browser history</li>
-          <li>Undo and redo operations</li>
-          <li>Image slideshow</li>
-          <li>Navigation systems</li>
-        </ul>
-
-
-        <!-- 11. NODE STRUCTURE -->
-
-        <h2>11. Node Structure in C</h2>
-
-        <div class="definition">
-          <pre>
-struct Node
-{
-    int data;
-    struct Node *next;
-};
-          </pre>
-        </div>
-
-        <p>
-          Here, <b>data</b> stores the value and <b>next</b> stores the address
-          of the next node.
-        </p>
-
-
-        <!-- 12. MEMORY REPRESENTATION -->
-
-        <h2>12. Linked List Memory Representation</h2>
-
-        <p>
-          Nodes of a linked list can be stored at different memory locations.
-          The pointer connects one node to another.
-        </p>
-
-        <div class="definition">
-          Head ↓ [10 | •] → [20 | •] → [30 | NULL]
-        </div>
-
-
-        <!-- 13. ANIMATION -->
-
-        <div class="linked-animation">
-
-          <h2>🎬 Understand Linked List with Animation</h2>
-
-          <p>
-            Each node contains data and a link to the next node.
-          </p>
-
-          <div
-            id="linkedListContainer"
-            class="linked-list-container"
-          ></div>
-
-          <div class="linked-controls">
-
-            <input
-              type="number"
-              id="nodeValue"
-              placeholder="Enter value"
-            />
-
-            <button onclick="addNode()">
-              ➕ Add Node
-            </button>
-
-            <button onclick="removeNode()">
-              ❌ Delete Last
-            </button>
-
-          </div>
-
-          <p
-            id="linkedMessage"
-            class="linked-message"
-          >
-            Add a node to see the linked list!
-          </p>
-
-        </div>
-
-
-        <!-- 14. IMPORTANT EXAM QUESTIONS -->
-
-        <h2>14. Important Exam Questions</h2>
-
-        <ol>
-          <li>What is a Linked List? Explain with example.</li>
-          <li>Explain the structure of a node.</li>
-          <li>Explain different types of Linked List.</li>
-          <li>Explain singly linked list.</li>
-          <li>Explain doubly linked list.</li>
-          <li>Explain circular singly linked list.</li>
-          <li>Explain circular doubly linked list.</li>
-          <li>Explain insertion and deletion in Linked List.</li>
-          <li>Explain advantages and disadvantages of Linked List.</li>
-          <li>Differentiate between Array and Linked List.</li>
-          <li>Write a C program to create a Linked List.</li>
-        </ol>
-
-
-        <!-- 15. QUICK REVISION -->
-
-        <h2>15. Quick Revision</h2>
-
-        <ul>
-          <li>Linked List is a linear data structure.</li>
-          <li>It consists of nodes.</li>
-          <li>Each node contains data and a pointer.</li>
-          <li>Nodes do not need continuous memory.</li>
-          <li>Linked List has dynamic size.</li>
-          <li>Insertion and deletion are easier than arrays.</li>
-          <li>Circular linked lists do not end with NULL.</li>
-          <li>Doubly linked lists can be traversed in both directions.</li>
-        </ul>
-
-
-        <!-- 16. SUMMARY -->
-
-        <h2>16. Summary</h2>
-
-        <p>
-          A linked list is a dynamic linear data structure made up of nodes.
-          Each node stores data and a link to another node. Linked lists are
-          useful when frequent insertion and deletion operations are required.
-        </p>
-
       </div>
+      <div class="hero-art" aria-label="Animated linked list illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-node node-a"><b>12</b><small>DATA</small></div>
+        <div class="hero-arrow arrow-a">→</div>
+        <div class="hero-node node-b"><b>24</b><small>DATA</small></div>
+        <div class="hero-arrow arrow-b">→</div>
+        <div class="hero-node node-c"><b>36</b><small>DATA</small></div>
+        <div class="hero-null">NULL</div>
+        <span class="floating-chip chip-one">HEAD</span><span class="floating-chip chip-two">NEXT</span>
+      </div>
+    </section>
 
+    <div class="content-layout">
+      <aside class="contents-card">
+        <div class="contents-title"><span class="contents-icon">☷</span><div><strong>On this page</strong><small>Jump to a topic</small></div></div>
+        <nav class="contents-nav" id="contentsNav">
+          <a href="#intro" class="active">1. Introduction</a>
+          <a href="#node">2. Node structure</a>
+          <a href="#compare">3. Array vs Linked List</a>
+          <a href="#types">4. Types of Linked List</a>
+          <a href="#operations">5. Basic operations</a>
+          <a href="#visualizer">6. Interactive visualizer</a>
+          <a href="#algorithms">7. Algorithms</a>
+          <a href="#complexity">8. Time complexity</a>
+          <a href="#c-code">9. C program</a>
+          <a href="#pros-cons">10. Advantages & limits</a>
+          <a href="#questions">11. Exam questions</a>
+          <a href="#revision">12. Quick revision</a>
+        </nav>
+        <div class="reading-card"><div class="reading-icon">◷</div><div><strong id="readPercent">0%</strong><small>Notes completed</small></div><div class="mini-track"><span id="readBar"></span></div></div>
+      </aside>
 
-      <!-- BACK BUTTON -->
+      <article class="notes-content">
+        <section class="note-section" id="intro">
+          <div class="section-heading"><span class="section-number">01</span><div><span class="section-kicker">START HERE</span><h2>Introduction to Linked List</h2></div></div>
+          <div class="note-card accent-purple">
+            <h3>Definition</h3>
+            <p>A <strong>linked list</strong> is a linear data structure made of separate elements called <strong>nodes</strong>. Each node stores data and one or more links (pointers) that connect it to another node. Nodes do not need to be stored next to each other in memory.</p>
+            <div class="definition-callout"><span class="callout-icon">💡</span><p><strong>In simple words:</strong> Think of a linked list as a chain. Each link contains some information and a direction to the next link.</p></div>
+          </div>
+          <div class="two-column">
+            <div class="note-card"><span class="card-icon purple-icon">▦</span><h3>Why do we use it?</h3><p>It can grow or shrink while a program runs. Inserting or removing a node can be efficient because nodes do not have to be shifted like array elements.</p></div>
+            <div class="note-card"><span class="card-icon blue-icon">⌁</span><h3>Important property</h3><p>A linked list is accessed by following links from the first node, called <strong>head</strong>. It normally does not provide direct index access like an array.</p></div>
+          </div>
+          <div class="note-card soft-card">
+            <h3>Basic memory idea</h3>
+            <div class="memory-flow"><div class="memory-label">HEAD</div><div class="memory-node"><b>10</b><small>data</small><i>next</i></div><span class="flow-arrow">→</span><div class="memory-node"><b>20</b><small>data</small><i>next</i></div><span class="flow-arrow">→</span><div class="memory-node"><b>30</b><small>data</small><i>next</i></div><span class="flow-arrow">→</span><div class="null-box">NULL</div></div>
+            <p class="small-note">The last node points to <code>NULL</code> in a normal singly linked list, showing that there is no next node.</p>
+          </div>
+        </section>
 
-      <button
-        class="back-btn"
-        onclick="location.href = 'ds-notes.html'"
-      >
-        ⬅️ Back to Data Structure Notes
-      </button>
+        <section class="note-section" id="node">
+          <div class="section-heading"><span class="section-number">02</span><div><span class="section-kicker">BUILDING BLOCK</span><h2>Node Structure</h2></div></div>
+          <div class="note-card">
+            <p>A node in a singly linked list contains two parts:</p>
+            <div class="node-parts"><div class="node-part data-part"><span>PART 1</span><strong>Data</strong><small>Stores the value</small></div><div class="node-part link-part"><span>PART 2</span><strong>Next pointer</strong><small>Stores the address of the next node</small></div></div>
+            <h3>C structure</h3>
+            <pre class="code-block"><code>struct node {
+    int data;
+    struct node *next;
+};</code><button class="copy-btn" type="button" data-copy="struct node {\n    int data;\n    struct node *next;\n};">Copy code</button></pre>
+            <ul class="clean-list">
+              <li><strong>data:</strong> stores the value of the node.</li>
+              <li><strong>next:</strong> stores the address of the next node.</li>
+              <li><strong>head:</strong> pointer that stores the address of the first node.</li>
+              <li><strong>NULL:</strong> indicates that a pointer does not point to a valid node.</li>
+            </ul>
+          </div>
+        </section>
 
+        <section class="note-section" id="compare">
+          <div class="section-heading"><span class="section-number">03</span><div><span class="section-kicker">COMPARE</span><h2>Array vs Linked List</h2></div></div>
+          <div class="table-wrap"><table><thead><tr><th>Basis</th><th>Array</th><th>Linked List</th></tr></thead><tbody>
+            <tr><td>Memory</td><td>Usually contiguous</td><td>Nodes may be anywhere in memory</td></tr>
+            <tr><td>Size</td><td>Usually fixed after creation in basic arrays</td><td>Can grow or shrink dynamically</td></tr>
+            <tr><td>Access</td><td>Direct access by index</td><td>Must follow links from the head</td></tr>
+            <tr><td>Insertion / deletion</td><td>May require shifting elements</td><td>Can change links; locating the position may still take time</td></tr>
+            <tr><td>Extra memory</td><td>Usually no link field per element</td><td>Needs pointer field(s) in each node</td></tr>
+          </tbody></table></div>
+        </section>
+
+        <section class="note-section" id="types">
+          <div class="section-heading"><span class="section-number">04</span><div><span class="section-kicker">FOUR MAIN TYPES</span><h2>Types of Linked List</h2></div></div>
+          <p class="section-intro">Select a type to see how its links work. The animated diagram highlights the direction in which nodes can be visited.</p>
+          <div class="type-selector" role="tablist" aria-label="Linked list types">
+            <button class="type-tab active" role="tab" aria-selected="true" data-type="singly">Singly</button>
+            <button class="type-tab" role="tab" aria-selected="false" data-type="doubly">Doubly</button>
+            <button class="type-tab" role="tab" aria-selected="false" data-type="circularSingly">Circular singly</button>
+            <button class="type-tab" role="tab" aria-selected="false" data-type="circularDoubly">Circular doubly</button>
+          </div>
+          <div class="type-demo note-card" id="typeDemo" aria-live="polite">
+            <div class="type-demo-head"><div><span class="type-label" id="typeLabel">TYPE 01</span><h3 id="typeTitle">Singly Linked List</h3></div><p id="typeDescription">Each node points to the next node. The last node points to NULL.</p></div>
+            <div class="type-visual" id="typeVisual"></div>
+            <div class="type-facts" id="typeFacts"></div>
+          </div>
+          <div class="two-column">
+            <div class="note-card"><h3>1. Singly Linked List</h3><p>Each node contains data and one <code>next</code> pointer. Traversal is possible only in the forward direction.</p></div>
+            <div class="note-card"><h3>2. Doubly Linked List</h3><p>Each node contains <code>prev</code>, data and <code>next</code>. It supports forward and backward traversal but needs extra memory.</p></div>
+            <div class="note-card"><h3>3. Circular Singly Linked List</h3><p>The last node points back to the first node instead of NULL. Traversal can continue in a loop.</p></div>
+            <div class="note-card"><h3>4. Circular Doubly Linked List</h3><p>Each node has previous and next links. The last node connects to the first, and the first connects back to the last.</p></div>
+          </div>
+        </section>
+
+        <section class="note-section" id="operations">
+          <div class="section-heading"><span class="section-number">05</span><div><span class="section-kicker">CORE CONCEPTS</span><h2>Basic Operations</h2></div></div>
+          <div class="operation-grid">
+            <div class="operation-card"><span class="op-number">01</span><h3>Traversal</h3><p>Visit each node one by one from the head until the end (NULL in a normal singly list).</p><code>temp = head;</code></div>
+            <div class="operation-card"><span class="op-number">02</span><h3>Insertion</h3><p>Add a new node at the beginning, end, or a particular position by adjusting links.</p><code>newnode-&gt;next = head;</code></div>
+            <div class="operation-card"><span class="op-number">03</span><h3>Deletion</h3><p>Remove a node and connect the previous node to the node after it. Free removed memory in C.</p><code>free(temp);</code></div>
+            <div class="operation-card"><span class="op-number">04</span><h3>Searching</h3><p>Compare each node's data with the required value until found or the list ends.</p><code>temp-&gt;data == key</code></div>
+            <div class="operation-card"><span class="op-number">05</span><h3>Updating</h3><p>Find a node and replace its stored data with a new value.</p><code>temp-&gt;data = value;</code></div>
+            <div class="operation-card"><span class="op-number">06</span><h3>Counting</h3><p>Traverse the list and increase a counter for every node visited.</p><code>count++;</code></div>
+          </div>
+        </section>
+
+        <section class="note-section" id="visualizer">
+          <div class="section-heading"><span class="section-number">06</span><div><span class="section-kicker">TRY IT YOURSELF</span><h2>Interactive Linked List Visualizer</h2></div></div>
+          <p class="section-intro">Add, remove, search, update and traverse nodes. Each action is animated so you can follow the changes in the list.</p>
+          <div class="simulator note-card">
+            <div class="simulator-top"><div><span class="live-indicator"></span><strong>Live node playground</strong></div><span class="node-count"><span id="nodeCount">4</span> nodes</span></div>
+            <div class="sim-list-wrap"><div class="sim-list" id="simList" aria-live="polite"></div><div class="empty-message" id="emptyMessage" hidden>The list is empty. Add a value to begin.</div></div>
+            <div class="sim-controls">
+              <label class="value-field">Node value<input type="number" id="nodeValue" value="50" placeholder="Enter integer"></label>
+              <div class="button-row"><button class="action-btn primary" id="addEndBtn" type="button">＋ Add at end</button><button class="action-btn" id="addStartBtn" type="button">↤ Add at start</button><button class="action-btn" id="deleteStartBtn" type="button">− Delete first</button><button class="action-btn" id="deleteEndBtn" type="button">Delete last ↦</button></div>
+              <div class="button-row secondary-actions"><button class="action-btn" id="searchBtn" type="button">⌕ Search value</button><button class="action-btn" id="updateBtn" type="button">✎ Update selected</button><button class="action-btn" id="traverseBtn" type="button">▷ Animate traversal</button><button class="action-btn danger" id="resetBtn" type="button">↻ Reset</button></div>
+            </div>
+            <div class="sim-message" id="simMessage" role="status">Ready! Try adding a node.</div>
+          </div>
+          <div class="definition-callout"><span class="callout-icon">🎯</span><p><strong>Try this:</strong> add a node at the beginning, then delete the first node. Notice how the head changes. Search for a value to highlight the matching node.</p></div>
+        </section>
+
+        <section class="note-section" id="algorithms">
+          <div class="section-heading"><span class="section-number">07</span><div><span class="section-kicker">EXAM PREPARATION</span><h2>Basic Algorithms</h2></div></div>
+          <div class="note-card">
+            <h3>Algorithm: Traversal in a Singly Linked List</h3>
+            <ol class="algorithm-list"><li>Start.</li><li>Set <code>temp = head</code>.</li><li>While <code>temp != NULL</code>, display <code>temp-&gt;data</code>.</li><li>Move to the next node using <code>temp = temp-&gt;next</code>.</li><li>Stop when <code>temp == NULL</code>.</li></ol>
+          </div>
+          <div class="two-column">
+            <div class="note-card"><h3>Insert at beginning</h3><pre class="code-block compact"><code>newnode-&gt;next = head;
+head = newnode;</code><button class="copy-btn" type="button" data-copy="newnode->next = head;\nhead = newnode;">Copy</button></pre><p class="small-note">The new node points to the old first node, then head is moved to the new node.</p></div>
+            <div class="note-card"><h3>Delete from beginning</h3><pre class="code-block compact"><code>temp = head;
+head = head-&gt;next;
+free(temp);</code><button class="copy-btn" type="button" data-copy="temp = head;\nhead = head->next;\nfree(temp);">Copy</button></pre><p class="small-note">Save the old head, move head forward, and release the old node's memory.</p></div>
+            <div class="note-card"><h3>Insert after a node</h3><pre class="code-block compact"><code>newnode-&gt;next = temp-&gt;next;
+temp-&gt;next = newnode;</code><button class="copy-btn" type="button" data-copy="newnode->next = temp->next;\ntemp->next = newnode;">Copy</button></pre><p class="small-note">Set the new node's next link first, then connect the previous node to it.</p></div>
+            <div class="note-card"><h3>Search a value</h3><pre class="code-block compact"><code>temp = head;
+while (temp != NULL) {
+    if (temp-&gt;data == key) break;
+    temp = temp-&gt;next;
+}</code><button class="copy-btn" type="button" data-copy="temp = head;\nwhile (temp != NULL) {\n    if (temp->data == key) break;\n    temp = temp->next;\n}">Copy</button></pre><p class="small-note">The loop stops when the value is found or the end is reached.</p></div>
+          </div>
+        </section>
+
+        <section class="note-section" id="complexity">
+          <div class="section-heading"><span class="section-number">08</span><div><span class="section-kicker">QUICK ANALYSIS</span><h2>Time Complexity</h2></div></div>
+          <div class="table-wrap"><table><thead><tr><th>Operation</th><th>Typical time</th><th>Reason</th></tr></thead><tbody>
+            <tr><td>Access by position</td><td><span class="complexity medium">O(n)</span></td><td>Walk through nodes from the head</td></tr>
+            <tr><td>Search</td><td><span class="complexity medium">O(n)</span></td><td>May inspect every node</td></tr>
+            <tr><td>Insert at head</td><td><span class="complexity fast">O(1)</span></td><td>Change a small number of pointers</td></tr>
+            <tr><td>Delete at head</td><td><span class="complexity fast">O(1)</span></td><td>Move head to the next node</td></tr>
+            <tr><td>Insert at end</td><td><span class="complexity medium">O(n)</span></td><td>Usually find the last node first; O(1) with a tail pointer</td></tr>
+            <tr><td>Delete at end (singly)</td><td><span class="complexity medium">O(n)</span></td><td>Find the node before the last node</td></tr>
+          </tbody></table></div>
+          <p class="small-note">Here, <code>n</code> is the number of nodes. Complexity can vary depending on whether a tail pointer or a direct node reference is available.</p>
+        </section>
+
+        <section class="note-section" id="c-code">
+          <div class="section-heading"><span class="section-number">09</span><div><span class="section-kicker">C PROGRAMMING</span><h2>Simple C Program: Display a Linked List</h2></div></div>
+          <div class="note-card">
+            <p>This beginner-friendly program creates three nodes and displays their data. It uses dynamic memory allocation with <code>malloc()</code>.</p>
+            <pre class="code-block large-code"><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct node {
+    int data;
+    struct node *next;
+};
+
+int main(void) {
+    struct node *head, *second, *third, *temp;
+
+    head = malloc(sizeof(struct node));
+    second = malloc(sizeof(struct node));
+    third = malloc(sizeof(struct node));
+
+    if (head == NULL || second == NULL || third == NULL) {
+        printf("Memory allocation failed");
+        free(head);
+        free(second);
+        free(third);
+        return 1;
+    }
+
+    head-&gt;data = 10;
+    head-&gt;next = second;
+
+    second-&gt;data = 20;
+    second-&gt;next = third;
+
+    third-&gt;data = 30;
+    third-&gt;next = NULL;
+
+    temp = head;
+    while (temp != NULL) {
+        printf("%d -&gt; ", temp-&gt;data);
+        temp = temp-&gt;next;
+    }
+    printf("NULL\n");
+
+    free(third);
+    free(second);
+    free(head);
+    return 0;
+}</code><button class="copy-btn" type="button" data-copy="#include <stdio.h>\n#include <stdlib.h>\n\nstruct node {\n    int data;\n    struct node *next;\n};\n\nint main(void) {\n    struct node *head, *second, *third, *temp;\n    head = malloc(sizeof(struct node));\n    second = malloc(sizeof(struct node));\n    third = malloc(sizeof(struct node));\n    if (head == NULL || second == NULL || third == NULL) {\n        printf(\"Memory allocation failed\");\n        free(head); free(second); free(third);\n        return 1;\n    }\n    head->data = 10; head->next = second;\n    second->data = 20; second->next = third;\n    third->data = 30; third->next = NULL;\n    temp = head;\n    while (temp != NULL) {\n        printf(\"%d -> \", temp->data);\n        temp = temp->next;\n    }\n    printf(\"NULL\\n\");\n    free(third); free(second); free(head);\n    return 0;\n}">Copy program</button></pre>
+            <div class="output-box"><span>EXPECTED OUTPUT</span><code>10 -&gt; 20 -&gt; 30 -&gt; NULL</code></div>
+          </div>
+        </section>
+
+        <section class="note-section" id="pros-cons">
+          <div class="section-heading"><span class="section-number">10</span><div><span class="section-kicker">EVALUATION</span><h2>Advantages and Disadvantages</h2></div></div>
+          <div class="two-column">
+            <div class="note-card good-card"><h3><span>✓</span> Advantages</h3><ul class="clean-list"><li>Size can grow or shrink dynamically.</li><li>Insertion and deletion can be efficient when the correct node is already known.</li><li>Does not require one continuous block of memory.</li><li>Useful for implementing stacks, queues, graphs and other structures.</li></ul></div>
+            <div class="note-card caution-card"><h3><span>!</span> Disadvantages</h3><ul class="clean-list"><li>No direct index access; nodes must be traversed.</li><li>Extra memory is needed for pointer fields.</li><li>Pointer handling makes code more complex.</li><li>Incorrect pointer changes can cause memory errors or lost nodes.</li></ul></div>
+          </div>
+          <div class="note-card"><h3>Applications</h3><div class="application-chips"><span>Stacks and queues</span><span>Graph adjacency lists</span><span>Hash-table chaining</span><span>Playlists</span><span>Undo / redo systems</span><span>Memory management</span></div></div>
+        </section>
+
+        <section class="note-section" id="questions">
+          <div class="section-heading"><span class="section-number">11</span><div><span class="section-kicker">PRACTISE</span><h2>Important Exam Questions</h2></div></div>
+          <div class="question-list">
+            <details><summary>1. Define a linked list. Explain its node structure.</summary><p>A linked list is a linear data structure consisting of nodes connected through pointers. A singly linked-list node contains data and a pointer to the next node.</p></details>
+            <details><summary>2. Explain the different types of linked lists.</summary><p>The main types are singly, doubly, circular singly and circular doubly linked lists. They differ in the number and direction of links and whether the end connects back to the beginning.</p></details>
+            <details><summary>3. Write the advantages and disadvantages of a linked list.</summary><p>Advantages include dynamic size and efficient pointer-based insertion/deletion. Disadvantages include extra pointer memory, sequential access and more complex pointer management.</p></details>
+            <details><summary>4. Explain insertion and deletion in a singly linked list.</summary><p>Insertion creates a node and adjusts links so it becomes part of the list. Deletion changes links to bypass the target node and releases its memory when dynamically allocated.</p></details>
+            <details><summary>5. Compare arrays and linked lists.</summary><p>Arrays provide direct index access and commonly use contiguous memory. Linked lists use connected nodes, support dynamic growth, and require traversal to reach a position.</p></details>
+            <details><summary>6. Explain traversal and searching with an algorithm.</summary><p>Start from head, process each node, and move using the next pointer. Searching compares each node's data with the required key until a match or NULL is reached.</p></details>
+          </div>
+        </section>
+
+        <section class="note-section" id="revision">
+          <div class="section-heading"><span class="section-number">12</span><div><span class="section-kicker">BEFORE THE EXAM</span><h2>Quick Revision</h2></div></div>
+          <div class="revision-grid">
+            <div><strong>Node</strong><span>Data + link(s)</span></div><div><strong>Head</strong><span>First node address</span></div><div><strong>NULL</strong><span>No next node</span></div><div><strong>Singly</strong><span>One next link</span></div><div><strong>Doubly</strong><span>Previous + next</span></div><div><strong>Traversal</strong><span>Usually O(n)</span></div>
+          </div>
+          <div class="final-summary"><div class="summary-spark">✦</div><div><h3>Remember the main idea</h3><p>A linked list stores values in nodes connected by pointers. Understand how the links change during insertion and deletion—that is the key to solving most linked-list questions.</p></div></div>
+        </section>
+
+        <footer class="page-footer"><a class="back-btn" href="../ds-notes.html">← Back to Data Structures Notes</a><span>Made for learning • StudySpark AI</span><button class="top-btn" id="backToTop" type="button">↑ Back to top</button></footer>
+      </article>
     </div>
-
-
-    <!-- JAVASCRIPT -->
-
-    <script src="../js/ds-linked-list.js"></script>
-
-  </body>
+  </main>
+</body>
 </html>
