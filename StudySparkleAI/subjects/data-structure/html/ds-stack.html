@@ -1,345 +1,248 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Stack - Data Structure</title>
+  <title>Stack - Data Structure | StudySpark AI</title>
 
-  <link rel="stylesheet" href="../css/data-structure.css" />
+  <link rel="stylesheet" href="../css/stack.css">
+  <link rel="stylesheet" href="../css/introduction-notes.css">
+  <script src="../js/ds-stack.js" defer></script>
 </head>
 
 <body>
-
-  <!-- Header -->
-  <header class="page-header">
-    <h1>📚 Stack</h1>
-    <p>Learn the basic concepts of Stack in Data Structure.</p>
+  <header class="topbar">
+    <a href="../../../index.html" class="brand">StudySpark <span>AI</span></a>
   </header>
 
+  <main class="container">
 
-  <!-- Main Content -->
-  <div class="notes-container">
-
-    <!-- Introduction -->
-    <div class="note-card">
-
-      <h2>What is Stack?</h2>
-
+    <section class="hero">
+      <span class="tag">DATA STRUCTURE</span>
+      <h1>Stack</h1>
       <p>
-        A Stack is a linear data structure in which elements are
-        inserted and removed from the same end.
+        Learn Stack with easy notes, examples, operations and an
+        interactive animation.
       </p>
+    </section>
 
-      <div class="definition">
-        <strong>Definition:</strong>
-        Stack follows the LIFO principle, which means
-        <strong>Last In, First Out</strong>.
-      </div>
-
-      <h3>Example</h3>
-
+    <section class="note-card">
+      <h2>1. Definition of Stack</h2>
       <p>
-        A real-life example of a stack is a stack of plates.
-        The plate placed last on the top is removed first.
+        A stack is a linear data structure in which insertion and deletion
+        are performed from only one end called the TOP.
       </p>
-
-    </div>
-
-
-    <!-- LIFO -->
-    <div class="note-card">
-
-      <h2>LIFO Principle</h2>
-
       <p>
-        LIFO stands for <strong>Last In, First Out</strong>.
+        Stack follows the LIFO principle, which means Last In, First Out.
         The element inserted last is removed first.
       </p>
+    </section>
 
+    <section class="note-card">
+      <h2>2. Real-Life Example</h2>
+      <p>
+        A pile of plates is an example of a stack. The plate placed last
+        on the top is removed first.
+      </p>
+    </section>
+
+    <section class="note-card">
+      <h2>3. LIFO Principle</h2>
+      <p>
+        LIFO stands for Last In, First Out. The last inserted element is
+        the first element to be deleted.
+      </p>
       <div class="example-box">
-        <strong>Example:</strong><br><br>
-
-        If we push:
-        10 → 20 → 30
-
-        <br><br>
-
-        Then the first element removed will be:
-        <strong>30</strong>
+        <strong>Example:</strong>
+        <p>Push 10 → Push 20 → Push 30</p>
+        <p>Pop removes 30 first.</p>
       </div>
+    </section>
 
-    </div>
+    <section class="note-card">
+      <h2>4. Basic Operations of Stack</h2>
 
+      <div class="operation-grid">
+        <article>
+          <h3>Push</h3>
+          <p>Adds a new element to the top of the stack.</p>
+        </article>
 
-    <!-- Stack Operations -->
-    <div class="note-card">
+        <article>
+          <h3>Pop</h3>
+          <p>Removes the top element from the stack.</p>
+        </article>
 
-      <h2>Stack Operations</h2>
+        <article>
+          <h3>Peek / Top</h3>
+          <p>Displays the top element without removing it.</p>
+        </article>
 
-      <h3>1. Push</h3>
+        <article>
+          <h3>isEmpty</h3>
+          <p>Checks whether the stack has no elements.</p>
+        </article>
 
-      <p>
-        Push is used to add an element to the top of the stack.
-      </p>
-
-      <h3>2. Pop</h3>
-
-      <p>
-        Pop is used to remove the top element from the stack.
-      </p>
-
-      <h3>3. Peek</h3>
-
-      <p>
-        Peek is used to view the top element without removing it.
-      </p>
-
-      <h3>4. IsEmpty</h3>
-
-      <p>
-        IsEmpty checks whether the stack contains any element or not.
-      </p>
-
-    </div>
-
-
-    <!-- Stack Animation -->
-    <div class="note-card">
-
-      <h2>Stack Animation</h2>
-
-      <p>
-        Use the buttons below to understand how Push, Pop and Peek
-        operations work.
-      </p>
-
-      <div class="stack-animation">
-
-        <h2>Interactive Stack</h2>
-
-        <div
-          id="stackContainer"
-          class="stack-container"
-        >
-        </div>
-
-        <div class="stack-controls">
-
-          <input
-            type="text"
-            id="stackValue"
-            placeholder="Enter value"
-          />
-
-          <button onclick="pushStack()">
-            Push
-          </button>
-
-          <button onclick="popStack()">
-            Pop
-          </button>
-
-          <button onclick="peekStack()">
-            Peek
-          </button>
-
-        </div>
-
-        <p
-          id="stackMessage"
-          class="stack-message"
-        >
-          Stack is empty.
-        </p>
-
+        <article>
+          <h3>isFull</h3>
+          <p>Checks whether an array-based stack is full.</p>
+        </article>
       </div>
+    </section>
 
-    </div>
+    <section class="note-card">
+      <h2>5. Stack Overflow</h2>
+      <p>
+        Stack overflow occurs when we try to insert an element into a
+        fixed-size stack that is already full.
+      </p>
+    </section>
 
+    <section class="note-card">
+      <h2>6. Stack Underflow</h2>
+      <p>
+        Stack underflow occurs when we try to remove an element from an
+        empty stack.
+      </p>
+    </section>
 
-    <!-- Types -->
-    <div class="note-card">
-
-      <h2>Types of Stack</h2>
-
+    <section class="note-card">
+      <h2>7. Types of Stack</h2>
       <ul>
-        <li>Static Stack</li>
-        <li>Dynamic Stack</li>
+        <li><strong>Static Stack:</strong> Uses a fixed-size array.</li>
+        <li><strong>Dynamic Stack:</strong> Can grow or shrink as elements are added or removed, depending on its implementation.</li>
       </ul>
+    </section>
 
-    </div>
-
-
-    <!-- Applications -->
-    <div class="note-card">
-
-      <h2>Applications of Stack</h2>
-
+    <section class="note-card">
+      <h2>8. Applications of Stack</h2>
       <ul>
-        <li>Function Calls</li>
-        <li>Undo and Redo Operations</li>
-        <li>Expression Evaluation</li>
-        <li>Parentheses Matching</li>
-        <li>Browser Back Button</li>
-        <li>Recursion</li>
+        <li>Function calls and recursion.</li>
+        <li>Undo and redo operations.</li>
+        <li>Expression evaluation.</li>
+        <li>Checking balanced parentheses.</li>
+        <li>Backtracking and browser history.</li>
       </ul>
+    </section>
 
-    </div>
-
-
-    <!-- Advantages -->
-    <div class="note-card">
-
-      <h2>Advantages of Stack</h2>
-
+    <section class="note-card">
+      <h2>9. Advantages of Stack</h2>
       <ul>
-        <li>Easy to implement.</li>
-        <li>Insertion and deletion are fast.</li>
-        <li>Follows the LIFO principle.</li>
-        <li>Useful in recursion and function calls.</li>
+        <li>Simple to implement.</li>
+        <li>Push and pop are efficient operations.</li>
+        <li>Useful in function calls and expression evaluation.</li>
+        <li>Helps manage data in LIFO order.</li>
       </ul>
+    </section>
 
-    </div>
-
-
-    <!-- Disadvantages -->
-    <div class="note-card">
-
-      <h2>Disadvantages of Stack</h2>
-
+    <section class="note-card">
+      <h2>10. Disadvantages of Stack</h2>
       <ul>
         <li>Only the top element can be accessed directly.</li>
-        <li>Random access is not possible.</li>
-        <li>Stack overflow can occur when the stack is full.</li>
+        <li>Fixed-size stacks can overflow.</li>
+        <li>Removing an element from an empty stack causes underflow.</li>
       </ul>
+    </section>
 
-    </div>
+    <section class="note-card">
+      <h2>11. Time Complexity</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Operation</th>
+              <th>Time Complexity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Push</td><td>O(1)</td></tr>
+            <tr><td>Pop</td><td>O(1)</td></tr>
+            <tr><td>Peek</td><td>O(1)</td></tr>
+            <tr><td>isEmpty</td><td>O(1)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small-note">
+        These complexities assume the usual array-based or linked-list
+        stack implementation.
+      </p>
+    </section>
 
+    <!-- INTERACTIVE STACK -->
+    <section class="visualizer-card">
+      <div class="visualizer-heading">
+        <span class="tag">INTERACTIVE LEARNING</span>
+        <h2>Stack Animation</h2>
+        <p>Try Push, Pop, Peek and watch the stack change step by step.</p>
+      </div>
 
-    <!-- Back Button -->
-    <button
-      class="back-btn"
-      onclick="location.href = 'ds-notes.html'"
-    >
-      ⬅️ Back to Data Structure Notes
-    </button>
+      <div class="stack-layout">
 
-  </div>
+        <div class="stack-stage">
+          <div class="stack-top-label">TOP ↓</div>
+          <div id="stackVisual" class="stack-visual" aria-live="polite">
+            <div class="empty-message">Stack is empty</div>
+          </div>
+          <div class="stack-base"></div>
+        </div>
 
+        <div class="stack-side-panel">
+          <label for="stackValue">Enter a value</label>
+          <input
+            id="stackValue"
+            type="number"
+            placeholder="e.g. 25"
+            value="25"
+          >
 
-  <!-- Stack JavaScript -->
-  <script>
+          <div class="stack-buttons">
+            <button id="pushBtn" class="btn btn-push" type="button">＋ Push</button>
+            <button id="popBtn" class="btn btn-pop" type="button">− Pop</button>
+            <button id="peekBtn" class="btn btn-peek" type="button">👁 Peek</button>
+            <button id="nextStepBtn" class="btn btn-next" type="button">Next Step</button>
+            <button id="playAnimationBtn" class="btn btn-play" type="button">▶ Play Animation</button>
+            <button id="resetBtn" class="btn btn-reset" type="button">↻ Reset</button>
+          </div>
 
-    let stack = [];
+          <div class="stack-status">
+            <span>Status</span>
+            <strong id="stackStatus" role="status">Ready to start</strong>
+          </div>
 
-    const maxStackSize = 8;
+          <div class="stack-info">
+            <p>Current size: <strong id="stackSize">0</strong></p>
+            <p>Top element: <strong id="topElement">None</strong></p>
+            <p>Capacity: <strong>5 elements</strong></p>
+          </div>
+        </div>
 
+      </div>
+    </section>
 
-    function pushStack() {
+    <section class="note-card">
+      <h2>12. Example of Stack Operations</h2>
+      <ol>
+        <li>Push 10: Stack contains 10.</li>
+        <li>Push 20: Stack contains 10, 20.</li>
+        <li>Push 30: Stack contains 10, 20, 30.</li>
+        <li>Pop: 30 is removed.</li>
+        <li>Peek: 20 is the top element.</li>
+      </ol>
+    </section>
 
-      const input =
-        document.getElementById("stackValue");
+    <section class="note-card">
+      <h2>13. Conclusion</h2>
+      <p>
+        Stack is a linear data structure that follows LIFO. It is useful
+        when data must be processed in reverse order.
+      </p>
+    </section>
 
-      const value = input.value.trim();
+    <footer class="page-footer">
+      <p>StudySpark AI · Learn step by step</p>
+    </footer>
 
-      const message =
-        document.getElementById("stackMessage");
-
-      if (value === "") {
-
-        message.textContent =
-          "Please enter a value.";
-
-        return;
-      }
-
-      if (stack.length >= maxStackSize) {
-
-        message.textContent =
-          "Stack Overflow! Stack is full.";
-
-        return;
-      }
-
-      stack.push(value);
-
-      input.value = "";
-
-      displayStack();
-
-      message.textContent =
-        value + " pushed into the stack.";
-
-    }
-
-
-    function popStack() {
-
-      const message =
-        document.getElementById("stackMessage");
-
-      if (stack.length === 0) {
-
-        message.textContent =
-          "Stack Underflow! Stack is empty.";
-
-        return;
-      }
-
-      const removed =
-        stack.pop();
-
-      displayStack();
-
-      message.textContent =
-        removed + " popped from the stack.";
-
-    }
-
-
-    function peekStack() {
-
-      const message =
-        document.getElementById("stackMessage");
-
-      if (stack.length === 0) {
-
-        message.textContent =
-          "Stack is empty.";
-
-        return;
-      }
-
-      message.textContent =
-        "Top element is " + stack[stack.length - 1] + ".";
-
-    }
-
-
-    function displayStack() {
-
-      const container =
-        document.getElementById("stackContainer");
-
-      container.innerHTML = "";
-
-      stack.forEach((item) => {
-
-        const element =
-          document.createElement("div");
-
-        element.className = "stack-item";
-
-        element.textContent = item;
-
-        container.appendChild(element);
-
-      });
-
-    }
-
-  </script>
-
+  </main>
 </body>
 </html>
