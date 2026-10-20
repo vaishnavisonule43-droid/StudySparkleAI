@@ -1,475 +1,636 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Sorting - Data Structure</title>
-
-  <link rel="stylesheet" href="../css/data-structure.css" />
-</head>
-
-<body>
-
-  <!-- Header -->
-  <header class="page-header">
-    <h1>🔢 Sorting</h1>
-    <p>Learn the basic concepts of Sorting in Data Structure.</p>
-  </header>
-
-
-  <!-- Main Content -->
-  <div class="notes-container">
-
-    <!-- Introduction -->
-    <div class="note-card">
-
-      <h2>What is Sorting?</h2>
-
-      <p>
-        Sorting is the process of arranging data in a particular
-        order, such as ascending or descending order.
-      </p>
-
-      <div class="definition">
-        <strong>Definition:</strong>
-        Sorting is a technique used to arrange elements in a
-        specific order to make data easier to read, search and manage.
-      </div>
-
-      <h3>Example</h3>
-
-      <div class="example-box">
-        Unsorted: 40, 10, 30, 20, 50
-        <br><br>
-        Ascending: 10, 20, 30, 40, 50
-        <br><br>
-        Descending: 50, 40, 30, 20, 10
-      </div>
-
-    </div>
-
-
-    <!-- Types -->
-    <div class="note-card">
-
-      <h2>Types of Sorting</h2>
-
-      <h3>1. Bubble Sort</h3>
-
-      <p>
-        Bubble Sort repeatedly compares adjacent elements and
-        swaps them if they are in the wrong order.
-      </p>
-
-
-      <h3>2. Selection Sort</h3>
-
-      <p>
-        Selection Sort finds the smallest element and places it
-        at the correct position.
-      </p>
-
-
-      <h3>3. Insertion Sort</h3>
-
-      <p>
-        Insertion Sort builds the sorted array one element at a time.
-      </p>
-
-
-      <h3>4. Merge Sort</h3>
-
-      <p>
-        Merge Sort divides the array into smaller parts, sorts them
-        and then merges them together.
-      </p>
-
-
-      <h3>5. Quick Sort</h3>
-
-      <p>
-        Quick Sort selects a pivot element and divides the array
-        around the pivot.
-      </p>
-
-    </div>
-
-
-    <!-- Bubble Sort -->
-    <div class="note-card">
-
-      <h2>Bubble Sort</h2>
-
-      <p>
-        Bubble Sort compares adjacent elements. If the first element
-        is greater than the second element, they are swapped.
-      </p>
-
-      <h3>Steps</h3>
-
-      <ol>
-        <li>Compare two adjacent elements.</li>
-        <li>Swap them if they are in the wrong order.</li>
-        <li>Continue comparing the remaining elements.</li>
-        <li>Repeat the process until the array is sorted.</li>
-      </ol>
-
-      <div class="example-box">
-        Example:
-        <br><br>
-        30, 10, 20
-        <br><br>
-        Compare 30 and 10 → Swap
-        <br>
-        10, 30, 20
-        <br><br>
-        Compare 30 and 20 → Swap
-        <br>
-        10, 20, 30
-      </div>
-
-    </div>
-
-
-    <!-- Sorting Animation -->
-    <div class="note-card">
-
-      <h2>Sorting Animation</h2>
-
-      <p>
-        Click the buttons below to see how different sorting
-        algorithms arrange the elements.
-      </p>
-
-      <div class="sorting-animation">
-
-        <h2>Interactive Sorting</h2>
-
-        <div
-          id="sortingArray"
-          class="sorting-container"
-        >
-        </div>
-
-        <div class="sorting-controls">
-
-          <button onclick="bubbleSort()">
-            Bubble Sort
-          </button>
-
-          <button onclick="selectionSort()">
-            Selection Sort
-          </button>
-
-          <button onclick="insertionSort()">
-            Insertion Sort
-          </button>
-
-          <button onclick="resetSorting()">
-            Reset
-          </button>
-
-        </div>
-
-        <p
-          id="sortingMessage"
-          class="sorting-message"
-        >
-          Choose a sorting algorithm.
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#171c3a" />
+    <title>Sorting Algorithms | Data Structures Notes</title>
+    <link rel="stylesheet" href="../css/ds-sorting.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <a class="brand" href="ds-notes.html">DS<span>•</span>NOTES</a>
+        <p class="eyebrow">DATA STRUCTURES · STUDY GUIDE</p>
+        <h1>Sorting <span>Algorithms</span></h1>
+        <p class="hero-sub">
+          Understand how data gets organized — one comparison at a time.
         </p>
-
+        <div class="tags">
+          <span>📘 Exam-ready notes</span><span>⚡ Interactive demos</span
+          ><span>🧠 Step-by-step learning</span>
+        </div>
       </div>
-
-    </div>
-
-
-    <!-- Comparison -->
-    <div class="note-card">
-
-      <h2>Sorting Algorithms Comparison</h2>
-
-      <table>
-
-        <tr>
-          <th>Algorithm</th>
-          <th>Best Case</th>
-          <th>Average Case</th>
-          <th>Worst Case</th>
-        </tr>
-
-        <tr>
-          <td>Bubble Sort</td>
-          <td>O(n)</td>
-          <td>O(n²)</td>
-          <td>O(n²)</td>
-        </tr>
-
-        <tr>
-          <td>Selection Sort</td>
-          <td>O(n²)</td>
-          <td>O(n²)</td>
-          <td>O(n²)</td>
-        </tr>
-
-        <tr>
-          <td>Insertion Sort</td>
-          <td>O(n)</td>
-          <td>O(n²)</td>
-          <td>O(n²)</td>
-        </tr>
-
-        <tr>
-          <td>Merge Sort</td>
-          <td>O(n log n)</td>
-          <td>O(n log n)</td>
-          <td>O(n log n)</td>
-        </tr>
-
-        <tr>
-          <td>Quick Sort</td>
-          <td>O(n log n)</td>
-          <td>O(n log n)</td>
-          <td>O(n²)</td>
-        </tr>
-
-      </table>
-
-    </div>
-
-
-    <!-- Applications -->
-    <div class="note-card">
-
-      <h2>Applications of Sorting</h2>
-
-      <ul>
-        <li>Arranging student marks.</li>
-        <li>Arranging products by price.</li>
-        <li>Organizing names alphabetically.</li>
-        <li>Searching data efficiently.</li>
-        <li>Arranging records in databases.</li>
-      </ul>
-
-    </div>
-
-
-    <!-- Advantages -->
-    <div class="note-card">
-
-      <h2>Advantages of Sorting</h2>
-
-      <ul>
-        <li>Makes data easier to understand.</li>
-        <li>Helps in faster searching.</li>
-        <li>Makes data organization easier.</li>
-        <li>Useful for processing large amounts of data.</li>
-      </ul>
-
-    </div>
-
-
-    <!-- Back Button -->
-    <button
-      class="back-btn"
-      onclick="location.href = 'ds-notes.html'"
-    >
-      ⬅️ Back to Data Structure Notes
-    </button>
-
-  </div>
-
-
-  <!-- Sorting JavaScript -->
-  <script>
-
-    let sortingData = [40, 10, 30, 20, 50];
-
-    let sortingRunning = false;
-
-
-    function displaySortingArray(activeIndex = -1, compareIndex = -1) {
-
-      const container =
-        document.getElementById("sortingArray");
-
-      container.innerHTML = "";
-
-      sortingData.forEach((value, index) => {
-
-        const element =
-          document.createElement("div");
-
-        element.className = "sort-element";
-
-        element.textContent = value;
-
-        if (index === activeIndex) {
-          element.classList.add("active");
-        }
-
-        if (index === compareIndex) {
-          element.classList.add("comparing");
-        }
-
-        container.appendChild(element);
-
-      });
-
-    }
-
-
-    function delay(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
-
-    async function bubbleSort() {
-
-      if (sortingRunning) return;
-
-      sortingRunning = true;
-
-      document.getElementById("sortingMessage").textContent =
-        "Bubble Sort is running...";
-
-      for (let i = 0; i < sortingData.length; i++) {
-
-        for (let j = 0; j < sortingData.length - i - 1; j++) {
-
-          displaySortingArray(j, j + 1);
-
-          await delay(700);
-
-          if (sortingData[j] > sortingData[j + 1]) {
-
-            let temp = sortingData[j];
-
-            sortingData[j] = sortingData[j + 1];
-
-            sortingData[j + 1] = temp;
-
-          }
-
-          displaySortingArray();
-
-        }
-
-      }
-
-      sortingRunning = false;
-
-      document.getElementById("sortingMessage").textContent =
-        "Bubble Sort completed.";
-
-    }
-
-
-    async function selectionSort() {
-
-      if (sortingRunning) return;
-
-      sortingRunning = true;
-
-      document.getElementById("sortingMessage").textContent =
-        "Selection Sort is running...";
-
-      for (let i = 0; i < sortingData.length - 1; i++) {
-
-        let minIndex = i;
-
-        for (let j = i + 1; j < sortingData.length; j++) {
-
-          displaySortingArray(minIndex, j);
-
-          await delay(700);
-
-          if (sortingData[j] < sortingData[minIndex]) {
-            minIndex = j;
-          }
-
-        }
-
-        let temp = sortingData[i];
-
-        sortingData[i] = sortingData[minIndex];
-
-        sortingData[minIndex] = temp;
-
-        displaySortingArray();
-
-      }
-
-      sortingRunning = false;
-
-      document.getElementById("sortingMessage").textContent =
-        "Selection Sort completed.";
-
-    }
-
-
-    async function insertionSort() {
-
-      if (sortingRunning) return;
-
-      sortingRunning = true;
-
-      document.getElementById("sortingMessage").textContent =
-        "Insertion Sort is running...";
-
-      for (let i = 1; i < sortingData.length; i++) {
-
-        let key = sortingData[i];
-
-        let j = i - 1;
-
-        displaySortingArray(i, j);
-
-        await delay(700);
-
-        while (j >= 0 && sortingData[j] > key) {
-
-          sortingData[j + 1] = sortingData[j];
-
-          displaySortingArray(j, j + 1);
-
-          await delay(700);
-
-          j--;
-
-        }
-
-        sortingData[j + 1] = key;
-
-        displaySortingArray();
-
-      }
-
-      sortingRunning = false;
-
-      document.getElementById("sortingMessage").textContent =
-        "Insertion Sort completed.";
-
-    }
-
-
-    function resetSorting() {
-
-      sortingData = [40, 10, 30, 20, 50];
-
-      sortingRunning = false;
-
-      displaySortingArray();
-
-      document.getElementById("sortingMessage").textContent =
-        "Array reset. Choose a sorting algorithm.";
-
-    }
-
-
-    displaySortingArray();
-
-  </script>
-
-</body>
+      <i class="orb orb1"></i><i class="orb orb2"></i>
+    </header>
+    <main class="layout">
+      <aside class="side">
+        <b class="nav-title">ON THIS PAGE</b
+        ><a href="#intro">01 · Introduction</a
+        ><a href="#types">02 · Types of sorting</a
+        ><a href="#playground">03 · Sorting playground</a
+        ><a href="#bubble">04 · Bubble sort</a
+        ><a href="#selection">05 · Selection sort</a
+        ><a href="#insertion">06 · Insertion sort</a
+        ><a href="#merge">07 · Merge sort</a><a href="#quick">08 · Quick sort</a
+        ><a href="#compare">09 · Comparison</a
+        ><a href="#revision">10 · Revision</a>
+        <div class="tip">
+          <b>Study tip</b>
+          <p>
+            For exam answers, write definition, working steps, example and time
+            complexity.
+          </p>
+        </div>
+      </aside>
+      <div class="content">
+        <section class="card reveal" id="intro">
+          <label>01 / THE BASICS</label>
+          <h2>What is Sorting?</h2>
+          <p>
+            <b>Sorting</b> is the process of arranging data elements in a
+            particular order, usually ascending (smallest to largest) or
+            descending (largest to smallest).
+          </p>
+          <div class="definition">
+            <span>✦</span>
+            <div>
+              <b>Exam definition</b>
+              <p>
+                Sorting is a technique used to arrange data elements in a
+                specific order so that data becomes easier to read, search and
+                process.
+              </p>
+            </div>
+          </div>
+          <h3>Example: arranging numbers</h3>
+          <div class="example">
+            <div>
+              <small>UNSORTED</small>
+              <div class="nums">
+                <i>40</i><i>10</i><i>30</i><i>20</i><i>50</i>
+              </div>
+            </div>
+            <strong class="down">↓</strong>
+            <div>
+              <small>ASCENDING ORDER</small>
+              <div class="nums green">
+                <i>10</i><i>20</i><i>30</i><i>40</i><i>50</i>
+              </div>
+            </div>
+            <div>
+              <small>DESCENDING ORDER</small>
+              <div class="nums orange">
+                <i>50</i><i>40</i><i>30</i><i>20</i><i>10</i>
+              </div>
+            </div>
+          </div>
+          <div class="callout">
+            <b>Remember:</b> Ascending = increasing order. Descending =
+            decreasing order.
+          </div>
+        </section>
+        <section class="card reveal" id="types">
+          <label>02 / OVERVIEW</label>
+          <h2>Types of Sorting Algorithms</h2>
+          <p>Choose a card to jump to the explanation.</p>
+          <div class="algo-grid">
+            <a href="#bubble" class="algo"
+              ><span>🫧</span>
+              <h3>Bubble Sort</h3>
+              <p>Compares adjacent elements and swaps them if needed.</p>
+              <b>Average: O(n²)</b></a
+            >
+            <a href="#selection" class="algo"
+              ><span>🎯</span>
+              <h3>Selection Sort</h3>
+              <p>
+                Selects the smallest remaining element for the next position.
+              </p>
+              <b>Average: O(n²)</b></a
+            >
+            <a href="#insertion" class="algo"
+              ><span>🃏</span>
+              <h3>Insertion Sort</h3>
+              <p>Inserts each next element into the sorted part.</p>
+              <b>Average: O(n²)</b></a
+            >
+            <a href="#merge" class="algo"
+              ><span>🧩</span>
+              <h3>Merge Sort</h3>
+              <p>Divides the array, sorts parts and merges them.</p>
+              <b>Average: O(n log n)</b></a
+            >
+            <a href="#quick" class="algo"
+              ><span>⚡</span>
+              <h3>Quick Sort</h3>
+              <p>Uses a pivot to partition smaller and larger values.</p>
+              <b>Average: O(n log n)</b></a
+            >
+          </div>
+        </section>
+        <section class="card reveal" id="playground">
+          <label>03 / TRY IT YOURSELF</label>
+          <h2>Interactive Sorting Playground</h2>
+          <p>
+            Highlighted bars show the values currently being checked. Try the
+            same array with different algorithms.
+          </p>
+          <div class="playground">
+            <div class="playtop">
+              <div>
+                <small>CURRENT ALGORITHM</small>
+                <h3 id="algorithmName">Bubble Sort</h3>
+              </div>
+              <div class="stats">
+                <span><small>Comparisons</small><b id="comparisons">0</b></span
+                ><span><small>Moves / swaps</small><b id="moves">0</b></span>
+              </div>
+            </div>
+            <div
+              id="sortingArray"
+              class="bars"
+              aria-label="Array visualization"
+            ></div>
+            <div class="legend">
+              <span>🟠 Comparing</span><span>🟦 Current / pivot</span
+              ><span>🟢 Sorted</span>
+            </div>
+            <div class="controls">
+              <label
+                >Algorithm<select id="algorithm">
+                  <option value="bubble">Bubble Sort</option>
+                  <option value="selection">Selection Sort</option>
+                  <option value="insertion">Insertion Sort</option>
+                  <option value="merge">Merge Sort</option>
+                  <option value="quick">Quick Sort</option>
+                </select></label
+              ><label
+                >Speed: <b id="speedText">Normal</b
+                ><input
+                  id="speed"
+                  type="range"
+                  min="1"
+                  max="5"
+                  value="3"
+                /><small class="range-label"
+                  ><span>Slow</span><span>Fast</span></small
+                ></label
+              >
+            </div>
+            <div class="buttons">
+              <button id="start" class="primary">▶ Start sorting</button
+              ><button id="pause" disabled>Ⅱ Pause</button
+              ><button id="reset">↺ Reset</button
+              ><button id="random">⤨ New array</button>
+            </div>
+            <p id="message" class="message" aria-live="polite">
+              Choose an algorithm and press Start sorting.
+            </p>
+            <div class="explain">
+              <span>💡</span>
+              <div>
+                <b>What is happening?</b>
+                <p id="explanation">
+                  The algorithm will explain each comparison here as it runs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="card reveal" id="bubble">
+          <label>04 / ALGORITHM 01</label>
+          <h2>Bubble Sort</h2>
+          <p>
+            Bubble Sort repeatedly compares two adjacent elements. If they are
+            in the wrong order, it swaps them. After each pass, the largest
+            unsorted element moves to the end.
+          </p>
+          <div class="definition">
+            <span>🫧</span>
+            <div>
+              <b>Simple definition</b>
+              <p>
+                Bubble Sort compares adjacent elements and swaps them when they
+                are in the wrong order.
+              </p>
+            </div>
+          </div>
+          <h3>Example: sort 30, 10, 20</h3>
+          <div class="steps">
+            <div>
+              <b>1. Compare 30 and 10</b>
+              <p>30 is greater than 10, so swap them.</p>
+              <div class="nums">
+                <i class="changed">10</i><i class="changed">30</i><i>20</i>
+              </div>
+            </div>
+            <div>
+              <b>2. Compare 30 and 20</b>
+              <p>30 is greater than 20, so swap them.</p>
+              <div class="nums">
+                <i>10</i><i class="changed">20</i><i class="changed">30</i>
+              </div>
+            </div>
+            <div>
+              <b>3. Result</b>
+              <p>The array is now sorted.</p>
+              <div class="nums green"><i>10</i><i>20</i><i>30</i></div>
+            </div>
+          </div>
+          <h3>Algorithm steps</h3>
+          <ol>
+            <li>Start from the first element.</li>
+            <li>Compare adjacent elements.</li>
+            <li>Swap them if the left element is greater.</li>
+            <li>Continue through the unsorted part.</li>
+            <li>
+              Repeat until sorted; an optimized version stops if no swaps occur.
+            </li>
+          </ol>
+          <div class="complexity">
+            <span><small>Best case*</small><b>O(n)</b></span
+            ><span><small>Average</small><b>O(n²)</b></span
+            ><span><small>Worst</small><b>O(n²)</b></span
+            ><span><small>Stable?</small><b>Yes</b></span>
+          </div>
+          <small class="footnote"
+            >*Best case O(n) when early stopping is used.</small
+          >
+        </section>
+        <section class="card reveal" id="selection">
+          <label>05 / ALGORITHM 02</label>
+          <h2>Selection Sort</h2>
+          <p>
+            Selection Sort searches the unsorted part for the smallest element,
+            then swaps it with the first element of that part. It repeats until
+            every position is filled.
+          </p>
+          <div class="definition">
+            <span>🎯</span>
+            <div>
+              <b>Simple definition</b>
+              <p>
+                Selection Sort repeatedly selects the smallest element from the
+                unsorted part and places it in its correct position.
+              </p>
+            </div>
+          </div>
+          <h3>Example: 29, 10, 14, 37</h3>
+          <div class="steps">
+            <div>
+              <b>1. Find the smallest value</b>
+              <p>The smallest is 10. Swap it with 29.</p>
+              <div class="nums">
+                <i class="green-chip">10</i><i class="changed">29</i><i>14</i
+                ><i>37</i>
+              </div>
+            </div>
+            <div>
+              <b>2. Search the remaining part</b>
+              <p>In 29, 14, 37, the smallest is 14. Place it next.</p>
+              <div class="nums">
+                <i class="green-chip">10</i><i class="green-chip">14</i
+                ><i class="changed">29</i><i>37</i>
+              </div>
+            </div>
+            <div>
+              <b>3. Final result</b>
+              <div class="nums green"><i>10</i><i>14</i><i>29</i><i>37</i></div>
+            </div>
+          </div>
+          <h3>Algorithm steps</h3>
+          <ol>
+            <li>Assume the first unsorted element is the minimum.</li>
+            <li>Compare it with all other elements in the unsorted part.</li>
+            <li>Remember the index of the smallest element.</li>
+            <li>Swap the minimum with the first unsorted element.</li>
+            <li>Move the sorted boundary right and repeat.</li>
+          </ol>
+          <div class="complexity">
+            <span><small>Best case</small><b>O(n²)</b></span
+            ><span><small>Average</small><b>O(n²)</b></span
+            ><span><small>Worst</small><b>O(n²)</b></span
+            ><span><small>Stable?</small><b>No*</b></span>
+          </div>
+          <small class="footnote"
+            >*The usual swap-based implementation is not stable.</small
+          >
+        </section>
+        <section class="card reveal" id="insertion">
+          <label>06 / ALGORITHM 03</label>
+          <h2>Insertion Sort</h2>
+          <p>
+            Insertion Sort keeps a sorted section at the beginning. It takes the
+            next element (the <b>key</b>), shifts larger elements one position
+            right and inserts the key into its correct place.
+          </p>
+          <div class="definition">
+            <span>🃏</span>
+            <div>
+              <b>Simple definition</b>
+              <p>
+                Insertion Sort builds a sorted array one element at a time by
+                inserting each element into its correct position.
+              </p>
+            </div>
+          </div>
+          <h3>Example: 30, 10, 20</h3>
+          <div class="steps">
+            <div>
+              <b>1. Take key 10</b>
+              <p>30 is greater than 10, so shift 30 right and insert 10.</p>
+              <div class="nums">
+                <i class="green-chip">10</i><i class="changed">30</i><i>20</i>
+              </div>
+            </div>
+            <div>
+              <b>2. Take key 20</b>
+              <p>Shift 30 right and insert 20 after 10.</p>
+              <div class="nums">
+                <i class="green-chip">10</i><i class="changed">20</i
+                ><i class="changed">30</i>
+              </div>
+            </div>
+            <div>
+              <b>3. Result</b>
+              <div class="nums green"><i>10</i><i>20</i><i>30</i></div>
+            </div>
+          </div>
+          <h3>Algorithm steps</h3>
+          <ol>
+            <li>Assume the first element is sorted.</li>
+            <li>Select the next element as the key.</li>
+            <li>
+              Shift sorted elements greater than the key one position right.
+            </li>
+            <li>Insert the key into the empty position.</li>
+            <li>Repeat until all elements are processed.</li>
+          </ol>
+          <div class="complexity">
+            <span><small>Best case</small><b>O(n)</b></span
+            ><span><small>Average</small><b>O(n²)</b></span
+            ><span><small>Worst</small><b>O(n²)</b></span
+            ><span><small>Stable?</small><b>Yes</b></span>
+          </div>
+        </section>
+        <section class="card reveal" id="merge">
+          <label>07 / ALGORITHM 04</label>
+          <h2>Merge Sort</h2>
+          <p>
+            Merge Sort follows the <b>divide and conquer</b> technique. It
+            divides the array into halves until each part has one element, then
+            merges the parts in sorted order.
+          </p>
+          <div class="definition">
+            <span>🧩</span>
+            <div>
+              <b>Simple definition</b>
+              <p>
+                Merge Sort divides an array into smaller parts, sorts those
+                parts and merges them to create a sorted array.
+              </p>
+            </div>
+          </div>
+          <h3>Example: 38, 27, 43, 10</h3>
+          <div class="merge-diagram">
+            <div><i>38</i><i>27</i><i>43</i><i>10</i></div>
+            <b>↓ Divide</b>
+            <div><i>38, 27</i><i>43, 10</i></div>
+            <b>↓ Divide again</b>
+            <div><i>38</i><i>27</i><i>43</i><i>10</i></div>
+            <b>↓ Sort and merge</b>
+            <div class="merge-blue"><i>27, 38</i><i>10, 43</i></div>
+            <b>↓ Final merge</b>
+            <div class="merge-green"><i>10, 27, 38, 43</i></div>
+          </div>
+          <h3>Algorithm steps</h3>
+          <ol>
+            <li>Divide the array into two halves.</li>
+            <li>Keep dividing until each sub-array has one element.</li>
+            <li>Compare the first available elements of the sub-arrays.</li>
+            <li>Merge them in sorted order.</li>
+            <li>Continue merging until one sorted array remains.</li>
+          </ol>
+          <div class="complexity">
+            <span><small>Best case</small><b>O(n log n)</b></span
+            ><span><small>Average</small><b>O(n log n)</b></span
+            ><span><small>Worst</small><b>O(n log n)</b></span
+            ><span><small>Stable?</small><b>Yes</b></span>
+          </div>
+          <div class="callout">
+            <b>Key point:</b> Merge Sort has predictable performance but usually
+            needs extra memory for merging arrays.
+          </div>
+        </section>
+        <section class="card reveal" id="quick">
+          <label>08 / ALGORITHM 05</label>
+          <h2>Quick Sort</h2>
+          <p>
+            Quick Sort also uses divide and conquer. It chooses a <b>pivot</b>,
+            places smaller values on one side and larger values on the other,
+            then sorts the two parts.
+          </p>
+          <div class="definition">
+            <span>⚡</span>
+            <div>
+              <b>Simple definition</b>
+              <p>
+                Quick Sort sorts data by selecting a pivot and partitioning
+                elements into groups smaller and larger than the pivot.
+              </p>
+            </div>
+          </div>
+          <h3>Example: 30, 10, 40, 20 (pivot = 20)</h3>
+          <div class="quick-diagram">
+            <div class="small-group">
+              <small>SMALLER THAN PIVOT</small>
+              <div class="nums green"><i>10</i></div>
+            </div>
+            <div class="pivot"><small>PIVOT</small><b>20</b></div>
+            <div class="large-group">
+              <small>GREATER THAN PIVOT</small>
+              <div class="nums orange"><i>30</i><i>40</i></div>
+            </div>
+          </div>
+          <p>
+            After sorting the left and right groups, the result is
+            <b>10, 20, 30, 40</b>.
+          </p>
+          <h3>Algorithm steps</h3>
+          <ol>
+            <li>Choose a pivot element.</li>
+            <li>
+              Partition the array into smaller and larger values around the
+              pivot.
+            </li>
+            <li>The pivot reaches its correct position.</li>
+            <li>Apply Quick Sort to the left and right partitions.</li>
+            <li>Stop when a partition has zero or one element.</li>
+          </ol>
+          <div class="complexity">
+            <span><small>Best case</small><b>O(n log n)</b></span
+            ><span><small>Average</small><b>O(n log n)</b></span
+            ><span><small>Worst</small><b>O(n²)</b></span
+            ><span><small>Stable?</small><b>No*</b></span>
+          </div>
+          <small class="footnote"
+            >*Common in-place Quick Sort is not stable. Repeatedly poor pivot
+            choices can cause worst-case performance.</small
+          >
+        </section>
+        <section class="card reveal" id="compare">
+          <label>09 / QUICK COMPARISON</label>
+          <h2>Sorting Algorithms Comparison</h2>
+          <p>
+            Time complexity describes how the amount of work grows as the number
+            of elements (n) increases.
+          </p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Algorithm</th>
+                  <th>Best</th>
+                  <th>Average</th>
+                  <th>Worst</th>
+                  <th>Stable?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Bubble Sort</th>
+                  <td>O(n)*</td>
+                  <td>O(n²)</td>
+                  <td>O(n²)</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <th>Selection Sort</th>
+                  <td>O(n²)</td>
+                  <td>O(n²)</td>
+                  <td>O(n²)</td>
+                  <td>No*</td>
+                </tr>
+                <tr>
+                  <th>Insertion Sort</th>
+                  <td>O(n)</td>
+                  <td>O(n²)</td>
+                  <td>O(n²)</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <th>Merge Sort</th>
+                  <td>O(n log n)</td>
+                  <td>O(n log n)</td>
+                  <td>O(n log n)</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <th>Quick Sort</th>
+                  <td>O(n log n)</td>
+                  <td>O(n log n)</td>
+                  <td>O(n²)</td>
+                  <td>No*</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <small class="footnote"
+            >*Bubble best case assumes early stopping. Stability reflects common
+            introductory implementations.</small
+          >
+          <div class="callout">
+            <b>Easy memory trick:</b> Bubble = neighbours; Selection = smallest;
+            Insertion = insert key; Merge = divide and merge; Quick = pivot and
+            partition.
+          </div>
+        </section>
+        <section class="card reveal" id="revision">
+          <label>10 / EXAM REVISION</label>
+          <h2>Applications of Sorting</h2>
+          <div class="applications">
+            <div>
+              <span>🎓</span><b>Student records</b>
+              <p>Arrange marks or roll numbers.</p>
+            </div>
+            <div>
+              <span>🛒</span><b>Online shopping</b>
+              <p>Sort products by price or rating.</p>
+            </div>
+            <div>
+              <span>🔤</span><b>Names and words</b>
+              <p>Arrange names alphabetically.</p>
+            </div>
+            <div>
+              <span>🗄️</span><b>Databases</b>
+              <p>Organize records by date or ID.</p>
+            </div>
+          </div>
+          <h3>Advantages of Sorting</h3>
+          <ul class="checks">
+            <li>Makes data organized and easier to understand.</li>
+            <li>
+              Can make searching more efficient; binary search requires sorted
+              data.
+            </li>
+            <li>Helps identify minimum, maximum and duplicate values.</li>
+            <li>Supports clear reports and organized database output.</li>
+          </ul>
+          <h3>Short exam questions</h3>
+          <div class="qa">
+            <details>
+              <summary>1. What is sorting?</summary>
+              <p>
+                Sorting is the process of arranging data elements in a specific
+                order, such as ascending or descending order.
+              </p>
+            </details>
+            <details>
+              <summary>2. Which sorting algorithm uses a pivot?</summary>
+              <p>Quick Sort uses a pivot to partition the array.</p>
+            </details>
+            <details>
+              <summary>3. Which algorithms use divide and conquer?</summary>
+              <p>Merge Sort and Quick Sort both use divide and conquer.</p>
+            </details>
+            <details>
+              <summary>
+                4. Which algorithm works well for nearly sorted data?
+              </summary>
+              <p>
+                Insertion Sort is often efficient for small or nearly sorted
+                arrays.
+              </p>
+            </details>
+            <details>
+              <summary>5. What is Quick Sort's worst-case complexity?</summary>
+              <p>
+                O(n²), often when pivot choices repeatedly create unbalanced
+                partitions.
+              </p>
+            </details>
+          </div>
+          <div class="revision-box">
+            <span>🧠</span>
+            <div>
+              <b>Last-minute revision</b>
+              <p>
+                Learn each algorithm's main idea, trace a small example by hand,
+                and remember best, average and worst time complexity.
+              </p>
+            </div>
+          </div>
+        </section>
+        <div class="bottom">
+          <a href="ds-notes.html" class="back">← Back to Data Structure Notes</a
+          ><button id="top" class="back">↑ Back to top</button>
+        </div>
+        <footer>
+          Study consistently. Understand the steps, not just the names. ✨
+        </footer>
+      </div>
+    </main>
+    <script src="js/sorting-notes.js"></script>
+  </body>
 </html>
