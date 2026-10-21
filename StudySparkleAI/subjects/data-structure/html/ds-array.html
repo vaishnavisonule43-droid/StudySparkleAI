@@ -3,529 +3,536 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Array Notes | Data Structures</title>
+    <meta
+      name="description"
+      content="Complete Array notes with definitions, C programs, examples and interactive visualizations."
+    />
+    <title>Array Notes | StudySpark AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/array-notes.css" />
   </head>
   <body>
-
-   <div class="array-notes-page">
-      <span class="header-badge">DATA STRUCTURES NOTES</span>
-      <h1>Array in Data Structure</h1>
-      <p>
-        Complete Notes • Examples • Algorithms • C Programs • Exam Preparation
-      </p>
+    <header class="hero">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="hero-inner">
+        <a class="brand" href="../../../index.html"
+          >STUDY<span>SPARK</span> AI</a
+        >
+        <p class="eyebrow">DATA STRUCTURES • COMPLETE STUDY NOTES</p>
+        <h1>Understand <span>Arrays</span></h1>
+        <p class="hero-sub">
+          Simple definitions, clear C examples, exam-ready notes and interactive
+          visualizations that show every step.
+        </p>
+        <div class="tags">
+          <span>Beginner Friendly</span><span>C Programming</span
+          ><span>Step-by-Step Visuals</span><span>Exam Preparation</span>
+        </div>
+      </div>
     </header>
 
-    <main class="notes-container">
-      <section
-        class="note-card"
-        id="array-introduction"
-        data-array-topic="array-intro"
-      >
-        <span class="topic-label">01 • BASICS</span>
-        <h2>1. Introduction to Array</h2>
-
-        <h3>What is an Array?</h3>
-        <div class="definition">
-          <strong>Definition:</strong> An array is a linear data structure that
-          stores multiple elements of the same data type in consecutive memory
-          locations. Each element is accessed using an index.
+    <main class="layout">
+      <nav class="side" aria-label="Array notes navigation">
+        <span class="nav-title">ON THIS PAGE</span>
+        <a href="#array-introduction">01. Introduction</a>
+        <a href="#array-types">02. Types of Array</a>
+        <a href="#array-index">03. Index & Memory</a>
+        <a href="#array-operations">04. Basic Operations</a>
+        <a href="#array-traversal">Traversal</a>
+        <a href="#array-insertion">Insertion</a>
+        <a href="#array-deletion">Deletion</a>
+        <a href="#array-searching">Searching</a>
+        <a href="#array-updating">Updating</a>
+        <a href="#array-sorting">05. Sorting</a>
+        <a href="#array-advantages">06. Pros & Cons</a>
+        <a href="#array-applications">07. Applications</a>
+        <a href="#array-conclusion">08. Exam Revision</a>
+        <div class="tip">
+          <b>Study tip</b>
+          <p>
+            Run each visualization, read the explanation, and then write the
+            same steps in your own words.
+          </p>
         </div>
+      </nav>
 
-        <p>
-          In programming, we often need to store several values of the same
-          type. For example, if we want to store the marks of five students, we
-          could create five separate variables. However, managing many variables
-          becomes difficult. An array solves this problem by storing multiple
-          values under one variable name.
-        </p>
-
-        <h3>Example without an Array</h3>
-        <pre class="code-block"><code>int mark1 = 70;
+      <div class="content">
+        <section
+          class="card reveal"
+          id="array-introduction"
+          data-array-topic="array-intro"
+        >
+          <label>01 • BASICS</label>
+          <h2>Introduction to Array</h2>
+          <h3>What is an Array?</h3>
+          <div class="definition">
+            <span>📘</span>
+            <div>
+              <b>Definition</b>
+              <p>
+                An array is a linear data structure that stores multiple
+                elements of the same data type in consecutive memory locations.
+                Each element is accessed using an index.
+              </p>
+            </div>
+          </div>
+          <p>
+            Suppose we need to store five students' marks. Instead of creating
+            five separate variables, we can keep all values under one array
+            name. This makes the data easier to access and process using loops.
+          </p>
+          <h3>Without an array</h3>
+          <pre class="code-block"><code>int mark1 = 70;
 int mark2 = 80;
 int mark3 = 65;
 int mark4 = 90;
 int mark5 = 75;</code><button class="copy-btn" type="button">Copy Code</button></pre>
+          <h3>Using an array</h3>
+          <pre
+            class="code-block"
+          ><code>int marks[5] = {70, 80, 65, 90, 75};</code><button class="copy-btn" type="button">Copy Code</button></pre>
+          <p>
+            All five marks are stored in the array named <code>marks</code>. In
+            C, the first index is <code>0</code>.
+          </p>
+          <div class="array-diagram" aria-label="Array indexes and values">
+            <div class="array-cell">
+              <span>Index 0</span><strong>70</strong>
+            </div>
+            <div class="array-cell">
+              <span>Index 1</span><strong>80</strong>
+            </div>
+            <div class="array-cell">
+              <span>Index 2</span><strong>65</strong>
+            </div>
+            <div class="array-cell">
+              <span>Index 3</span><strong>90</strong>
+            </div>
+            <div class="array-cell">
+              <span>Index 4</span><strong>75</strong>
+            </div>
+          </div>
+          <h3>Important characteristics</h3>
+          <ul>
+            <li>Stores multiple elements under one variable name.</li>
+            <li>In C, indexing starts at 0.</li>
+            <li>All elements use the same declared data type.</li>
+            <li>Elements are stored in consecutive memory locations.</li>
+            <li>Accessing a known index takes <code>O(1)</code> time.</li>
+            <li>A normal fixed-size array does not automatically grow.</li>
+          </ul>
+          <h3>Array declaration in C</h3>
+          <pre class="code-block"><code>data_type array_name[size];
+int numbers[5];</code><button class="copy-btn" type="button">Copy Code</button></pre>
+          <div class="callout">
+            <b>Remember:</b> Size tells how many elements the array can hold; an
+            index tells the position of an element.
+          </div>
+        </section>
 
-        <p>
-          Here, five separate variables are required. If there are 100 students,
-          creating and managing 100 separate variables is inconvenient.
-        </p>
-
-        <h3>Example using an Array</h3>
-        <pre
-          class="code-block"
-        ><code>int marks[5] = {70, 80, 65, 90, 75};</code><button class="copy-btn" type="button">Copy Code</button></pre>
-
-        <p>
-          Now, all five marks are stored in one array named <code>marks</code>.
-          We can access each mark using its index.
-        </p>
-
-        <h3>Array Representation</h3>
-        <div class="array-diagram">
-          <div class="array-cell"><span>Index 0</span><strong>70</strong></div>
-          <div class="array-cell"><span>Index 1</span><strong>80</strong></div>
-          <div class="array-cell"><span>Index 2</span><strong>65</strong></div>
-          <div class="array-cell"><span>Index 3</span><strong>90</strong></div>
-          <div class="array-cell"><span>Index 4</span><strong>75</strong></div>
-        </div>
-
-        <h3>Important Characteristics</h3>
-        <ul>
-          <li>An array stores multiple elements under one name.</li>
-          <li>In C, array indexing starts from 0.</li>
-          <li>Array elements have the same declared data type.</li>
-          <li>Elements of an array are stored consecutively in memory.</li>
-          <li>Accessing an element by index takes constant time, O(1).</li>
-          <li>
-            A normal fixed-size array cannot automatically grow when more
-            elements are needed.
-          </li>
-        </ul>
-
-        <h3>Declaration of an Array in C</h3>
-        <pre
-          class="code-block"
-        ><code>data_type array_name[size];</code><button class="copy-btn" type="button">Copy Code</button></pre>
-
-        <p>
-          For example, <code>int a[5];</code> declares an array that can hold
-          five integers.
-        </p>
-
-        <div class="definition">
-          <strong>Remember:</strong> The size of an array is the number of
-          elements it can hold, whereas the index identifies the position of an
-          element.
-        </div>
-      </section>
-
-      <section
-        class="note-card"
-        id="array-types"
-        data-array-topic="array-types"
-      >
-        <span class="topic-label">02 • CLASSIFICATION</span>
-        <h2>2. Types of Array</h2>
-
-        <h3>2.1 One-Dimensional Array</h3>
-        <p>
-          A one-dimensional array stores elements in a single sequence or list.
-          Each element is accessed using one index.
-        </p>
-
-        <pre class="code-block"><code>int numbers[5] = {10, 20, 30, 40, 50};
+        <section
+          class="card reveal"
+          id="array-types"
+          data-array-topic="array-types"
+        >
+          <label>02 • CLASSIFICATION</label>
+          <h2>Types of Array</h2>
+          <h3>1. One-dimensional array</h3>
+          <p>
+            A one-dimensional array stores values in a single list. Each element
+            is accessed with one index.
+          </p>
+          <pre class="code-block"><code>int numbers[5] = {10, 20, 30, 40, 50};
 printf("%d", numbers[2]);</code><button class="copy-btn" type="button">Copy Code</button></pre>
-
-        <p><strong>Output:</strong></p>
-        <pre class="output-block">30</pre>
-        <p>
-          The index 2 refers to the third element because indexing begins at
-          zero.
-        </p>
-        <p>
-          <strong>Uses:</strong> Student marks, temperatures, prices and lists
-          of numbers.
-        </p>
-
-        <h3>2.2 Two-Dimensional Array</h3>
-        <p>
-          A two-dimensional array stores data in rows and columns. It is useful
-          for representing a matrix or a table.
-        </p>
-
-        <pre class="code-block"><code>int matrix[2][3] = {
-    {1, 2, 3},
-    {4, 5, 6}
-};
-
+          <p><b>Output:</b></p>
+          <pre class="output-block">30</pre>
+          <p><b>Uses:</b> Marks, prices, temperatures and lists.</p>
+          <h3>2. Two-dimensional array</h3>
+          <p>
+            A two-dimensional array stores values in rows and columns, like a
+            table or matrix.
+          </p>
+          <pre
+            class="code-block"
+          ><code>int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
 printf("%d", matrix[1][2]);</code><button class="copy-btn" type="button">Copy Code</button></pre>
+          <p><b>Output:</b></p>
+          <pre class="output-block">6</pre>
+          <p>
+            <code>matrix[1][2]</code> means row index 1 and column index 2. Both
+            indexes start from zero.
+          </p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Row / Column</th>
+                  <th>Column 0</th>
+                  <th>Column 1</th>
+                  <th>Column 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Row 0</th>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <th>Row 1</th>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>3. Multidimensional array</h3>
+          <p>
+            An array with three or more dimensions is called a multidimensional
+            array.
+          </p>
+          <pre
+            class="code-block"
+          ><code>int data[2][3][4];</code><button class="copy-btn" type="button">Copy Code</button></pre>
+          <p>It can hold 2 × 3 × 4 = 24 integers.</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Structure</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1D</td>
+                  <td>Single list</td>
+                  <td><code>a[5]</code></td>
+                </tr>
+                <tr>
+                  <td>2D</td>
+                  <td>Rows and columns</td>
+                  <td><code>a[2][3]</code></td>
+                </tr>
+                <tr>
+                  <td>Multidimensional</td>
+                  <td>Three or more dimensions</td>
+                  <td><code>a[2][3][4]</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-        <p><strong>Output:</strong></p>
-        <pre class="output-block">6</pre>
-        <p>
-          <code>matrix[1][2]</code> means row index 1 and column index 2. Both
-          indexes start from zero.
-        </p>
+        <section
+          class="card reveal"
+          id="array-index"
+          data-array-topic="array-access"
+        >
+          <label>03 • MEMORY AND INDEXING</label>
+          <h2>Array Index and Accessing Elements</h2>
+          <p>
+            An index is the position number used to identify an element. In C,
+            the first index is 0, not 1.
+          </p>
+          <pre class="code-block"><code>int a[5] = {10, 20, 30, 40, 50};
+printf("%d", a[2]);</code><button class="copy-btn" type="button">Copy Code</button></pre>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Index</th>
+                  <th>0</th>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Value</th>
+                  <td>10</td>
+                  <td>20</td>
+                  <td>30</td>
+                  <td>40</td>
+                  <td>50</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul>
+            <li><code>a[0]</code> is 10.</li>
+            <li><code>a[1]</code> is 20.</li>
+            <li><code>a[2]</code> is 30.</li>
+            <li><code>a[4]</code> is 50.</li>
+          </ul>
+          <h3>Address formula</h3>
+          <div class="formula-box">
+            Address of A[i] = Base Address + (i × Size of Each Element)
+          </div>
+          <p>
+            If base address = 1000, each integer occupies 4 bytes, and index =
+            3:
+          </p>
+          <div class="steps">
+            <div>
+              <b>Step 1</b>
+              <p>Index = 3</p>
+            </div>
+            <div>
+              <b>Step 2</b>
+              <p>Element size = 4 bytes</p>
+            </div>
+            <div>
+              <b>Step 3</b>
+              <p>Address = 1000 + (3 × 4) = <strong>1012</strong></p>
+            </div>
+          </div>
+          <p class="footnote">
+            The 4-byte size is an example assumption; the actual size of int
+            depends on the C implementation.
+          </p>
+          <div class="callout">
+            <b>Important:</b> For an array of size 5, valid indexes are 0
+            through 4. Accessing an out-of-range index in C causes undefined
+            behavior.
+          </div>
+        </section>
 
-        <div class="table-wrap">
-          <table>
-            <tr>
-              <th>Row / Column</th>
-              <th>Column 0</th>
-              <th>Column 1</th>
-              <th>Column 2</th>
-            </tr>
-            <tr>
-              <th>Row 0</th>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <th>Row 1</th>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-            </tr>
-          </table>
-        </div>
+        <section
+          class="card reveal"
+          id="array-operations"
+          data-array-topic="array-operations"
+        >
+          <label>04 • BASIC OPERATIONS</label>
+          <h2>Operations on Array</h2>
+          <p>
+            The common operations are traversal, insertion, deletion, searching
+            and updating. Try the visual lab below to watch values move and
+            compare.
+          </p>
+          <div class="playground" id="array-lab">
+            <div class="playtop">
+              <div>
+                <small>INTERACTIVE ARRAY LAB</small>
+                <h3 id="lab-title">Traversal</h3>
+              </div>
+              <div class="stats">
+                <span><small>STEP</small><b id="lab-step">0 / 5</b></span
+                ><span><small>ARRAY SIZE</small><b id="lab-size">5</b></span>
+              </div>
+            </div>
+            <div class="lab-array" id="lab-array" aria-live="polite"></div>
+            <div class="index-row" id="lab-indexes"></div>
+            <p class="message" id="lab-message">
+              Press Start to visit each element one by one.
+            </p>
+            <div class="explain">
+              <span>💡</span>
+              <div>
+                <b>What is happening?</b>
+                <p id="lab-explanation">
+                  Traversal checks each element from left to right.
+                </p>
+              </div>
+            </div>
+            <div class="controls">
+              <label
+                >Choose operation<select id="lab-operation">
+                  <option value="traversal">Traversal</option>
+                  <option value="search">Linear Search</option>
+                  <option value="insert">Insertion</option>
+                  <option value="delete">Deletion</option>
+                  <option value="bubble">Bubble Sort</option>
+                </select></label
+              >
+              <label
+                >Search value / new value<input
+                  id="lab-value"
+                  type="number"
+                  value="30"
+              /></label>
+              <label
+                >Index for insertion / deletion<input
+                  id="lab-position"
+                  type="number"
+                  min="0"
+                  max="7"
+                  value="2"
+              /></label>
+              <label
+                >Animation speed
+                <span class="range-label"
+                  ><span>Slow</span><span>Fast</span></span
+                ><input id="lab-speed" type="range" min="1" max="5" value="3"
+              /></label>
+            </div>
+            <div class="buttons">
+              <button class="primary" id="lab-start" type="button">
+                ▶ Start</button
+              ><button id="lab-next" type="button">Next Step →</button
+              ><button id="lab-reset" type="button">↺ Reset</button>
+            </div>
+          </div>
 
-        <h3>2.3 Multidimensional Array</h3>
-        <p>
-          An array with three or more dimensions is called a multidimensional
-          array. It can represent data arranged across multiple dimensions.
-        </p>
-
-        <pre
-          class="code-block"
-        ><code>int data[2][3][4];</code><button class="copy-btn" type="button">Copy Code</button></pre>
-
-        <p>
-          This declaration represents an array with 2 blocks, 3 rows per block
-          and 4 columns per row, giving a total capacity of 24 integers.
-        </p>
-
-        <h3>Comparison of Array Types</h3>
-        <div class="table-wrap">
-          <table>
-            <tr>
-              <th>Type</th>
-              <th>Structure</th>
-              <th>Example</th>
-            </tr>
-            <tr>
-              <td>One-dimensional</td>
-              <td>Single list</td>
-              <td><code>a[5]</code></td>
-            </tr>
-            <tr>
-              <td>Two-dimensional</td>
-              <td>Rows and columns</td>
-              <td><code>a[2][3]</code></td>
-            </tr>
-            <tr>
-              <td>Multidimensional</td>
-              <td>Three or more dimensions</td>
-              <td><code>a[2][3][4]</code></td>
-            </tr>
-          </table>
-        </div>
-      </section>
-
-      <section
-        class="note-card"
-        id="array-index"
-        data-array-topic="array-access"
-      >
-        <span class="topic-label">03 • MEMORY AND INDEXING</span>
-        <h2>3. Array Index and Accessing Elements</h2>
-
-        <p>
-          An index is the position number used to identify an element inside an
-          array. In C, the first index is 0, not 1.
-        </p>
-
-        <pre
-          class="code-block"
-        ><code>int a[5] = {10, 20, 30, 40, 50};</code><button class="copy-btn" type="button">Copy Code</button></pre>
-
-        <div class="table-wrap">
-          <table>
-            <tr>
-              <th>Index</th>
-              <td>0</td>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-            </tr>
-            <tr>
-              <th>Value</th>
-              <td>10</td>
-              <td>20</td>
-              <td>30</td>
-              <td>40</td>
-              <td>50</td>
-            </tr>
-          </table>
-        </div>
-
-        <ul>
-          <li><code>a[0]</code> returns 10.</li>
-          <li><code>a[1]</code> returns 20.</li>
-          <li><code>a[2]</code> returns 30.</li>
-          <li><code>a[4]</code> returns 50.</li>
-        </ul>
-
-        <h3>Program to Access an Array Element</h3>
-        <pre class="code-block"><code>#include &lt;stdio.h&gt;
-
-int main()
-{
-    int a[5] = {10, 20, 30, 40, 50};
-
-    printf("Element = %d", a[2]);
-
-    return 0;
-}</code><button class="copy-btn" type="button">Copy Code</button></pre>
-
-        <p><strong>Output:</strong></p>
-        <pre class="output-block">Element = 30</pre>
-
-        <h3>How is the Address Calculated?</h3>
-        <p>
-          For a one-dimensional array, the address of an element can be
-          calculated using this formula:
-        </p>
-        <div class="formula-box">
-          Address of A[i] = Base Address + (i × Size of Each Element)
-        </div>
-
-        <p>
-          Suppose the base address is 1000, each integer occupies 4 bytes, and
-          we want the element at index 3.
-        </p>
-        <div class="step-box">
-          <p><strong>Step 1:</strong> Index = 3</p>
-          <p><strong>Step 2:</strong> Element size = 4 bytes</p>
-          <p><strong>Step 3:</strong> Address = 1000 + (3 × 4)</p>
-          <p><strong>Answer:</strong> Address = 1012</p>
-        </div>
-
-        <p class="small-note">
-          The 4-byte size is an example assumption. The actual size of int
-          depends on the C implementation.
-        </p>
-
-        <div class="warning-box">
-          <strong>Important:</strong> If an array has size 5, its valid indexes
-          are 0 through 4. Accessing an out-of-range index in C results in
-          undefined behavior.
-        </div>
-      </section>
-
-      <section
-        class="note-card"
-        id="array-operations"
-        data-array-topic="array-operations"
-      >
-        <span class="topic-label">04 • BASIC OPERATIONS</span>
-        <h2>4. Operations on Array</h2>
-
-        <p>
-          The common array operations are traversal, insertion, deletion,
-          searching and updating. Each operation serves a different purpose.
-        </p>
-
-        <h3 id="array-traversal">4.1 Traversal</h3>
-        <div class="definition">
-          <strong>Definition:</strong> Traversal is the process of visiting each
-          element of an array one by one to display or process its value.
-        </div>
-
-        <p><strong>Algorithm:</strong></p>
-        <ol>
-          <li>Start from index 0.</li>
-          <li>Read or process the current element.</li>
-          <li>Move to the next index.</li>
-          <li>Repeat until all elements have been visited.</li>
-        </ol>
-
-        <pre class="code-block"><code>#include &lt;stdio.h&gt;
-
+          <h3 id="array-traversal">4.1 Traversal</h3>
+          <div class="definition">
+            <span>🔎</span>
+            <div>
+              <b>Definition</b>
+              <p>
+                Traversal is the process of visiting each array element one by
+                one to display or process its value.
+              </p>
+            </div>
+          </div>
+          <ol>
+            <li>Start from index 0.</li>
+            <li>Read or process the current element.</li>
+            <li>Move to the next index.</li>
+            <li>Repeat until all elements have been visited.</li>
+          </ol>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
 int main()
 {
     int a[5] = {10, 20, 30, 40, 50};
     int i;
-
     for(i = 0; i &lt; 5; i++)
-    {
         printf("%d ", a[i]);
-    }
-
     return 0;
 }</code><button class="copy-btn" type="button">Copy Code</button></pre>
+          <p><b>Output:</b></p>
+          <pre class="output-block">10 20 30 40 50</pre>
+          <p>
+            The loop starts at <code>i = 0</code>. After printing each value,
+            <code>i</code> increases. When <code>i</code> becomes 5, the
+            condition <code>i &lt; 5</code> is false and the loop stops. Time
+            complexity: <code>O(n)</code>.
+          </p>
 
-        <p><strong>Output:</strong></p>
-        <pre class="output-block">10 20 30 40 50</pre>
-
-        <p>
-          <strong>Explanation:</strong> Initially, <code>i = 0</code>, so the
-          program prints <code>a[0]</code>. The loop then increments
-          <code>i</code> and continues until <code>i = 4</code>. When
-          <code>i</code> becomes 5, the condition <code>i &lt; 5</code> becomes
-          false and the loop stops.
-        </p>
-
-        <p>
-          <strong>Time complexity:</strong> O(n), because all n elements are
-          visited.
-        </p>
-
-        <h3 id="array-insertion">4.2 Insertion</h3>
-        <div class="definition">
-          <strong>Definition:</strong> Insertion is the process of adding a new
-          element at a specified position in an array.
-        </div>
-
-        <p>
-          When inserting into the middle of an array, existing elements must be
-          shifted to the right to create space. Insertion at the end may not
-          require shifting, provided capacity is available.
-        </p>
-
-        <h4>Example: Insert 25 at index 2</h4>
-        <p>Original array: <code>10, 20, 30, 40</code></p>
-
-        <div class="step-box">
-          <p><strong>Step 1:</strong> Start from the last element, 40.</p>
-          <p><strong>Step 2:</strong> Move 40 one position right.</p>
-          <p><strong>Step 3:</strong> Move 30 one position right.</p>
-          <p><strong>Step 4:</strong> Place 25 at index 2.</p>
-        </div>
-
-        <p>Final array: <code>10, 20, 25, 30, 40</code></p>
-
-        <p><strong>Algorithm:</strong></p>
-        <ol>
-          <li>Check whether the array has available capacity.</li>
-          <li>Start from the last occupied index.</li>
-          <li>Shift elements right until the insertion index is free.</li>
-          <li>Insert the new value.</li>
-          <li>Increase the logical element count by one.</li>
-        </ol>
-
-        <pre class="code-block"><code>#include &lt;stdio.h&gt;
-
+          <h3 id="array-insertion">4.2 Insertion</h3>
+          <div class="definition">
+            <span>➕</span>
+            <div>
+              <b>Definition</b>
+              <p>
+                Insertion is the process of adding a new element at a specified
+                position in an array.
+              </p>
+            </div>
+          </div>
+          <p>
+            When inserting in the middle, move existing elements one position
+            right to create space. The example below inserts 25 at index 2.
+          </p>
+          <div class="steps">
+            <div>
+              <b>Step 1</b>
+              <p>Start from the last occupied element.</p>
+              <div class="nums"><i>10</i><i>20</i><i>30</i><i>40</i></div>
+            </div>
+            <div>
+              <b>Step 2</b>
+              <p>Shift 40 and 30 one position to the right.</p>
+              <div class="nums orange">
+                <i>10</i><i>20</i><i>30</i><i class="changed">40</i><i>40</i>
+              </div>
+            </div>
+            <div>
+              <b>Step 3</b>
+              <p>Put 25 at index 2.</p>
+              <div class="nums green">
+                <i>10</i><i>20</i><i>25</i><i>30</i><i>40</i>
+              </div>
+            </div>
+          </div>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
 int main()
 {
     int a[10] = {10, 20, 30, 40};
     int n = 4, pos = 2, value = 25, i;
-
     for(i = n; i &gt; pos; i--)
-    {
         a[i] = a[i - 1];
-    }
-
     a[pos] = value;
     n++;
-
     for(i = 0; i &lt; n; i++)
-    {
         printf("%d ", a[i]);
-    }
-
     return 0;
 }</code><button class="copy-btn" type="button">Copy Code</button></pre>
+          <p><b>Output:</b></p>
+          <pre class="output-block">10 20 25 30 40</pre>
+          <p>
+            The loop shifts elements from right to left, then places 25 at index
+            2. Time complexity: <code>O(n)</code> in the worst case. This
+            example assumes free capacity and a valid index.
+          </p>
 
-        <p><strong>Output:</strong></p>
-        <pre class="output-block">10 20 25 30 40</pre>
-
-        <p>
-          <strong>Explanation:</strong> The loop starts at index 4, copying the
-          element at index 3 into index 4. It continues shifting elements until
-          index 2 is available. The value 25 is then placed at index 2.
-        </p>
-
-        <p>
-          <strong>Time complexity:</strong> O(n) in the worst case, because many
-          elements may need to be shifted.
-        </p>
-        <p class="small-note">
-          This example uses a zero-based index and assumes the array has enough
-          capacity.
-        </p>
-
-        <h3 id="array-deletion">4.3 Deletion</h3>
-        <div class="definition">
-          <strong>Definition:</strong> Deletion is the process of removing an
-          element from a specified position in an array.
-        </div>
-
-        <p>
-          After an element is deleted, the elements to its right are shifted one
-          position left so that there is no gap in the logical sequence.
-        </p>
-
-        <h4>Example: Delete the element at index 2</h4>
-        <p>Original array: <code>10, 20, 30, 40, 50</code></p>
-        <p>
-          The element at index 2 is 30. After deleting it, the result is
-          <code>10, 20, 40, 50</code>.
-        </p>
-
-        <p><strong>Algorithm:</strong></p>
-        <ol>
-          <li>Check that the index is valid.</li>
-          <li>Start at the index to be deleted.</li>
-          <li>Copy each following element into the previous position.</li>
-          <li>Decrease the logical element count by one.</li>
-        </ol>
-
-        <pre class="code-block"><code>#include &lt;stdio.h&gt;
-
+          <h3 id="array-deletion">4.3 Deletion</h3>
+          <div class="definition">
+            <span>➖</span>
+            <div>
+              <b>Definition</b>
+              <p>
+                Deletion is the process of removing an element from a specified
+                position in an array.
+              </p>
+            </div>
+          </div>
+          <p>
+            To delete 30 at index 2 from <code>10, 20, 30, 40, 50</code>, shift
+            40 and 50 one position left. The logical size changes from 5 to 4.
+          </p>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
 int main()
 {
     int a[5] = {10, 20, 30, 40, 50};
     int n = 5, pos = 2, i;
-
     for(i = pos; i &lt; n - 1; i++)
-    {
         a[i] = a[i + 1];
-    }
-
     n--;
-
     for(i = 0; i &lt; n; i++)
-    {
         printf("%d ", a[i]);
-    }
-
     return 0;
 }</code><button class="copy-btn" type="button">Copy Code</button></pre>
+          <p><b>Output:</b></p>
+          <pre class="output-block">10 20 40 50</pre>
+          <p>
+            After shifting, reduce the logical size by one. Time complexity:
+            <code>O(n)</code> in the worst case.
+          </p>
 
-        <p><strong>Output:</strong></p>
-        <pre class="output-block">10 20 40 50</pre>
-
-        <p>
-          <strong>Explanation:</strong> The value at index 3 is copied to index
-          2. Then the value at index 4 is copied to index 3. The logical size is
-          reduced from 5 to 4.
-        </p>
-
-        <p><strong>Time complexity:</strong> O(n) in the worst case.</p>
-
-        <h3 id="array-searching">4.4 Searching</h3>
-        <div class="definition">
-          <strong>Definition:</strong> Searching is the process of finding
-          whether a given value exists in an array and identifying its position.
-        </div>
-
-        <h4>Linear Search</h4>
-        <p>
-          Linear search checks each element from the beginning. It stops when
-          the target is found or when every element has been checked.
-        </p>
-
-        <p>
-          <strong>Example:</strong> Find 40 in <code>10, 20, 30, 40, 50</code>.
-        </p>
-        <div class="step-box">
-          <p>Index 0: 10 is not 40.</p>
-          <p>Index 1: 20 is not 40.</p>
-          <p>Index 2: 30 is not 40.</p>
-          <p>Index 3: 40 matches the target. Stop searching.</p>
-        </div>
-
-        <pre class="code-block"><code>#include &lt;stdio.h&gt;
-
+          <h3 id="array-searching">4.4 Searching</h3>
+          <div class="definition">
+            <span>🎯</span>
+            <div>
+              <b>Definition</b>
+              <p>
+                Searching means checking whether a value exists in an array and
+                finding its position.
+              </p>
+            </div>
+          </div>
+          <h4>Linear Search</h4>
+          <p>
+            Linear search compares the target with each element from the
+            beginning. It stops when a match is found or all elements have been
+            checked.
+          </p>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
 int main()
 {
     int a[5] = {10, 20, 30, 40, 50};
     int key = 40, i, found = 0;
-
     for(i = 0; i &lt; 5; i++)
     {
         if(a[i] == key)
@@ -535,200 +542,139 @@ int main()
             break;
         }
     }
-
     if(found == 0)
-    {
         printf("Not found");
-    }
-
     return 0;
 }</code><button class="copy-btn" type="button">Copy Code</button></pre>
-
-        <p><strong>Output:</strong></p>
-        <pre class="output-block">Found at index 3</pre>
-
-        <p>
-          <strong>Explanation:</strong> The variable <code>key</code> stores the
-          target value. The loop compares the target with each array element.
-          When a match is found, the program prints the index and
-          <code>break</code> ends the loop.
-        </p>
-
-        <p>
-          <strong>Time complexity:</strong> Best case O(1); worst case O(n).
-        </p>
-
-        <h4>Binary Search</h4>
-        <p>
-          Binary search repeatedly divides the search interval into halves. It
-          requires the array to be sorted before searching.
-        </p>
-
-        <div class="step-box">
-          <p>Sorted array: <code>10, 20, 30, 40, 50</code></p>
-          <p>Target: <code>40</code></p>
+          <p><b>Output:</b></p>
+          <pre class="output-block">Found at index 3</pre>
+          <p>Best case: <code>O(1)</code>; worst case: <code>O(n)</code>.</p>
+          <h4>Binary Search</h4>
           <p>
-            Middle index = 2, value = 30. Since 40 is greater than 30, search
-            the right half.
+            Binary search repeatedly divides the search interval in half. The
+            array must be sorted first.
           </p>
-          <p>Next middle index = 3, value = 40. Target found.</p>
-        </div>
-
-        <pre class="code-block"><code>#include &lt;stdio.h&gt;
-
-int main()
+          <div class="steps">
+            <div>
+              <b>Step 1</b>
+              <p>Sorted array: 10, 20, 30, 40, 50. Target = 40.</p>
+            </div>
+            <div>
+              <b>Step 2</b>
+              <p>
+                Middle index = 2, value = 30. Since 40 is greater, search the
+                right half.
+              </p>
+            </div>
+            <div>
+              <b>Step 3</b>
+              <p>Next middle index = 3, value = 40. Target found!</p>
+            </div>
+          </div>
+          <pre class="code-block"><code>low = 0;
+high = n - 1;
+while(low &lt;= high)
 {
-    int a[5] = {10, 20, 30, 40, 50};
-    int low = 0, high = 4, mid, key = 40;
-
-    while(low &lt;= high)
-    {
-        mid = low + (high - low) / 2;
-
-        if(a[mid] == key)
-        {
-            printf("Found at index %d", mid);
-            return 0;
-        }
-        else if(a[mid] &lt; key)
-        {
-            low = mid + 1;
-        }
-        else
-        {
-            high = mid - 1;
-        }
-    }
-
-    printf("Not found");
-    return 0;
+    mid = low + (high - low) / 2;
+    if(a[mid] == key)
+        break;
+    else if(a[mid] &lt; key)
+        low = mid + 1;
+    else
+        high = mid - 1;
 }</code><button class="copy-btn" type="button">Copy Code</button></pre>
-
-        <p><strong>Output:</strong></p>
-        <pre class="output-block">Found at index 3</pre>
-
-        <p>
-          <strong>Time complexity:</strong> O(log n) in the best standard
-          worst-case analysis for binary search, compared with O(n) for linear
-          search. Binary search works only when the data is sorted according to
-          the searched order.
-        </p>
-
-        <h3 id="array-updating">4.5 Updating</h3>
-        <div class="definition">
-          <strong>Definition:</strong> Updating means replacing the existing
-          value of an element at a particular index with a new value.
-        </div>
-
-        <pre class="code-block"><code>#include &lt;stdio.h&gt;
-
-int main()
-{
-    int a[4] = {10, 20, 30, 40};
-    int i;
-
-    a[1] = 99;
-
-    for(i = 0; i &lt; 4; i++)
-    {
-        printf("%d ", a[i]);
-    }
-
-    return 0;
-}</code><button class="copy-btn" type="button">Copy Code</button></pre>
-
-        <p><strong>Output:</strong></p>
-        <pre class="output-block">10 99 30 40</pre>
-
-        <p>
-          <strong>Explanation:</strong> The statement
-          <code>a[1] = 99;</code> replaces the value 20 at index 1 with 99. No
-          shifting is required.
-        </p>
-        <p>
-          <strong>Time complexity:</strong> O(1) when the index is known and
-          valid.
-        </p>
-      </section>
-
-      <section
-        class="note-card"
-        id="array-sorting"
-        data-array-topic="array-sort"
-      >
-        <span class="topic-label">05 • SORTING</span>
-        <h2>5. Sorting an Array</h2>
-
-        <div class="definition">
-          <strong>Definition:</strong> Sorting is the process of arranging array
-          elements in a specific order, such as ascending or descending order.
-        </div>
-
-        <h3>Ascending and Descending Order</h3>
-        <p>
-          Ascending order arranges values from smallest to largest. Descending
-          order arranges them from largest to smallest.
-        </p>
-
-        <div class="table-wrap">
-          <table>
-            <tr>
-              <th>Original</th>
-              <td>5</td>
-              <td>3</td>
-              <td>8</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <th>Ascending</th>
-              <td>1</td>
-              <td>3</td>
-              <td>5</td>
-              <td>8</td>
-            </tr>
-            <tr>
-              <th>Descending</th>
-              <td>8</td>
-              <td>5</td>
-              <td>3</td>
-              <td>1</td>
-            </tr>
-          </table>
-        </div>
-
-        <h3>Bubble Sort</h3>
-        <p>
-          Bubble Sort compares adjacent elements. If two adjacent elements are
-          in the wrong order, they are swapped. Repeated passes gradually move
-          larger values towards the end of the array.
-        </p>
-
-        <h4>Step-by-Step Example</h4>
-        <p>Original array: <code>5, 3, 8, 1</code></p>
-
-        <div class="step-box">
           <p>
-            <strong>Pass 1:</strong> Compare 5 and 3; swap. Compare 5 and 8; no
-            swap. Compare 8 and 1; swap. Result: <code>3, 5, 1, 8</code>.
+            Time complexity: <code>O(log n)</code>. Always use sorted data for
+            binary search.
           </p>
-          <p>
-            <strong>Pass 2:</strong> Compare 3 and 5; no swap. Compare 5 and 1;
-            swap. Result: <code>3, 1, 5, 8</code>.
-          </p>
-          <p>
-            <strong>Pass 3:</strong> Compare 3 and 1; swap. Result:
-            <code>1, 3, 5, 8</code>.
-          </p>
-        </div>
 
-        <h3>Bubble Sort Program in C</h3>
-        <pre class="code-block"><code>#include &lt;stdio.h&gt;
+          <h3 id="array-updating">4.5 Updating</h3>
+          <div class="definition">
+            <span>✏️</span>
+            <div>
+              <b>Definition</b>
+              <p>
+                Updating means replacing an existing value at a particular index
+                with a new value.
+              </p>
+            </div>
+          </div>
+          <pre class="code-block"><code>int a[4] = {10, 20, 30, 40};
+a[1] = 99;</code><button class="copy-btn" type="button">Copy Code</button></pre>
+          <p>
+            New array: <code>10, 99, 30, 40</code>. No shifting is required, so
+            updating a known valid index takes <code>O(1)</code>.
+          </p>
+        </section>
 
+        <section
+          class="card reveal"
+          id="array-sorting"
+          data-array-topic="array-sort"
+        >
+          <label>05 • SORTING</label>
+          <h2>Sorting an Array</h2>
+          <div class="definition">
+            <span>↕️</span>
+            <div>
+              <b>Definition</b>
+              <p>
+                Sorting arranges array elements in a particular order, such as
+                ascending or descending.
+              </p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Order</th>
+                  <th>Example</th>
+                  <th>Meaning</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ascending</td>
+                  <td>1, 3, 5, 8</td>
+                  <td>Smallest to largest</td>
+                </tr>
+                <tr>
+                  <td>Descending</td>
+                  <td>8, 5, 3, 1</td>
+                  <td>Largest to smallest</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Bubble Sort</h3>
+          <p>
+            Bubble Sort compares adjacent elements. If they are in the wrong
+            order, it swaps them. After each pass, the largest unsorted value
+            moves towards the end.
+          </p>
+          <div class="steps">
+            <div>
+              <b>Pass 1</b>
+              <p>
+                Start 5, 3, 8, 1. Swap 5 and 3; then swap 8 and 1. Result:
+                <code>3, 5, 1, 8</code>.
+              </p>
+            </div>
+            <div>
+              <b>Pass 2</b>
+              <p>Swap 5 and 1. Result: <code>3, 1, 5, 8</code>.</p>
+            </div>
+            <div>
+              <b>Pass 3</b>
+              <p>Swap 3 and 1. Sorted: <code>1, 3, 5, 8</code>.</p>
+            </div>
+          </div>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
 int main()
 {
     int a[5] = {5, 3, 8, 1, 4};
     int i, j, temp;
-
     for(i = 0; i &lt; 4; i++)
     {
         for(j = 0; j &lt; 4 - i; j++)
@@ -741,303 +687,226 @@ int main()
             }
         }
     }
-
     for(i = 0; i &lt; 5; i++)
-    {
         printf("%d ", a[i]);
-    }
-
     return 0;
 }</code><button class="copy-btn" type="button">Copy Code</button></pre>
-
-        <p><strong>Output:</strong></p>
-        <pre class="output-block">1 3 4 5 8</pre>
-
-        <h3>How the Swap Works</h3>
-        <pre class="code-block"><code>temp = a[j];
+          <p><b>Output:</b></p>
+          <pre class="output-block">1 3 4 5 8</pre>
+          <h3>How swapping works</h3>
+          <pre class="code-block"><code>temp = a[j];
 a[j] = a[j + 1];
 a[j + 1] = temp;</code><button class="copy-btn" type="button">Copy Code</button></pre>
+          <p>
+            The temporary variable saves the first value before it is
+            overwritten. Bubble Sort has average and worst-case time complexity
+            <code>O(n²)</code> and auxiliary space <code>O(1)</code>.
+          </p>
+        </section>
 
-        <p>
-          The temporary variable stores the first value before it is
-          overwritten. The second value is copied into the first position, and
-          the saved value is then copied into the second position.
-        </p>
+        <section
+          class="card reveal"
+          id="array-advantages"
+          data-array-topic="array-pros"
+        >
+          <label>06 • REVISION</label>
+          <h2>Advantages and Disadvantages</h2>
+          <div class="algo-grid">
+            <div class="algo">
+              <span>✅</span>
+              <h3>Advantages</h3>
+              <p>Easy data management under one name.</p>
+              <p>Fast direct access using an index.</p>
+              <p>Simple traversal with loops.</p>
+              <p>Consecutive memory storage can improve locality.</p>
+              <p>Useful for building stacks, queues and heaps.</p>
+            </div>
+            <div class="algo">
+              <span>⚠️</span>
+              <h3>Disadvantages</h3>
+              <p>Normal C arrays have fixed capacity.</p>
+              <p>Insertion in the middle may require shifting.</p>
+              <p>Deletion in the middle may require shifting.</p>
+              <p>Elements share the same declared type.</p>
+              <p>Over-allocation can waste memory.</p>
+            </div>
+          </div>
+          <h3>Time complexity of array operations</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Operation</th>
+                  <th>Time</th>
+                  <th>Reason</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Access by index</td>
+                  <td>O(1)</td>
+                  <td>Direct access</td>
+                </tr>
+                <tr>
+                  <td>Traversal</td>
+                  <td>O(n)</td>
+                  <td>Visits all elements</td>
+                </tr>
+                <tr>
+                  <td>Linear search</td>
+                  <td>O(n)</td>
+                  <td>May check every element</td>
+                </tr>
+                <tr>
+                  <td>Binary search</td>
+                  <td>O(log n)</td>
+                  <td>Halves search range</td>
+                </tr>
+                <tr>
+                  <td>Insertion in middle</td>
+                  <td>O(n)</td>
+                  <td>May shift elements</td>
+                </tr>
+                <tr>
+                  <td>Deletion in middle</td>
+                  <td>O(n)</td>
+                  <td>May shift elements</td>
+                </tr>
+                <tr>
+                  <td>Update by index</td>
+                  <td>O(1)</td>
+                  <td>Direct assignment</td>
+                </tr>
+                <tr>
+                  <td>Bubble Sort</td>
+                  <td>O(n²)</td>
+                  <td>Repeated comparisons</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="footnote">
+            Here, n is the number of elements. These are usual worst-case
+            complexities unless otherwise stated.
+          </p>
+        </section>
 
-        <p>
-          <strong>Time complexity:</strong> O(n²) in the average and worst cases
-          for this basic implementation. Its auxiliary space complexity is O(1).
-        </p>
-      </section>
+        <section
+          class="card reveal"
+          id="array-applications"
+          data-array-topic="array-applications"
+        >
+          <label>07 • PRACTICAL USES</label>
+          <h2>Applications of Array</h2>
+          <div class="applications">
+            <div>
+              <span>🎓</span><b>Student records</b>
+              <p>
+                Store marks and calculate totals, averages and highest marks.
+              </p>
+            </div>
+            <div>
+              <span>🧮</span><b>Matrix operations</b>
+              <p>Represent rows and columns for mathematical calculations.</p>
+            </div>
+            <div>
+              <span>🔍</span><b>Searching and sorting</b>
+              <p>Keep values together so algorithms can process them.</p>
+            </div>
+            <div>
+              <span>🖼️</span><b>Image processing</b>
+              <p>Represent pixels in a grid or multidimensional structure.</p>
+            </div>
+            <div>
+              <span>🧱</span><b>Other data structures</b>
+              <p>Build stacks, queues, heaps and more.</p>
+            </div>
+            <div>
+              <span>📊</span><b>Statistics</b>
+              <p>
+                Store observations to calculate totals, averages, minimums and
+                maximums.
+              </p>
+            </div>
+          </div>
+        </section>
 
-      <section
-        class="note-card"
-        id="array-advantages"
-        data-array-topic="array-pros"
-      >
-        <span class="topic-label">06 • REVISION</span>
-        <h2>6. Advantages and Disadvantages of Array</h2>
-
-        <h3>Advantages</h3>
-        <ul>
-          <li>
-            <strong>Easy data management:</strong> Multiple values can be stored
-            under one variable name.
-          </li>
-          <li>
-            <strong>Fast indexed access:</strong> An element can be accessed
-            directly using its index.
-          </li>
-          <li>
-            <strong>Simple traversal:</strong> Loops make it easy to process
-            every element.
-          </li>
-          <li>
-            <strong>Memory locality:</strong> Consecutive storage often improves
-            access efficiency.
-          </li>
-          <li>
-            <strong>Useful foundation:</strong> Arrays are used to implement
-            other data structures and algorithms.
-          </li>
-        </ul>
-
-        <h3>Disadvantages</h3>
-        <ul>
-          <li>
-            <strong>Fixed capacity:</strong> A normal declared C array does not
-            automatically expand.
-          </li>
-          <li>
-            <strong>Insertion cost:</strong> Inserting in the middle may require
-            shifting many elements.
-          </li>
-          <li>
-            <strong>Deletion cost:</strong> Deleting from the middle may require
-            shifting remaining elements.
-          </li>
-          <li>
-            <strong>Same declared type:</strong> Elements of a normal C array
-            share the same element type.
-          </li>
-          <li>
-            <strong>Capacity planning:</strong> Allocating more space than
-            needed may waste memory.
-          </li>
-        </ul>
-
-        <h3>Time Complexity of Array Operations</h3>
-        <div class="table-wrap">
-          <table>
-            <tr>
-              <th>Operation</th>
-              <th>Time Complexity</th>
-              <th>Reason</th>
-            </tr>
-            <tr>
-              <td>Access by index</td>
-              <td>O(1)</td>
-              <td>Direct index calculation</td>
-            </tr>
-            <tr>
-              <td>Traversal</td>
-              <td>O(n)</td>
-              <td>Visits all elements</td>
-            </tr>
-            <tr>
-              <td>Linear search</td>
-              <td>O(n)</td>
-              <td>May check every element</td>
-            </tr>
-            <tr>
-              <td>Binary search</td>
-              <td>O(log n)</td>
-              <td>Halves the search interval</td>
-            </tr>
-            <tr>
-              <td>Insertion in middle</td>
-              <td>O(n)</td>
-              <td>May shift elements</td>
-            </tr>
-            <tr>
-              <td>Deletion in middle</td>
-              <td>O(n)</td>
-              <td>May shift elements</td>
-            </tr>
-            <tr>
-              <td>Update by index</td>
-              <td>O(1)</td>
-              <td>Direct assignment</td>
-            </tr>
-            <tr>
-              <td>Bubble Sort</td>
-              <td>O(n²)</td>
-              <td>Repeated adjacent comparisons</td>
-            </tr>
-          </table>
+        <section
+          class="card reveal"
+          id="array-conclusion"
+          data-array-topic="array-conclusion"
+        >
+          <label>08 • EXAM PREPARATION</label>
+          <h2>Quick Revision and Important Questions</h2>
+          <h3>Important points</h3>
+          <ul>
+            <li>
+              An array stores multiple elements of the same declared type.
+            </li>
+            <li>The first index in C is 0.</li>
+            <li>For size n, valid indexes are 0 through n − 1.</li>
+            <li>Access by index takes O(1).</li>
+            <li>Traversal and linear search take O(n) in the worst case.</li>
+            <li>Binary search requires sorted data.</li>
+            <li>Insertion and deletion may require shifting.</li>
+            <li>Bubble Sort has O(n²) average and worst-case time.</li>
+          </ul>
+          <h3>Short questions</h3>
+          <ol>
+            <li>Define an array.</li>
+            <li>What is an array index?</li>
+            <li>Differentiate between 1D and 2D arrays.</li>
+            <li>Define traversal, insertion and deletion.</li>
+            <li>What is linear search?</li>
+            <li>Why must data be sorted before binary search?</li>
+            <li>What is Bubble Sort?</li>
+            <li>State two advantages and disadvantages of arrays.</li>
+          </ol>
+          <h3>Long questions</h3>
+          <ol>
+            <li>Explain array representation and types with examples.</li>
+            <li>
+              Explain traversal, insertion and deletion with algorithms and C
+              programs.
+            </li>
+            <li>Explain linear and binary search with examples.</li>
+            <li>Explain Bubble Sort with steps and a C program.</li>
+            <li>
+              Discuss the advantages, disadvantages and applications of arrays.
+            </li>
+            <li>Explain the time complexity of array operations.</li>
+          </ol>
+          <div class="revision-box">
+            <span>🎯</span>
+            <div>
+              <b>Exam tip</b>
+              <p>
+                For a programming question, write the definition, algorithm if
+                asked, program and output. Explain important statements for a
+                detailed answer.
+              </p>
+            </div>
+          </div>
+        </section>
+        <div class="bottom">
+          <a class="back" href="javascript:history.back()"
+            >← Back to Previous Page</a
+          ><a
+            class="back"
+            href="#top"
+            onclick="
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              return false;
+            "
+            >↑ Back to Top</a
+          >
         </div>
-
-        <p class="small-note">
-          Here, n represents the number of elements. The complexity shown is the
-          usual worst-case complexity unless otherwise noted.
-        </p>
-      </section>
-
-      <section
-        class="note-card"
-        id="array-applications"
-        data-array-topic="array-applications"
-      >
-        <span class="topic-label">07 • PRACTICAL USES</span>
-        <h2>7. Applications of Array</h2>
-
-        <h3>1. Student Record Systems</h3>
-        <p>
-          An array can store marks for multiple students and make it easy to
-          calculate totals, averages and highest marks.
-        </p>
-
-        <h3>2. Matrix Operations</h3>
-        <p>
-          Two-dimensional arrays represent matrices used in mathematical
-          calculations and scientific applications.
-        </p>
-
-        <h3>3. Searching and Sorting</h3>
-        <p>
-          Arrays store collections of values that can be searched for a target
-          or sorted into a required order.
-        </p>
-
-        <h3>4. Image Processing</h3>
-        <p>
-          Images can be represented as grids of pixel values. Two-dimensional or
-          multidimensional arrays can store those values.
-        </p>
-
-        <h3>5. Implementing Other Data Structures</h3>
-        <p>
-          Arrays can be used to implement stacks, queues, heaps and other
-          structures.
-        </p>
-
-        <h3>6. Statistical Calculations</h3>
-        <p>
-          Arrays can store observations used to calculate totals, averages,
-          minimum values and maximum values.
-        </p>
-      </section>
-
-      <section
-        class="note-card"
-        id="array-conclusion"
-        data-array-topic="array-conclusion"
-      >
-        <span class="topic-label">08 • EXAM PREPARATION</span>
-        <h2>8. Quick Revision and Important Questions</h2>
-
-        <h3>Important Points to Remember</h3>
-        <ul>
-          <li>An array stores multiple elements of the same declared type.</li>
-          <li>In C, the first index is 0.</li>
-          <li>For an array of size n, valid indexes range from 0 to n - 1.</li>
-          <li>Access by index takes O(1) time.</li>
-          <li>
-            Traversal and linear search take O(n) time in the usual worst case.
-          </li>
-          <li>Binary search requires sorted data.</li>
-          <li>Insertion and deletion may require shifting elements.</li>
-          <li>Bubble Sort has O(n²) average and worst-case time complexity.</li>
-        </ul>
-
-        <h3>Short Questions</h3>
-        <ol>
-          <li>Define an array.</li>
-          <li>What is an array index?</li>
-          <li>
-            What is the difference between a one-dimensional and a
-            two-dimensional array?
-          </li>
-          <li>Define traversal, insertion and deletion.</li>
-          <li>What is linear search?</li>
-          <li>Why must an array be sorted before binary search?</li>
-          <li>What is Bubble Sort?</li>
-          <li>State two advantages and two disadvantages of arrays.</li>
-        </ol>
-
-        <h3>Long Questions</h3>
-        <ol>
-          <li>
-            Explain array representation and types of arrays with examples.
-          </li>
-          <li>
-            Explain traversal, insertion and deletion with algorithms and C
-            programs.
-          </li>
-          <li>Explain linear search and binary search with examples.</li>
-          <li>
-            Explain Bubble Sort with a step-by-step example and C program.
-          </li>
-          <li>
-            Discuss the advantages, disadvantages and applications of arrays.
-          </li>
-          <li>Explain the time complexity of common array operations.</li>
-        </ol>
-
-        <div class="definition">
-          <strong>Exam tip:</strong> For a programming question, write the
-          definition, algorithm if requested, program and output. Explain
-          important statements when the question asks for a detailed answer.
-        </div>
-      </section>
-
-      <button class="back-btn" type="button" onclick="history.back()">
-        ← Back to Previous Page
-      </button>
+        <footer>
+          StudySpark AI • Data Structures • Learn the concept, understand the
+          logic, practise the program.
+        </footer>
+      </div>
     </main>
-
-    <footer class="page-footer">
-      <p>Data Structures | Array Notes</p>
-      <p>Learn the concept • Understand the logic • Practise the program</p>
-    </footer>
-</div>
-    <script>
-      document.querySelectorAll(".copy-btn").forEach(function (button) {
-        button.addEventListener("click", async function () {
-          const code = button.parentElement.querySelector("code").innerText;
-          const originalText = button.innerText;
-
-          try {
-            await navigator.clipboard.writeText(code);
-            button.innerText = "Copied!";
-            button.classList.add("copied");
-            setTimeout(function () {
-              button.innerText = originalText;
-              button.classList.remove("copied");
-            }, 1500);
-          } catch (error) {
-            const textArea = document.createElement("textarea");
-            textArea.value = code;
-            textArea.style.position = "fixed";
-            textArea.style.opacity = "0";
-            document.body.appendChild(textArea);
-            textArea.select();
-
-            try {
-              document.execCommand("copy");
-              button.innerText = "Copied!";
-            } catch (copyError) {
-              button.innerText = "Copy failed";
-            }
-
-            textArea.remove();
-
-            setTimeout(function () {
-              button.innerText = originalText;
-            }, 1500);
-          }
-        });
-      });
-    </script>
+    <script src="../js/ds-array.js" defer></script>
   </body>
 </html>
