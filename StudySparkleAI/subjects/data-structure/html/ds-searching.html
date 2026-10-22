@@ -1,496 +1,1053 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Searching - Data Structure</title>
-
-  <link rel="stylesheet" href="../css/data-structure.css" />
-</head>
-
-<body>
-
-  <!-- Header -->
-  <header class="page-header">
-    <h1>🔍 Searching</h1>
-    <p>Learn the basic concepts of Searching in Data Structure.</p>
-  </header>
-
-
-  <!-- Main Content -->
-  <div class="notes-container">
-
-    <!-- Introduction -->
-    <div class="note-card">
-
-      <h2>What is Searching?</h2>
-
-      <p>
-        Searching is the process of finding a particular element
-        from a collection of data.
-      </p>
-
-      <div class="definition">
-        <strong>Definition:</strong>
-        Searching is an operation used to find the location of
-        a specific element in a data structure.
-      </div>
-
-      <h3>Example</h3>
-
-      <p>
-        Suppose an array contains:
-      </p>
-
-      <div class="example-box">
-        10, 20, 30, 40, 50
-      </div>
-
-      <p>
-        If we want to find 30, the searching operation checks
-        the elements until 30 is found.
-      </p>
-
-    </div>
-
-
-    <!-- Types of Searching -->
-    <div class="note-card">
-
-      <h2>Types of Searching</h2>
-
-      <h3>1. Linear Search</h3>
-
-      <p>
-        Linear Search checks each element one by one from the
-        beginning until the required element is found.
-      </p>
-
-      <div class="example-box">
-        Example: Searching 30 in
-        10, 20, 30, 40, 50
-        <br><br>
-        10 → 20 → <strong>30 Found</strong>
-      </div>
-
-
-      <h3>2. Binary Search</h3>
-
-      <p>
-        Binary Search works on a sorted array. It repeatedly
-        divides the search area into two halves.
-      </p>
-
-      <div class="example-box">
-        Example: Searching 40 in
-        10, 20, 30, 40, 50
-        <br><br>
-        The middle element is checked first and the search
-        continues in the required half.
-      </div>
-
-    </div>
-
-
-    <!-- Linear Search -->
-    <div class="note-card">
-
-      <h2>Linear Search</h2>
-
-      <p>
-        Linear Search compares the target element with every
-        element one by one.
-      </p>
-
-      <h3>Steps</h3>
-
-      <ol>
-        <li>Start from the first element.</li>
-        <li>Compare the element with the target.</li>
-        <li>If the element matches, searching is completed.</li>
-        <li>If it does not match, move to the next element.</li>
-        <li>Repeat until the element is found or the array ends.</li>
-      </ol>
-
-    </div>
-
-
-    <!-- Binary Search -->
-    <div class="note-card">
-
-      <h2>Binary Search</h2>
-
-      <p>
-        Binary Search is a faster searching technique that works
-        only on sorted data.
-      </p>
-
-      <h3>Steps</h3>
-
-      <ol>
-        <li>Find the middle element.</li>
-        <li>Compare the middle element with the target.</li>
-        <li>If it matches, the element is found.</li>
-        <li>If the target is smaller, search the left half.</li>
-        <li>If the target is larger, search the right half.</li>
-        <li>Repeat until the element is found.</li>
-      </ol>
-
-    </div>
-
-
-    <!-- Comparison -->
-    <div class="note-card">
-
-      <h2>Linear Search vs Binary Search</h2>
-
-      <table>
-
-        <tr>
-          <th>Feature</th>
-          <th>Linear Search</th>
-          <th>Binary Search</th>
-        </tr>
-
-        <tr>
-          <td>Data</td>
-          <td>Sorted or Unsorted</td>
-          <td>Must be Sorted</td>
-        </tr>
-
-        <tr>
-          <td>Method</td>
-          <td>Checks one by one</td>
-          <td>Divides into halves</td>
-        </tr>
-
-        <tr>
-          <td>Speed</td>
-          <td>Slower</td>
-          <td>Faster</td>
-        </tr>
-
-        <tr>
-          <td>Time Complexity</td>
-          <td>O(n)</td>
-          <td>O(log n)</td>
-        </tr>
-
-      </table>
-
-    </div>
-
-
-    <!-- Searching Animation -->
-    <div class="note-card">
-
-      <h2>Searching Animation</h2>
-
-      <p>
-        Enter a number and click Search to see how the element
-        is searched in the array.
-      </p>
-
-      <div class="search-animation">
-
-        <h2>Interactive Searching</h2>
-
-        <div
-          id="searchArray"
-          class="search-array"
-        >
-        </div>
-
-        <div class="search-controls">
-
-          <input
-            type="number"
-            id="searchValue"
-            placeholder="Enter value"
-          />
-
-          <button onclick="linearSearch()">
-            Linear Search
-          </button>
-
-          <button onclick="binarySearch()">
-            Binary Search
-          </button>
-
-          <button onclick="resetSearch()">
-            Reset
-          </button>
-
-        </div>
-
-        <p
-          id="searchMessage"
-          class="search-message"
-        >
-          Enter a value to start searching.
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Complete Searching notes with Linear Search, Binary Search, algorithms, examples, C programs and interactive visualization."
+    />
+    <title>Searching | StudySpark AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/ds-searching.css" />
+    <script src="../js/searching.js" defer></script>
+  </head>
+  <body>
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <header class="hero">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <a class="brand" href="../../../index.html">StudySpark<span> AI</span></a>
+
+      <div class="hero-content">
+        <span class="eyebrow">DATA STRUCTURES • COMPLETE NOTES</span>
+        <h1>🔍 Searching</h1>
+        <p>
+          Understand how computers find data using simple explanations, solved
+          examples, C programs and interactive visualizations.
         </p>
-
+        <div class="pills">
+          <span>📘 Deep Notes</span>
+          <span>💻 C Programs</span>
+          <span>✨ Visual Learning</span>
+          <span>🎯 Exam Ready</span>
+        </div>
       </div>
+    </header>
 
-    </div>
+    <div class="overlay" id="sidebarOverlay"></div>
 
+    <div class="layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="side-head">
+          <span>SEARCHING CONTENTS</span>
+          <button id="closeSidebar" aria-label="Close navigation">×</button>
+        </div>
 
-    <!-- Applications -->
-    <div class="note-card">
+        <input
+          type="search"
+          class="topic-search"
+          id="topicSearch"
+          placeholder="Search topics..."
+        />
 
-      <h2>Applications of Searching</h2>
+        <nav id="topicNav">
+          <a href="#intro">01. Introduction</a>
+          <a href="#need">02. Need & Applications</a>
+          <a href="#types">03. Types of Searching</a>
+          <a href="#linear">04. Linear Search</a>
+          <a href="#linear-example">05. Linear Dry Run</a>
+          <a href="#binary">06. Binary Search</a>
+          <a href="#binary-example">07. Binary Dry Run</a>
+          <a href="#visualizer">08. Interactive Visualizer</a>
+          <a href="#algorithms">09. Algorithms & C Code</a>
+          <a href="#complexity">10. Time Complexity</a>
+          <a href="#comparison">11. Comparison</a>
+          <a href="#advantages">12. Advantages & Limits</a>
+          <a href="#revision">13. Quick Revision</a>
+          <a href="#questions">14. Exam Questions</a>
+        </nav>
 
-      <ul>
-        <li>Searching a contact in a phone.</li>
-        <li>Finding a record in a database.</li>
-        <li>Searching a file in a computer.</li>
-        <li>Finding products in an online store.</li>
-        <li>Searching information in large data sets.</li>
-      </ul>
+        <div class="side-bottom">
+          <div>YOUR READING PROGRESS</div>
+          <div class="track"><span id="topicProgress"></span></div>
+          <span id="progressLabel">0 of 14 topics</span>
+          <p><a href="ds-notes.html">← Back to DS Notes</a></p>
+        </div>
+      </aside>
 
-    </div>
+      <main class="content">
+        <div class="mobile-tools">
+          <button id="openSidebar">☰ Topics</button>
+          <span>SEARCHING NOTES</span>
+        </div>
 
+        <section class="card reveal" id="intro" data-topic>
+          <span class="kicker">01 • BASIC CONCEPT</span>
+          <h2>What is Searching?</h2>
 
-    <!-- Advantages -->
-    <div class="note-card">
+          <p>
+            Searching is one of the basic operations in Data Structures. It is
+            used to find whether a particular element exists in a collection of
+            data and, if it exists, to determine its location.
+          </p>
 
-      <h2>Advantages of Searching</h2>
+          <div class="definition">
+            <b>DEFINITION</b>
+            <p>
+              <strong>Searching</strong> is the process of finding the location
+              of a required element, called the <em>key</em>, in a collection of
+              data.
+            </p>
+          </div>
 
-      <ul>
-        <li>Helps to find required data quickly.</li>
-        <li>Useful for managing large amounts of data.</li>
-        <li>Different searching methods can be used according to the data.</li>
-      </ul>
+          <h3>Simple Example</h3>
+          <p>
+            Suppose the array contains these values. We want to find the key
+            <strong>30</strong>.
+          </p>
 
-    </div>
+          <div class="number-strip">
+            <div><small>Index 0</small><b>10</b></div>
+            <div><small>Index 1</small><b>20</b></div>
+            <div class="target">
+              <small>Index 2</small><b>30</b><em>FOUND</em>
+            </div>
+            <div><small>Index 3</small><b>40</b></div>
+            <div><small>Index 4</small><b>50</b></div>
+          </div>
 
+          <p>
+            The required value <strong>30</strong> is present at index 2, which
+            is position 3. Remember that an array index usually starts at 0, but
+            a position starts at 1.
+          </p>
 
-    <!-- Back Button -->
-    <button
-      class="back-btn"
-      onclick="location.href = 'ds-notes.html'"
-    >
-      ⬅️ Back to Data Structure Notes
-    </button>
+          <div class="three-grid">
+            <div>
+              <b>Key</b>
+              <p>The value we want to find. Example: 30.</p>
+            </div>
+            <div>
+              <b>Index</b>
+              <p>The zero-based location of an element. Example: 2.</p>
+            </div>
+            <div>
+              <b>Result</b>
+              <p>
+                The location of the key, or a message that it was not found.
+              </p>
+            </div>
+          </div>
+        </section>
 
-  </div>
+        <section class="card reveal" id="need" data-topic>
+          <span class="kicker">02 • WHY SEARCHING?</span>
+          <h2>Need and Applications of Searching</h2>
+          <p>
+            Searching helps us retrieve the required information from a large
+            collection of records without checking every record manually.
+          </p>
 
+          <div class="two-grid">
+            <div class="method">
+              <div class="method-icon purple">📱</div>
+              <h3>Mobile Contacts</h3>
+              <p>Finding a person's name or number in a contact list.</p>
+            </div>
+            <div class="method">
+              <div class="method-icon green">🏦</div>
+              <h3>Banking Systems</h3>
+              <p>
+                Finding a customer account using an account number or customer
+                ID.
+              </p>
+            </div>
+            <div class="method">
+              <div class="method-icon green">🛒</div>
+              <h3>Online Shopping</h3>
+              <p>Finding products by product name, ID or keyword.</p>
+            </div>
+            <div class="method">
+              <div class="method-icon purple">📚</div>
+              <h3>Libraries & Records</h3>
+              <p>Finding books, student details, files and database records.</p>
+            </div>
+          </div>
 
-  <!-- Searching JavaScript -->
-  <script>
+          <h3>Why is it important?</h3>
+          <ul>
+            <li>It helps find required data efficiently.</li>
+            <li>
+              It reduces unnecessary comparisons when an appropriate method is
+              used.
+            </li>
+            <li>
+              It supports database systems, applications and information
+              retrieval.
+            </li>
+            <li>
+              The choice of searching algorithm affects performance when data
+              becomes large.
+            </li>
+          </ul>
+        </section>
 
-    const searchData = [10, 20, 30, 40, 50];
+        <section class="card reveal" id="types" data-topic>
+          <span class="kicker">03 • MAIN TYPES</span>
+          <h2>Types of Searching</h2>
 
-    const searchArray =
-      document.getElementById("searchArray");
+          <div class="two-grid">
+            <div class="method">
+              <div class="method-icon purple">➡️</div>
+              <h3>1. Linear Search</h3>
+              <p>
+                Checks elements one by one from the beginning until the key is
+                found or the list ends.
+              </p>
+              <ul>
+                <li>Works with sorted and unsorted data.</li>
+                <li>Simple to implement.</li>
+                <li>Worst-case time: O(n).</li>
+              </ul>
+              <a href="#linear">Learn Linear Search ↓</a>
+            </div>
 
-    const searchMessage =
-      document.getElementById("searchMessage");
+            <div class="method">
+              <div class="method-icon green">✂️</div>
+              <h3>2. Binary Search</h3>
+              <p>
+                Checks the middle element and eliminates half of the remaining
+                search range at each step.
+              </p>
+              <ul>
+                <li>Requires sorted data.</li>
+                <li>Efficient for large sorted arrays.</li>
+                <li>Worst-case time: O(log n).</li>
+              </ul>
+              <a href="#binary">Learn Binary Search ↓</a>
+            </div>
+          </div>
 
+          <div class="warning">
+            <strong>Important:</strong> Binary Search should not be applied
+            directly to an unsorted array. The sorted order is what allows it to
+            discard half of the search range safely.
+          </div>
+        </section>
 
-    function displaySearchArray() {
+        <section class="card reveal" id="linear" data-topic>
+          <span class="kicker">04 • METHOD ONE</span>
+          <h2>Linear Search</h2>
 
-      searchArray.innerHTML = "";
+          <div class="definition">
+            <b>DEFINITION</b>
+            <p>
+              Linear Search is a searching technique that compares the key with
+              each element one by one, starting from the first element until the
+              key is found or all elements have been checked.
+            </p>
+          </div>
 
-      searchData.forEach((value, index) => {
+          <h3>Working of Linear Search</h3>
+          <ol class="steps">
+            <li>Start from the first element of the array.</li>
+            <li>Compare the current element with the key.</li>
+            <li>If both are equal, return the element's index.</li>
+            <li>If they are not equal, move to the next element.</li>
+            <li>Repeat until the key is found or the array ends.</li>
+            <li>If the key is not present, return -1.</li>
+          </ol>
 
-        const element =
-          document.createElement("div");
+          <h3>Example</h3>
+          <p>Array: <code>12, 25, 18, 40, 35</code>; Key: <code>40</code></p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Element Checked</th>
+                  <th>Comparison</th>
+                  <th>Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>12</td>
+                  <td>12 == 40?</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>25</td>
+                  <td>25 == 40?</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>18</td>
+                  <td>18 == 40?</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>40</td>
+                  <td>40 == 40?</td>
+                  <td class="yes">Yes — Found!</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="success">
+            Result: Key 40 is found at index 3, which is position 4. Total
+            comparisons = 4.
+          </div>
 
-        element.className = "search-element";
+          <h3>Advantages</h3>
+          <ul>
+            <li>Easy to understand and implement.</li>
+            <li>Works with both sorted and unsorted arrays.</li>
+            <li>Does not require additional sorting.</li>
+          </ul>
 
-        element.textContent = value;
+          <h3>Disadvantages</h3>
+          <ul>
+            <li>
+              May check every element when the key is near the end or absent.
+            </li>
+            <li>Can be inefficient for very large collections.</li>
+          </ul>
+        </section>
 
-        element.id = "search-" + index;
+        <section class="card reveal" id="linear-example" data-topic>
+          <span class="kicker">05 • STEP-BY-STEP DRY RUN</span>
+          <h2>Linear Search: Solved Example</h2>
+          <p>
+            <strong>Question:</strong> Apply Linear Search to find 25 in the
+            array <code>[10, 15, 25, 30, 45]</code>.
+          </p>
 
-        searchArray.appendChild(element);
+          <div class="static-visual">
+            <div><small>INDEX 0</small><b>10</b><label>Compare 10</label></div>
+            <span>→</span>
+            <div><small>INDEX 1</small><b>15</b><label>Compare 15</label></div>
+            <span>→</span>
+            <div class="found-static">
+              <small>INDEX 2</small><b>25</b><label>Key found!</label>
+            </div>
+          </div>
 
-      });
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Current Index</th>
+                  <th>Current Value</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>10</td>
+                  <td>10 != 25, continue.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>1</td>
+                  <td>15</td>
+                  <td>15 != 25, continue.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>2</td>
+                  <td>25</td>
+                  <td>25 == 25, stop.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
+          <div class="success">
+            <strong>Final answer:</strong> Element 25 is found at index 2
+            (position 3) after 3 comparisons.
+          </div>
+
+          <h3>Linear Search Pseudocode</h3>
+          <pre
+            class="code-block"
+          ><button class="copy-btn" type="button">Copy</button><code>LinearSearch(A, n, key)
+    for i = 0 to n - 1
+        if A[i] == key
+            return i
+    return -1</code></pre>
+        </section>
+
+        <section class="card reveal" id="binary" data-topic>
+          <span class="kicker">06 • METHOD TWO</span>
+          <h2>Binary Search</h2>
+
+          <div class="definition">
+            <b>DEFINITION</b>
+            <p>
+              Binary Search is a searching technique that finds a key in sorted
+              data by repeatedly checking the middle element and reducing the
+              search range to one half.
+            </p>
+          </div>
+
+          <h3>Important Terms</h3>
+          <div class="term-grid">
+            <div>
+              <code>LOW</code>
+              <p>The index of the first element in the current search range.</p>
+            </div>
+            <div>
+              <code>HIGH</code>
+              <p>The index of the last element in the current search range.</p>
+            </div>
+            <div>
+              <code>MID</code>
+              <p>
+                The index of the middle element, calculated using
+                <code>(LOW + HIGH) / 2</code> with integer division.
+              </p>
+            </div>
+            <div>
+              <code>KEY</code>
+              <p>The value we want to find in the sorted array.</p>
+            </div>
+          </div>
+
+          <h3>Working of Binary Search</h3>
+          <ol class="steps">
+            <li>Set <code>LOW = 0</code> and <code>HIGH = n - 1</code>.</li>
+            <li>
+              Calculate <code>MID = LOW + (HIGH - LOW) / 2</code> using integer
+              division.
+            </li>
+            <li>If <code>A[MID] == KEY</code>, the key is found.</li>
+            <li>
+              If <code>KEY &lt; A[MID]</code>, search the left half by setting
+              <code>HIGH = MID - 1</code>.
+            </li>
+            <li>
+              If <code>KEY &gt; A[MID]</code>, search the right half by setting
+              <code>LOW = MID + 1</code>.
+            </li>
+            <li>
+              Repeat while <code>LOW &lt;= HIGH</code>. If
+              <code>LOW &gt; HIGH</code>, the key is not present.
+            </li>
+          </ol>
+
+          <div class="warning">
+            <strong>Exam tip:</strong> If KEY is smaller than MID's element,
+            move HIGH left. If KEY is greater than MID's element, move LOW
+            right. Do not reverse these rules.
+          </div>
+
+          <h3>Why is Binary Search faster?</h3>
+          <p>
+            After each unsuccessful comparison, Binary Search eliminates
+            approximately half of the remaining candidates. Linear Search
+            usually eliminates only one candidate per comparison.
+          </p>
+        </section>
+
+        <section class="card reveal" id="binary-example" data-topic>
+          <span class="kicker">07 • SOLVED EXAMPLE</span>
+          <h2>Binary Search: Step-by-Step Dry Run</h2>
+          <p>
+            <strong>Question:</strong> Find key 40 in the sorted array
+            <code>[10, 20, 30, 40, 50, 60, 70]</code>.
+          </p>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>LOW</th>
+                  <th>HIGH</th>
+                  <th>MID</th>
+                  <th>A[MID]</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>6</td>
+                  <td>3</td>
+                  <td>40</td>
+                  <td class="yes">Found!</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>Calculation:</p>
+          <pre
+            class="code-block"
+          ><button class="copy-btn" type="button">Copy</button><code>LOW = 0
+HIGH = 6
+MID = (LOW + HIGH) / 2
+MID = (0 + 6) / 2 = 3
+
+A[3] = 40
+KEY = 40
+
+KEY == A[MID]
+Therefore, the key is found at index 3.
+Position = 3 + 1 = 4.</code></pre>
+
+          <h3>Example requiring multiple steps</h3>
+          <p>Find 60 in <code>[10, 20, 30, 40, 50, 60, 70]</code>.</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>LOW</th>
+                  <th>HIGH</th>
+                  <th>MID</th>
+                  <th>A[MID]</th>
+                  <th>Decision</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>6</td>
+                  <td>3</td>
+                  <td>40</td>
+                  <td>60 &gt; 40, set LOW = 4</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>4</td>
+                  <td>6</td>
+                  <td>5</td>
+                  <td>60</td>
+                  <td class="yes">Found at index 5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="success">
+            Final answer: Key 60 is found at index 5 (position 6) after 2
+            comparisons.
+          </div>
+        </section>
+
+        <section class="card reveal" id="visualizer" data-topic>
+          <span class="kicker">08 • INTERACTIVE LAB</span>
+          <h2>Searching Visualization</h2>
+          <p>
+            Enter your own array and target value. Run either algorithm to see
+            each comparison, the current index and the search steps. Binary
+            Search automatically sorts a copy of the array for this
+            demonstration.
+          </p>
+
+          <div class="visualizer">
+            <div class="lab-head">
+              <b><i></i> SEARCH ALGORITHM LAB</b>
+              <span>LIVE VISUALIZATION</span>
+            </div>
+
+            <div class="controls">
+              <label class="wide"
+                >Array values
+                <input
+                  id="arrayInput"
+                  value="10, 20, 30, 40, 50, 60, 70"
+                  maxlength="200"
+                />
+                <small
+                  >Separate numbers using commas or spaces. Maximum 30
+                  numbers.</small
+                >
+              </label>
+              <label
+                >Target key
+                <input type="number" id="targetInput" value="60" />
+              </label>
+              <label
+                >Animation speed
+                <select id="speedInput">
+                  <option value="1100">Slow</option>
+                  <option value="700" selected>Normal</option>
+                  <option value="300">Fast</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="buttons">
+              <button type="button" id="runLinear">▶ Linear Search</button>
+              <button type="button" id="runBinary">▶ Binary Search</button>
+              <button type="button" id="resetVisualizer" class="ghost">
+                ↻ Reset
+              </button>
+            </div>
+
+            <div class="visual-array" id="visualArray" aria-live="polite"></div>
+
+            <div class="legend">
+              <span>● LOW</span>
+              <span>● MID / CURRENT</span>
+              <span>● HIGH</span>
+              <span>● FOUND</span>
+            </div>
+
+            <div class="status">
+              <b>↳</b>
+              <p id="visualMessage">
+                Enter a target and choose a search method.
+              </p>
+            </div>
+
+            <div class="stats">
+              <div><small>COMPARISONS</small><b id="comparisonCount">0</b></div>
+              <div>
+                <small>SEARCH RANGE / POSITION</small><b id="rangeCount">—</b>
+              </div>
+              <div><small>RESULT</small><b id="resultCount">Waiting</b></div>
+            </div>
+
+            <div class="step-log" id="stepLog">
+              <p class="empty-log">Your search steps will appear here.</p>
+            </div>
+          </div>
+
+          <p class="muted">
+            Note: Binary Search sorts a copy of the input values in ascending
+            order. Therefore, the displayed index refers to the sorted array,
+            not the original unsorted order.
+          </p>
+        </section>
+
+        <section class="card reveal" id="algorithms" data-topic>
+          <span class="kicker">09 • ALGORITHM & PROGRAM</span>
+          <h2>Algorithms and C Programs</h2>
+
+          <h3>Linear Search Algorithm</h3>
+          <pre
+            class="code-block"
+          ><button class="copy-btn" type="button">Copy</button><code>1. Start
+2. Read n, array A and key
+3. For i = 0 to n - 1
+4.     If A[i] == key, print index i and stop
+5. If key is not found, print "Not found"
+6. Stop</code></pre>
+
+          <h3>Linear Search in C</h3>
+          <pre
+            class="code-block"
+          ><button class="copy-btn" type="button">Copy</button><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a[100], n, key, i, found = 0;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &amp;n);
+
+    if (n &lt; 1 || n &gt; 100) {
+        printf("Invalid size");
+        return 0;
     }
 
+    printf("Enter array elements: ");
+    for (i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
 
-    function linearSearch() {
+    printf("Enter key to search: ");
+    scanf("%d", &amp;key);
 
-      resetSearch(false);
-
-      const target =
-        parseInt(
-          document.getElementById("searchValue").value
-        );
-
-      if (isNaN(target)) {
-
-        searchMessage.textContent =
-          "Please enter a value.";
-
-        return;
-      }
-
-      let index = 0;
-
-      searchMessage.textContent =
-        "Linear Search started...";
-
-      const interval =
-        setInterval(() => {
-
-          if (index >= searchData.length) {
-
-            clearInterval(interval);
-
-            searchMessage.textContent =
-              target + " was not found.";
-
-            return;
-          }
-
-          const element =
-            document.getElementById(
-              "search-" + index
-            );
-
-          element.classList.add("active");
-
-          if (searchData[index] === target) {
-
-            element.classList.remove("active");
-
-            element.classList.add("found");
-
-            clearInterval(interval);
-
-            searchMessage.textContent =
-              target + " found at position " +
-              (index + 1) + ".";
-
-            return;
-          }
-
-          setTimeout(() => {
-            element.classList.remove("active");
-          }, 350);
-
-          index++;
-
-        }, 600);
-
-    }
-
-
-    function binarySearch() {
-
-      resetSearch(false);
-
-      const target =
-        parseInt(
-          document.getElementById("searchValue").value
-        );
-
-      if (isNaN(target)) {
-
-        searchMessage.textContent =
-          "Please enter a value.";
-
-        return;
-      }
-
-      let left = 0;
-      let right = searchData.length - 1;
-
-      searchMessage.textContent =
-        "Binary Search started...";
-
-      const interval =
-        setInterval(() => {
-
-          if (left > right) {
-
-            clearInterval(interval);
-
-            searchMessage.textContent =
-              target + " was not found.";
-
-            return;
-          }
-
-          const middle =
-            Math.floor((left + right) / 2);
-
-          const element =
-            document.getElementById(
-              "search-" + middle
-            );
-
-          element.classList.add("active");
-
-          if (searchData[middle] === target) {
-
-            element.classList.remove("active");
-
-            element.classList.add("found");
-
-            clearInterval(interval);
-
-            searchMessage.textContent =
-              target + " found at position " +
-              (middle + 1) + ".";
-
-            return;
-          }
-
-          if (target < searchData[middle]) {
-
-            right = middle - 1;
-
-          } else {
-
-            left = middle + 1;
-
-          }
-
-          setTimeout(() => {
-            element.classList.remove("active");
-          }, 400);
-
-        }, 900);
-
-    }
-
-
-    function resetSearch(showMessage = true) {
-
-      searchData.forEach((value, index) => {
-
-        const element =
-          document.getElementById(
-            "search-" + index
-          );
-
-        if (element) {
-
-          element.classList.remove("active");
-          element.classList.remove("found");
-          element.classList.remove("highlight");
-
+    for (i = 0; i &lt; n; i++) {
+        if (a[i] == key) {
+            printf("Found at position %d", i + 1);
+            found = 1;
+            break;
         }
-
-      });
-
-      if (showMessage) {
-
-        searchMessage.textContent =
-          "Enter a value to start searching.";
-
-      }
-
     }
 
+    if (!found)
+        printf("Element not found");
 
-    displaySearchArray();
+    return 0;
+}</code></pre>
 
-  </script>
+          <h3>Binary Search Algorithm</h3>
+          <pre
+            class="code-block"
+          ><button class="copy-btn" type="button">Copy</button><code>1. Start
+2. Read sorted array A and key
+3. Set LOW = 0 and HIGH = n - 1
+4. While LOW &lt;= HIGH
+5.     MID = LOW + (HIGH - LOW) / 2
+6.     If A[MID] == key, return MID
+7.     If key &lt; A[MID], set HIGH = MID - 1
+8.     Otherwise, set LOW = MID + 1
+9. If not found, return -1
+10. Stop</code></pre>
 
-</body>
+          <h3>Binary Search in C</h3>
+          <pre
+            class="code-block"
+          ><button class="copy-btn" type="button">Copy</button><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a[100], n, key, low, high, mid, i;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &amp;n);
+
+    if (n &lt; 1 || n &gt; 100) {
+        printf("Invalid size");
+        return 0;
+    }
+
+    printf("Enter sorted array elements: ");
+    for (i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+
+    printf("Enter key to search: ");
+    scanf("%d", &amp;key);
+
+    low = 0;
+    high = n - 1;
+
+    while (low &lt;= high) {
+        mid = low + (high - low) / 2;
+
+        if (a[mid] == key) {
+            printf("Found at position %d", mid + 1);
+            return 0;
+        } else if (key &lt; a[mid]) {
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    printf("Element not found");
+    return 0;
+}</code></pre>
+
+          <div class="warning">
+            The Binary Search C program expects the input array to be sorted in
+            ascending order. Entering an unsorted array can produce an incorrect
+            result.
+          </div>
+        </section>
+
+        <section class="card reveal" id="complexity" data-topic>
+          <span class="kicker">10 • PERFORMANCE</span>
+          <h2>Time and Space Complexity</h2>
+
+          <div class="two-grid">
+            <div class="complexity">
+              <small>LINEAR SEARCH • WORST CASE</small>
+              <strong>O(n)</strong>
+              <p>May check all n elements.</p>
+            </div>
+            <div class="complexity">
+              <small>BINARY SEARCH • WORST CASE</small>
+              <strong>O(log n)</strong>
+              <p>Repeatedly halves the search range.</p>
+            </div>
+          </div>
+
+          <h3>Complexity Table</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Algorithm</th>
+                  <th>Best Case</th>
+                  <th>Average Case</th>
+                  <th>Worst Case</th>
+                  <th>Extra Space</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Linear Search</td>
+                  <td>O(1)</td>
+                  <td>O(n)</td>
+                  <td>O(n)</td>
+                  <td>O(1)</td>
+                </tr>
+                <tr>
+                  <td>Binary Search (iterative)</td>
+                  <td>O(1)</td>
+                  <td>O(log n)</td>
+                  <td>O(log n)</td>
+                  <td>O(1)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>What does this mean?</h3>
+          <p>
+            <strong>O(1):</strong> Constant time — the operation takes a fixed
+            amount of work, independent of the input size.
+          </p>
+          <p>
+            <strong>O(n):</strong> Linear time — the amount of work can grow
+            proportionally to the number of elements.
+          </p>
+          <p>
+            <strong>O(log n):</strong> Logarithmic time — the search range is
+            repeatedly divided, so the number of steps grows slowly as n
+            increases.
+          </p>
+
+          <div class="tip">
+            For an array of 1,024 elements, Binary Search needs at most about 11
+            comparisons in the worst case, whereas Linear Search may need 1,024.
+            The exact number depends on the search and array size.
+          </div>
+        </section>
+
+        <section class="card reveal" id="comparison" data-topic>
+          <span class="kicker">11 • IMPORTANT DIFFERENCES</span>
+          <h2>Linear Search vs Binary Search</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Linear Search</th>
+                  <th>Binary Search</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Method</td>
+                  <td>Checks elements one by one.</td>
+                  <td>Checks the middle and halves the range.</td>
+                </tr>
+                <tr>
+                  <td>Data requirement</td>
+                  <td>Sorted or unsorted.</td>
+                  <td>Must be sorted.</td>
+                </tr>
+                <tr>
+                  <td>Best case</td>
+                  <td>O(1)</td>
+                  <td>O(1)</td>
+                </tr>
+                <tr>
+                  <td>Worst-case time</td>
+                  <td>O(n)</td>
+                  <td>O(log n)</td>
+                </tr>
+                <tr>
+                  <td>Implementation</td>
+                  <td>Very simple.</td>
+                  <td>Requires LOW, HIGH and MID.</td>
+                </tr>
+                <tr>
+                  <td>Best suited for</td>
+                  <td>Small or unsorted collections.</td>
+                  <td>Large sorted arrays.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card reveal" id="advantages" data-topic>
+          <span class="kicker">12 • QUICK EVALUATION</span>
+          <h2>Advantages and Disadvantages</h2>
+
+          <div class="two-grid">
+            <div>
+              <h3>Linear Search</h3>
+              <p class="yes"><strong>Advantages</strong></p>
+              <ul>
+                <li>Simple to write and understand.</li>
+                <li>Works on unsorted data.</li>
+                <li>No sorting is required first.</li>
+              </ul>
+              <p class="no"><strong>Disadvantages</strong></p>
+              <ul>
+                <li>May require many comparisons.</li>
+                <li>Slow for large collections in the worst case.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Binary Search</h3>
+              <p class="yes"><strong>Advantages</strong></p>
+              <ul>
+                <li>Fast for large sorted arrays.</li>
+                <li>Requires fewer comparisons.</li>
+                <li>Iterative version uses O(1) extra space.</li>
+              </ul>
+              <p class="no"><strong>Disadvantages</strong></p>
+              <ul>
+                <li>Requires sorted data.</li>
+                <li>Its logic is more complex than Linear Search.</li>
+                <li>
+                  Sorting first may add extra cost if the data is not already
+                  sorted.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="card reveal revision" id="revision" data-topic>
+          <span class="kicker">13 • LAST-MINUTE REVISION</span>
+          <h2>Quick Revision Notes</h2>
+          <p><b>01</b> Searching finds the location of a required element.</p>
+          <p><b>02</b> The required value is called the key.</p>
+          <p><b>03</b> Linear Search checks elements one by one.</p>
+          <p><b>04</b> Linear Search works with sorted and unsorted data.</p>
+          <p><b>05</b> Binary Search requires sorted data.</p>
+          <p><b>06</b> MID = LOW + (HIGH − LOW) / 2, using integer division.</p>
+          <p><b>07</b> If KEY is smaller than A[MID], set HIGH = MID − 1.</p>
+          <p><b>08</b> If KEY is greater than A[MID], set LOW = MID + 1.</p>
+          <p><b>09</b> Linear Search worst case = O(n).</p>
+          <p><b>10</b> Binary Search worst case = O(log n).</p>
+          <p><b>11</b> In a zero-based array, index = position − 1.</p>
+          <p>
+            <b>12</b> In these algorithms, −1 can indicate that the key was not
+            found.
+          </p>
+
+          <div class="finish">
+            <b>Exam writing tip</b>
+            <p>
+              For a searching question, write the definition, algorithm steps, a
+              dry-run table, the final position and the time complexity. For
+              Binary Search, show LOW, HIGH and MID clearly.
+            </p>
+          </div>
+        </section>
+
+        <section class="card reveal" id="questions" data-topic>
+          <span class="kicker">14 • PRACTICE</span>
+          <h2>Important Exam Questions</h2>
+
+          <details>
+            <summary>1. What is Searching?</summary>
+            <p>
+              Searching is the process of finding the location of a required
+              element, called the key, in a collection of data.
+            </p>
+          </details>
+
+          <details>
+            <summary>2. Explain Linear Search with an example.</summary>
+            <p>
+              Linear Search compares the key with each element one by one until
+              the key is found or the array ends. For example, searching 30 in
+              [10, 20, 30] checks 10, then 20, then finds 30 at index 2.
+            </p>
+          </details>
+
+          <details>
+            <summary>3. Explain Binary Search with an example.</summary>
+            <p>
+              Binary Search works on sorted data. It compares the key with the
+              middle element and repeatedly selects the left or right half until
+              the key is found or the range becomes empty.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              4. Differentiate between Linear and Binary Search.
+            </summary>
+            <p>
+              Linear Search checks elements one by one and works on unsorted
+              data, with worst-case time O(n). Binary Search repeatedly halves
+              the search range, requires sorted data and has worst-case time
+              O(log n).
+            </p>
+          </details>
+
+          <details>
+            <summary>5. What are LOW, HIGH and MID?</summary>
+            <p>
+              LOW is the first index of the current search range, HIGH is the
+              last index, and MID is the middle index calculated using integer
+              division.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              6. Write the time complexity of both searching methods.
+            </summary>
+            <p>
+              Linear Search: best O(1), average O(n), worst O(n). Iterative
+              Binary Search: best O(1), average O(log n), worst O(log n).
+            </p>
+          </details>
+
+          <details>
+            <summary>7. Why does Binary Search require sorted data?</summary>
+            <p>
+              Sorted order tells us which half may contain the key. Without
+              sorted order, discarding half of the array may discard the
+              required element.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              8. Find 25 using Linear Search in [5, 15, 25, 35, 45].
+            </summary>
+            <p>
+              Compare 5 with 25, then 15 with 25, then 25 with 25. The key is
+              found at index 2 (position 3) after 3 comparisons.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              9. What happens if Binary Search does not find the key?
+            </summary>
+            <p>
+              The search range eventually becomes empty, meaning LOW is greater
+              than HIGH. The algorithm returns −1 or displays “Element not
+              found.”
+            </p>
+          </details>
+
+          <div class="finish">
+            <b>Keep practising!</b>
+            <p>
+              Use the interactive lab above with different keys. Try a value at
+              the beginning, middle, end and a value that does not exist.
+            </p>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <span>© StudySpark AI • Data Structures Learning Notes</span>
+          <a href="ds-notes.html">← Back to Data Structure Notes</a>
+          <button type="button" id="topButton">↑ Back to top</button>
+        </footer>
+      </main>
+    </div>
+    <script src="../js/ds-searching.js"></script>
+  </body>
 </html>
